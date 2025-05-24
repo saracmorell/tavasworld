@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sara C Morell | Tavas World</title>
+  <title>Tavas World | Sara C Morell</title>
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">Sara C Morell</a></h1>
+      <a href="index.html" class="logo"><img src="assets/img/Arrow.png" alt="Tavas World Logo" class="img-fluid"></a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
@@ -42,123 +42,107 @@
   </section>
 
   <main id="main">
-    <section id="about" class="about-mf sect-pt4 route">
+    <section id="books" class="books-mf sect-pt4 route">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="about-img">
-                    <img src="assets/img/20240622_072529.jpg" class="img-fluid rounded b-shadow-a" alt="Sara C Morell">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="title-left">About Sara</h5>
-                  <p class="lead">Sara C Morell is an author, creative director, and visionary behind Tavas World. Her work spans children's literature, coloring books, and thoughtful journals that aim to inspire, educate, and entertain. With a background in program management and publishing, Sara blends imagination with structure to build a brand that resonates across ages.</p>
-                  <ul class="list-ico mt-3">
-                    <li><span class="bi bi-geo-alt"></span> Based in the U.S., Open to Relocation</li>
-                    <li><span class="bi bi-link"></span> <a href="https://www.amazon.com/author/saracmorell" target="_blank">Amazon Author Page</a></li>
-                    <li><span class="bi bi-envelope"></span> contact@example.com</li>
-                  </ul>
-                </div>
-              </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DW3K3YMT" target="_blank">
+                <img src="assets/img/dino-activity.png" alt="My Big Dinosaur Coloring & Activity Book" class="img-fluid">
+                <h2 class="w-title">My Big Dinosaur Coloring & Activity Book</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DVYC597Z" target="_blank">
+                <img src="assets/img/summer.png" alt="Summer Coloring Book" class="img-fluid">
+                <h2 class="w-title">Summer Coloring Book</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DYJZFX1W" target="_blank">
+                <img src="assets/img/machines.png" alt="Big Machines and Hard Workers" class="img-fluid">
+                <h2 class="w-title">Big Machines and Hard Workers</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DXY7L6KY" target="_blank">
+                <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" class="img-fluid">
+                <h2 class="w-title">Dinosaurs in Action and Coloring Adventures</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DY7MKL35" target="_blank">
+                <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas" class="img-fluid">
+                <h2 class="w-title">The Adventures of Raspen and Sylas</h2>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="https://www.amazon.com/dp/B0DZ9ZK8XM" target="_blank">
+                <img src="assets/img/shineon.png" alt="Shine On Journal" class="img-fluid">
+                <h2 class="w-title">Shine On: Daily Gratitude Journal for Teens</h2>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="books" class="portfolio-mf sect-pt4 route">
+    <section id="contact" class="contact-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">Books</h3>
-              <p class="subtitle-a">Featured Publications by Sara C Morell</p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/raspen.png" alt="Raspen and Sylas" class="img-fluid">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">Send a Message</h5>
+                  </div>
+                  <div>
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                      </div>
+                      <div class="mb-3">
+                        <textarea name="message" rows="5" class="form-control" placeholder="Message" required></textarea>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit">Send Message</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">The Adventures of Raspen and Sylas</h2>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">Get in Touch</h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">If you'd like to collaborate, have questions about books, or want to discuss opportunities, feel free to send a message using the form or reach out via email.</p>
+                    <ul class="list-ico">
+                      <li><span class="bi bi-envelope"></span> contact@example.com</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/dino-activity.png" alt="Dinosaur Coloring Book" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">My Big Dinosaur Coloring Book</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/summer.png" alt="Summer Coloring Book" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">Summer Coloring Book</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">Dinosaurs in Action</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/machines.png" alt="Big Machines" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">Big Machines and Hard Workers</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" target="_blank">
-                <div class="work-img">
-                  <img src="assets/img/shineon.png" alt="Shine On Journal" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content text-center">
-                <h2 class="w-title">Shine On Journal</h2>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
