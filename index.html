@@ -34,6 +34,10 @@
       font-size: 1.2rem;
       margin-top: 10px;
     }
+    .typed-text {
+      font-weight: bold;
+      color: #e0d5b9;
+    }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
@@ -74,6 +78,7 @@
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -95,13 +100,25 @@
   <main style="margin-top: 100px;">
     <section class="hero-section">
       <h1>Welcome to Tavas World</h1>
-      <p><span>Author, Creator, Storyteller</span></p>
+      <p><span id="typed" class="typed-text"></span></p>
     </section>
 
     <section class="footer-section">
       <p>&copy; 2025 Tavas World. All rights reserved.</p>
     </section>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var typed = new Typed("#typed", {
+        strings: ["Author", "Creative Director", "Visionary", "Storyteller"],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
 </body>
 
 </html>
