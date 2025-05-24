@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavas World - About</title>
+  <title>Welcome To Tavas World</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -18,22 +18,44 @@
       color: #2c2c2c;
       margin: 0;
     }
-    .hero-section {
+    .hero {
       background-image: url('assets/img/lake.jpg');
       background-size: cover;
       background-position: center;
-      height: 300px;
+      height: 90vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: #ffffff;
+      color: #f5f1ed;
+      position: relative;
     }
-    .hero-section h1 {
-      font-size: 3.2rem;
+    .hero h1 {
+      font-size: 3.5rem;
       font-family: 'Playfair Display', serif;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      color: #f3ece4;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    .hero p span {
+      font-weight: bold;
+      color: #e6d3b3;
+      font-size: 1.25rem;
+    }
+    .content-section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+    .cta-book {
+      margin-top: 40px;
+    }
+    .cta-book img {
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+    .cta-book img:hover {
+      transform: scale(1.05);
     }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
@@ -44,18 +66,13 @@
       text-decoration: none;
     }
     #navbar ul {
-      margin: 0;
-      padding: 0;
       list-style: none;
       display: flex;
-    }
-    #navbar ul li {
-      margin-left: 20px;
+      gap: 20px;
     }
     #navbar ul li a {
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
       transition: 0.3s;
     }
     #navbar ul li a:hover,
@@ -64,27 +81,9 @@
     }
     .footer-section {
       background-color: #1a1a1a;
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
-      font-size: 0.95rem;
       color: #ccc;
-      margin-top: 60px;
-    }
-    .content-section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .about-content img {
-      max-width: 250px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    .about-content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
     }
   </style>
 </head>
@@ -95,41 +94,32 @@
       <h1 class="logo"><a href="index.html">Tavas World</a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="books.html">Books</a></li>
-          <li><a class="nav-link active" href="about.html">About</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
   </header>
 
-  <main style="margin-top: 100px;">
-    <section class="hero-section">
-      <h1 style="color: white;">About</h1>
+  <main style="margin-top: 80px;">
+    <section class="hero">
+      <div>
+        <h1>Welcome to Tavas World</h1>
+        <p><span>Author, Creator, Storyteller</span></p>
+      </div>
     </section>
 
-    <section class="content-section about-content text-center">
-      <img src="assets/img/20240622_072529.jpg" alt="Sara C Morell">
+    <section class="content-section">
       <p>
-        Sara C Morell, born on July 19, 1975, to a dynamic young mother and a military father with a passion for music and photography, grew up surrounded by creativity and resilience. Her mother’s journey from a certified nursing assistant to owning a nursing home instilled in Sara the values of hard work, ambition, and compassion.
+        Tavas World is the creative universe of Sara C Morell, a U.S.-based author and independent publisher best known for her beloved series <strong>The Adventures of Raspen and Sylas</strong>. Her work blends timeless life lessons with vivid imagination, offering children and families powerful messages about kindness, resilience, and friendship.
       </p>
-      <p>
-        A pillar of strength in Sara’s life has been her bonus dad, a man who never runs out of stories, laughter, or words of wisdom. Through his humor, sharp insight, and constant encouragement, he’s shown her the true meaning of unconditional love and what it really means to be family. His influence has been a guiding light, reminding her that sometimes, it’s the people who choose to show up for us who shape our lives the most.
-      </p>
-      <p>
-        Navigating the challenges of frequent moves during childhood, Sara and her brother developed a deep sense of adaptability and determination. These formative experiences are the heartbeat of <em>The Adventures of Raspen and Sylas</em>, a beloved children’s book series that blends life lessons with enchanting stories to foster meaningful conversations between parents and children.
-      </p>
-      <p>
-        Sara’s life has been a variety of experiences, from raising three boys on a vibrant farm filled with llamas, a yak, and Barbados sheep, to navigating life’s changes with resilience and grace. Though her sons are grown and her path has evolved, she continues to pour her experiences into creating books and journals that uplift and inspire.
-      </p>
-      <p>
-        Armed with a degree in Information Technology and on her way to completing a bachelor’s in Business Management, Sara has excelled in roles within Maternal Fetal Medicine and state government. She brings a blend of leadership, compassion, and innovation to every endeavor.
-      </p>
-      <p>
-        Today, Sara lives with intention and curiosity, embracing new adventures, whether she’s kayaking tranquil waters or uncovering hidden beauty in nature. Every story she writes carries that same spirit of exploration and heart, offering readers not just tales, but touchstones of hope and growth.
-      </p>
+      <div class="cta-book">
+        <a href="books.html">
+          <img src="assets/img/raspen.png" alt="Raspen and Sylas">
+        </a>
+      </div>
     </section>
 
     <section class="footer-section">
@@ -137,5 +127,4 @@
     </section>
   </main>
 </body>
-
 </html>
