@@ -98,6 +98,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
+      text-align: center;
     }
     .book-gallery a img {
       width: 200px;
@@ -107,6 +108,12 @@
     }
     .book-gallery a img:hover {
       transform: scale(1.05);
+    }
+    .book-title {
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
     }
   </style>
 </head>
@@ -129,7 +136,7 @@
 
   <main style="margin-top: 100px;">
     <section class="hero-section">
-      <h1>Writing</h1>
+      <h1 style="color: white;">Writing</h1>
     </section>
 
     <section class="content-section">
@@ -143,21 +150,36 @@
       </div>
 
       <div class="book-gallery">
-        <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank">
-          <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action">
-        </a>
-        <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
-          <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book">
-        </a>
-        <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank">
-          <img src="assets/img/machines.png" alt="Big Machines Coloring Book">
-        </a>
-        <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank">
-          <img src="assets/img/shineon.png" alt="Shine On Journal" style="width: 200px; height: auto;">
-        </a>
-        <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
-          <img src="assets/img/summer.png" alt="Summer Coloring Book">
-        </a>
+        <div>
+          <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank">
+            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action">
+          </a>
+          <div class="book-title">Dinosaurs in Action</div>
+        </div>
+        <div>
+          <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
+            <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book">
+          </a>
+          <div class="book-title">Dinosaur Activity Book</div>
+        </div>
+        <div>
+          <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank">
+            <img src="assets/img/machines.png" alt="Big Machines Coloring Book">
+          </a>
+          <div class="book-title">Big Machines Coloring Book</div>
+        </div>
+        <div>
+          <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank">
+            <img src="assets/img/shineon.png" alt="Shine On Journal">
+          </a>
+          <div class="book-title">Shine On: Gratitude Journal</div>
+        </div>
+        <div>
+          <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
+            <img src="assets/img/summer.png" alt="Summer Coloring Book">
+          </a>
+          <div class="book-title">Summer Coloring Book</div>
+        </div>
       </div>
     </section>
 
