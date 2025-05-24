@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavas World</title>
+  <title>Tavas World - About</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -21,24 +22,18 @@
       background-image: url('assets/img/lake.jpg');
       background-size: cover;
       background-position: center;
-      padding: 120px 20px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      color: #f9f9f9;
-    }
-   .hero-section h1 {
-  font-size: 3.2rem;
-  font-family: 'Playfair Display', serif;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-}
-    .hero-section p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
-    .typed-text {
-      font-weight: bold;
       color: #ffffff;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+    .hero-section h1 {
+      font-size: 3.2rem;
+      font-family: 'Playfair Display', serif;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
@@ -75,31 +70,23 @@
       color: #ccc;
       margin-top: 60px;
     }
-    .footer-section p {
-      margin: 0;
-    }
     .content-section {
       padding: 60px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+    }
+    .about-content img {
+      max-width: 250px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
       text-align: center;
-    }
-    .featured-book {
-      margin: 40px auto;
-      text-align: center;
-    }
-    .featured-book img {
-      max-width: 300px;
-      width: 100%;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-    .featured-book img:hover {
-      transform: scale(1.05);
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -108,10 +95,10 @@
       <h1 class="logo"><a href="index.html">Tavas World</a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="books.html">Books</a></li>
-          <li><a class="nav-link scrollto" href="about.html">About</a></li>
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="books.html">Books</a></li>
+          <li><a class="nav-link active" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -120,38 +107,35 @@
 
   <main style="margin-top: 100px;">
     <section class="hero-section">
-      <h1>Welcome to Tavas World</h1>
-      <p><span id="typed" class="typed-text"></span></p>
+      <h1 style="color: white;">About</h1>
     </section>
 
-    <section class="content-section">
+    <section class="content-section about-content text-center">
+      <img src="assets/img/20240622_072529.jpg" alt="Sara C Morell">
       <p>
-        Tavas World is the creative universe of Sara C Morell, a U.S.-based author, children’s book illustrator, and independent publisher. She is best known for <strong>The Adventures of Raspen and Sylas</strong>, a beloved series that encourages meaningful conversations and life lessons between parents and children. Her catalog includes <strong>coloring books for kids</strong>, <strong>gratitude journals for teens</strong>, and educational <strong>activity books</strong> that spark creativity and learning. Sara’s mission is to inspire curiosity, emotional intelligence, friendships, and connection through imaginative storytelling and beautifully crafted design.
+        Sara C Morell, born on July 19, 1975, to a dynamic young mother and a military father with a passion for music and photography, grew up surrounded by creativity and resilience. Her mother’s journey from a certified nursing assistant to owning a nursing home instilled in Sara the values of hard work, ambition, and compassion.
       </p>
-    </section>
-
-    <section class="featured-book">
-      <a href="books.html">
-        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas">
-      </a>
+      <p>
+        Navigating the challenges of frequent moves during childhood, Sara and her brother developed a deep sense of adaptability and determination. These formative experiences are the heartbeat of <em>The Adventures of Raspen and Sylas</em>, a beloved children’s book series that blends life lessons with enchanting stories to foster meaningful conversations between parents and children.
+      </p>
+      <p>
+        Sara’s life has been a variety of experiences, from raising three boys on a vibrant farm filled with llamas, a yak, and Barbados sheep, to navigating life’s changes with resilience and grace. Though her sons are grown and her path has evolved, she continues to pour her experiences into creating books and journals that uplift and inspire.
+      </p>
+      <p>
+        Armed with a degree in Information Technology and on her way to completing a bachelor’s in Business Management, Sara has excelled in roles within Maternal Fetal Medicine and state government. She brings a blend of leadership, compassion, and innovation to every endeavor.
+      </p>
+      <p>
+        Today, Sara lives with intention and curiosity, embracing new adventures, whether she’s kayaking tranquil waters or uncovering hidden beauty in nature. Every story she writes carries that same spirit of exploration and heart, offering readers not just tales, but touchstones of hope and growth.
+      </p>
+      <p>
+        A pillar of strength in Sara’s life has been her bonus dad, a man who never runs out of stories, laughter, or words of wisdom. Through his humor, sharp insight, and constant encouragement, he’s shown her the true meaning of unconditional love and what it really means to be family. His influence has been a guiding light, reminding her that sometimes, it’s the people who choose to show up for us who shape our lives the most.
+      </p>
     </section>
 
     <section class="footer-section">
       <p>&copy; 2025 Tavas World. All rights reserved.</p>
     </section>
   </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var typed = new Typed("#typed", {
-        strings: ["Author", "Independent Publisher"],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 1500,
-        loop: true
-      });
-    });
-  </script>
 </body>
 
 </html>
