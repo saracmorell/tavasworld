@@ -18,6 +18,30 @@
       color: #2c2c2c;
       margin: 0;
     }
+    .hero-section {
+      background-image: url('assets/img/lake.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+    .hero-section h1 {
+      font-size: 3.2rem;
+      font-family: 'Playfair Display', serif;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-family: 'Playfair Display', serif;
+      color: #f4e8d4;
+    }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
@@ -45,63 +69,19 @@
     #navbar ul li a.active {
       color: #d1bfa7;
     }
-    .hero-section {
-      background-image: url('assets/img/lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .featured-book {
       text-align: center;
+      margin: 40px auto;
     }
-    .hero-section h1 {
-      font-size: 3.2rem;
-      font-family: 'Playfair Display', serif;
-      color: #f5f0e6;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    }
-    .scrolling-subtitle {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-top: 15px;
-      color: #fff;
-      animation: scrollWords 12s infinite;
-    }
-    @keyframes scrollWords {
-      0% {opacity: 0;}
-      10% {opacity: 1;}
-      25% {opacity: 1;}
-      35% {opacity: 0;}
-      100% {opacity: 0;}
-    }
-    .cta-section {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: #f8f5f0;
-    }
-    .cta-section img {
-      max-width: 220px;
+    .featured-book img {
+      max-width: 200px;
+      height: auto;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
-    .cta-section img:hover {
+    .featured-book img:hover {
       transform: scale(1.05);
-    }
-    .cta-section p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.1rem;
-    }
-    .cta-section a {
-      display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
-      color: #7c5c45;
-      text-decoration: none;
-      border-bottom: 2px solid #7c5c45;
     }
     .footer-section {
       background-color: #1a1a1a;
@@ -109,6 +89,7 @@
       text-align: center;
       font-size: 0.95rem;
       color: #ccc;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -131,16 +112,14 @@
 
   <main style="margin-top: 100px;">
     <section class="hero-section">
-      <div>
-        <h1>Welcome to Tavas World</h1>
-        <div class="scrolling-subtitle">Author, Illustrator, Independent Publisher</div>
-      </div>
+      <h1>Welcome to Tavas World</h1>
+      <p class="hero-subtitle">Author, Illustrator, Independent Publisher</p>
     </section>
 
-    <section class="cta-section">
-      <img src="assets/img/raspen.png" alt="Raspen and Sylas Book">
-      <p>Tavas World is the creative universe of Sara C Morell — a U.S.-based author, children’s book illustrator, and independent publisher. She is best known for the <em>Adventures of Raspen and Sylas</em>, a beloved series that encourages meaningful conversations and life lessons between parents and children. Her catalog also includes coloring books for kids, guided gratitude journals for teens, and activity books that blend creativity with learning.</p>
-      <a href="books.html">Explore Books</a>
+    <section class="featured-book">
+      <a href="books.html">
+        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas">
+      </a>
     </section>
 
     <section class="footer-section">
