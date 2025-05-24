@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | Tavas World</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fffdf8;
+      color: #2c2c2c;
+    }
+
+    .hero-section {
+      background-image: url('assets/img/lake.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hero-section h1 {
+      font-size: 3.2rem;
+      font-family: 'Playfair Display', serif;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    header#header {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .container.form-section {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #f8f6f2;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+      color: #3c2f2f;
+    }
+
+    .form-control {
+      border-radius: 0;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #3c2f2f;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #5b4c4c;
+    }
+
+    .footer-section {
+      background-color: #1a1a1a;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="books.html">Books</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link active" href="contact.html">Connect</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main style="margin-top: 100px;">
+    <section class="hero-section">
+      <h1>Connect</h1>
+    </section>
+
+    <div class="container form-section">
+      <h2>Reach Out</h2>
+      <p>If you'd like to collaborate, inquire about Sara’s books, or just say hello—this is the place to do it.</p>
+      <form action="mailto:tavasworldllc@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+        <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+        <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+
+    <section class="footer-section">
+      <p>&copy; 2025 Tavas World. All rights reserved.</p>
+    </section>
+  </main>
+</body>
+
+</html>
