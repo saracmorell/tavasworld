@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tavas World | Books</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fffdf8;
+      color: #2c2c2c;
+      margin: 0;
+    }
+    header#header {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    #header .logo a {
+      color: #fff;
+      font-size: 28px;
+      text-decoration: none;
+    }
+    #navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+    #navbar ul li {
+      margin-left: 20px;
+    }
+    #navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    #navbar ul li a:hover,
+    #navbar ul li a.active {
+      color: #d1bfa7;
+    }
+    .book-section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .featured-book {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .featured-book img {
+      max-width: 300px;
+      width: 100%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+    .featured-book h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+    .book-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .book-grid-item {
+      text-align: center;
+      max-width: 220px;
+    }
+    .book-grid-item img {
+      width: 100%;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .book-grid-item img:hover {
+      transform: scale(1.05);
+    }
+    .book-grid-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+    .footer-section {
+      background-color: #1a1a1a;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="books.html">Books</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main style="margin-top: 120px;">
+    <section class="book-section">
+      <div class="featured-book">
+        <img src="assets/img/raspen.png" alt="Raspen and Sylas">
+        <h2>The Adventures of Raspen and Sylas</h2>
+        <p>The Raspen and Sylas series reflects Sara’s personal journey, offering children stories that inspire bravery, kindness, and resilience. As a mother of three, Sara’s love for reading to her boys ignited her passion for writing. She began as an author’s assistant, refining her craft before fulfilling her dream of creating books that not only entertain but also teach essential life lessons.<br><br>
+        Through vibrant storytelling and charming illustrations, this heartwarming tale helps young readers build emotional intelligence and meaningful connections.</p>
+      </div>
+
+      <div class="book-grid">
+        <div class="book-grid-item">
+          <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank">
+            <img src="assets/img/dino-activity.png" alt="My Big Dinosaur Coloring Activity Book">
+          </a>
+          <p>Dinosaur Activity Book</p>
+        </div>
+        <div class="book-grid-item">
+          <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank">
+            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action">
+          </a>
+          <p>Dinosaurs in Action</p>
+        </div>
+        <div class="book-grid-item">
+          <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank">
+            <img src="assets/img/machines.png" alt="Big Machines and Hard Workers">
+          </a>
+          <p>Machines and Workers</p>
+        </div>
+        <div class="book-grid-item">
+          <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank">
+            <img src="assets/img/shineon.png" alt="Shine On Journal">
+          </a>
+          <p>Shine On Journal</p>
+        </div>
+        <div class="book-grid-item">
+          <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank">
+            <img src="assets/img/summer.png" alt="Summer Coloring Book">
+          </a>
+          <p>Summer Coloring Book</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section">
+      <p>&copy; 2025 Tavas World. All rights reserved.</p>
+    </section>
+  </main>
+</body>
+
+</html>
