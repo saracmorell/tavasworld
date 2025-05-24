@@ -37,10 +37,13 @@
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
     .hero-subtitle {
-      font-size: 1.2rem;
-      margin-top: 10px;
+      font-size: 1.25rem;
       font-family: 'Playfair Display', serif;
-      color: #f4e8d4;
+      color: #ffffff;
+    }
+    .typed-cursor {
+      font-weight: bold;
+      color: #ffffff;
     }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
@@ -113,7 +116,9 @@
   <main style="margin-top: 100px;">
     <section class="hero-section">
       <h1>Welcome to Tavas World</h1>
-      <p class="hero-subtitle">Author, Illustrator, Independent Publisher</p>
+      <p class="hero-subtitle">
+        <span class="typed" data-typed-items="Author, Illustrator, Independent Publisher"></span>
+      </p>
     </section>
 
     <section class="featured-book">
@@ -126,6 +131,21 @@
       <p>&copy; 2025 Tavas World. All rights reserved.</p>
     </section>
   </main>
+
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script>
+    const typed = new Typed('.typed', {
+      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(', '),
+      typeSpeed: 80,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>
