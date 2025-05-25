@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Tavas World</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -18,71 +18,67 @@
       color: #2c2c2c;
       margin: 0;
     }
-
     .hero-section {
       background-image: url('assets/img/lake.jpg');
       background-size: cover;
       background-position: center;
       height: 300px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #ffffff;
       position: relative;
     }
-
     .hero-section::before {
       content: "";
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background: rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
-
     .hero-section h1 {
       font-size: 3rem;
       font-family: 'Playfair Display', serif;
       position: relative;
       z-index: 2;
+      color: #ffffff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
-
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
-
     #navbar {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
     }
-
     #navbar ul {
+      margin: 0;
+      padding: 0;
       list-style: none;
       display: flex;
-      padding: 0;
-      margin: 0;
       flex-direction: row;
+      flex-wrap: wrap;
     }
-
     #navbar ul li {
       margin-left: 20px;
     }
-
     #navbar ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       transition: 0.3s;
     }
-
     #navbar ul li a:hover,
     #navbar ul li a.active {
       color: #d1bfa7;
     }
-
     .about-content {
       max-width: 1000px;
       margin: 40px auto;
@@ -90,20 +86,17 @@
       text-align: left;
       font-size: 1.05rem;
     }
-
     .about-content h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.75rem;
       margin-bottom: 20px;
     }
-
     .about-image {
       float: right;
       margin: 0 0 20px 20px;
       width: 200px;
       border-radius: 8px;
     }
-
     .footer-section {
       background-color: #1a1a1a;
       padding: 40px 20px;
@@ -112,7 +105,6 @@
       color: #ccc;
       margin-top: 60px;
     }
-
     @media (max-width: 768px) {
       #navbar ul {
         flex-direction: column;
@@ -125,19 +117,11 @@
         z-index: 9999;
         padding: 20px;
       }
-
       #navbar ul.show {
         display: flex;
       }
-
       #navbar ul li {
         margin: 10px 0;
-      }
-
-      .about-image {
-        float: none;
-        display: block;
-        margin: 0 auto 20px;
       }
     }
   </style>
@@ -164,9 +148,8 @@
     </section>
 
     <section class="about-content">
-      <img src="assets/img/sara.jpg" alt="Sara C Morell" class="about-image" />
-      <p><strong>Sara C. Morell</strong>, born on July 19, 1975, to a dynamic young mother, and a military father with a passion for music and photography, grew up surrounded by creativity and resilience. Her mother’s journey from a certified nursing assistant to owning a nursing home instilled in Sara the values of hard work, ambition, and compassion.</p>
-      <p>A pillar of strength in Sara’s life has been her bonus dad, a man who never runs out of stories, laughter, or words of wisdom. Through his humor, sharp insight, and constant encouragement, he’s shown her the true meaning of unconditional love and what it really means to be family. His influence has been a guiding light, reminding her that sometimes, it’s the people who choose to show up for us who shape our lives the most.</p>
+      <img src="assets/img/sara.jpg" alt="Sara C Morell" class="about-image">
+      <p><strong>Sara C. Morell</strong>, born on July 19, 1975, to a dynamic young mother, and a military father with a passion for music and photography, grew up surrounded by creativity and resilience. Her mother’s journey from a certified nursing assistant to owning a nursing home instilled in Sara the values of hard work, ambition, and compassion. A pillar of strength in Sara’s life has been her bonus dad, a man who never runs out of stories, laughter, or words of wisdom. Through his humor, sharp insight, and constant encouragement, he’s shown her the true meaning of unconditional love and what it really means to be family. His influence has been a guiding light, reminding her that sometimes, it’s the people who choose to show up for us who shape our lives the most.</p>
       <p>Navigating the challenges of frequent moves during childhood, Sara and her brother developed a deep sense of adaptability and determination. These formative experiences are the heartbeat of <em>The Adventures of Raspen and Sylas</em>, a beloved children’s book series that blends life lessons with enchanting stories to foster meaningful conversations between parents and children.</p>
       <p>From raising three boys on a vibrant farm filled with llamas, a yak, and Barbados sheep, to navigating life’s changes with resilience and grace, Sara continues to pour her life into books and journals that uplift and inspire.</p>
       <p>Armed with a degree in Information Technology, and nearing the completion of a bachelor’s in Business Management, Sara has excelled in Maternal Fetal Medicine and state government roles. She brings a blend of leadership, compassion, and innovation to every endeavor.</p>
@@ -180,6 +163,7 @@
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Mobile nav toggle functionality
     document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
       document.querySelector('#navbar ul').classList.toggle('show');
     });
