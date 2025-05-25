@@ -4,19 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect | Tavas World</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Font match -->
+  <!-- Match About Page Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Playfair Display', serif;
       background-color: #f5f5f5;
     }
 
@@ -42,7 +40,6 @@
       text-decoration: none;
       font-weight: bold;
       padding: 6px 12px;
-      border-radius: 3px;
     }
 
     nav ul li a.active,
@@ -56,22 +53,21 @@
       color: white;
     }
 
-    .banner-image {
+    .banner img {
       width: 100%;
       height: auto;
-      max-height: 400px;
-      object-fit: cover;
-      filter: brightness(65%);
+      filter: brightness(60%);
     }
 
-    .banner-text {
+    .banner h1 {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 56px;
+      font-size: 64px;
       font-weight: 700;
-      letter-spacing: 2px;
+      margin: 0;
+      padding: 0;
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     }
 
@@ -126,41 +122,15 @@
 <body>
 
   <!-- Navigation -->
-  <header>
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="books.html">BOOKS</a></li>
-          <li><a href="connect.html" class="active">CONNECT</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Banner Section -->
-  <div class="banner">
-    <img src="assets/img/lake.jpg" alt="Lake Banner" class="banner-image">
-    <div class="banner-text">Connect</div>
+  <div class="nav-container">
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="books.html">BOOKS</a></li>
+        <li><a href="connect.html" class="active">CONNECT</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <!-- Page Content -->
-  <main>
-    <section class="content">
-      <p>Whether you're a fellow author, a reader, or someone curious about creative work, Sara would love to connect!</p>
-      <div class="contact-buttons">
-        <a href="mailto:saracolleenmorell@gmail.com" class="btn">Email</a>
-        <a href="https://www.linkedin.com/in/saracmorell" class="btn" target="_blank">LinkedIn</a>
-        <a href="https://www.amazon.com/author/saracmorell" class="btn" target="_blank">Amazon Author Page</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sara C. Morell | All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+  <!-- Banner Sec
