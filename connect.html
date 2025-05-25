@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connect - Tavas World</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect | Tavas World</title>
+
+  <!-- Font match -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #fffdf8;
-      color: #2c2c2c;
-      margin: 0;
-    }
-    .hero-section {
-      background-image: url('assets/img/lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #ffffff;
-      position: relative;
-    }
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-    .hero-section h1 {
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      position: relative;
-      z-index: 2;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    }
-    header#header {
-      background-color: rgba(0, 0, 0, 0.85);
-    }
-    #navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    #navbar ul {
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      background-color: #f5f5f5;
     }
-    #navbar ul li {
-      margin-left: 20px;
+
+    .nav-container {
+      background-color: #2c2c2c;
+      padding: 10px 0;
     }
-    #navbar ul li a {
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
       color: #fff;
       text-decoration: none;
-      font-size: 16px;
-      transition: 0.3s;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 3px;
     }
-    #navbar ul li a:hover,
-    #navbar ul li a.active {
-      color: #d1bfa7;
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      border-bottom: 2px solid #fff;
+    }
+
+    .banner {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      filter: brightness(65%);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     .content p {
@@ -134,7 +139,7 @@
     </div>
   </header>
 
-  <!-- Banner -->
+  <!-- Banner Section -->
   <div class="banner">
     <img src="assets/img/lake.jpg" alt="Lake Banner" class="banner-image">
     <div class="banner-text">Connect</div>
