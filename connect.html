@@ -1,124 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connect | Tavas World</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fffdf8;
-      color: #2c2c2c;
+    /* NAV STYLES */
+    .navbar {
+      background-color: #333;
+      padding: 10px;
     }
 
-    .hero-section {
-      background-image: url('assets/img/lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
+    .nav-menu {
+      list-style: none;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
     }
 
-    .hero-section h1 {
-      font-size: 3.2rem;
-      font-family: 'Playfair Display', serif;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    .nav-menu li {
+      margin: 5px 15px;
     }
 
-    header#header {
-      background-color: rgba(0, 0, 0, 0.85);
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 4px;
     }
 
-    .container.form-section {
-      max-width: 700px;
-      margin: 60px auto;
-      background-color: #f8f6f2;
+    .nav-menu a:hover,
+    .nav-menu .active {
+      background-color: #555;
+    }
+
+    /* PAGE CONTENT */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .form-section h2 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
-      color: #3c2f2f;
-    }
-
-    .form-control {
-      border-radius: 0;
-      margin-bottom: 15px;
-    }
-
-    .btn-primary {
-      background-color: #3c2f2f;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #5b4c4c;
-    }
-
-    .footer-section {
-      background-color: #1a1a1a;
-      padding: 40px 20px;
+    h1 {
       text-align: center;
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      margin: 10px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-links a:hover {
+      background-color: #555;
     }
   </style>
 </head>
-
 <body>
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="books.html">Books</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
-          <li><a class="nav-link active" href="connect.html">Connect</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
+
+  <!-- ✅ FIXED NAV MENU -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="connect.html" class="active">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <div class="container">
+    <h1>Connect with Sara</h1>
+    <p>Whether you're a fellow author, a reader, or someone curious about creative work, Sara would love to connect!</p>
+
+    <div class="contact-links">
+      <a href="mailto:saracolleenmorell@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/saracmorell" target="_blank">LinkedIn</a>
+      <a href="https://www.amazon.com/author/saracmorell" target="_blank">Amazon Author Page</a>
     </div>
-  </header>
+  </div>
 
-  <main style="margin-top: 100px;">
-    <section class="hero-section">
-      <h1>Connect</h1>
-    </section>
-
-    <div class="container form-section">
-      <h2>Reach Out</h2>
-      <p>If you'd like to collaborate, inquire about Sara’s books, or just say hello—this is the place to do it.</p>
-      <form action="mailto:tavasworldllc@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" class="form-control" name="name" placeholder="Your Name" required />
-        <input type="email" class="form-control" name="email" placeholder="Your Email" required />
-        <input type="text" class="form-control" name="subject" placeholder="Subject" required />
-        <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-      </form>
-    </div>
-
-    <section class="footer-section">
-      <p>&copy; 2025 Tavas World. All rights reserved.</p>
-    </section>
-  </main>
 </body>
-
 </html>
