@@ -2,159 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Connect | Tavas World</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- Match About Page Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fffdf8;
+      color: #2c2c2c;
+    }
+    header#header {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+    #header .logo a {
+      color: #fff;
+      font-size: 28px;
+      text-decoration: none;
+    }
+    #navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+    #navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    #navbar ul li a:hover,
+    #navbar ul li a.active {
+      color: #d1bfa7;
+    }
+    .hero-section {
+      background-image: url('assets/img/lake.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3.2rem;
       font-family: 'Playfair Display', serif;
-      background-color: #f5f5f5;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
-
-    .nav-container {
-      background-color: #2c2c2c;
-      padding: 10px 0;
+    .contact-section {
+      padding: 50px 20px;
+      max-width: 600px;
+      margin: auto;
     }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 30px;
     }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
+    .form-control {
+      border-radius: 6px;
+      margin-bottom: 20px;
     }
-
-    nav ul li a {
+    .btn-submit {
+      background-color: #4a3f35;
       color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 6px 12px;
-    }
-
-    nav ul li a.active,
-    nav ul li a:hover {
-      border-bottom: 2px solid #fff;
-    }
-
-    .banner {
-      position: relative;
-      text-align: center;
-      color: white;
-    }
-
-    .banner img {
-      width: 100%;
-      height: auto;
-      filter: brightness(60%);
-    }
-
-    .banner h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 64px;
-      font-weight: 700;
-      margin: 0;
-      padding: 0;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .contact-buttons {
-      margin-top: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
+      border: none;
       padding: 10px 20px;
-      background-color: #2c2c2c;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      font-size: 1rem;
+      border-radius: 6px;
     }
-
-    .btn:hover {
-      background-color: #555;
+    .btn-submit:hover {
+      background-color: #6c584c;
     }
-
-    footer {
-      background-color: #2c2c2c;
-      color: #fff;
+    .footer-section {
+      background-color: #1a1a1a;
+      color: #ccc;
       text-align: center;
-      padding: 20px 10px;
+      padding: 30px 20px;
+      font-size: 0.95rem;
       margin-top: 60px;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Connect</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Navigation -->
-  <div class="nav-container">
-    <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="books.html">BOOKS</a></li>
-        <li><a href="connect.html" class="active">CONNECT</a></li>
-      </ul>
-    </nav>
-  </div>
+  <main style="margin-top: 100px;">
+    <section class="hero-section">
+      <h1>Connect</h1>
+    </section>
 
-  <!-- Banner Section -->
-  <div class="banner">
-    <img src="assets/img/lake.jpg" alt="Lake Banner">
-    <h1>About</h1> <!-- This will say "About" in the final version; change to Connect -->
-  </div>
+    <section class="contact-section">
+      <h2>I'd love to hear from you</h2>
+      <form action="https://formsubmit.co/tavasworldllc@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://www.tavasworld.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="6" class="form-control" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn-submit">Send Message</button>
+        </div>
+      </form>
+    </section>
 
-  <!-- Page Content -->
-  <main>
-    <section class="content">
-      <p>Whether you're a fellow author, a reader, or someone curious about creative work, Sara would love to connect!</p>
-      <div class="contact-buttons">
-        <a href="mailto:saracolleenmorell@gmail.com" class="btn">Email</a>
-        <a href="https://www.linkedin.com/in/saracmorell" class="btn" target="_blank">LinkedIn</a>
-        <a href="https://www.amazon.com/author/saracmorell" class="btn" target="_blank">Amazon Author Page</a>
-      </div>
+    <section class="footer-section">
+      <p>&copy; 2025 Tavas World. All rights reserved.</p>
     </section>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sara C. Morell | All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
