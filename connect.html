@@ -77,29 +77,21 @@
     }
     .contact-section {
       padding: 50px 20px;
-      max-width: 600px;
-      margin: auto;
+      text-align: center;
     }
     .contact-section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      text-align: center;
       margin-bottom: 30px;
     }
-    .form-control {
-      border-radius: 6px;
-      margin-bottom: 20px;
+    .social-icons a {
+      margin: 0 15px;
+      color: #4a3f35;
+      font-size: 2rem;
+      transition: color 0.3s;
     }
-    .btn-submit {
-      background-color: #4a3f35;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 6px;
-    }
-    .btn-submit:hover {
-      background-color: #6c584c;
+    .social-icons a:hover {
+      color: #6c584c;
     }
     .footer-section {
       background-color: #1a1a1a;
@@ -152,22 +144,11 @@
 
     <section class="contact-section">
       <h2>I'd love to hear from you</h2>
-      <form action="https://formsubmit.co/tavasworldllc@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://www.tavasworld.com/thankyou.html">
-        <input type="hidden" name="_captcha" value="false">
-        <div class="form-group">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="6" class="form-control" placeholder="Your Message" required></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn-submit">Send Message</button>
-        </div>
-      </form>
+      <div class="social-icons">
+        <a href="mailto:tavasworldllc@gmail.com" target="_blank" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        <a href="https://www.linkedin.com/in/saramorell" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.amazon.com/author/saramorell" target="_blank" aria-label="Amazon"><i class="bi bi-book-fill"></i></a>
+      </div>
     </section>
 
     <section class="footer-section">
