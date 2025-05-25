@@ -7,30 +7,39 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Georgia', serif;
       background-color: #fffdf8;
       color: #2c2c2c;
+      margin: 0;
     }
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
-    #header .logo a {
-      color: #fff;
-      font-size: 28px;
-      text-decoration: none;
+    #navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
     #navbar ul {
+      margin: 0;
+      padding: 0;
       list-style: none;
       display: flex;
-      gap: 20px;
-      padding: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    #navbar ul li {
+      margin-left: 20px;
     }
     #navbar ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 16px;
+      transition: 0.3s;
     }
     #navbar ul li a:hover,
     #navbar ul li a.active {
@@ -46,10 +55,24 @@
       align-items: center;
       color: #fff;
       text-align: center;
+      position: relative;
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
     }
     .hero-section h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       font-family: 'Playfair Display', serif;
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
     .contact-section {
@@ -86,20 +109,38 @@
       font-size: 0.95rem;
       margin-top: 60px;
     }
+    @media (max-width: 768px) {
+      #navbar ul {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        padding: 20px;
+      }
+      #navbar ul.show {
+        display: flex;
+      }
+      #navbar ul li {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
-
 <body>
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
+    <div class="container d-flex justify-content-center">
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="active" href="contact.html">Connect</a></li>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="books.html">Books</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link active" href="connect.html">Connect</a></li>
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
   </header>
@@ -133,5 +174,13 @@
       <p>&copy; 2025 Tavas World. All rights reserved.</p>
     </section>
   </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Mobile nav toggle functionality
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('#navbar ul').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
