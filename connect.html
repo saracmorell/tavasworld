@@ -6,111 +6,152 @@
   <title>Connect | Tavas World</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* NAV STYLES */
-    .navbar {
-      background-color: #333;
-      padding: 10px;
-    }
-
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-menu li {
-      margin: 5px 15px;
-    }
-
-    .nav-menu a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 6px 10px;
-      border-radius: 4px;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu .active {
-      background-color: #555;
-    }
-
-    /* PAGE CONTENT */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background-color: #f5f5f5;
     }
 
-    .container {
+    .nav-container {
+      background-color: #2c2c2c;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 3px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+      border-bottom: 2px solid #fff;
+    }
+
+    .banner {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .banner-image {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .content {
       max-width: 800px;
       margin: 40px auto;
-      background: white;
       padding: 30px;
+      background-color: #fff;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
-      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1rem;
+    .content p {
+      font-size: 1.1rem;
       line-height: 1.6;
-      text-align: center;
     }
 
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    .contact-buttons {
       margin-top: 20px;
     }
 
-    .contact-links a {
+    .btn {
+      display: inline-block;
       margin: 10px;
-      padding: 10px 15px;
-      background-color: #333;
-      color: #fff;
+      padding: 10px 20px;
+      background-color: #2c2c2c;
+      color: white;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
 
-    .contact-links a:hover {
+    .btn:hover {
       background-color: #555;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ FIXED NAV MENU -->
-  <nav class="navbar">
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="books.html">Books</a></li>
-      <li><a href="connect.html" class="active">Connect</a></li>
-    </ul>
-  </nav>
-
-  <!-- PAGE CONTENT -->
-  <div class="container">
-    <h1>Connect with Sara</h1>
-    <p>Whether you're a fellow author, a reader, or someone curious about creative work, Sara would love to connect!</p>
-
-    <div class="contact-links">
-      <a href="mailto:saracolleenmorell@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/saracmorell" target="_blank">LinkedIn</a>
-      <a href="https://www.amazon.com/author/saracmorell" target="_blank">Amazon Author Page</a>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="books.html">BOOKS</a></li>
+          <li><a href="connect.html" class="active">CONNECT</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="assets/img/lake.jpg" alt="Lake Banner" class="banner-image">
+    <div class="banner-text">Connect</div>
   </div>
+
+  <!-- Page Content -->
+  <main>
+    <section class="content">
+      <p>Whether you're a fellow author, a reader, or someone curious about creative work, Sara would love to connect!</p>
+      <div class="contact-buttons">
+        <a href="mailto:saracolleenmorell@gmail.com" class="btn">Email</a>
+        <a href="https://www.linkedin.com/in/saracmorell" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://www.amazon.com/author/saracmorell" class="btn" target="_blank">Amazon Author Page</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sara C. Morell | All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
