@@ -60,7 +60,10 @@
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     }
     .typed {
-      font-size: 2.2rem;
+      font-size: 2.8rem !important;
+      font-weight: 600;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
     .typed-cursor {
       font-weight: bold;
@@ -146,11 +149,29 @@
     @media (max-width: 768px) {
       #navbar ul {
         flex-direction: column;
-        align-items: flex-start;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 9999;
+        padding: 20px;
+      }
+      #navbar ul.show {
+        display: flex;
       }
       #navbar ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 10px 0;
+      }
+      .typed {
+        font-size: 1.8rem !important;
+        line-height: 1.6;
+        padding: 0 15px;
+      }
+      .hero-subtitle {
+        font-size: 1.4rem !important;
+        color: #fff !important;
       }
     }
   </style>
@@ -217,6 +238,11 @@
       backSpeed: 40,
       backDelay: 2000,
       loop: true
+    });
+
+    // Mobile nav toggle functionality
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('#navbar ul').classList.toggle('show');
     });
   </script>
 </body>
