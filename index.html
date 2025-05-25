@@ -72,14 +72,11 @@
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
-    #header .logo a {
-      color: #fff;
-      font-size: 28px;
-      text-decoration: none;
-    }
     #navbar {
       display: flex;
+      justify-content: center;
       align-items: center;
+      width: 100%;
     }
     #navbar ul {
       margin: 0;
@@ -107,7 +104,7 @@
       margin: 40px auto;
     }
     .featured-book img {
-      max-width: 400px;
+      max-width: 300px;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -179,8 +176,7 @@
 
 <body>
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <h1 class="logo"><a href="index.html">Tavas World</a></h1>
+    <div class="container d-flex justify-content-center">
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="index.html">Home</a></li>
