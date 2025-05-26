@@ -108,21 +108,28 @@
       transform-style: preserve-3d;
       transition: transform 0.8s;
     }
-    .flip-container:hover .flip-book {
-      transform: rotateY(180deg);
-    }
-    .book-front, .book-back {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      backface-visibility: hidden;
-    }
-    .book-front img, .book-back img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+    .flip-container {
+  perspective: 1000px;
+  width: 300px;
+  height: auto;
+}
+
+.flip-book {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.book-front img,
+.book-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
     .book-back {
       transform: rotateY(180deg);
     }
