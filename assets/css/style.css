@@ -1542,4 +1542,19 @@ html { overflow-y: scroll; }
     line-height: 1.8;
   }
 }
+.footer-brandline {
+  margin-bottom: 6px;
+}
+
+.footer-acronym {
+  margin-bottom: 14px;
+}
+
+.footer-tagline {
+  margin-bottom: 18px;
+}
+
+.footer-copy {
+  margin-top: 0;
+}
 
