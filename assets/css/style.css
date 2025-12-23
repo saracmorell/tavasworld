@@ -1511,9 +1511,8 @@ footer .credits a {
 
 /* Separators (only if you wrap them in spans) */
 .footer-tagline{
-  margin-bottom: 14px;  /* this is the sweet spot */
-}
-.footer-tagline{
+  color: #d1bfa7;          /* same gold as TAVAS + T.A.V.A.S */
   font-style: italic;
-  opacity: 0.85;
+  margin-top: 6px;         /* subtle breathing room */
 }
+
