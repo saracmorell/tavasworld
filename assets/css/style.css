@@ -1484,10 +1484,12 @@ footer .credits a {
 /* Footer brand line */
 /* Footer brand line */
 .footer-brandline{
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: #d1bfa7; /* SAME as T.A.V.A.S first letters */
+  font-weight: 700;
 }
 /* Acronym styling */
 .footer-acronym{
