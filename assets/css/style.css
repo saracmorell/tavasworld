@@ -1492,4 +1492,41 @@ footer .credits a {
   font-weight: 700;
   color: #d6a15c;      /* your sunset gold */
 }
+/* Footer brand line */
+.footer-brandline{
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-brandline span{
+  font-size: 1.12em;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #d6a15c; /* matches your menu hover tone */
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* Acronym styling */
+.footer-acronym{
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* First letters */
+.footer-acronym .cap{
+  color: #d6a15c;        /* same as menu hover */
+  font-weight: 700;
+  font-size: 1.25em;     /* slightly larger */
+}
+
+/* The dots */
+.footer-acronym .sep{
+  margin: 0 10px;
+  opacity: 0.9;
+}
 
