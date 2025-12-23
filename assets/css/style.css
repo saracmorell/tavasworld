@@ -1515,7 +1515,8 @@ footer .credits a {
   font-style: italic;
   margin-top: 6px;         /* subtle breathing room */
 }
-.footer-tagline{
-  margin-bottom: 12px; /* space above copyright */
+.footer-tagline {
+  margin-bottom: 14px; /* instead of 12px */
 }
+
 
