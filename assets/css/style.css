@@ -1482,14 +1482,14 @@ footer .credits a {
   line-height: 1.7;
 }
 .footer-acronym {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 6px;
 }
 
 .footer-acronym span {
+  font-size: 1.15em;   /* slightly larger, not loud */
   font-weight: 700;
-  font-size: 1.05em;
-  color: #d6a15c; /* sunset gold */
+  color: #d6a15c;      /* your sunset gold */
 }
+
