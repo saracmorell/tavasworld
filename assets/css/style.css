@@ -1502,10 +1502,9 @@ footer .credits a {
 .footer-acronym .cap{
   color: #d1bfa7;
   font-weight: 700;
-  font-size: 1.35em;     /* noticeable but still elegant */
-  letter-spacing: 0.02em;
-  position: relative;
-  top: 1px;              /* gives subtle lift */
+  font-size: 1.35em;   /* this is the missing punch */
+  display: inline-block;
+  transform: translateY(-1px); /* subtle optical lift */
 }
 
 /* Separators (only if you wrap them in spans) */
