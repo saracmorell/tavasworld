@@ -1490,7 +1490,7 @@ footer .credits a {
 .footer-acronym span {
   font-size: 1.15em;   /* slightly larger, not loud */
   font-weight: 700;
-  color: #d6a15c;      /* your sunset gold */
+  color: #d1bfa7;      /* your sunset gold */
 }
 /* Footer brand line */
 .footer-brandline{
@@ -1504,7 +1504,7 @@ footer .credits a {
   font-size: 1.12em;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: #d6a15c; /* matches your menu hover tone */
+  text-decoration-color: #d1bfa7; /* matches your menu hover tone */
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1519,7 +1519,7 @@ footer .credits a {
 
 /* First letters */
 .footer-acronym .cap{
-  color: #d6a15c;        /* same as menu hover */
+  color: #d1bfa7;        /* same as menu hover */
   font-weight: 700;
   font-size: 1.25em;     /* slightly larger */
 }
