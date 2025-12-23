@@ -1518,5 +1518,14 @@ footer .credits a {
 .footer-tagline {
   margin-bottom: 14px; /* instead of 12px */
 }
+.footer-acronym .cap {
+  color: #d1bfa7;
+  font-weight: 700;
+  font-size: 1.25em;   /* you can keep or slightly adjust */
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;        /* tiny optical lift */
+}
 
 
