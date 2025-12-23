@@ -1510,9 +1510,8 @@ footer .credits a {
 }
 
 /* Separators (only if you wrap them in spans) */
-.footer-acronym .sep{
-  margin: 0 10px;
-  opacity: 0.9;
+.footer-tagline{
+  margin-bottom: 14px;  /* this is the sweet spot */
 }
 .footer-tagline{
   font-style: italic;
