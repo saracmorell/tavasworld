@@ -1532,5 +1532,10 @@ html { overflow-y: scroll; }
   display: inline-block;
   white-space: nowrap;
 }
+/* Prevent mobile from splitting T.A.V.A.S words */
+.footer-acronym .word {
+  display: inline-block;
+  white-space: nowrap;
+}
 
 
