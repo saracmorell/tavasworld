@@ -1489,16 +1489,6 @@ footer .credits a {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
-.footer-brandline span{
-  font-size: 1.12em;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: #d1bfa7;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
-}
-
 /* Acronym styling */
 .footer-acronym{
   font-size: 0.95rem;
@@ -1519,4 +1509,10 @@ footer .credits a {
 .footer-acronym .sep{
   margin: 0 10px;
   opacity: 0.9;
+}
+.footer-tagline{
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-top: 6px;
 }
