@@ -1557,4 +1557,12 @@ html { overflow-y: scroll; }
 .footer-copy {
   margin-top: 0;
 }
+.footer-section::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(209, 191, 167, 0.35);
+  margin: 0 auto 22px;
+}
 
