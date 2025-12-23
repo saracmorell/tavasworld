@@ -1528,5 +1528,9 @@ html { overflow-y: scroll; }
 .hero-section {
   background-attachment: scroll;
 }
+.footer-acronym .word {
+  display: inline-block;
+  white-space: nowrap;
+}
 
 
