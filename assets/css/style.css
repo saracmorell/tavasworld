@@ -1476,3 +1476,8 @@ footer .credits a {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   background: #fff;
 }
+.about-content p {
+  max-width: 720px;
+  margin: 20px auto;
+  line-height: 1.7;
+}
