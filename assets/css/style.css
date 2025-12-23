@@ -1481,17 +1481,6 @@ footer .credits a {
   margin: 20px auto;
   line-height: 1.7;
 }
-.footer-acronym {
-  font-size: 0.9rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.footer-acronym span {
-  font-size: 1.15em;   /* slightly larger, not loud */
-  font-weight: 700;
-  color: #d1bfa7;      /* your sunset gold */
-}
 /* Footer brand line */
 .footer-brandline{
   font-size: 1.05rem;
@@ -1504,7 +1493,7 @@ footer .credits a {
   font-size: 1.12em;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: #d1bfa7; /* matches your menu hover tone */
+  text-decoration-color: #d1bfa7;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1515,18 +1504,18 @@ footer .credits a {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 8px;
+  color: #ffffff; /* makes non-first letters white */
 }
 
-/* First letters */
+/* First letters only */
 .footer-acronym .cap{
-  color: #d1bfa7;        /* same as menu hover */
+  color: #d1bfa7;
   font-weight: 700;
-  font-size: 1.25em;     /* slightly larger */
+  font-size: 1.15em;   /* don’t go 1.25, it looks loud */
 }
 
-/* The dots */
+/* Separators (only if you wrap them in spans) */
 .footer-acronym .sep{
   margin: 0 10px;
   opacity: 0.9;
 }
-
