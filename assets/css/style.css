@@ -1537,5 +1537,9 @@ html { overflow-y: scroll; }
   display: inline-block;
   white-space: nowrap;
 }
-
+@media (max-width: 480px) {
+  .footer-acronym {
+    line-height: 1.8;
+  }
+}
 
