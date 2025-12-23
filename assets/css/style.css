@@ -1481,3 +1481,15 @@ footer .credits a {
   margin: 20px auto;
   line-height: 1.7;
 }
+.footer-acronym {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.footer-acronym span {
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #d6a15c; /* sunset gold */
+}
