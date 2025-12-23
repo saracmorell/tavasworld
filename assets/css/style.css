@@ -1513,8 +1513,6 @@ footer .credits a {
   opacity: 0.9;
 }
 .footer-tagline{
-  font-size: 0.9rem;
   font-style: italic;
-  opacity: 0.9;
-  margin-top: 6px;
+  opacity: 0.85;
 }
