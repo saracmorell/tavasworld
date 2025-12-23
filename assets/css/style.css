@@ -1520,5 +1520,13 @@ footer .credits a {
 .footer-tagline {
   margin-bottom: 14px; /* instead of 12px */
 }
+/* 1) Stop page shift between pages with/without a scrollbar */
+html { overflow-y: scroll; }
+
+/* 2) Prevent “fixed background” jank on pages like Connect */
+.bg-image,
+.hero-section {
+  background-attachment: scroll;
+}
 
 
