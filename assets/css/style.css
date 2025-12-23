@@ -1502,7 +1502,10 @@ footer .credits a {
 .footer-acronym .cap{
   color: #d1bfa7;
   font-weight: 700;
-  font-size: 1.15em;   /* don’t go 1.25, it looks loud */
+  font-size: 1.35em;     /* noticeable but still elegant */
+  letter-spacing: 0.02em;
+  position: relative;
+  top: 1px;              /* gives subtle lift */
 }
 
 /* Separators (only if you wrap them in spans) */
