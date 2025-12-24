@@ -24,6 +24,11 @@ body {
    ========================= */
 
 /* Standard H1 for ALL inner pages */
+/* =========================
+   GLOBAL PAGE TITLE SETTINGS
+   ========================= */
+
+/* Standard H1 for ALL inner pages */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -54,6 +59,29 @@ h1 {
   font-weight: 500;
 }
 
+/* HOMEPAGE HERO title stays larger and white */
+.hero .hero-title,
+.hero-section h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-bottom: 6px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1,
+  .title-a,
+  .title-left {
+    font-size: 1.9rem;
+  }
+
+  .hero .hero-title,
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
 /* HOMEP*
 h2,
 h3,
