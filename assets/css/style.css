@@ -19,6 +19,11 @@ body {
    ========================= */
 
 /* Standard H1 for ALL inner pages */
+/* =========================
+   GLOBAL PAGE TITLE SETTINGS
+   ========================= */
+
+/* Standard H1 for ALL inner pages */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -29,33 +34,27 @@ h1 {
   color: #1e1e1e;
 }
 
-/* Make sure DevFolio title classes match your H1 font */
-.hero-title,
+/* DevFolio title classes, match the same font + sizing */
 .title-a,
-.title-left {
+.title-left,
+.hero-title {
   font-family: 'Playfair Display', serif;
 }
 
-/* Homepage hero H1 stays bigger and white */
-.hero-section h1 {
-  font-size: 3.2rem;
-  line-height: 1.1;
-  color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  margin-bottom: 6px;
+/* Keep “section title” look consistent with H1 sizing */
+.title-a {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: none; /* removes forced uppercase */
 }
 
-/* Mobile sizing */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.9rem;
-  }
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
+/* Left titles match */
+.title-left {
+  font-size: 2.2rem;
+  font-weight: 500;
 }
 
-
+/* HOMEP*
 h2,
 h3,
 h4,
