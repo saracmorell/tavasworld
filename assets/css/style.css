@@ -14,6 +14,11 @@ body {
   color: #4e4e4e;
 }
 
+/* =========================
+   Tavas World Title Standards
+   ========================= */
+
+/* Standard H1 for ALL inner pages */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
@@ -23,26 +28,33 @@ h1 {
   line-height: 1.2;
   color: #1e1e1e;
 }
-.hero-section h1 {
-  font-size: 3.2rem;
-  color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  margin-bottom: 6px;
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.9rem;
-  }
 
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-}
+/* Make sure DevFolio title classes match your H1 font */
 .hero-title,
 .title-a,
 .title-left {
   font-family: 'Playfair Display', serif;
 }
+
+/* Homepage hero H1 stays bigger and white */
+.hero-section h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-bottom: 6px;
+}
+
+/* Mobile sizing */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
+
 
 h2,
 h3,
