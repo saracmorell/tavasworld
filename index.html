@@ -193,7 +193,7 @@
     <section class="hero-section">
       <h1>Welcome to Tavas World</h1>
       <p class="hero-subtitle">
-        <span class="typed" data-typed-items="Inspire, Create, Power, Connect, Mentor, Publish"></span>
+      <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Mentor, Publish"></span>
       </p>
       <p class="tagline">A Creative World Inspired by Freedom</p>
     </section>
@@ -247,20 +247,26 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script>
-    const typed = new Typed('.typed', {
-      strings: document.querySelector('.typed').getAttribute('data-typed-items').split(', '),
-      typeSpeed: 80,
-      backSpeed: 40,
-      backDelay: 2000,
-      loop: true
-    });
+ <script>
+  const typedItems = document
+    .querySelector('.typed')
+    .getAttribute('data-typed-items')
+    .split(',')
+    .map(s => s.trim());
 
-    // Mobile nav toggle functionality
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-      document.querySelector('#navbar ul').classList.toggle('show');
-    });
-  </script>
+  new Typed('.typed', {
+    strings: typedItems,
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 2000,
+    loop: true
+  });
+
+  // Mobile nav toggle functionality
+  document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+    document.querySelector('#navbar ul').classList.toggle('show');
+  });
+</script>
 </body>
 
 </html>
