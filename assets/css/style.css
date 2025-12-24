@@ -14,7 +14,12 @@ body {
   color: #4e4e4e;
 }
 
-h1,
+h1{
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+}
 h2,
 h3,
 h4,
