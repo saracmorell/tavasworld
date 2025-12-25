@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tavas World</title>
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/upgrade.css">
 
-<style>
-  body {
-    font-family: 'Georgia', serif;
-    background-color: #fffdf8;
-    color: #2c2c2c;
-  }
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  .hero-section {
-    background-image: url('assets/img/lake.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-</style>
+  <!-- Site CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/upgrade.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #fffdf8;
+      color: #2c2c2c;
+    }
+
+    .hero-section {
+      background-image: url("assets/img/lake.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      position: relative;      /* REQUIRED for ::before overlay */
+      overflow: hidden;        /* Keeps overlay clean */
+    }
+
     .hero-section::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background: rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
+
     .hero-section h1,
     .hero-subtitle,
     .tagline {
       position: relative;
       z-index: 2;
     }
+
     .hero-section h1 {
       font-size: 3.2rem;
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       color: #ffffff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      margin: 0;
     }
+
     .hero-subtitle {
       font-size: 2rem;
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       color: #ffffff;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      margin: 10px 0 0 0;
     }
+
     .typed {
       font-size: 2.8rem !important;
       font-weight: 600;
       color: #ffffff;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
     }
+
     .typed-cursor {
       font-weight: bold;
       color: #ffffff;
     }
+
     header#header {
       background-color: rgba(0, 0, 0, 0.85);
     }
+
     #navbar {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
     }
+
     #navbar ul {
       margin: 0;
       padding: 0;
@@ -86,24 +101,30 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: center;
     }
+
     #navbar ul li {
       margin-left: 20px;
     }
+
     #navbar ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       transition: 0.3s;
     }
+
     #navbar ul li a:hover,
     #navbar ul li a.active {
       color: #d1bfa7;
     }
+
     .featured-book {
       text-align: center;
       margin: 40px auto;
     }
+
     .featured-book img {
       max-width: 300px;
       height: auto;
@@ -111,9 +132,11 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
     }
+
     .featured-book img:hover {
       transform: scale(1.05);
     }
+
     .seo-content {
       max-width: 800px;
       margin: 40px auto;
@@ -121,15 +144,18 @@
       text-align: center;
       color: #333;
     }
+
     .seo-content h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: "Playfair Display", serif;
       font-size: 1.75rem;
       margin-bottom: 20px;
     }
+
     .seo-content p {
       font-size: 1.05rem;
       margin-top: 15px;
     }
+
     .footer-section {
       background-color: #1a1a1a;
       padding: 40px 20px;
@@ -138,12 +164,14 @@
       color: #ccc;
       margin-top: 60px;
     }
+
     .tagline {
       font-size: 1.2rem;
       margin-top: 10px;
       font-style: italic;
       color: #e0e0e0;
     }
+
     @media (max-width: 768px) {
       #navbar ul {
         flex-direction: column;
@@ -156,17 +184,21 @@
         z-index: 9999;
         padding: 20px;
       }
+
       #navbar ul.show {
         display: flex;
       }
+
       #navbar ul li {
         margin: 10px 0;
       }
+
       .typed {
         font-size: 1.8rem !important;
         line-height: 1.6;
         padding: 0 15px;
       }
+
       .hero-subtitle {
         font-size: 1.4rem !important;
         color: #fff !important;
@@ -194,81 +226,90 @@
     <section class="hero-section">
       <h1>Welcome to Tavas World</h1>
       <p class="hero-subtitle">
-      <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Mentor, Publish"></span>
+        <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Mentor, Publish"></span>
       </p>
       <p class="tagline">A Creative World Inspired by Freedom</p>
     </section>
 
     <section class="featured-book">
       <a href="books.html">
-        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas">
+        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas" />
       </a>
     </section>
 
     <section class="seo-content">
       <h2>Empowering Minds Through Storytelling, Mentorship, and Meaning.</h2>
-     <p>
- Welcome to Tavas World—where imagination meets purpose. Created by children’s book author, publisher, and mentor Sara C. Morell, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection. From heartwarming picture books to guided journals and hands-on activity books, each creation is designed to spark learning and meaningful conversations.
-</p>
-<p>
-  Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real-life lessons to empower young readers and the adults guiding them. Tavas World is growing—with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs in the near future.
-</p>
-<p>
-  Explore the collection, connect through story, and discover the mission behind Tavas World—one book at a time.
-</p>
 
+      <p>
+        Welcome to Tavas World, where imagination meets purpose. Created by children’s book author, publisher, and mentor Sara C. Morell, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection. From heartwarming picture books to guided journals and hands on activity books, each creation is designed to spark learning and meaningful conversations.
+      </p>
+
+      <p>
+        Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real life lessons to empower young readers and the adults guiding them. Tavas World is growing, with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs in the near future.
+      </p>
+
+      <p>
+        Explore the collection, connect through story, and discover the mission behind Tavas World, one book at a time.
+      </p>
     </section>
 
-  <section class="footer-section">
-  <div class="footer-brandline">Tavas <span>World</span></div>
+    <section class="footer-section">
+      <div class="footer-brandline">Tavas <span>World</span></div>
 
-  <div class="footer-acronym">
-  <span class="word"><span class="cap">T</span>ravel</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">A</span>dventure</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">V</span>ision</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">A</span>spiration</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">S</span>uccess</span>
-</div>
-  <div class="footer-tagline">
-    Navigating the world with intention.
-  </div>
-  <div class="footer-copy">
-    © 2025 Tavas World. All rights reserved.
-  </div>
-</section>
+      <div class="footer-acronym">
+        <span class="word"><span class="cap">T</span>ravel</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">A</span>dventure</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">V</span>ision</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">A</span>spiration</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">S</span>uccess</span>
+      </div>
 
+      <div class="footer-tagline">Navigating the world with intention.</div>
+      <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
+    </section>
   </main>
 
+  <!-- Vendor JS -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
- <script>
-  const typedItems = document
-    .querySelector('.typed')
-    .getAttribute('data-typed-items')
-    .split(',')
-    .map(s => s.trim());
 
-  new Typed('.typed', {
-    strings: typedItems,
-    typeSpeed: 80,
-    backSpeed: 40,
-    backDelay: 2000,
-    loop: true
-  });
+  <!-- Upgrade JS (make sure THIS file exists at assets/js/upgrade.js) -->
+  <script src="assets/js/upgrade.js"></script>
 
-  // Mobile nav toggle functionality
-  document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-    document.querySelector('#navbar ul').classList.toggle('show');
-  });
-     <script src="assets/js/upgrade.js"></script>
-</script>
+  <!-- Page JS -->
+  <script>
+    // Typed
+    const typedEl = document.querySelector(".typed");
+    if (typedEl) {
+      const typedItems = typedEl
+        .getAttribute("data-typed-items")
+        .split(",")
+        .map((s) => s.trim());
+
+      new Typed(".typed", {
+        strings: typedItems,
+        typeSpeed: 80,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+      });
+    }
+
+    // Mobile nav toggle
+    const toggle = document.querySelector(".mobile-nav-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        const menu = document.querySelector("#navbar ul");
+        if (menu) menu.classList.toggle("show");
+      });
+    }
+  </script>
 </body>
-
 </html>
