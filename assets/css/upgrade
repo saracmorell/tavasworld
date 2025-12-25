@@ -1,0 +1,171 @@
+/* ==========================================================
+   Tavas World Upgrade Layer (SAFE ADD-ON)
+   Earth tones + cinematic + subtle gaming polish
+   Remove this file link to revert instantly.
+   ========================================================== */
+
+:root{
+  --ink:#101010;
+  --paper:#fbf8f2;
+  --choco:#241a14;
+  --cocoa:#3a2a22;
+  --sand:#d7c3a8;
+  --latte:#efe3d3;
+  --gold:#d1bfa7;
+  --line:rgba(36,26,20,.14);
+
+  --radius:18px;
+  --shadow: 0 20px 60px rgba(0,0,0,.28);
+  --shadow-soft: 0 10px 30px rgba(0,0,0,.18);
+}
+
+html { scroll-behavior: smooth; }
+body{
+  background: var(--paper);
+  color: var(--cocoa);
+}
+
+a{ text-decoration: none; }
+a:hover{ opacity:.92; }
+
+/* ---- Optional page container polish (doesn't break layout) ---- */
+.container, .container-fluid{
+  position: relative;
+}
+
+/* ==========================================================
+   HERO: cinematic overlay + water shimmer layer
+   Works if your hero uses #hero or .hero or .hero-section.
+   ========================================================== */
+
+#hero, .hero, .hero-section{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Dark cinematic overlay */
+#hero::before, .hero::before, .hero-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(1200px 700px at 20% 30%, rgba(0,0,0,.12), transparent 60%),
+    linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.25) 55%, rgba(0,0,0,.60));
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Subtle “lake shimmer” layer */
+#hero::after, .hero::after, .hero-section::after{
+  content:"";
+  position:absolute;
+  left:-20%;
+  right:-20%;
+  bottom:-25%;
+  height:55%;
+  background:
+    radial-gradient(900px 250px at 50% 0%, rgba(255,255,255,.10), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,.06) 0px,
+      rgba(255,255,255,.02) 18px,
+      rgba(255,255,255,.00) 36px
+    );
+  filter: blur(0.2px);
+  opacity:.55;
+  transform: skewY(-2deg);
+  mix-blend-mode: overlay;
+  pointer-events:none;
+  z-index:1;
+  animation: twShimmer 10s linear infinite;
+}
+
+@keyframes twShimmer{
+  0%{ transform: skewY(-2deg) translateX(0); }
+  100%{ transform: skewY(-2deg) translateX(140px); }
+}
+
+/* Make sure hero content sits above overlays */
+#hero * , .hero * , .hero-section * { position: relative; z-index: 2; }
+
+/* Hero text polish */
+#hero h1, .hero h1, .hero-section h1,
+#hero .hero-title, .hero .hero-title, .hero-section .hero-title{
+  color: #fff;
+  text-shadow: 0 10px 40px rgba(0,0,0,.55);
+  letter-spacing: .2px;
+}
+
+#hero p, .hero p, .hero-section p,
+#hero .hero-subtitle, .hero .hero-subtitle, .hero-section .hero-subtitle{
+  color: rgba(255,255,255,.92);
+  text-shadow: 0 10px 40px rgba(0,0,0,.45);
+}
+
+/* ==========================================================
+   BUTTONS: modern, “gaming-polished” but earthy
+   ========================================================== */
+
+.tw-btn,
+a.btn, button.btn, .button, .button-a{
+  border-radius: 999px !important;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  will-change: transform;
+}
+
+.tw-btn:hover,
+a.btn:hover, button.btn:hover, .button:hover, .button-a:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  filter: saturate(1.05);
+}
+
+/* Optional “primary” earth-tone button */
+.tw-btn-primary{
+  background: linear-gradient(180deg, #3a2a22, #241a14);
+  color: var(--latte) !important;
+  border: 1px solid rgba(209,191,167,.35);
+}
+
+.tw-btn-primary:hover{
+  box-shadow: 0 18px 55px rgba(0,0,0,.35);
+}
+
+/* ==========================================================
+   CARDS + SECTIONS: cleaner, more premium spacing
+   ========================================================== */
+
+.box-shadow-full, .service-box, .work-box, .card, .card-blog{
+  border-radius: var(--radius);
+  border: 1px solid rgba(36,26,20,.10);
+}
+
+.sect-pt4, .sect-4{
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+
+/* ==========================================================
+   REVEAL ANIMATION (activated by JS, safe if JS missing)
+   ========================================================== */
+.tw-reveal{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.tw-reveal.tw-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================
+   ACCESSIBILITY: respect reduced motion
+   ========================================================== */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  #hero::after, .hero::after, .hero-section::after{ animation: none; }
+  .tw-reveal{ transition: none; }
+  .tw-btn, a.btn, button.btn, .button, .button-a{ transition: none; }
+}
