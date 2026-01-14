@@ -1,69 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Portfolio | Sara C. Morell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- IMPORTANT: keeps this page out of Google -->
-  <meta name="robots" content="noindex, nofollow">
+  <!-- Keeps this page out of Google -->
+  <meta name="robots" content="noindex, nofollow" />
 
   <style>
-    body {
-      font-family: Georgia, serif;
-      background-color: #fffdf8;
-      color: #1f1f1f;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg: #0b0f14;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.09);
+      --line: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.58);
+      --accent: #b7a36a;
+      --accent2:#d6c27c;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 980px;
     }
-    .container {
-      max-width: 900px;
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(183,163,106,.18), transparent 55%),
+                  radial-gradient(900px 600px at 80% 20%, rgba(214,194,124,.12), transparent 60%),
+                  radial-gradient(900px 700px at 55% 90%, rgba(255,255,255,.06), transparent 55%),
+                  var(--bg);
+      letter-spacing: .2px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:focus{ outline: 2px solid rgba(183,163,106,.55); outline-offset: 3px; border-radius: 10px; }
+
+    .wrap{
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 48px 20px;
+      padding: 46px 18px 64px;
     }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 28px;
     }
-    p {
-      font-size: 18px;
-      max-width: 760px;
+
+    .brand{
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
     }
-    .section {
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(0,0,0,0.15);
+
+    .kicker{
+      color: var(--muted2);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
     }
-    a {
-      color: #1f4b3a;
-      font-weight: 600;
-      text-decoration: none;
+
+    h1{
+      margin:0;
+      font-size: 34px;
+      font-weight: 650;
+      letter-spacing: .3px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .meta{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 78ch;
+      line-height: 1.65;
+    }
+
+    .actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-size: 14px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.18);
+    }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(183,163,106,.28), rgba(183,163,106,.12));
+      border-color: rgba(183,163,106,.45);
+    }
+    .btn.primary:hover{
+      background: linear-gradient(180deg, rgba(214,194,124,.34), rgba(183,163,106,.14));
+      border-color: rgba(214,194,124,.55);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    @media (min-width: 880px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.05));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset: -40px -60px auto auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle at 40% 40%, rgba(183,163,106,.22), transparent 60%);
+      filter: blur(0px);
+      pointer-events:none;
+    }
+
+    .cardHeader{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .cardTitle{
+      margin:0;
+      font-size: 17px;
+      font-weight: 650;
+      letter-spacing: .2px;
+    }
+
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .desc{
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+      max-width: 70ch;
+    }
+
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    li{ margin: 6px 0; }
+
+    .cardFooter{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .link{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-size: 13.5px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .link:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.20);
+    }
+
+    .full{
+      grid-column: 1 / -1;
+    }
+
+    .note{
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--muted2);
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+
+    .footer{
+      margin-top: 18px;
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,.48);
+      font-size: 12.5px;
+    }
+
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,.10);
+      margin-top: 22px;
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <h1>Portfolio</h1>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="kicker">Private portfolio, shared by link only</div>
+        <h1>Portfolio</h1>
+        <p class="meta">
+          Selected public work demonstrating digital platforms, brand systems, and content execution.
+          Additional case studies, including nonprofit communications and partnership work, are available upon request.
+        </p>
+      </div>
 
-    <p>
-      This page highlights selected public work demonstrating digital platforms,
-      brand systems, and content execution. Additional work is available upon request.
-    </p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View published books</a>
+        <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View Shine On</a>
+      </div>
+    </div>
 
-    <div class="section">
-      <h2>Web and Brand Platforms</h2>
+    <section class="grid">
+      <article class="card">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Salomon Farms &amp; Trucking</h2>
+          <div class="tag">GitHub-managed website</div>
+        </div>
+        <p class="desc">
+          A clean, business-forward site built and maintained through a GitHub codebase, designed for clarity, trust, and conversion.
+        </p>
+        <ul>
+          <li>Structured site navigation and layout for quick scanning and clear calls to action.</li>
+          <li>Implemented brand consistency across typography, messaging, and visual hierarchy.</li>
+          <li>Maintain ongoing updates directly in code, keeping the site current and accurate.</li>
+        </ul>
+        <div class="cardFooter">
+          <a class="link" href="https://sftrucking406.com/" target="_blank" rel="noopener">Open site</a>
+        </div>
+      </article>
 
-      <p>
-        <a href="https://sftrucking406.com/" target="_blank">Salomon Farms & Trucking</a><br>
-        Custom GitHub-managed website, branding, layout, and ongoing updates.
-      </p>
+      <article class="card">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Shine On Journal</h2>
+          <div class="tag">Brand, UX, product presence</div>
+        </div>
+        <p class="desc">
+          A focused digital presence aligned to a journaling and reflection concept, designed to feel calm, polished, and intentional.
+        </p>
+        <ul>
+          <li>Organized content for a clean experience and fast understanding of the offering.</li>
+          <li>Balanced tone, messaging, and design to match audience expectations.</li>
+          <li>Iterated directly in the GitHub workflow to refine structure and presentation.</li>
+        </ul>
+        <div class="cardFooter">
+          <a class="link" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">Open site</a>
+        </div>
+      </article>
 
-      <p>
-        <a href="https://www.shineonjournal.com/" target="_blank">Shine On Journal</a><br>
-        Brand concept, produ
+      <article class="card full">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Tavas World, Publishing &amp; Content System</h2>
+          <div class="tag">Long-term brand execution</div>
+        </div>
+        <p class="desc">
+          A multi-title publishing presence supported by consistent branding, clear content structure, and ongoing updates through a GitHub-managed website.
+        </p>
+        <ul>
+          <li>Maintained a consistent brand system across multiple titles and categories.</li>
+          <li>Built a clean “books” hub that makes browsing and discovery easy.</li>
+          <li>Updated and managed content directly in the codebase to keep listings accurate.</li>
+        </ul>
+        <div class="cardFooter">
+          <a class="link" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">Open books page</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="note">
+      Note: This portfolio page is intentionally not linked in the site navigation and includes a no-index tag.
+      It is shared directly with hiring teams and partners upon request.
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="footer">
+      <div>Sara C. Morell</div>
+      <div>Portfolio page, by direct link</div>
+    </div>
+  </main>
+</body>
+</html>
 
