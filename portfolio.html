@@ -10,76 +10,74 @@
 
   <style>
     :root{
-      --bg: #0b0f14;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.09);
-      --line: rgba(255,255,255,.12);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --muted2: rgba(255,255,255,.58);
-      --accent: #b7a36a;
-      --accent2:#d6c27c;
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --bg: #0f1113;
+      --panel: rgba(255,255,255,0.04);
+      --panel2: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --muted2: rgba(255,255,255,0.52);
+      --accent: #c9b77a;         /* muted brass */
+      --accentLine: rgba(201,183,122,0.35);
       --radius: 18px;
-      --max: 980px;
+      --max: 1020px;
     }
 
     *{ box-sizing: border-box; }
     html, body { height: 100%; }
+
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(183,163,106,.18), transparent 55%),
-                  radial-gradient(900px 600px at 80% 20%, rgba(214,194,124,.12), transparent 60%),
-                  radial-gradient(900px 700px at 55% 90%, rgba(255,255,255,.06), transparent 55%),
-                  var(--bg);
-      letter-spacing: .2px;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
     }
 
     a{ color: inherit; text-decoration: none; }
-    a:focus{ outline: 2px solid rgba(183,163,106,.55); outline-offset: 3px; border-radius: 10px; }
+    a:hover{ text-decoration: none; }
+    a:focus{
+      outline: 2px solid var(--accentLine);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
 
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 46px 18px 64px;
+      padding: 44px 18px 64px;
     }
 
     .topbar{
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction: column;
-      gap: 6px;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
     }
 
     .kicker{
       color: var(--muted2);
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1.6px;
+      margin-bottom: 10px;
     }
 
     h1{
-      margin:0;
-      font-size: 34px;
+      margin: 0;
+      font-size: 36px;
       font-weight: 650;
-      letter-spacing: .3px;
+      letter-spacing: 0.4px;
     }
 
     .meta{
-      margin-top: 8px;
+      margin-top: 10px;
       color: var(--muted);
       font-size: 15px;
       max-width: 78ch;
-      line-height: 1.65;
     }
 
     .actions{
@@ -87,6 +85,7 @@
       gap: 10px;
       flex-wrap: wrap;
       justify-content: flex-end;
+      margin-top: 6px;
     }
 
     .btn{
@@ -96,56 +95,45 @@
       padding: 11px 14px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
+      background: transparent;
       color: var(--text);
       font-size: 14px;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
       white-space: nowrap;
     }
+
     .btn:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.18);
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.14);
     }
+
     .btn.primary{
-      background: linear-gradient(180deg, rgba(183,163,106,.28), rgba(183,163,106,.12));
-      border-color: rgba(183,163,106,.45);
+      border-color: var(--accentLine);
+      background: rgba(201,183,122,0.08);
     }
+
     .btn.primary:hover{
-      background: linear-gradient(180deg, rgba(214,194,124,.34), rgba(183,163,106,.14));
-      border-color: rgba(214,194,124,.55);
+      background: rgba(201,183,122,0.12);
+      border-color: rgba(201,183,122,0.45);
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr;
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 18px;
     }
 
-    @media (min-width: 880px){
+    @media (min-width: 900px){
       .grid{ grid-template-columns: 1fr 1fr; }
     }
 
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.05));
+      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 18px 18px 16px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before{
-      content:"";
-      position:absolute;
-      inset: -40px -60px auto auto;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle at 40% 40%, rgba(183,163,106,.22), transparent 60%);
-      filter: blur(0px);
-      pointer-events:none;
     }
 
     .cardHeader{
@@ -160,7 +148,7 @@
       margin:0;
       font-size: 17px;
       font-weight: 650;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
     }
 
     .tag{
@@ -168,8 +156,8 @@
       align-items:center;
       padding: 7px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
       color: var(--muted);
       font-size: 12px;
       white-space: nowrap;
@@ -179,8 +167,8 @@
       margin: 0 0 12px 0;
       color: var(--muted);
       font-size: 14.5px;
-      line-height: 1.65;
-      max-width: 70ch;
+      line-height: 1.7;
+      max-width: 72ch;
     }
 
     ul{
@@ -190,7 +178,14 @@
       font-size: 14px;
       line-height: 1.7;
     }
-    li{ margin: 6px 0; }
+    li{ margin: 7px 0; }
+
+    .status{
+      margin-top: 10px;
+      color: var(--muted2);
+      font-size: 13px;
+      letter-spacing: 0.2px;
+    }
 
     .cardFooter{
       display:flex;
@@ -202,19 +197,21 @@
     .link{
       display:inline-flex;
       align-items:center;
+      justify-content: center;
       gap: 8px;
       padding: 10px 12px;
       border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
       color: var(--text);
       font-size: 13.5px;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
+
     .link:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.20);
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.14);
     }
 
     .full{
@@ -225,27 +222,27 @@
       margin-top: 18px;
       padding: 14px 16px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      background: var(--panel2);
       color: var(--muted2);
       font-size: 13.5px;
       line-height: 1.7;
     }
 
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-top: 22px;
+    }
+
     .footer{
-      margin-top: 18px;
+      margin-top: 16px;
       display:flex;
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      color: rgba(255,255,255,.48);
+      color: rgba(255,255,255,0.44);
       font-size: 12.5px;
-    }
-
-    .hr{
-      height: 1px;
-      background: rgba(255,255,255,.10);
-      margin-top: 22px;
     }
   </style>
 </head>
@@ -253,7 +250,7 @@
 <body>
   <main class="wrap">
     <div class="topbar">
-      <div class="brand">
+      <div>
         <div class="kicker">Private portfolio, shared by link only</div>
         <h1>Portfolio</h1>
         <p class="meta">
@@ -264,7 +261,7 @@
 
       <div class="actions">
         <a class="btn primary" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View published books</a>
-        <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View Shine On</a>
+        <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View Shine On MVP page</a>
       </div>
     </div>
 
@@ -278,7 +275,7 @@
           A clean, business-forward site built and maintained through a GitHub codebase, designed for clarity, trust, and conversion.
         </p>
         <ul>
-          <li>Structured site navigation and layout for quick scanning and clear calls to action.</li>
+          <li>Structured navigation and page layout for fast scanning and clear calls to action.</li>
           <li>Implemented brand consistency across typography, messaging, and visual hierarchy.</li>
           <li>Maintain ongoing updates directly in code, keeping the site current and accurate.</li>
         </ul>
@@ -290,18 +287,19 @@
       <article class="card">
         <div class="cardHeader">
           <h2 class="cardTitle">Shine On Journal</h2>
-          <div class="tag">Brand, UX, product presence</div>
+          <div class="tag">App in development</div>
         </div>
         <p class="desc">
-          A focused digital presence aligned to a journaling and reflection concept, designed to feel calm, polished, and intentional.
+          A journaling and reflection app in active development. The current public page is the MVP landing presence while the product build continues, with features rolling out in phases.
         </p>
         <ul>
-          <li>Organized content for a clean experience and fast understanding of the offering.</li>
-          <li>Balanced tone, messaging, and design to match audience expectations.</li>
-          <li>Iterated directly in the GitHub workflow to refine structure and presentation.</li>
+          <li>Defined MVP scope and user experience direction, with a phased roadmap for expanded features.</li>
+          <li>Built a public-facing landing presence to support early positioning and future launch readiness.</li>
+          <li>Iterating through a GitHub-managed workflow as functionality and UI are refined.</li>
         </ul>
+        <div class="status">Status: MVP in progress, app build underway.</div>
         <div class="cardFooter">
-          <a class="link" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">Open site</a>
+          <a class="link" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View MVP landing page</a>
         </div>
       </article>
 
@@ -315,7 +313,7 @@
         </p>
         <ul>
           <li>Maintained a consistent brand system across multiple titles and categories.</li>
-          <li>Built a clean “books” hub that makes browsing and discovery easy.</li>
+          <li>Built a clean books hub that makes browsing and discovery easy.</li>
           <li>Updated and managed content directly in the codebase to keep listings accurate.</li>
         </ul>
         <div class="cardFooter">
