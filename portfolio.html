@@ -8,7 +8,7 @@
   <!-- Keep private -->
   <meta name="robots" content="noindex, nofollow" />
 
-  <!-- Fonts (executive, clean) -->
+  <!-- Executive typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,77 +21,76 @@
       --line:rgba(255,255,255,0.11);
       --text:rgba(255,255,255,0.92);
       --muted:rgba(255,255,255,0.70);
-      --muted2:rgba(255,255,255,0.56);
-      --shadow: 0 14px 40px rgba(0,0,0,0.35);
+      --muted2:rgba(255,255,255,0.55);
+      --shadow:0 18px 44px rgba(0,0,0,0.35);
       --radius:18px;
       --max:1040px;
     }
 
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box;}
     body{
       margin:0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      letter-spacing: 0.1px;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      letter-spacing:0.1px;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:focus{ outline: 2px solid rgba(255,255,255,0.35); outline-offset: 3px; border-radius: 10px; }
+    a{color:inherit;text-decoration:none;}
+    a:focus{outline:2px solid rgba(255,255,255,0.35);outline-offset:3px;border-radius:10px;}
 
     .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 54px 18px 70px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:56px 18px 72px;
     }
 
-    /* Top framing */
     .kicker{
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.46);
-      margin-bottom: 10px;
+      font-size:11px;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.46);
+      margin-bottom:12px;
     }
 
     .topRow{
       display:flex;
-      gap:16px;
       justify-content:space-between;
-      align-items:flex-start;
+      gap:18px;
       flex-wrap:wrap;
+      align-items:flex-start;
     }
 
     h1{
       margin:0;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 46px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      line-height: 1.05;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:46px;
+      font-weight:700;
+      line-height:1.05;
+      letter-spacing:0.2px;
     }
 
     .identity{
-      margin-top: 12px;
+      margin-top:14px;
+      max-width:78ch;
       display:flex;
       flex-direction:column;
-      gap: 10px;
-      max-width: 78ch;
+      gap:10px;
     }
 
     .name{
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.80);
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.80);
     }
 
     .intro{
-      font-size: 16px;
-      line-height: 1.75;
-      color: var(--muted);
+      font-size:16px;
+      line-height:1.75;
+      color:var(--muted);
       margin:0;
     }
 
@@ -99,122 +98,118 @@
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      margin-top: 6px;
+      margin-top:6px;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:8px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: rgba(255,255,255,0.88);
-      font-size: 13.5px;
-      font-weight: 500;
-      white-space: nowrap;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      font-size:13.5px;
+      font-weight:500;
+      color:rgba(255,255,255,0.88);
+      white-space:nowrap;
     }
-    .btn:hover{ background: rgba(255,255,255,0.06); }
+    .btn:hover{background:rgba(255,255,255,0.06);}
 
     .divider{
       height:1px;
-      background: rgba(255,255,255,0.10);
-      margin: 26px 0 18px;
+      background:rgba(255,255,255,0.10);
+      margin:28px 0 20px;
     }
 
-    /* Grid */
     .grid{
       display:grid;
       grid-template-columns:1fr;
-      gap: 14px;
-      margin-top: 18px;
+      gap:14px;
+      margin-top:18px;
     }
-    @media(min-width: 900px){
-      .grid{ grid-template-columns:1fr 1fr; }
+    @media(min-width:900px){
+      .grid{grid-template-columns:1fr 1fr;}
     }
 
     .card{
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow);
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 18px 16px;
+      box-shadow:var(--shadow);
     }
 
     .cardHeader{
       display:flex;
       justify-content:space-between;
-      gap: 12px;
+      gap:12px;
       align-items:flex-start;
-      margin-bottom: 10px;
+      margin-bottom:10px;
     }
 
     .cardTitle{
       margin:0;
-      font-size: 18px;
-      font-weight: 650;
-      letter-spacing: 0.1px;
+      font-size:18px;
+      font-weight:650;
+      letter-spacing:0.1px;
     }
 
     .tag{
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: rgba(255,255,255,0.66);
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.03);
+      color:rgba(255,255,255,0.66);
       white-space:nowrap;
     }
 
     .desc{
-      margin: 0 0 12px 0;
-      font-size: 14.5px;
-      color: var(--muted);
-      max-width: 74ch;
+      margin:0 0 12px 0;
+      font-size:14.5px;
+      line-height:1.7;
+      color:var(--muted);
+      max-width:74ch;
     }
 
     ul{
       margin:0;
-      padding-left: 18px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.68);
-      line-height: 1.7;
+      padding-left:18px;
+      font-size:14px;
+      color:rgba(255,255,255,0.68);
+      line-height:1.7;
     }
-    li{ margin: 7px 0; }
+    li{margin:7px 0;}
 
     .status{
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted2);
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted2);
     }
 
-    .cardFooter{
-      margin-top: 14px;
-    }
-
-    .full{ grid-column: 1 / -1; }
+    .cardFooter{margin-top:14px;}
+    .full{grid-column:1 / -1;}
 
     .note{
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: var(--panel2);
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.60);
-      line-height: 1.7;
+      margin-top:20px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:var(--panel2);
+      font-size:13.5px;
+      color:rgba(255,255,255,0.60);
+      line-height:1.7;
     }
 
     .footer{
-      margin-top: 18px;
+      margin-top:18px;
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
-      gap: 10px;
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.42);
+      gap:10px;
+      font-size:12.5px;
+      color:rgba(255,255,255,0.42);
     }
   </style>
 </head>
@@ -235,10 +230,10 @@
         </div>
       </div>
 
-      <div class="actions" aria-label="Portfolio quick links">
-        <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View published books</a>
-        <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View Shine On MVP</a>
-        <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">View SF&amp;Trucking</a>
+      <div class="actions">
+        <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">Salomon Farms &amp; Trucking</a>
+        <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">Shine On Journal</a>
+        <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">Publishing Portfolio</a>
       </div>
     </div>
 
@@ -249,15 +244,15 @@
       <article class="card">
         <div class="cardHeader">
           <h2 class="cardTitle">Salomon Farms &amp; Trucking</h2>
-          <div class="tag">Operational website</div>
+          <div class="tag">Revenue operations &amp; growth execution</div>
         </div>
         <p class="desc">
-          Business-forward digital presence supporting credibility, clarity, and ongoing operational continuity.
+          Ongoing operational leadership focused on revenue continuity, growth execution, and owner confidence.
         </p>
         <ul>
-          <li>Structured navigation and messaging to support trust and decision-making.</li>
-          <li>Maintained through a GitHub codebase for accuracy, control, and fast iteration.</li>
-          <li>Supports owner visibility without requiring daily involvement.</li>
+          <li>Lead revenue operations and growth execution to ensure financial flow and business momentum.</li>
+          <li>Drive visibility and demand through coordinated digital and outbound initiatives.</li>
+          <li>Maintain operational systems and digital infrastructure to support scale without daily owner involvement.</li>
         </ul>
         <div class="cardFooter">
           <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">View site</a>
@@ -267,34 +262,34 @@
       <article class="card">
         <div class="cardHeader">
           <h2 class="cardTitle">Shine On Journal</h2>
-          <div class="tag">App in development</div>
+          <div class="tag">Founder-led product in development</div>
         </div>
         <p class="desc">
-          Founder-led journaling and reflection product in active development. The public site represents MVP positioning while the build progresses.
+          Founder-led journaling and reflection product in active development, built with disciplined scope and phased delivery.
         </p>
         <ul>
-          <li>Defined MVP scope, positioning, and phased rollout direction.</li>
-          <li>Built an early public presence to support launch readiness and adoption.</li>
-          <li>Iterating functionality and UI through a GitHub-managed workflow.</li>
+          <li>Define MVP scope, positioning, and rollout strategy.</li>
+          <li>Build and refine the public-facing presence to support launch readiness.</li>
+          <li>Iterate functionality and user experience through a GitHub-managed workflow.</li>
         </ul>
-        <div class="status">Status: MVP in progress, app build underway.</div>
+        <div class="status">Status: MVP in progress, product build underway.</div>
         <div class="cardFooter">
-          <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View MVP page</a>
+          <a class="btn" href="https://www.shineonjournal.com/" target="_blank" rel="noopener">View product</a>
         </div>
       </article>
 
       <article class="card full">
         <div class="cardHeader">
           <h2 class="cardTitle">Tavas World, Publishing Platform</h2>
-          <div class="tag">Long-term execution</div>
+          <div class="tag">Portfolio stewardship</div>
         </div>
         <p class="desc">
-          Multi-title publishing presence supported by consistent structure, brand discipline, and operational maintenance.
+          Ongoing leadership of a diverse publishing portfolio spanning multiple formats, audiences, and creative directions.
         </p>
         <ul>
-          <li>Maintained a centralized books hub that supports discovery, credibility, and scale.</li>
-          <li>Ensured brand consistency across multiple titles and categories.</li>
-          <li>Managed directly in code to keep content current and accurate.</li>
+          <li>Lead a varied publishing portfolio with clear positioning for each title.</li>
+          <li>Develop and maintain a centralized books hub that supports discovery, credibility, and scale.</li>
+          <li>Update content and structure directly in code to ensure accuracy and continuity.</li>
         </ul>
         <div class="cardFooter">
           <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View books</a>
