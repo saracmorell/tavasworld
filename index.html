@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +17,8 @@
       color: #2c2c2c;
       margin: 0;
     }
+
+    /* ── HERO ── */
     .hero-section {
       background-image: url('assets/img/lake.jpg');
       background-size: cover;
@@ -34,61 +35,75 @@
     .hero-section::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
     .hero-section h1,
     .hero-subtitle,
-    .tagline {
-      position: relative;
-      z-index: 2;
-    }
+    .tagline { position: relative; z-index: 2; }
     .hero-section h1 {
       font-size: 3.2rem;
       font-family: 'Playfair Display', serif;
       color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
     .hero-subtitle {
       font-size: 2rem;
       font-family: 'Playfair Display', serif;
       color: #ffffff;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
     .typed {
       font-size: 2.8rem !important;
       font-weight: 600;
       color: #ffffff;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
-    .typed-cursor {
-      font-weight: bold;
-      color: #ffffff;
+    .typed-cursor { font-weight: bold; color: #ffffff; }
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-style: italic;
+      color: #e0e0e0;
     }
-    header#header {
-      background-color: rgba(0, 0, 0, 0.85);
+
+    /* ── HEADER / NAV ── */
+    header#header { background-color: rgba(0,0,0,0.85); }
+    .header-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .header-logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .header-logo-text {
+      font-family: 'Playfair Display', serif;
+      color: #d1bfa7;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
     #navbar {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      width: 100%;
+      flex: 1;
     }
     #navbar ul {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       list-style: none;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
     }
-    #navbar ul li {
-      margin-left: 20px;
-    }
+    #navbar ul li { margin-left: 20px; }
     #navbar ul li a {
       color: #fff;
       text-decoration: none;
@@ -96,23 +111,101 @@
       transition: 0.3s;
     }
     #navbar ul li a:hover,
-    #navbar ul li a.active {
-      color: #d1bfa7;
-    }
-    .featured-book {
+    #navbar ul li a.active { color: #d1bfa7; }
+
+    /* ── TAVAS APP SECTION ── */
+    .tavas-app-section {
+      background-color: #0f0f0f;
+      padding: 64px 24px;
       text-align: center;
-      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
     }
-    .featured-book img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+    .tavas-app-inner {
+      max-width: 660px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
-    .featured-book img:hover {
-      transform: scale(1.05);
+    .tavas-badge {
+      display: inline-block;
+      background: #c1a270;
+      color: #1a1008;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 14px;
+      border-radius: 3px;
+      margin-bottom: 22px;
     }
+    .tavas-sun {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 20px;
+      filter: drop-shadow(0 0 22px rgba(193,162,112,0.5));
+    }
+    .tavas-app-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #f0e6d3;
+      letter-spacing: 6px;
+      margin-bottom: 8px;
+    }
+    .tavas-app-tagline {
+      font-size: 1rem;
+      color: #a88a5a;
+      font-style: italic;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .tavas-app-desc {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: #c0b8aa;
+      margin-bottom: 32px;
+    }
+    .tavas-app-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-tavas-gold {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #c1a270;
+      color: #1a1008;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .btn-tavas-gold:hover { background: #d4b882; color: #1a1008; text-decoration: none; }
+    .btn-tavas-outline {
+      display: inline-block;
+      padding: 12px 30px;
+      border: 1px solid rgba(193,162,112,0.6);
+      color: #c1a270;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .btn-tavas-outline:hover {
+      background: rgba(193,162,112,0.1);
+      color: #c1a270;
+      text-decoration: none;
+    }
+
+    /* ── ABOUT / SEO TEXT ── */
     .seo-content {
       max-width: 800px;
       margin: 40px auto;
@@ -125,120 +218,193 @@
       font-size: 1.75rem;
       margin-bottom: 20px;
     }
-    .seo-content p {
-      font-size: 1.05rem;
-      margin-top: 15px;
+    .seo-content p { font-size: 1.05rem; margin-top: 15px; }
+    .seo-divider {
+      width: 50px; height: 2px;
+      background: #d1bfa7;
+      margin: 0 auto 32px;
     }
+
+    /* ── BOOKS STRIP ── */
+    .books-strip {
+      background-color: #f2ede6;
+      padding: 52px 24px;
+      text-align: center;
+    }
+    .books-strip h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #1e1e1e;
+      margin-bottom: 10px;
+    }
+    .books-strip p {
+      color: #666;
+      font-size: 0.97rem;
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .books-strip .featured-book-img {
+      max-width: 160px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      display: block;
+      margin: 0 auto 24px;
+      transition: transform 0.3s ease;
+    }
+    .books-strip .featured-book-img:hover { transform: scale(1.04); }
+    .btn-dark-tw {
+      display: inline-block;
+      padding: 10px 28px;
+      background: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .btn-dark-tw:hover { background: #3a3a3a; color: #fff; text-decoration: none; }
+
+    /* ── FOOTER ── */
     .footer-section {
       background-color: #1a1a1a;
       padding: 40px 20px;
       text-align: center;
       font-size: 0.95rem;
       color: #ccc;
-      margin-top: 60px;
+      margin-top: 0;
     }
-    .tagline {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      font-style: italic;
-      color: #e0e0e0;
-    }
+
+    /* ── MOBILE ── */
     @media (max-width: 768px) {
+      .header-logo-text { display: none; }
       #navbar ul {
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0,0,0,0.95);
         width: 100%;
         display: none;
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 60px; left: 0;
         z-index: 9999;
         padding: 20px;
       }
-      #navbar ul.show {
-        display: flex;
-      }
-      #navbar ul li {
-        margin: 10px 0;
-      }
-      .typed {
-        font-size: 1.8rem !important;
-        line-height: 1.6;
-        padding: 0 15px;
-      }
-      .hero-subtitle {
-        font-size: 1.4rem !important;
-        color: #fff !important;
-      }
+      #navbar ul.show { display: flex; }
+      #navbar ul li { margin: 10px 0; }
+      .typed { font-size: 1.8rem !important; line-height: 1.6; padding: 0 15px; }
+      .hero-subtitle { font-size: 1.4rem !important; color: #fff !important; }
+      .tavas-app-title { font-size: 2rem; }
+      .tavas-sun { width: 86px; height: 86px; }
     }
   </style>
 </head>
-
 <body>
+
+  <!-- ══ HEADER ══ -->
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo-wrap">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World Logo" class="header-logo-img">
+        <span class="header-logo-text">Tavas World</span>
+      </a>
+
+      <!-- Nav -->
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="books.html">Books</a></li>
+          <li><a class="nav-link" href="https://tavas.app" target="_blank">Tavas App</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link" href="connect.html">Connect</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
+
     </div>
   </header>
 
-  <main style="margin-top: 100px;">
+  <main style="margin-top: 80px;">
+
+    <!-- ══ HERO ══ -->
     <section class="hero-section">
       <h1>Welcome to Tavas World</h1>
       <p class="hero-subtitle">
-      <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Mentor, Publish"></span>
+        <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Mentor, Publish"></span>
       </p>
       <p class="tagline">A Creative World Inspired by Freedom</p>
     </section>
 
-    <section class="featured-book">
-      <a href="books.html">
-        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas">
-      </a>
+    <!-- ══ TAVAS APP ══ -->
+    <section class="tavas-app-section">
+      <div class="tavas-app-inner">
+        <div><span class="tavas-badge">Now Available</span></div>
+        <img src="assets/img/TranparentSun.png" alt="Tavas Wellness Journal App" class="tavas-sun">
+        <h2 class="tavas-app-title">TAVAS</h2>
+        <p class="tavas-app-tagline">Your Journey. All Power. Fearless Strength.</p>
+        <p class="tavas-app-desc">
+          A wellness journal app designed to help you track your mood, habits, supplements, and daily intentions —
+          with an AI companion named Sunny to guide you along the way. Built for real life, on your terms.
+        </p>
+        <div class="tavas-app-btns">
+          <a href="https://tavas.app" target="_blank" class="btn-tavas-gold">Try the Web App</a>
+          <a href="#" class="btn-tavas-outline">Coming Soon on Google Play</a>
+        </div>
+      </div>
     </section>
 
+    <!-- ══ ABOUT / SEO ══ -->
     <section class="seo-content">
+      <div class="seo-divider"></div>
       <h2>Empowering Minds Through Storytelling, Mentorship, and Meaning.</h2>
-     <p>
- Welcome to Tavas World—where imagination meets purpose. Created by children’s book author, publisher, and mentor Sara C. Morell, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection. From heartwarming picture books to guided journals and hands-on activity books, each creation is designed to spark learning and meaningful conversations.
-</p>
-<p>
-  Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real-life lessons to empower young readers and the adults guiding them. Tavas World is growing—with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs in the near future.
-</p>
-<p>
-  Explore the collection, connect through story, and discover the mission behind Tavas World—one book at a time.
-</p>
-
+      <p>
+        Welcome to Tavas World—where imagination meets purpose. Created by children's book author, publisher, and
+        mentor Sara C. Morell, this space is dedicated to storytelling that builds positivity, kindness, emotional
+        intelligence, curiosity, and authentic connection. From heartwarming picture books to guided journals and
+        hands-on activity books, each creation is designed to spark learning and meaningful conversations.
+      </p>
+      <p>
+        Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and
+        real-life lessons to empower young readers and the adults guiding them. Tavas World is growing—with plans
+        to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs in the
+        near future.
+      </p>
+      <p>
+        Explore the collection, connect through story, and discover the mission behind Tavas World—one book at a time.
+      </p>
     </section>
 
-  <section class="footer-section">
-  <div class="footer-brandline">Tavas <span>World</span></div>
+    <!-- ══ BOOKS STRIP ══ -->
+    <section class="books-strip">
+      <a href="books.html">
+        <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas" class="featured-book-img">
+      </a>
+      <h2>Children's Books &amp; Activity Books</h2>
+      <p>Picture books, guided journals, and activity books crafted to spark curiosity and meaningful connection.</p>
+      <a href="books.html" class="btn-dark-tw">Browse All Books</a>
+    </section>
 
-  <div class="footer-acronym">
-  <span class="word"><span class="cap">T</span>ravel</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">A</span>dventure</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">V</span>ision</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">A</span>spiration</span>
-  <span class="sep">•</span>
-  <span class="word"><span class="cap">S</span>uccess</span>
-</div>
-  <div class="footer-tagline">
-    Navigating the world with intention.
-  </div>
-  <div class="footer-copy">
-    © 2025 Tavas World. All rights reserved.
-  </div>
-</section>
+    <!-- ══ FOOTER ══ -->
+    <section class="footer-section">
+      <div class="footer-brandline">Tavas <span>World</span></div>
+      <div class="footer-acronym">
+        <span class="word"><span class="cap">T</span>ravel</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">A</span>dventure</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">V</span>ision</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">A</span>spiration</span>
+        <span class="sep">•</span>
+        <span class="word"><span class="cap">S</span>uccess</span>
+      </div>
+      <div class="footer-tagline">Navigating the world with intention.</div>
+      <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
+    </section>
 
   </main>
 
@@ -247,26 +413,23 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
- <script>
-  const typedItems = document
-    .querySelector('.typed')
-    .getAttribute('data-typed-items')
-    .split(',')
-    .map(s => s.trim());
+  <script>
+    const typedItems = document
+      .querySelector('.typed')
+      .getAttribute('data-typed-items')
+      .split(',')
+      .map(s => s.trim());
+    new Typed('.typed', {
+      strings: typedItems,
+      typeSpeed: 80,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true
+    });
 
-  new Typed('.typed', {
-    strings: typedItems,
-    typeSpeed: 80,
-    backSpeed: 40,
-    backDelay: 2000,
-    loop: true
-  });
-
-  // Mobile nav toggle functionality
-  document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-    document.querySelector('#navbar ul').classList.toggle('show');
-  });
-</script>
+    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
+      document.querySelector('#navbar ul').classList.toggle('show');
+    });
+  </script>
 </body>
-
 </html>
