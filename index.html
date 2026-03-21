@@ -77,8 +77,8 @@
       text-decoration: none;
     }
     .header-logo-img {
-      width: 40px;
-      height: 40px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -140,12 +140,12 @@
       margin-bottom: 22px;
     }
     .tavas-sun {
-      width: 110px;
-      height: 110px;
+      width: 160px;
+      height: 160px;
       object-fit: contain;
       display: block;
       margin: 0 auto 20px;
-      filter: drop-shadow(0 0 22px rgba(193,162,112,0.5));
+      filter: drop-shadow(0 0 28px rgba(193,162,112,0.5));
     }
     .tavas-app-title {
       font-family: 'Playfair Display', serif;
@@ -167,6 +167,22 @@
       color: #c0b8aa;
       margin-bottom: 32px;
     }
+    .tavas-app-features {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto 32px;
+      border-top: 1px solid rgba(193,162,112,0.2);
+      padding-top: 24px;
+      width: 100%;
+    }
+    .tavas-feature-item {
+      font-size: 0.92rem;
+      color: #c0b8aa;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      letter-spacing: 0.3px;
+    }
+    .tavas-feature-item:last-child { border-bottom: none; }
     .tavas-app-btns {
       display: flex;
       gap: 14px;
@@ -297,7 +313,7 @@
       .typed { font-size: 1.8rem !important; line-height: 1.6; padding: 0 15px; }
       .hero-subtitle { font-size: 1.4rem !important; color: #fff !important; }
       .tavas-app-title { font-size: 2rem; }
-      .tavas-sun { width: 86px; height: 86px; }
+      .tavas-sun { width: 120px; height: 120px; }
     }
   </style>
 </head>
@@ -347,9 +363,22 @@
         <h2 class="tavas-app-title">TAVAS</h2>
         <p class="tavas-app-tagline">Your Journey. All Power. Fearless Strength.</p>
         <p class="tavas-app-desc">
-          A wellness journal app designed to help you track your mood, habits, supplements, and daily intentions —
-          with an AI companion named Sunny to guide you along the way. Built for real life, on your terms.
+          Tavas is a structured system for tracking your day, building consistency, and staying accountable.
+          Log your mood, water, exercise, and supplements, set goals, and see your progress over time.
+          Built-in exercise breaks with timers keep you moving throughout the day — not just tracking it.
         </p>
+        <p class="tavas-app-desc">
+          Use the AI companion for guidance, insights, and hands-free logging. Designed with accessibility
+          in mind — including support for dyslexia, color blindness, and more — and secured with PIN
+          protection and encryption, Tavas gives you clarity, control, and a way to stay on track.
+        </p>
+        <div class="tavas-app-features">
+          <div class="tavas-feature-item">⚡ Built-in exercise breaks with timers</div>
+          <div class="tavas-feature-item">✦ Accessibility support for dyslexia, color blindness &amp; more</div>
+          <div class="tavas-feature-item">✦ AI companion for guidance and hands-free logging</div>
+          <div class="tavas-feature-item">✦ Secured with PIN lock and encryption</div>
+          <div class="tavas-feature-item">✦ All-in-one system, not scattered apps</div>
+        </div>
         <div class="tavas-app-btns">
           <a href="https://tavas.app" target="_blank" class="btn-tavas-gold">Try the Web App</a>
           <a href="#" class="btn-tavas-outline">Coming Soon on Google Play</a>
