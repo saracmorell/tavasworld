@@ -54,13 +54,14 @@
       margin-bottom:12px;
     }
 
-    .topRow{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-    }
+   .topRow{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  text-align:center;
+  .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
+}
 
     h1{
       margin:0;
@@ -71,13 +72,15 @@
       letter-spacing:0.2px;
     }
 
-    .identity{
-      margin-top:14px;
-      max-width:78ch;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
+   .identity{
+  margin-top:14px;
+  max-width:78ch;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:center;
+  .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
+}
 
     .name{
       font-size:14px;
@@ -99,6 +102,7 @@
       gap:10px;
       flex-wrap:wrap;
       margin-top:6px;
+      .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
     }
 
     .btn{
