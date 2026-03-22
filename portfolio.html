@@ -4,15 +4,10 @@
   <meta charset="UTF-8" />
   <title>Portfolio | Sara C. Morell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Keep private -->
   <meta name="robots" content="noindex, nofollow" />
-
-  <!-- Executive typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --bg:#0e1012;
@@ -26,7 +21,6 @@
       --radius:18px;
       --max:1040px;
     }
-
     *{box-sizing:border-box;}
     body{
       margin:0;
@@ -36,33 +30,28 @@
       line-height:1.7;
       letter-spacing:0.1px;
     }
-
     a{color:inherit;text-decoration:none;}
     a:focus{outline:2px solid rgba(255,255,255,0.35);outline-offset:3px;border-radius:10px;}
-
     .wrap{
       max-width:var(--max);
       margin:0 auto;
       padding:56px 18px 72px;
     }
-
     .kicker{
       font-size:11px;
       letter-spacing:0.18em;
       text-transform:uppercase;
       color:rgba(255,255,255,0.46);
       margin-bottom:12px;
+      text-align:center;
     }
-
-   .topRow{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;
-  text-align:center;
-  .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
-}
-
+    .topRow{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      text-align:center;
+    }
     h1{
       margin:0;
       font-family:"Playfair Display",Georgia,serif;
@@ -71,17 +60,14 @@
       line-height:1.05;
       letter-spacing:0.2px;
     }
-
-   .identity{
-  margin-top:14px;
-  max-width:78ch;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  text-align:center;
-  .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
-}
-
+    .identity{
+      margin-top:14px;
+      max-width:78ch;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      text-align:center;
+    }
     .name{
       font-size:14px;
       font-weight:600;
@@ -89,22 +75,19 @@
       text-transform:uppercase;
       color:rgba(255,255,255,0.80);
     }
-
     .intro{
       font-size:16px;
       line-height:1.75;
       color:var(--muted);
       margin:0;
     }
-
     .actions{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
       margin-top:6px;
-      .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px; justify-content:center; }
+      justify-content:center;
     }
-
     .btn{
       display:inline-flex;
       align-items:center;
@@ -119,13 +102,11 @@
       white-space:nowrap;
     }
     .btn:hover{background:rgba(255,255,255,0.06);}
-
     .divider{
       height:1px;
       background:rgba(255,255,255,0.10);
       margin:28px 0 20px;
     }
-
     .grid{
       display:grid;
       grid-template-columns:1fr;
@@ -135,7 +116,6 @@
     @media(min-width:900px){
       .grid{grid-template-columns:1fr 1fr;}
     }
-
     .card{
       background:var(--panel);
       border:1px solid var(--line);
@@ -143,7 +123,6 @@
       padding:18px 18px 16px;
       box-shadow:var(--shadow);
     }
-
     .cardHeader{
       display:flex;
       justify-content:space-between;
@@ -151,14 +130,12 @@
       align-items:flex-start;
       margin-bottom:10px;
     }
-
     .cardTitle{
       margin:0;
       font-size:18px;
       font-weight:650;
       letter-spacing:0.1px;
     }
-
     .tag{
       font-size:12px;
       padding:7px 10px;
@@ -168,7 +145,6 @@
       color:rgba(255,255,255,0.66);
       white-space:nowrap;
     }
-
     .desc{
       margin:0 0 12px 0;
       font-size:14.5px;
@@ -176,7 +152,6 @@
       color:var(--muted);
       max-width:74ch;
     }
-
     ul{
       margin:0;
       padding-left:18px;
@@ -185,16 +160,13 @@
       line-height:1.7;
     }
     li{margin:7px 0;}
-
     .status{
       margin-top:10px;
       font-size:13px;
       color:var(--muted2);
     }
-
     .cardFooter{margin-top:14px;}
     .full{grid-column:1 / -1;}
-
     .note{
       margin-top:20px;
       padding:14px 16px;
@@ -204,28 +176,28 @@
       font-size:13.5px;
       color:rgba(255,255,255,0.60);
       line-height:1.7;
+      text-align:center;
     }
-
     .footer{
-     .footer{ margin-top:18px; display:flex; justify-content:center; flex-wrap:wrap; gap:10px; font-size:12.5px; color:rgba(255,255,255,0.42); text-align:center; }
+      margin-top:18px;
       display:flex;
-      justify-content:space-between;
+      justify-content:center;
       flex-wrap:wrap;
       gap:10px;
       font-size:12.5px;
       color:rgba(255,255,255,0.42);
+      text-align:center;
     }
   </style>
 </head>
-
 <body>
   <main class="wrap">
+
     <div class="kicker">Private portfolio, shared by direct link only</div>
 
     <div class="topRow">
       <div>
         <h1>Portfolio</h1>
-
         <div class="identity">
           <div class="name">Sara C. Morell</div>
           <p class="intro">
@@ -233,94 +205,93 @@
           </p>
         </div>
       </div>
-
       <div class="actions">
-       <a class="btn" href="https://tavas.app" target="_blank" rel="noopener">Tavas App</a>
+        <a class="btn" href="https://tavas.app" target="_blank" rel="noopener">Tavas App</a>
         <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">Publishing Portfolio</a>
-         <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">Salomon Farms &amp; Trucking</a>
+        <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">Salomon Farms &amp; Trucking</a>
         <a class="btn" href="https://www.shotamusic.com" target="_blank" rel="noopener">Shota Music</a>
       </div>
     </div>
 
     <div class="divider"></div>
 
-   <section class="grid">
+    <section class="grid">
 
-  <article class="card full">
-    <div class="cardHeader">
-      <h2 class="cardTitle">Tavas World, Publishing Platform</h2>
-      <div class="tag">Portfolio stewardship</div>
-    </div>
-    <p class="desc">
-      Ongoing leadership of a diverse publishing portfolio spanning multiple formats, audiences, and creative directions.
-    </p>
-    <ul>
-      <li>Lead a varied publishing portfolio with clear positioning for each title.</li>
-      <li>Develop and maintain a centralized books hub that supports discovery, credibility, and scale.</li>
-      <li>Update content and structure directly in code to ensure accuracy and continuity.</li>
-    </ul>
-    <div class="cardFooter">
-      <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View books</a>
-    </div>
-  </article>
+      <article class="card full">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Tavas World, Publishing Platform</h2>
+          <div class="tag">Portfolio stewardship</div>
+        </div>
+        <p class="desc">
+          Ongoing leadership of a diverse publishing portfolio spanning multiple formats, audiences, and creative directions.
+        </p>
+        <ul>
+          <li>Lead a varied publishing portfolio with clear positioning for each title.</li>
+          <li>Develop and maintain a centralized books hub that supports discovery, credibility, and scale.</li>
+          <li>Update content and structure directly in code to ensure accuracy and continuity.</li>
+        </ul>
+        <div class="cardFooter">
+          <a class="btn" href="https://www.tavasworld.com/books.html" target="_blank" rel="noopener">View books</a>
+        </div>
+      </article>
 
-  <article class="card">
-    <div class="cardHeader">
-      <h2 class="cardTitle">Tavas App</h2>
-      <div class="tag">Founder-led product in development</div>
-    </div>
-    <p class="desc">
-      Founder-led wellness and productivity app in active development, built with disciplined scope and phased delivery.
-    </p>
-    <ul>
-      <li>Define MVP scope, positioning, and rollout strategy across web and mobile platforms.</li>
-      <li>Build and refine the public-facing presence at tavas.app to support launch readiness.</li>
-      <li>Iterate functionality and user experience through a GitHub-managed workflow.</li>
-    </ul>
-    <div class="status">Status: Web app live. Google Play submission under review. Apple App Store planned.</div>
-    <div class="cardFooter">
-      <a class="btn" href="https://tavas.app" target="_blank" rel="noopener">View app</a>
-    </div>
-  </article>
+      <article class="card">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Tavas App</h2>
+          <div class="tag">Founder-led product in development</div>
+        </div>
+        <p class="desc">
+          Founder-led wellness and productivity app in active development, built with disciplined scope and phased delivery.
+        </p>
+        <ul>
+          <li>Define MVP scope, positioning, and rollout strategy across web and mobile platforms.</li>
+          <li>Build and refine the public-facing presence at tavas.app to support launch readiness.</li>
+          <li>Iterate functionality and user experience through a GitHub-managed workflow.</li>
+        </ul>
+        <div class="status">Status: Web app live. Google Play submission under review. Apple App Store planned.</div>
+        <div class="cardFooter">
+          <a class="btn" href="https://tavas.app" target="_blank" rel="noopener">View app</a>
+        </div>
+      </article>
 
-  <article class="card">
-    <div class="cardHeader">
-      <h2 class="cardTitle">Salomon Farms &amp; Trucking</h2>
-      <div class="tag">Revenue operations &amp; growth execution</div>
-    </div>
-    <p class="desc">
-      Ongoing operational leadership focused on revenue continuity, growth execution, and owner confidence.
-    </p>
-    <ul>
-      <li>Lead revenue operations and growth execution to ensure financial flow and business momentum.</li>
-      <li>Drive visibility and demand through coordinated digital and outbound initiatives.</li>
-      <li>Maintain operational systems and digital infrastructure to support scale without daily owner involvement.</li>
-    </ul>
-    <div class="cardFooter">
-      <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">View site</a>
-    </div>
-  </article>
+      <article class="card">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Salomon Farms &amp; Trucking</h2>
+          <div class="tag">Revenue operations &amp; growth execution</div>
+        </div>
+        <p class="desc">
+          Ongoing operational leadership focused on revenue continuity, growth execution, and owner confidence.
+        </p>
+        <ul>
+          <li>Lead revenue operations and growth execution to ensure financial flow and business momentum.</li>
+          <li>Drive visibility and demand through coordinated digital and outbound initiatives.</li>
+          <li>Maintain operational systems and digital infrastructure to support scale without daily owner involvement.</li>
+        </ul>
+        <div class="cardFooter">
+          <a class="btn" href="https://sftrucking406.com/" target="_blank" rel="noopener">View site</a>
+        </div>
+      </article>
 
-  <article class="card">
-    <div class="cardHeader">
-      <h2 class="cardTitle">Shota — Official Artist Site</h2>
-      <div class="tag">Artist web presence &amp; brand design</div>
-    </div>
-    <p class="desc">
-      Designed and developed a luxury editorial artist site for SHOTA, a genre-fluid recording artist with a cinematic, global sound.
-    </p>
-    <ul>
-      <li>Built a fully custom dark-aesthetic site with gold accents, premium typography, and cinematic hero design.</li>
-      <li>Integrated streaming platform links, embedded Spotify player, and release showcase.</li>
-      <li>Deployed via GitHub Pages with a custom domain at shotamusic.com.</li>
-    </ul>
-    <div class="status">Status: Live at shotamusic.com</div>
-    <div class="cardFooter">
-      <a class="btn" href="https://www.shotamusic.com" target="_blank" rel="noopener">View site</a>
-    </div>
-  </article>
+      <article class="card">
+        <div class="cardHeader">
+          <h2 class="cardTitle">Shota — Official Artist Site</h2>
+          <div class="tag">Artist web presence &amp; brand design</div>
+        </div>
+        <p class="desc">
+          Designed and developed a luxury editorial artist site for SHOTA, a genre-fluid recording artist with a cinematic, global sound.
+        </p>
+        <ul>
+          <li>Built a fully custom dark-aesthetic site with gold accents, premium typography, and cinematic hero design.</li>
+          <li>Integrated streaming platform links, embedded Spotify player, and release showcase.</li>
+          <li>Deployed via GitHub Pages with a custom domain at shotamusic.com.</li>
+        </ul>
+        <div class="status">Status: Live at shotamusic.com</div>
+        <div class="cardFooter">
+          <a class="btn" href="https://www.shotamusic.com" target="_blank" rel="noopener">View site</a>
+        </div>
+      </article>
 
-</section>
+    </section>
 
     <div class="note">
       This portfolio is intentionally private, not linked in site navigation, and shared directly with owners, boards, and hiring teams.
@@ -329,8 +300,7 @@
     <div class="footer">
       <div>Sara C. Morell</div>
     </div>
+
   </main>
 </body>
 </html>
-
-
