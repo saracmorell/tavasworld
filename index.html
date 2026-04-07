@@ -371,6 +371,7 @@
       text-transform: uppercase;
       color: var(--gold-dim);
       margin-bottom: 10px;
+      text-align: center;
     }
     .sec-title {
       font-family: 'Libre Baskerville', serif;
@@ -379,6 +380,7 @@
       color: var(--cream);
       margin-bottom: 12px;
       line-height: 1.2;
+      text-align: center;
     }
     .sec-sub {
       font-family: 'Playfair Display', serif;
@@ -387,6 +389,9 @@
       max-width: 520px;
       line-height: 1.85;
       margin-bottom: 40px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
@@ -449,7 +454,7 @@
       background: rgba(212,168,83,0.05);
       border: 0.5px solid rgba(212,168,83,0.2);
       border-radius: 14px;
-      padding: 52px 40px;
+      padding: 48px 40px;
       text-align: center;
       width: 100%;
     }
@@ -465,7 +470,7 @@
       color: var(--cream-low);
       line-height: 1.85;
       margin-bottom: 32px;
-      max-width: 420px;
+      max-width: 560px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -505,10 +510,18 @@
       padding: 30px;
       border: 0.5px solid var(--border);
       background: rgba(212,168,83,0.03);
+      display: flex;
+      flex-direction: column;
     }
     .price-card.hot {
       border: 1px solid rgba(212,168,83,0.35);
       background: rgba(212,168,83,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .price-list {
+      list-style: none;
+      flex: 1;
     }
     .price-badge {
       font-family: 'Montserrat', sans-serif;
@@ -549,7 +562,7 @@
       color: rgba(245,236,215,0.75);
       margin-bottom: 20px;
     }
-    .price-list { list-style: none; }
+    .price-list { list-style: none; flex: 1; }
     .price-list li {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.78rem;
@@ -966,6 +979,7 @@
             <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Basic habit tracking</li>
             <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Exercise breaks</li>
             <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>7-day streaks</li>
+            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Basic wellness insights</li>
           </ul>
           <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Download Free</button></a>
         </div>
@@ -983,21 +997,6 @@
           </ul>
           <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Start 7-Day Free Trial</button></a>
         </div>
-        <div class="price-card hot">
-          <div class="price-badge">Best Value</div>
-          <div class="price-name">Yearly</div>
-          <div class="price-num">$39.99 <span>/ year</span></div>
-          <div class="price-desc">Save 33% vs monthly</div>
-          <ul class="price-list">
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Everything in premium</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Get Best Value</button></a>
-        </div>
-      </div>
         <div class="price-card hot">
           <div class="price-badge">Best Value</div>
           <div class="price-name">Yearly</div>
@@ -1077,11 +1076,11 @@
             <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 8px;">Our Story</a>
           </div>
           <div class="about-img">
-            <div style="width:70px; height:70px; border-radius:50%; background:rgba(212,168,83,0.1); border:1px solid rgba(212,168,83,0.25); display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-family:'Libre Baskerville',serif; font-size:1.4rem; color:var(--gold);">S</div>
+            <img src="assets/img/sara.jpg" alt="Sara C. Morell" style="width:140px; height:140px; border-radius:50%; object-fit:cover; object-position: center top; border:3px solid rgba(212,168,83,0.4); margin:0 auto 20px; display:block; box-shadow: 0 0 32px rgba(212,168,83,0.15);">
             <h3>Sara C. Morell</h3>
             <p style="margin-bottom:16px;">Author · Publisher · Mentor</p>
             <div style="border-top:0.5px solid var(--border); padding-top:16px; margin-top:4px;">
-              <p style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:rgba(245,236,215,0.50); line-height:1.7; margin-bottom:12px;">Children's book author, wellness app creator, and mentor dedicated to empowering readers of all ages.</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:rgba(245,236,215,0.60); line-height:1.7; margin-bottom:12px;">Children's book author, wellness app creator, and mentor dedicated to empowering readers of all ages.</p>
               <a href="mailto:sara@tavasworld.com?subject=Work With Me — Tavas World" style="font-family:'Montserrat',sans-serif; font-size:0.72rem; color:var(--gold); text-decoration:none; letter-spacing:0.06em;">sara@tavasworld.com</a>
             </div>
           </div>
