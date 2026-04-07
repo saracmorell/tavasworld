@@ -443,6 +443,9 @@
           </div>
 
           <form id="contact-form">
+            <input type="hidden" name="access_key" value="d47e65a1-e5ec-4430-9ff4-4954505a79b4">
+            <input type="hidden" name="subject" value="New message from Tavas World">
+            <input type="hidden" name="from_name" value="Tavas World Website">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Your Name</label>
@@ -471,9 +474,7 @@
             <div class="form-submit">
               <button type="submit" id="submit-btn" class="btn-gold">Send My Message →</button>
               <p id="form-error" style="display:none; color:#E24B4A; font-family:'Montserrat',sans-serif; font-size:0.82rem; margin-top:12px;">Something went wrong. Please email sara@tavasworld.com directly.</p>
-              <p class="form-note">
-                Or email directly at <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a>
-              </p>
+              <p class="form-note">Or email directly at <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a></p>
             </div>
           </form>
         </div>
@@ -576,7 +577,7 @@
       const data = new FormData(form);
 
       try {
-        const response = await fetch('https://formspree.io/f/xzdkoryk', {
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: data,
           headers: { 'Accept': 'application/json' }
