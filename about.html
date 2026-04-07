@@ -1,213 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Tavas World</title>
+  <title>About Sara — Tavas World</title>
+  <meta name="description" content="Meet Sara C. Morell — children's book author, tech founder, and creator of Tavas World. Her story of resilience, creativity, and building something real.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fffdf8;
-      color: #2c2c2c;
-      margin: 0;
+    :root {
+      --choc:       #1C1208;
+      --choc-dark:  #140E06;
+      --choc-deep:  #0F0A04;
+      --gold:       #D4A853;
+      --gold-light: #E8C070;
+      --gold-dim:   rgba(212,168,83,0.55);
+      --cream:      #F5ECD7;
+      --cream-mid:  rgba(245,236,215,0.75);
+      --cream-low:  rgba(245,236,215,0.60);
+      --border:     rgba(212,168,83,0.14);
     }
-    .hero-section {
-      background-image: url('assets/img/lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Playfair Display', Georgia, serif;
+      background-color: var(--choc);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--choc-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+    /* ══ HEADER ══ */
+    #header {
+      background: rgba(20,14,6,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--border);
+      padding: 0 32px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+    }
+    .header-logo-wrap { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .header-logo-img { width: 40px; height: 40px; object-fit: contain; border-radius: 50%; }
+    .header-logo-text {
+      font-family: 'Libre Baskerville', serif;
+      color: var(--cream); font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.12em; white-space: nowrap;
+    }
+    .header-logo-text span { color: var(--gold); }
+    #navbar { display: flex; align-items: center; gap: 28px; }
+    #navbar a {
+      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream-mid); text-decoration: none; transition: color 0.2s;
+    }
+    #navbar a:hover, #navbar a.active { color: var(--gold); }
+    .nav-cta {
+      font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--choc-dark) !important; background: var(--gold);
+      padding: 9px 22px; border-radius: 999px; text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+    .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; }
+
+    /* ══ BUTTONS ══ */
+    .btn-gold {
+      display: inline-block; padding: 14px 34px; background: var(--gold);
+      color: var(--choc-dark); font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; border-radius: 999px; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-dark); text-decoration: none; }
+    .btn-outline-gold {
+      display: inline-block; padding: 14px 34px; background: transparent;
+      color: var(--cream-mid); font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; border-radius: 999px; border: 1px solid rgba(212,168,83,0.3);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
+
+    /* ══ PAGE HERO ══ */
+    .page-hero {
+      margin-top: 68px;
+      padding: 80px 32px 60px;
+      background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 55%, #110B04 100%);
+      text-align: center;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .page-hero .sec-label {
+      font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700;
+      color: var(--cream); margin-bottom: 16px; line-height: 1.15;
+    }
+    .page-hero p {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      color: var(--cream-mid); max-width: 540px; margin: 0 auto; line-height: 1.85;
+    }
+
+    /* ══ SECTIONS ══ */
+    .section { padding: 72px 32px; }
+    .section-alt { background: var(--choc-dark); }
+    .section-inner {
+      max-width: 1100px; margin: 0 auto; width: 100%; text-align: center;
+    }
+    .sec-label {
+      font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+    }
+    .sec-title {
+      font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700; color: var(--cream); margin-bottom: 14px; line-height: 1.2;
+    }
+    .sec-sub {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid);
+      max-width: 580px; line-height: 1.85; margin: 0 auto 48px;
+    }
+    .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
+
+    /* ══ ABOUT STORY ══ */
+    .story-wrap {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 60px;
+      align-items: start;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .story-photo-col {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       text-align: center;
-      color: #ffffff;
-      position: relative;
+      position: sticky;
+      top: 88px;
     }
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-    .hero-section h1 {
-      font-size: 3rem;
-      font-family: 'Playfair Display', serif;
-      position: relative;
-      z-index: 2;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    }
-    header#header {
-      background-color: rgba(0, 0, 0, 0.85);
-    }
-    #navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }
-    #navbar ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    #navbar ul li {
-      margin-left: 20px;
-    }
-    #navbar ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-    #navbar ul li a:hover,
-    #navbar ul li a.active {
-      color: #d1bfa7;
-    }
-    .about-content {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: left;
-      font-size: 1.05rem;
-    }
-    .about-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
+    .story-photo {
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgba(212,168,83,0.4);
+      display: block;
+      box-shadow: 0 0 40px rgba(212,168,83,0.15);
       margin-bottom: 20px;
     }
-    .about-image {
-      float: right;
-      margin: 0 0 20px 20px;
-      width: 200px;
-      border-radius: 8px;
+    .story-photo-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem; color: var(--cream); margin-bottom: 6px;
     }
-    .footer-section {
-      background-color: #1a1a1a;
-      padding: 40px 20px;
+    .story-photo-role {
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .story-photo-tavas {
+      background: rgba(212,168,83,0.06);
+      border: 0.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
       text-align: center;
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-top: 60px;
+      width: 100%;
     }
+    .story-photo-tavas p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem; color: var(--cream-mid); line-height: 1.7;
+      margin-bottom: 4px;
+    }
+    .story-photo-tavas p strong { color: var(--gold); font-weight: 600; }
+
+    /* ══ STORY TEXT ══ */
+    .story-text p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; color: var(--cream-mid);
+      line-height: 1.95; margin-bottom: 24px;
+    }
+    .story-text p em { color: var(--gold); font-style: italic; }
+    .story-text p strong { color: var(--cream); font-weight: 600; }
+    .story-text .story-drop {
+      font-size: 3.5rem; font-weight: 700; color: var(--gold);
+      float: left; line-height: 0.8; margin: 8px 12px 0 0;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    /* ══ VALUES ══ */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+    }
+    .value-card {
+      background: rgba(212,168,83,0.04);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .value-icon {
+      font-size: 1.8rem; margin-bottom: 12px; display: block;
+    }
+    .value-card h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 8px;
+    }
+    .value-card p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem; color: var(--cream-low); line-height: 1.65;
+    }
+
+    /* ══ TAVAS MEANING ══ */
+    .tavas-meaning {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .tavas-card {
+      background: rgba(212,168,83,0.05);
+      border: 0.5px solid rgba(212,168,83,0.2);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .tavas-card .tavas-tag {
+      font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); background: rgba(212,168,83,0.1);
+      padding: 4px 12px; border-radius: 999px; display: inline-block; margin-bottom: 16px;
+    }
+    .tavas-card h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.3rem; color: var(--cream); margin-bottom: 12px; line-height: 1.3;
+    }
+    .tavas-card h3 span { color: var(--gold); }
+    .tavas-card p {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem; color: var(--cream-mid); line-height: 1.75;
+    }
+
+    /* ══ CTA ══ */
+    .about-cta {
+      background: linear-gradient(135deg, var(--choc-dark) 0%, var(--choc) 100%);
+      border: 0.5px solid rgba(212,168,83,0.2);
+      border-radius: 14px;
+      padding: 52px 44px;
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.8rem; color: var(--cream); margin-bottom: 14px;
+    }
+    .about-cta p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--cream-mid); line-height: 1.85;
+      max-width: 500px; margin: 0 auto 32px;
+    }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ══ FOOTER ══ */
+    footer {
+      background: var(--choc-deep);
+      border-top: 0.5px solid rgba(212,168,83,0.07);
+      padding: 40px 32px;
+    }
+    .footer-inner {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: 20px; max-width: 1100px; margin: 0 auto;
+    }
+    .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .footer-brand img { width: 32px; height: 32px; object-fit: contain; border-radius: 50%; }
+    .footer-brand-name {
+      font-family: 'Libre Baskerville', serif; font-size: 1rem;
+      color: var(--cream); letter-spacing: 0.1em;
+    }
+    .footer-tagline {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      font-style: italic; color: var(--gold);
+    }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a {
+      font-family: 'Montserrat', sans-serif; font-size: 0.82rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cream-mid); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy {
+      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low);
+    }
+
+    /* ══ MOBILE ══ */
     @media (max-width: 768px) {
-      #navbar ul {
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.95);
-        width: 100%;
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 9999;
-        padding: 20px;
-      }
-      #navbar ul.show {
-        display: flex;
-      }
-      #navbar ul li {
-        margin: 10px 0;
-      }
+      #header { padding: 0 20px; }
+      .header-logo-text { display: none; }
+      #navbar { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--choc-dark); flex-direction: column; align-items: center; padding: 20px; gap: 16px; border-bottom: 0.5px solid var(--border); }
+      #navbar.show { display: flex; }
+      .mobile-nav-toggle { display: block; }
+      .page-hero { padding: 60px 20px 40px; }
+      .section { padding: 52px 20px; }
+      .story-wrap { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+      .story-photo-col { position: static; }
+      .story-text p { text-align: left; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .tavas-meaning { grid-template-columns: 1fr; }
+      .about-cta { padding: 36px 24px; }
+    }
+
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-center">
-      <nav id="navbar" class="navbar">
-        <ul>
-         <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="https://tavas.app" target="_blank">Tavas App</a></li>
-          <li><a class="nav-link" href="books.html">Books</a></li>
-           <li><a class="nav-link" href="https://www.shotamusic.com" target="_blank">Music</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
-          <li><a class="nav-link active" href="connect.html">Connect</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="https://tavas.app" target="_blank">The App</a>
+      <a href="books.html">Books</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="https://www.shotamusic.com" target="_blank">Music</a>
+      <a href="about.html" class="active">About</a>
+      <a href="connect.html" class="nav-cta">Work With Me</a>
+    </nav>
+    <i class="bi bi-list mobile-nav-toggle" id="mobileToggle"></i>
   </header>
 
-  <main style="margin-top: 100px;">
-    <section class="hero-section">
-      <h1>About</h1>
-    </section>
- <section class="about-content" style="text-align: justify; hyphens: auto; max-width: 680px; margin: 0 auto;">
+  <main>
 
-<div class="about-photo-wrap">
-    <img src="assets/img/sara.jpg" alt="Sara C. Morell" class="about-photo">
-    <div class="about-photo-caption" style="margin-top: 12px;">Sara C. Morell</div>
-    <div class="about-photo-subtitle">Author • Creator • Founder</div>
-  </div>
-
-  <p>
-    Sara C. Morell is a children's book author, publisher, and tech founder — the kind of person who builds things from scratch and doesn't stop until they're done right.
-  </p>
-
-  <p>
-   She grew up surrounded by creativity and resilience. Her mother's journey from certified nursing assistant to nursing home owner instilled in her the values of hard work, ambition, and compassion. Her bonus dad — never short on stories, laughter, or wisdom — showed her what unconditional love and real family actually look like.
-  </p>
-  <p>
-   With a father in the Army, Sara spent her childhood moving often alongside her brother — and that adaptability never left her. That experience became the heartbeat of <em>The Adventures of Raspen and Sylas</em>, a children's book series that blends meaningful life lessons with enchanting storytelling — born from the belief that every child deserves to feel seen, heard, and uplifted.
-  </p>
-  <p>
-    From raising three boys on a farm filled with llamas, a yak, and Barbados sheep, to mentoring others through life's harder chapters, Sara has always channeled lived experience into something bigger than herself. That same drive led her to build Tavas — an AI-powered wellness and productivity app designed for real people managing real life. What started as a personal need became a fully launched Android app, built founder-led from the ground up.
- </p>
-    <p>
-    Today, Sara brings her technical, creative, and mentoring talents together under Tavas World — a brand dedicated to freedom, storytelling, growth, and building tools that actually help people. When she isn't writing or building, she's kayaking, hiking, or finding inspiration somewhere outside.
-  </p>
-</section>
-
-    <section class="footer-section">
-     <div class="footer-brandline">Tavas <span>World</span></div>
-  <div class="footer-tagline">
-    Navigating the world with intention.
-  </div>
-    <div class="footer-copy">
-      © 2025 Tavas World. All rights reserved.
+    <!-- ══ HERO ══ -->
+    <div class="page-hero">
+      <div class="sec-label">The Story Behind Tavas World</div>
+      <h1>Meet Sara C. Morell</h1>
+      <p>Author. Publisher. Tech founder. Builder. And the person behind everything you see here — created from scratch, with purpose.</p>
     </div>
-  </div>
-</section>
+
+    <!-- ══ STORY ══ -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="story-wrap">
+
+          <!-- PHOTO COL -->
+          <div class="story-photo-col">
+            <img src="assets/img/sara.jpg" alt="Sara C. Morell" class="story-photo">
+            <div class="story-photo-name">Sara C. Morell</div>
+            <div class="story-photo-role">Author · Creator · Founder</div>
+            <div class="story-photo-tavas">
+              <p><strong>T</strong>he <strong>A</strong>uthor's <strong>V</strong>irtual <strong>A</strong>ssistant <strong>S</strong>ystem</p>
+              <p style="font-size:0.65rem; color:var(--gold-dim); margin-top:6px;">Tavas World — Author Brand</p>
+              <div style="border-top:0.5px solid var(--border); margin:12px 0;"></div>
+              <p><strong>T</strong>he <strong>A</strong>I <strong>V</strong>irtual <strong>A</strong>ssistant <strong>S</strong>ystem</p>
+              <p style="font-size:0.65rem; color:var(--gold-dim); margin-top:6px;">Tavas App — Wellness Platform</p>
+            </div>
+          </div>
+
+          <!-- STORY TEXT -->
+          <div class="story-text">
+            <p>Sara C. Morell is a children's book author, publisher, and tech founder — the kind of person who builds things from scratch and doesn't stop until they're done right.</p>
+
+            <p>She grew up surrounded by creativity and resilience. Her mother's journey from certified nursing assistant to nursing home owner instilled in her the values of hard work, ambition, and compassion. Her bonus dad — never short on stories, laughter, or wisdom — showed her what unconditional love and real family actually look like.</p>
+
+            <p>With a father in the Army, Sara spent her childhood moving often alongside her brother — and that adaptability never left her. That experience became the heartbeat of <em>The Adventures of Raspen and Sylas</em>, a children's book series that blends meaningful life lessons with enchanting storytelling — born from the belief that every child deserves to feel seen, heard, and uplifted.</p>
+
+            <p>From raising <strong>three boys on a farm filled with llamas, a yak, and Barbados sheep</strong>, to mentoring others through life's harder chapters, Sara has always channeled lived experience into something bigger than herself. That same drive led her to build Tavas — an AI-powered wellness and productivity app designed for real people managing real life. What started as a personal need became a fully launched Android app, built founder-led from the ground up.</p>
+
+            <p>Today, Sara brings her technical, creative, and mentoring talents together under <em>Tavas World</em> — a brand dedicated to freedom, storytelling, growth, and building tools that actually help people. When she isn't writing or building, she's kayaking, hiking, or finding inspiration somewhere outside.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ══ TAVAS MEANING ══ -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="sec-label">What TAVAS Means</div>
+        <div class="sec-title">Two missions. One name.</div>
+        <div class="sec-sub">TAVAS isn't just a name — it's a promise. Two powerful meanings, one unified brand.</div>
+        <div class="tavas-meaning">
+          <div class="tavas-card">
+            <div class="tavas-tag">Author Brand</div>
+            <h3><span>T</span>he <span>A</span>uthor's <span>V</span>irtual <span>A</span>ssistant <span>S</span>ystem</h3>
+            <p>A creative world dedicated to storytelling, mentorship, and empowering aspiring authors and young readers to find their voice.</p>
+          </div>
+          <div class="tavas-card">
+            <div class="tavas-tag">The App</div>
+            <h3><span>T</span>he <span>A</span>I <span>V</span>irtual <span>A</span>ssistant <span>S</span>ystem</h3>
+            <p>An intelligent wellness companion built for real life — tracking habits, journaling, supplements, and providing AI-powered guidance daily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ══ VALUES ══ -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="sec-label">What Drives Sara</div>
+        <div class="sec-title">Built on these foundations</div>
+        <div class="sec-sub">Every book, every feature, every mentorship session comes back to these four things.</div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🌿</div>
+            <h3>Resilience</h3>
+            <p>Built through real life — farming, moving, juggling multiple jobs, and building anyway.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">✨</div>
+            <h3>Creativity</h3>
+            <p>From children's books to wellness apps — creativity is the thread running through everything.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Connection</h3>
+            <p>Every story, tool, and mentorship is built to create real, meaningful human connection.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <h3>Freedom</h3>
+            <p>Tavas World exists because freedom — creative, financial, personal — is worth building for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ══ CTA ══ -->
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="about-cta">
+          <h2>Ready to work with Sara?</h2>
+          <p>Whether you want to write a book, build a brand, or start your wellness journey — Sara is here to help you take the next step.</p>
+          <div class="cta-btns">
+            <a href="connect.html" class="btn-gold">Work With Me →</a>
+            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-outline-gold">Download the App</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
+        <div class="footer-brand-name">TAVAS WORLD</div>
+        <div class="footer-tagline">Navigating life with intention.</div>
+        <div style="margin-top:4px;"><a href="mailto:sara@tavasworld.com" style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:var(--gold); text-decoration:none; letter-spacing:0.04em;">sara@tavasworld.com</a></div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://tavas.app" target="_blank">App</a>
+        <a href="books.html">Books</a>
+        <a href="https://www.shotamusic.com" target="_blank">Music</a>
+        <a href="about.html">About</a>
+        <a href="connect.html">Work With Me</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">App Support</a>
+      </div>
+      <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
+    </div>
+  </footer>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.querySelector('.mobile-nav-toggle').addEventListener('click', function () {
-      document.querySelector('#navbar ul').classList.toggle('show');
+    document.getElementById('mobileToggle').addEventListener('click', function () {
+      document.getElementById('navbar').classList.toggle('show');
+    });
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      header.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.4)' : 'none';
     });
   </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
