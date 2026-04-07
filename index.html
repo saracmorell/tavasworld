@@ -20,8 +20,8 @@
       --gold-dim:   rgba(212,168,83,0.55);
       --gold-faint: rgba(212,168,83,0.12);
       --cream:      #F5ECD7;
-      --cream-mid:  rgba(245,236,215,0.55);
-      --cream-low:  rgba(245,236,215,0.35);
+      --cream-mid:  rgba(245,236,215,0.75);
+      --cream-low:  rgba(245,236,215,0.60);
       --cream-hint: rgba(245,236,215,0.08);
       --border:     rgba(212,168,83,0.14);
     }
@@ -285,12 +285,16 @@
     .email-bar {
       background: var(--choc-dark);
       padding: 22px 32px;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .email-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-      border-bottom: 0.5px solid var(--border);
     }
     .email-bar-text {
       font-family: 'Playfair Display', serif;
@@ -316,7 +320,7 @@
       width: 220px;
       transition: border-color 0.2s;
     }
-    .email-form input::placeholder { color: rgba(245,236,215,0.22); }
+    .email-form input::placeholder { color: rgba(245,236,215,0.40); }
     .email-form input:focus { border-color: var(--gold-dim); }
     .email-form button {
       font-family: 'Montserrat', sans-serif;
@@ -345,7 +349,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
       font-style: italic;
-      color: rgba(245,236,215,0.38);
+      color: rgba(245,236,215,0.75);
       letter-spacing: 0.02em;
     }
     .quote-bar p em { color: var(--gold); font-style: normal; }
@@ -353,6 +357,11 @@
     /* ══ SECTIONS ══ */
     .section { padding: 72px 32px; }
     .section-alt { background: var(--choc-dark); }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
 
     .sec-label {
       font-family: 'Montserrat', sans-serif;
@@ -431,7 +440,7 @@
     .feat-card p {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.8rem;
-      color: rgba(245,236,215,0.38);
+      color: rgba(245,236,215,0.75);
       line-height: 1.7;
     }
 
@@ -442,7 +451,7 @@
       border-radius: 14px;
       padding: 52px 40px;
       text-align: center;
-      max-width: 700px;
+      width: 100%;
     }
     .founding-wrap h2 {
       font-family: 'Libre Baskerville', serif;
@@ -487,9 +496,8 @@
     /* ══ PRICING ══ */
     .pricing-row {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      grid-template-columns: repeat(2, minmax(0, 400px));
       gap: 16px;
-      max-width: 560px;
     }
     .price-card {
       border-radius: 12px;
@@ -530,21 +538,21 @@
     }
     .price-num span {
       font-size: 0.82rem;
-      color: rgba(245,236,215,0.28);
+      color: rgba(245,236,215,0.75);
       font-family: 'Montserrat', sans-serif;
     }
     .price-desc {
       font-family: 'Playfair Display', serif;
       font-size: 0.85rem;
       font-style: italic;
-      color: rgba(245,236,215,0.28);
+      color: rgba(245,236,215,0.75);
       margin-bottom: 20px;
     }
     .price-list { list-style: none; }
     .price-list li {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.78rem;
-      color: rgba(245,236,215,0.42);
+      color: rgba(245,236,215,0.70);
       padding: 5px 0;
       display: flex;
       align-items: center;
@@ -634,7 +642,7 @@
     .book-name {
       font-family: 'Playfair Display', serif;
       font-size: 0.82rem;
-      color: rgba(245,236,215,0.65);
+      color: rgba(245,236,215,0.75);
       margin-bottom: 5px;
       line-height: 1.4;
     }
@@ -651,7 +659,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 48px;
       align-items: center;
-      max-width: 900px;
+      width: 100%;
     }
     .about-text p {
       font-family: 'Playfair Display', serif;
@@ -744,14 +752,14 @@
     .footer-brand-name {
       font-family: 'Libre Baskerville', serif;
       font-size: 0.88rem;
-      color: rgba(245,236,215,0.4);
+      color: rgba(245,236,215,0.75);
       letter-spacing: 0.1em;
     }
     .footer-tagline {
       font-family: 'Playfair Display', serif;
       font-size: 0.75rem;
       font-style: italic;
-      color: rgba(245,236,215,0.18);
+      color: rgba(245,236,215,0.50);
       margin-top: 3px;
     }
     .footer-links {
@@ -764,7 +772,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(245,236,215,0.22);
+      color: rgba(245,236,215,0.60);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -772,7 +780,7 @@
     .footer-copy {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.7rem;
-      color: rgba(245,236,215,0.14);
+      color: rgba(245,236,215,0.45);
       letter-spacing: 0.06em;
     }
 
@@ -816,7 +824,7 @@
       <a href="#pricing">Pricing</a>
       <a href="https://www.shotamusic.com" target="_blank">Music</a>
       <a href="about.html">About</a>
-      <a href="connect.html" class="nav-cta">Work With Me</a>
+      <a href="mailto:sara@tavasworld.com?subject=Work With Me — Tavas World" class="nav-cta">Work With Me</a>
     </nav>
 
     <i class="bi bi-list mobile-nav-toggle" id="mobileToggle"></i>
@@ -860,14 +868,16 @@
 
     <!-- ══ EMAIL CAPTURE ══ -->
     <div class="email-bar">
-      <div class="email-bar-text">
-        Get the free 7-Day Wellness Reset Guide
-        <span> — no spam. Just real value.</span>
+      <div class="email-bar-inner">
+        <div class="email-bar-text">
+          Get the free 7-Day Wellness Reset Guide
+          <span> — no spam. Just real value.</span>
+        </div>
+        <form class="email-form" onsubmit="handleEmail(event)">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Send It To Me</button>
+        </form>
       </div>
-      <form class="email-form" onsubmit="handleEmail(event)">
-        <input type="email" placeholder="Your email address" required />
-        <button type="submit">Send It To Me</button>
-      </form>
     </div>
 
     <!-- ══ QUOTE ══ -->
@@ -877,39 +887,41 @@
 
     <!-- ══ APP FEATURES ══ -->
     <section class="section">
-      <div class="sec-label">The Tavas App</div>
-      <div class="sec-title">Everything in one place</div>
-      <div class="sec-sub">No more scattered apps. Track your whole wellness journey — mind, body, and habits — in one system built for real life.</div>
-      <div class="feat-grid">
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div>
-          <h3>Supplement & peptide tracker</h3>
-          <p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <h3>Streak tracking & milestones</h3>
-          <p>Build consistency with streak counters and celebrate every win along the way.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <h3>Exercise breaks with timers</h3>
-          <p>Built-in movement prompts keep you active throughout the day — not just tracking it.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-          <h3>AI companion & voice logging</h3>
-          <p>Log anything hands-free. Get real insights and accountability from your AI wellness coach.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>Accessibility-first design</h3>
-          <p>Built for dyslexia, color blindness, and more. Wellness tools that work for everyone.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <h3>Insights & wellness score</h3>
-          <p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p>
+      <div class="section-inner">
+        <div class="sec-label">The Tavas App</div>
+        <div class="sec-title">Everything in one place</div>
+        <div class="sec-sub">No more scattered apps. Track your whole wellness journey — mind, body, and habits — in one system built for real life.</div>
+        <div class="feat-grid">
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div>
+            <h3>Supplement & peptide tracker</h3>
+            <p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>Streak tracking & milestones</h3>
+            <p>Build consistency with streak counters and celebrate every win along the way.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h3>Exercise breaks with timers</h3>
+            <p>Built-in movement prompts keep you active throughout the day — not just tracking it.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <h3>AI companion & voice logging</h3>
+            <p>Log anything hands-free. Get real insights and accountability from your AI wellness coach.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Accessibility-first design</h3>
+            <p>Built for dyslexia, color blindness, and more. Wellness tools that work for everyone.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h3>Insights & wellness score</h3>
+            <p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -918,18 +930,20 @@
 
     <!-- ══ FOUNDING MEMBER ══ -->
     <section class="section section-alt">
-      <div class="sec-label">Early Access</div>
-      <div class="sec-title">Be a founding member</div>
-      <div class="founding-wrap">
-        <h2>Shape Tavas from the ground up</h2>
-        <p>The app just launched. Join the founding community, get 30 days of premium free, and help build something that matters.</p>
-        <div class="perks">
-          <div class="perk"><div class="perk-dot"></div>30 days premium free</div>
-          <div class="perk"><div class="perk-dot"></div>Direct access to the creator</div>
-          <div class="perk"><div class="perk-dot"></div>Shape future features</div>
-          <div class="perk"><div class="perk-dot"></div>Founding member badge</div>
+      <div class="section-inner">
+        <div class="sec-label">Early Access</div>
+        <div class="sec-title">Be a founding member</div>
+        <div class="founding-wrap">
+          <h2>Shape Tavas from the ground up</h2>
+          <p>The app just launched. Join the founding community, get 30 days of premium free, and help build something that matters.</p>
+          <div class="perks">
+            <div class="perk"><div class="perk-dot"></div>30 days premium free</div>
+            <div class="perk"><div class="perk-dot"></div>Direct access to the creator</div>
+            <div class="perk"><div class="perk-dot"></div>Shape future features</div>
+            <div class="perk"><div class="perk-dot"></div>Founding member badge</div>
+          </div>
+          <a href="mailto:sara@tavasworld.com?subject=Founding Member — Tavas World" class="btn-gold">Claim Your Founding Spot</a>
         </div>
-        <a href="connect.html" class="btn-gold">Claim Your Founding Spot</a>
       </div>
     </section>
 
@@ -937,6 +951,7 @@
 
     <!-- ══ PRICING ══ -->
     <section class="section" id="pricing">
+      <div class="section-inner">
       <div class="sec-label">Pricing</div>
       <div class="sec-title">Start free. Upgrade anytime.</div>
       <div class="sec-sub">The free plan is genuinely useful. Premium unlocks your full potential.</div>
@@ -968,49 +983,52 @@
           <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Start 7-Day Free Trial</button></a>
         </div>
       </div>
+      </div>
     </section>
 
     <hr class="divider">
 
     <!-- ══ BOOKS ══ -->
     <section class="section section-alt">
-      <div class="sec-label">Tavas World Books</div>
-      <div class="sec-title">Stories that build character</div>
-      <div class="sec-sub">Children's books, activity books, and journals crafted to spark curiosity, kindness, and emotional growth.</div>
-      <div class="books-row">
-        <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" class="book-card">
-          <img src="assets/img/raspen.png" alt="Adventures of Raspen and Sylas" class="book-cover">
-          <div class="book-name">Adventures of Raspen & Sylas</div>
-          <div class="book-price">$12.99</div>
-        </a>
-        <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank" class="book-card">
-          <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" class="book-cover">
-          <div class="book-name">Dinosaurs in Action</div>
-          <div class="book-price">$9.99</div>
-        </a>
-        <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank" class="book-card">
-          <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book" class="book-cover">
-          <div class="book-name">Dinosaur Activity Book</div>
-          <div class="book-price">$9.99</div>
-        </a>
-        <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank" class="book-card">
-          <img src="assets/img/shineon.png" alt="Shine On Journal" class="book-cover">
-          <div class="book-name">Shine On Journal</div>
-          <div class="book-price">$14.99</div>
-        </a>
-        <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank" class="book-card">
-          <img src="assets/img/machines.png" alt="Big Machines Coloring Book" class="book-cover">
-          <div class="book-name">Big Machines Coloring Book</div>
-          <div class="book-price">$8.99</div>
-        </a>
-        <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank" class="book-card">
-          <img src="assets/img/summer.png" alt="Summer Coloring Book" class="book-cover">
-          <div class="book-name">Summer Coloring Book</div>
-          <div class="book-price">$8.99</div>
-        </a>
-      </div>
-      <div style="margin-top: 28px;">
-        <a href="books.html" class="btn-outline-gold">Browse All Books</a>
+      <div class="section-inner">
+        <div class="sec-label">Tavas World Books</div>
+        <div class="sec-title">Stories that build character</div>
+        <div class="sec-sub">Children's books, activity books, and journals crafted to spark curiosity, kindness, and emotional growth.</div>
+        <div class="books-row">
+          <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" class="book-card">
+            <img src="assets/img/raspen.png" alt="Adventures of Raspen and Sylas" class="book-cover">
+            <div class="book-name">Adventures of Raspen & Sylas</div>
+            <div class="book-price">$12.99</div>
+          </a>
+          <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank" class="book-card">
+            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" class="book-cover">
+            <div class="book-name">Dinosaurs in Action</div>
+            <div class="book-price">$9.99</div>
+          </a>
+          <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank" class="book-card">
+            <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book" class="book-cover">
+            <div class="book-name">Dinosaur Activity Book</div>
+            <div class="book-price">$9.99</div>
+          </a>
+          <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank" class="book-card">
+            <img src="assets/img/shineon.png" alt="Shine On Journal" class="book-cover">
+            <div class="book-name">Shine On Journal</div>
+            <div class="book-price">$14.99</div>
+          </a>
+          <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank" class="book-card">
+            <img src="assets/img/machines.png" alt="Big Machines Coloring Book" class="book-cover">
+            <div class="book-name">Big Machines Coloring Book</div>
+            <div class="book-price">$8.99</div>
+          </a>
+          <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank" class="book-card">
+            <img src="assets/img/summer.png" alt="Summer Coloring Book" class="book-cover">
+            <div class="book-name">Summer Coloring Book</div>
+            <div class="book-price">$8.99</div>
+          </a>
+        </div>
+        <div style="margin-top: 28px;">
+          <a href="books.html" class="btn-outline-gold">Browse All Books</a>
+        </div>
       </div>
     </section>
 
@@ -1018,19 +1036,21 @@
 
     <!-- ══ ABOUT ══ -->
     <section class="section">
-      <div class="sec-label">About Tavas World</div>
-      <div class="sec-title">Empowering minds through storytelling</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
-          <p>Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real-life lessons to empower young readers and the adults guiding them.</p>
-          <p>Tavas World is growing — with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs.</p>
-          <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 8px;">Our Story</a>
-        </div>
-        <div class="about-img">
-          <img src="assets/img/TranparentSun.png" alt="Tavas Sun" class="about-sun">
-          <h3>Sara C. Morell</h3>
-          <p>Author · Publisher · Mentor</p>
+      <div class="section-inner">
+        <div class="sec-label">About Tavas World</div>
+        <div class="sec-title">Empowering minds through storytelling</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
+            <p>Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real-life lessons to empower young readers and the adults guiding them.</p>
+            <p>Tavas World is growing — with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs.</p>
+            <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 8px;">Our Story</a>
+          </div>
+          <div class="about-img">
+            <img src="assets/img/TranparentSun.png" alt="Tavas Sun" class="about-sun">
+            <h3>Sara C. Morell</h3>
+            <p>Author · Publisher · Mentor</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1039,12 +1059,14 @@
 
     <!-- ══ COACHING CTA ══ -->
     <section class="section section-alt">
-      <div class="coach-card">
-        <div>
-          <h2>Work directly with Sara</h2>
-          <p>Author mentorship, wellness accountability coaching, and creative guidance for aspiring writers and entrepreneurs. Limited spots available each month.</p>
+      <div class="section-inner">
+        <div class="coach-card">
+          <div>
+            <h2>Work directly with Sara</h2>
+            <p>Author mentorship, wellness accountability coaching, and creative guidance for aspiring writers and entrepreneurs. Limited spots available each month.</p>
+          </div>
+          <a href="mailto:sara@tavasworld.com?subject=Session Inquiry — Tavas World" class="btn-gold">Book a Session →</a>
         </div>
-        <a href="connect.html" class="btn-gold">Book a Session →</a>
       </div>
     </section>
 
@@ -1058,6 +1080,7 @@
         <div>
           <div class="footer-brand-name">TAVAS WORLD</div>
           <div class="footer-tagline">Navigating life with intention.</div>
+          <div style="margin-top: 5px;"><a href="mailto:sara@tavasworld.com" style="font-family:'Montserrat',sans-serif; font-size:0.7rem; color:var(--gold); text-decoration:none; letter-spacing:0.04em;">sara@tavasworld.com</a></div>
         </div>
       </div>
       <div class="footer-links">
@@ -1065,7 +1088,8 @@
         <a href="books.html">Books</a>
         <a href="https://www.shotamusic.com" target="_blank">Music</a>
         <a href="about.html">About</a>
-        <a href="connect.html">Work With Me</a>
+        <a href="mailto:sara@tavasworld.com?subject=Work With Me — Tavas World">Work With Me</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">App Support</a>
       </div>
       <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
     </div>
@@ -1073,6 +1097,7 @@
 
   <!-- ══ SCRIPTS ══ -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script>
     // Typed.js
