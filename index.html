@@ -189,11 +189,11 @@
 
     .hero-tagline {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 500;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold-dim);
+      color: var(--gold);
       margin-bottom: 18px;
       animation: fadeUp 1s ease 0.35s both;
     }
@@ -298,16 +298,16 @@
     }
     .email-bar-text {
       font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-style: italic;
       color: var(--gold);
     }
     .email-bar-text span {
       font-style: normal;
-      font-size: 0.85rem;
-      color: var(--cream-low);
+      font-size: 0.9rem;
+      color: var(--cream-mid);
     }
-    .email-form { display: flex; gap: 8px; flex-wrap: wrap; }
+    .email-form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
     .email-form input {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.8rem;
@@ -365,28 +365,28 @@
 
     .sec-label {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--gold-dim);
+      color: var(--gold);
       margin-bottom: 10px;
       text-align: center;
     }
     .sec-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
       font-weight: 700;
       color: var(--cream);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       line-height: 1.2;
       text-align: center;
     }
     .sec-sub {
       font-family: 'Playfair Display', serif;
-      font-size: 0.97rem;
-      color: var(--cream-low);
-      max-width: 520px;
+      font-size: 1.05rem;
+      color: var(--cream-mid);
+      max-width: 580px;
       line-height: 1.85;
       margin-bottom: 40px;
       text-align: center;
@@ -437,15 +437,15 @@
     }
     .feat-card h3 {
       font-family: 'Libre Baskerville', serif;
-      font-size: 0.92rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--cream);
       margin-bottom: 8px;
     }
     .feat-card p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      color: rgba(245,236,215,0.75);
+      font-size: 0.9rem;
+      color: var(--cream-mid);
       line-height: 1.7;
     }
 
@@ -512,12 +512,16 @@
       background: rgba(212,168,83,0.03);
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .price-card.hot {
       border: 1px solid rgba(212,168,83,0.35);
       background: rgba(212,168,83,0.06);
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
     .price-list {
       list-style: none;
@@ -538,35 +542,35 @@
     }
     .price-name {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--cream-low);
+      color: var(--cream-mid);
     }
     .price-num {
       font-family: 'Libre Baskerville', serif;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       color: var(--cream);
       margin: 8px 0 4px;
     }
     .price-num span {
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       color: rgba(245,236,215,0.75);
       font-family: 'Montserrat', sans-serif;
     }
     .price-desc {
       font-family: 'Playfair Display', serif;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       font-style: italic;
       color: rgba(245,236,215,0.75);
       margin-bottom: 20px;
     }
-    .price-list { list-style: none; flex: 1; }
+    .price-list { list-style: none; flex: 1; width: 100%; text-align: left; }
     .price-list li {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      color: rgba(245,236,215,0.70);
+      font-size: 0.9rem;
+      color: var(--cream-mid);
       padding: 5px 0;
       display: flex;
       align-items: center;
@@ -676,10 +680,13 @@
       align-items: center;
       width: 100%;
     }
+    .about-text {
+      text-align: center;
+    }
     .about-text p {
       font-family: 'Playfair Display', serif;
-      font-size: 0.97rem;
-      color: var(--cream-low);
+      font-size: 1rem;
+      color: var(--cream-mid);
       line-height: 1.9;
       margin-bottom: 16px;
     }
@@ -691,23 +698,15 @@
       padding: 32px;
       text-align: center;
     }
-    .about-sun {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin: 0 auto 16px;
-      display: block;
-      filter: drop-shadow(0 0 20px rgba(212,168,83,0.3));
-    }
     .about-img h3 {
       font-family: 'Libre Baskerville', serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--cream);
       margin-bottom: 6px;
     }
     .about-img p {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
+      font-size: 0.82rem;
       color: var(--gold-dim);
       letter-spacing: 0.06em;
     }
@@ -719,23 +718,23 @@
       border-radius: 14px;
       padding: 52px 44px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 36px;
-      flex-wrap: wrap;
+      text-align: center;
+      gap: 28px;
     }
     .coach-card h2 {
       font-family: 'Libre Baskerville', serif;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: var(--cream);
       margin-bottom: 12px;
     }
     .coach-card p {
       font-family: 'Playfair Display', serif;
-      font-size: 0.97rem;
-      color: var(--cream-low);
+      font-size: 1rem;
+      color: var(--cream-mid);
       line-height: 1.85;
-      max-width: 380px;
+      max-width: 500px;
     }
 
     /* ══ FOOTER ══ */
@@ -746,17 +745,18 @@
     }
     .footer-inner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      text-align: center;
       gap: 20px;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
     .footer-brand {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
     .footer-brand img {
       width: 30px;
@@ -766,36 +766,37 @@
     }
     .footer-brand-name {
       font-family: 'Libre Baskerville', serif;
-      font-size: 0.88rem;
-      color: rgba(245,236,215,0.75);
+      font-size: 1rem;
+      color: var(--cream);
       letter-spacing: 0.1em;
     }
     .footer-tagline {
       font-family: 'Playfair Display', serif;
-      font-size: 0.75rem;
+      font-size: 0.88rem;
       font-style: italic;
-      color: rgba(245,236,215,0.50);
+      color: var(--cream-mid);
       margin-top: 3px;
     }
     .footer-links {
       display: flex;
       gap: 22px;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .footer-links a {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.82rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(245,236,215,0.60);
+      color: var(--cream-mid);
       text-decoration: none;
       transition: color 0.2s;
     }
     .footer-links a:hover { color: var(--gold); }
     .footer-copy {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      color: rgba(245,236,215,0.45);
+      font-size: 0.78rem;
+      color: var(--cream-low);
       letter-spacing: 0.06em;
     }
 
@@ -803,24 +804,29 @@
     @media (max-width: 768px) {
       #header { padding: 0 20px; }
       .header-logo-text { display: none; }
-      #navbar { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--choc-dark); flex-direction: column; align-items: flex-start; padding: 20px; gap: 16px; border-bottom: 0.5px solid var(--border); }
+      #navbar { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--choc-dark); flex-direction: column; align-items: center; padding: 20px; gap: 16px; border-bottom: 0.5px solid var(--border); }
       #navbar.show { display: flex; }
       .mobile-nav-toggle { display: block; }
       .hero-section { padding: 100px 20px 60px; }
       .hero-sun { width: 100px; height: 100px; }
       .hero-stats { gap: 28px; }
       .email-bar { padding: 18px 20px; }
+      .email-bar-inner { justify-content: center; text-align: center; }
+      .email-form { width: 100%; justify-content: center; }
       .email-form input { width: 100%; }
       .section { padding: 52px 20px; }
       .feat-grid { grid-template-columns: 1fr; }
       .pricing-row { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; }
       .coach-card { padding: 36px 24px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .footer-inner { align-items: center; gap: 24px; }
+      .footer-links { justify-content: center; }
+      .price-list { text-align: left; }
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
       .feat-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-row { grid-template-columns: repeat(2, minmax(0, 340px)); }
     }
   </style>
 </head>
@@ -908,7 +914,7 @@
         <div class="sec-sub">No more scattered apps. Track your whole wellness journey — mind, body, and habits — in one system built for real life.</div>
         <div class="feat-grid">
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div>
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z" fill="none" stroke-width="1.5" stroke-linecap="round"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5" stroke-width="1.5" stroke-linecap="round"/></svg></div>
             <h3>Supplement & peptide tracker</h3>
             <p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p>
           </div>
@@ -1056,7 +1062,7 @@
             <div class="book-price">$7.99</div>
           </a>
         </div>
-        <div style="margin-top: 28px;">
+        <div style="margin-top: 32px; text-align: center;">
           <a href="books.html" class="btn-outline-gold">Browse All Books</a>
         </div>
       </div>
@@ -1074,7 +1080,7 @@
             <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
             <p>Best known for <em>The Adventures of Raspen and Sylas</em>, Sara's work blends nature, kindness, and real-life lessons to empower young readers and the adults guiding them.</p>
             <p>Tavas World is growing — with plans to expand into creative mentorship and professional guidance for aspiring authors and entrepreneurs.</p>
-            <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 8px;">Our Story</a>
+            <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 16px;">Our Story</a>
           </div>
           <div class="about-img">
             <img src="assets/img/sara.jpg" alt="Sara C. Morell" style="width:140px; height:140px; border-radius:50%; object-fit:cover; object-position: center top; border:3px solid rgba(212,168,83,0.4); margin:0 auto 20px; display:block; box-shadow: 0 0 32px rgba(212,168,83,0.15);">
