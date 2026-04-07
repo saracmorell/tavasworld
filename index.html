@@ -140,11 +140,11 @@
 
     .hero-eyebrow {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.68rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--gold-dim);
+      color: var(--cream-mid);
       margin-bottom: 20px;
       animation: fadeUp 0.8s ease both;
     }
@@ -408,6 +408,10 @@
       border: 0.5px solid var(--border);
       border-radius: 10px;
       padding: 26px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       transition: border-color 0.25s, background 0.25s, transform 0.2s;
     }
     .feat-card:hover {
@@ -417,15 +421,15 @@
     }
 
     .feat-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
       background: rgba(212,168,83,0.08);
       border: 0.5px solid rgba(212,168,83,0.18);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      margin: 0 auto 16px;
     }
     .feat-icon svg {
       width: 17px; height: 17px;
@@ -772,10 +776,10 @@
     }
     .footer-tagline {
       font-family: 'Playfair Display', serif;
-      font-size: 0.88rem;
+      font-size: 1.05rem;
       font-style: italic;
-      color: var(--cream-mid);
-      margin-top: 3px;
+      color: var(--gold);
+      margin-top: 5px;
     }
     .footer-links {
       display: flex;
@@ -874,15 +878,15 @@
         </div>
         <div>
           <div class="stat-num">Free</div>
-          <div class="stat-label">To Download</div>
+          <div class="stat-label">App Download</div>
         </div>
         <div>
           <div class="stat-num">$4.99</div>
           <div class="stat-label">Premium / Month</div>
         </div>
         <div>
-          <div class="stat-num">7</div>
-          <div class="stat-label">Day Free Trial</div>
+          <div class="stat-num">7-Day</div>
+          <div class="stat-label">Free Trial</div>
         </div>
       </div>
     </section>
@@ -949,21 +953,15 @@
 
     <hr class="divider">
 
-    <!-- ══ FOUNDING MEMBER ══ -->
+    <!-- ══ DOWNLOAD CTA ══ -->
     <section class="section section-alt">
-      <div class="section-inner">
-        <div class="sec-label">Early Access</div>
-        <div class="sec-title">Be a founding member</div>
-        <div class="founding-wrap">
-          <h2>Shape Tavas from the ground up</h2>
-          <p>The app just launched. Join the founding community, get 30 days of premium free, and help build something that matters.</p>
-          <div class="perks">
-            <div class="perk"><div class="perk-dot"></div>30 days premium free</div>
-            <div class="perk"><div class="perk-dot"></div>Direct access to the creator</div>
-            <div class="perk"><div class="perk-dot"></div>Shape future features</div>
-            <div class="perk"><div class="perk-dot"></div>Founding member badge</div>
-          </div>
-          <a href="mailto:sara@tavasworld.com?subject=Founding Member — Tavas World" class="btn-gold">Claim Your Founding Spot</a>
+      <div class="section-inner" style="text-align:center;">
+        <div class="sec-label">Now Available</div>
+        <div class="sec-title">Start your journey today</div>
+        <div class="sec-sub">Download free on Google Play. Try premium free for 7 days — no commitment, cancel anytime.</div>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-gold">Download Free on Google Play</a>
+          <a href="#pricing" class="btn-outline-gold">See Pricing</a>
         </div>
       </div>
     </section>
@@ -978,8 +976,9 @@
       <div class="sec-sub">The free plan is genuinely useful. Premium unlocks your full potential.</div>
       <div class="pricing-row">
         <div class="price-card">
+          <div style="height:28px;"></div>
           <div class="price-name">Free</div>
-          <div class="price-num">$0 <span></div>
+          <div class="price-num">$0 <span>/ forever</span></div>
           <div class="price-desc">Everything you need to start</div>
           <ul class="price-list">
             <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Daily journaling</li>
