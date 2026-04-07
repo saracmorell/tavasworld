@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tavas World — Your Journey. All Power. Fearless Strength.</title>
-  <meta name="description" content="Tavas is your all-in-one wellness companion — journal daily, track habits, supplements, and get AI-powered guidance. Plus children's books, journals, and more from Sara C. Morell.">
+  <meta name="description" content="Tavas is your all-in-one wellness performance tracker — track habits, supplements, peptides, and get AI-powered guidance. Plus children's books and more from Sara C. Morell.">
+  <meta property="og:title" content="Tavas World — Your Journey. All Power. Fearless Strength." />
+  <meta property="og:description" content="Track habits, supplements, peptides, and get AI-powered guidance. Built for real life." />
+  <meta property="og:image" content="https://www.tavasworld.com/assets/img/TranparentSun.png" />
+  <meta property="og:url" content="https://www.tavasworld.com" />
+  <meta property="og:type" content="website" />
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/typed.js/typed.umd.js" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -27,7 +31,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -37,7 +40,6 @@
       overflow-x: hidden;
     }
 
-    /* ══ SCROLLBAR ══ */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--choc-dark); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
@@ -281,68 +283,10 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ══ EMAIL BAR ══ */
-    .email-bar {
-      background: var(--choc-dark);
-      padding: 22px 32px;
-      border-bottom: 0.5px solid var(--border);
-    }
-    .email-bar-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .email-bar-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--gold);
-    }
-    .email-bar-text span {
-      font-style: normal;
-      font-size: 0.9rem;
-      color: var(--cream-mid);
-    }
-    .email-form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-    .email-form input {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,168,83,0.2);
-      background: var(--cream-hint);
-      color: var(--cream);
-      outline: none;
-      width: 220px;
-      transition: border-color 0.2s;
-    }
-    .email-form input::placeholder { color: rgba(245,236,215,0.40); }
-    .email-form input:focus { border-color: var(--gold-dim); }
-    .email-form button {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      border-radius: 999px;
-      border: none;
-      background: var(--gold);
-      color: var(--choc-dark);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .email-form button:hover { background: var(--gold-light); }
-
     /* ══ QUOTE BAR ══ */
     .quote-bar {
       background: var(--choc);
       padding: 30px 32px;
-      text-align: center;
       border-bottom: 0.5px solid rgba(212,168,83,0.06);
     }
     .quote-bar p {
@@ -351,6 +295,7 @@
       font-style: italic;
       color: rgba(245,236,215,0.75);
       letter-spacing: 0.02em;
+      text-align: center;
     }
     .quote-bar p em { color: var(--gold); font-style: normal; }
 
@@ -453,59 +398,10 @@
       line-height: 1.7;
     }
 
-    /* ══ FOUNDING MEMBER ══ */
-    .founding-wrap {
-      background: rgba(212,168,83,0.05);
-      border: 0.5px solid rgba(212,168,83,0.2);
-      border-radius: 14px;
-      padding: 48px 40px;
-      text-align: center;
-      width: 100%;
-    }
-    .founding-wrap h2 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.6rem;
-      color: var(--cream);
-      margin-bottom: 14px;
-    }
-    .founding-wrap p {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.97rem;
-      color: var(--cream-low);
-      line-height: 1.85;
-      margin-bottom: 32px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .perks {
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-    .perk {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      letter-spacing: 0.04em;
-    }
-    .perk-dot {
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
     /* ══ PRICING ══ */
     .pricing-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 340px));
+      grid-template-columns: repeat(2, minmax(0, 340px));
       gap: 16px;
       justify-content: center;
     }
@@ -522,14 +418,6 @@
     .price-card.hot {
       border: 1px solid rgba(212,168,83,0.35);
       background: rgba(212,168,83,0.06);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .price-list {
-      list-style: none;
-      flex: 1;
     }
     .price-badge {
       font-family: 'Montserrat', sans-serif;
@@ -644,23 +532,6 @@
       object-fit: contain;
       border-radius: 5px;
       margin-bottom: 10px;
-      background: rgba(212,168,83,0.04);
-    }
-    .book-cover-placeholder {
-      width: 100%;
-      height: 100px;
-      background: rgba(212,168,83,0.06);
-      border-radius: 5px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .book-cover-placeholder svg {
-      width: 24px; height: 24px;
-      stroke: rgba(212,168,83,0.3);
-      fill: none;
-      stroke-width: 1.5;
     }
     .book-name {
       font-family: 'Playfair Display', serif;
@@ -684,9 +555,7 @@
       align-items: center;
       width: 100%;
     }
-    .about-text {
-      text-align: center;
-    }
+    .about-text { text-align: center; }
     .about-text p {
       font-family: 'Playfair Display', serif;
       font-size: 1rem;
@@ -713,32 +582,6 @@
       font-size: 0.82rem;
       color: var(--gold-dim);
       letter-spacing: 0.06em;
-    }
-
-    /* ══ COACHING ══ */
-    .coach-card {
-      background: linear-gradient(135deg, var(--choc-dark) 0%, var(--choc) 100%);
-      border: 0.5px solid rgba(212,168,83,0.2);
-      border-radius: 14px;
-      padding: 52px 44px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 28px;
-    }
-    .coach-card h2 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.8rem;
-      color: var(--cream);
-      margin-bottom: 12px;
-    }
-    .coach-card p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--cream-mid);
-      line-height: 1.85;
-      max-width: 500px;
     }
 
     /* ══ FOOTER ══ */
@@ -814,16 +657,10 @@
       .hero-section { padding: 100px 20px 60px; }
       .hero-sun { width: 100px; height: 100px; }
       .hero-stats { gap: 28px; }
-      .email-bar { padding: 18px 20px; }
-      .email-bar-inner { justify-content: center; text-align: center; }
-      .email-form { width: 100%; justify-content: center; }
-      .email-form input { width: 100%; }
       .section { padding: 52px 20px; }
       .feat-grid { grid-template-columns: 1fr; }
       .pricing-row { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; }
-      .coach-card { padding: 36px 24px; }
-      .footer-inner { align-items: center; gap: 24px; }
       .footer-links { justify-content: center; }
       .price-list { text-align: left; }
     }
@@ -842,16 +679,14 @@
       <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
-
     <nav id="navbar">
       <a href="https://tavas.app" target="_blank">The App</a>
       <a href="books.html">Books</a>
       <a href="#pricing">Pricing</a>
       <a href="https://www.shotamusic.com" target="_blank">Music</a>
       <a href="about.html">About</a>
-      <a href="connect.html" class="nav-cta">Work With Me</a>
+      <a href="connect.html" class="nav-cta">Connect</a>
     </nav>
-
     <i class="bi bi-list mobile-nav-toggle" id="mobileToggle"></i>
   </header>
 
@@ -874,7 +709,7 @@
           <span style="color:var(--gold); font-weight:600;">T</span>he <span style="color:var(--gold); font-weight:600;">A</span>I <span style="color:var(--gold); font-weight:600;">V</span>irtual <span style="color:var(--gold); font-weight:600;">A</span>ssistant <span style="color:var(--gold); font-weight:600;">S</span>ystem &nbsp;·&nbsp; <em style="color:rgba(245,236,215,0.45); font-style:italic;">The App</em>
         </div>
       </div>
-      <p class="hero-sub">Tavas is your all-in-one wellness companion — journal daily, track habits, and get AI-powered guidance. Built for real life.</p>
+      <p class="hero-sub">Tavas is your all-in-one wellness performance tracker — track habits, supplements, peptides, and get AI-powered guidance. Built for real life.</p>
       <div class="hero-btns">
         <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-gold">Download Free</a>
         <a href="books.html" class="btn-outline-gold">Explore Books</a>
@@ -899,20 +734,6 @@
       </div>
     </section>
 
-    <!-- ══ EMAIL CAPTURE ══ -->
-    <div class="email-bar">
-      <div class="email-bar-inner">
-        <div class="email-bar-text">
-          Get the free 7-Day Wellness Reset Guide
-          <span> — no spam. Just real value.</span>
-        </div>
-        <form class="email-form" onsubmit="handleEmail(event)">
-          <input type="email" placeholder="Your email address" required />
-          <button type="submit">Send It To Me</button>
-        </form>
-      </div>
-    </div>
-
     <!-- ══ QUOTE ══ -->
     <div class="quote-bar">
       <p>"You didn't come this far to only come this far." — <em>Tavas</em></p>
@@ -923,7 +744,7 @@
       <div class="section-inner">
         <div class="sec-label">The Tavas App</div>
         <div class="sec-title">Everything in one place</div>
-        <div class="sec-sub">No more scattered apps. Track your whole wellness journey — mind, body, and habits — in one system built for real life.</div>
+        <div class="sec-sub">No more scattered apps. Track your whole wellness — mind, body, and habits — in one system built for real life.</div>
         <div class="feat-grid">
           <div class="feat-card">
             <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z" fill="none" stroke-width="1.5" stroke-linecap="round"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5" stroke-width="1.5" stroke-linecap="round"/></svg></div>
@@ -943,7 +764,7 @@
           <div class="feat-card">
             <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
             <h3>AI companion & voice logging</h3>
-            <p>Log anything hands-free. Get real insights and accountability from your AI wellness coach.</p>
+            <p>Log anything hands-free. Get real insights and accountability from your AI wellness companion.</p>
           </div>
           <div class="feat-card">
             <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
@@ -979,53 +800,39 @@
     <!-- ══ PRICING ══ -->
     <section class="section" id="pricing">
       <div class="section-inner">
-      <div class="sec-label">Tavas App Pricing</div>
-      <div class="sec-title">Start free. Upgrade anytime.</div>
-      <div class="sec-sub">The <strong style="color:var(--cream);">Tavas App</strong> — <em>The AI Virtual Assistant System</em> — is your all-in-one wellness companion. Download free or unlock the full experience with premium.</div>
-      <div class="pricing-row">
-        <div class="price-card">
-          <div style="height:28px;"></div>
-          <div class="price-name">Free</div>
-          <div class="price-num">$0 <span>/Trial</span></div>
-          <div class="price-desc">Everything you need to start</div>
-          <ul class="price-list">
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Daily journaling</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Basic habit tracking</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Exercise breaks</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>7-day streaks</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Basic wellness insights</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Download Free</button></a>
+        <div class="sec-label">Tavas App Pricing</div>
+        <div class="sec-title">Start free. Upgrade anytime.</div>
+        <div class="sec-sub">The <strong style="color:var(--cream);">Tavas App</strong> — <em>The AI Virtual Assistant System</em> — is your all-in-one wellness performance tracker. Download free or unlock the full experience with premium.</div>
+        <div class="pricing-row">
+          <div class="price-card hot">
+            <div class="price-badge">Most Popular</div>
+            <div class="price-name">Monthly</div>
+            <div class="price-num">$4.99 <span>/ month</span></div>
+            <div class="price-desc">The full Tavas experience</div>
+            <ul class="price-list">
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Exercise breaks with timers</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Start 7-Day Free Trial</button></a>
+          </div>
+          <div class="price-card hot">
+            <div class="price-badge">Best Value</div>
+            <div class="price-name">Yearly</div>
+            <div class="price-num">$39.99 <span>/ year</span></div>
+            <div class="price-desc">Save 33% vs monthly</div>
+            <ul class="price-list">
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Everything in monthly</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
+              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Get Best Value</button></a>
+          </div>
         </div>
-        <div class="price-card hot">
-          <div class="price-badge">Most Popular</div>
-          <div class="price-name">Monthly</div>
-          <div class="price-num">$4.99 <span>/ month</span></div>
-          <div class="price-desc">The full Tavas experience</div>
-          <ul class="price-list">
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Everything in free</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Start 7-Day Free Trial</button></a>
-        </div>
-        <div class="price-card hot">
-          <div class="price-badge">Best Value</div>
-          <div class="price-name">Yearly</div>
-          <div class="price-num">$39.99 <span>/ year</span></div>
-          <div class="price-desc">Save 33% vs monthly</div>
-          <ul class="price-list">
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Everything in premium</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
-            <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Get Best Value</button></a>
-        </div>
-      </div>
       </div>
     </section>
 
@@ -1036,7 +843,7 @@
       <div class="section-inner">
         <div class="sec-label">Tavas World Books</div>
         <div class="sec-title">Stories that build character</div>
-        <div class="sec-sub">Children's books, activity books, and journals crafted to spark curiosity, kindness, and emotional growth.</div>
+        <div class="sec-sub">Children's books and activity books crafted to spark curiosity, kindness, and emotional growth.</div>
         <div class="books-row">
           <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" class="book-card">
             <img src="assets/img/raspen.png" alt="Adventures of Raspen and Sylas" class="book-cover">
@@ -1085,34 +892,18 @@
         <div class="about-grid">
           <div class="about-text">
             <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
-            <p><em>TAVAS</em> stands for <em>The Author's Virtual Assistant Studio</em> — a creative world built to inspire, mentor, and empower. From heartwarming children's books to guided journals, every creation is designed to spark learning and meaningful conversations.</p>
-            <p>The Tavas App carries that same vision forward — <em>The AI Virtual Assistant System</em> — bringing intelligent wellness tracking, journaling, and guidance to your daily life.</p>
+            <p><em>TAVAS</em> stands for <em>The Author's Virtual Assistant Studio</em> — a creative world built to inspire, mentor, and empower. From heartwarming children's books to activity books, every creation is designed to spark learning and meaningful conversations.</p>
+            <p>The Tavas App carries that same vision forward — <em>The AI Virtual Assistant System</em> — bringing intelligent wellness tracking and AI-powered guidance to your daily life.</p>
             <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 16px;">Our Story</a>
           </div>
           <div class="about-img">
             <img src="assets/img/sara.jpg" alt="Sara C. Morell" style="width:140px; height:140px; border-radius:50%; object-fit:cover; object-position: center top; border:3px solid rgba(212,168,83,0.4); margin:0 auto 20px; display:block; box-shadow: 0 0 32px rgba(212,168,83,0.15);">
             <h3>Sara C. Morell</h3>
-            <p style="margin-bottom:16px;">Author · Publisher · Mentor</p>
+            <p style="margin-bottom:16px;">Author · Publisher · Creator</p>
             <div style="border-top:0.5px solid var(--border); padding-top:16px; margin-top:4px;">
-              <p style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:rgba(245,236,215,0.60); line-height:1.7; margin-bottom:12px;">Children's book author, wellness app creator, and mentor dedicated to empowering readers of all ages.</p>
-              <a href="mailto:sara@tavasworld.com?subject=Work With Me — Tavas World" style="font-family:'Montserrat',sans-serif; font-size:0.72rem; color:var(--gold); text-decoration:none; letter-spacing:0.06em;">sara@tavasworld.com</a>
+              <p style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:rgba(245,236,215,0.60); line-height:1.7;">Children's book author, wellness app creator, and entrepreneur dedicated to empowering people of all ages.</p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- ══ COACHING CTA ══ -->
-    <section class="section section-alt">
-      <div class="section-inner">
-        <div class="coach-card">
-          <div>
-            <h2>Work directly with Sara</h2>
-            <p>Author mentorship, wellness accountability coaching, and creative guidance for aspiring writers and entrepreneurs. Limited spots available each month.</p>
-          </div>
-          <a href="connect.html" class="btn-gold">Book a Session →</a>
         </div>
       </div>
     </section>
@@ -1127,7 +918,6 @@
         <div>
           <div class="footer-brand-name">TAVAS WORLD</div>
           <div class="footer-tagline">Navigating life with intention.</div>
-          <div style="margin-top: 5px;"><a href="mailto:sara@tavasworld.com" style="font-family:'Montserrat',sans-serif; font-size:0.7rem; color:var(--gold); text-decoration:none; letter-spacing:0.04em;">sara@tavasworld.com</a></div>
         </div>
       </div>
       <div class="footer-links">
@@ -1135,49 +925,30 @@
         <a href="books.html">Books</a>
         <a href="https://www.shotamusic.com" target="_blank">Music</a>
         <a href="about.html">About</a>
-        <a href="mailto:sara@tavasworld.com?subject=Work With Me — Tavas World">Work With Me</a>
+        <a href="connect.html">Connect</a>
         <a href="mailto:support@tavasworld.com?subject=App Support">App Support</a>
       </div>
-      <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
+      <div class="footer-copy">© 2026 Tavas World. All rights reserved.</div>
     </div>
   </footer>
 
   <!-- ══ SCRIPTS ══ -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script>
-    // Typed.js
     const typedEl = document.querySelector('.typed');
     if (typedEl) {
       const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
       new Typed('.typed', { strings: items, typeSpeed: 80, backSpeed: 40, backDelay: 2000, loop: true });
     }
 
-    // Mobile nav
     document.getElementById('mobileToggle').addEventListener('click', function () {
       document.getElementById('navbar').classList.toggle('show');
     });
 
-    // Email capture
-    function handleEmail(e) {
-      e.preventDefault();
-      const input = e.target.querySelector('input');
-      const btn = e.target.querySelector('button');
-      btn.textContent = 'Thank you!';
-      btn.style.background = '#2D5A27';
-      input.value = '';
-      setTimeout(() => { btn.textContent = 'Send It To Me'; btn.style.background = ''; }, 3000);
-    }
-
-    // Scroll header shadow
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
-      if (window.scrollY > 20) {
-        header.style.boxShadow = '0 2px 24px rgba(0,0,0,0.4)';
-      } else {
-        header.style.boxShadow = 'none';
-      }
+      header.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.4)' : 'none';
     });
   </script>
 </body>
