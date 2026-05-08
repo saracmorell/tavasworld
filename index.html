@@ -89,8 +89,11 @@
     .app-cta-row { display: flex; justify-content: center; }
 
     .quote-section { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
-    .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; }
-    .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; transition: opacity 0.6s ease; }
+    .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); transition: opacity 0.6s ease; }
+    .quote-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
+    .quote-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.3s; }
+    .quote-dot.active { background: var(--gold); }
 
     .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 80px 48px; text-align: center; }
     .about-strip-inner { max-width: 620px; margin: 0 auto; }
@@ -286,8 +289,9 @@
     </section>
 
     <div class="quote-section">
-      <p class="quote-text">"You didn't come this far to only come this far."</p>
-      <p class="quote-attr">— Tavas</p>
+      <p class="quote-text" id="quoteText">"Do everything you ever dreamed of — and I mean everything."</p>
+      <p class="quote-attr" id="quoteAttr">— Sara C. Morell</p>
+      <div class="quote-dots" id="quoteDots"></div>
     </div>
 
     <div class="about-strip">
@@ -344,6 +348,45 @@
       const h = document.getElementById('header');
       h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
     });
+    const quotes = [
+      { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
+      { text: "I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
+      { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
+      { text: "Showing others the world through my eyes is a passion of mine.", attr: "— Sara C. Morell" },
+      { text: "The best thing about life is that no day is the same.", attr: "— Sara C. Morell" },
+      { text: "As a child I knew my life was not supposed to be that hard — so I made sure when I turned 18 that it was going to be how I chose it to be.", attr: "— Sara C. Morell" },
+    ];
+    let currentQuote = 0;
+    const quoteText = document.getElementById('quoteText');
+    const quoteAttr = document.getElementById('quoteAttr');
+    const dotsContainer = document.getElementById('quoteDots');
+
+    quotes.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => showQuote(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function showQuote(index) {
+      quoteText.style.opacity = '0';
+      quoteAttr.style.opacity = '0';
+      setTimeout(() => {
+        currentQuote = index;
+        quoteText.textContent = '"' + quotes[index].text + '"';
+        quoteAttr.textContent = quotes[index].attr;
+        quoteText.style.opacity = '1';
+        quoteAttr.style.opacity = '1';
+        document.querySelectorAll('.quote-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === index);
+        });
+      }, 400);
+    }
+
+    setInterval(() => {
+      showQuote((currentQuote + 1) % quotes.length);
+    }, 5000);
+
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
