@@ -385,7 +385,7 @@
 
     setInterval(() => {
       showQuote((currentQuote + 1) % quotes.length);
-    }, 5000);
+    }, 10000);
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
