@@ -13,8 +13,7 @@
   <meta property="og:type" content="website" />
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --choc:       #1C1208;
@@ -23,658 +22,134 @@
       --gold:       #D4A853;
       --gold-light: #E8C070;
       --gold-dim:   rgba(212,168,83,0.55);
-      --gold-faint: rgba(212,168,83,0.12);
+      --gold-faint: rgba(212,168,83,0.08);
       --cream:      #F5ECD7;
       --cream-mid:  rgba(245,236,215,0.75);
-      --cream-low:  rgba(245,236,215,0.60);
-      --cream-hint: rgba(245,236,215,0.08);
-      --border:     rgba(212,168,83,0.14);
+      --cream-low:  rgba(245,236,215,0.50);
+      --border:     rgba(212,168,83,0.12);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background-color: var(--choc-deep); color: var(--cream); overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
 
-    body {
-      font-family: 'Playfair Display', Georgia, serif;
-      background-color: var(--choc);
-      color: var(--cream);
-      overflow-x: hidden;
-    }
-
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--choc-dark); }
-    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
-
-    /* ══ HEADER ══ */
-    #header {
-      background: rgba(20,14,6,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 0.5px solid var(--border);
-      padding: 0 32px;
-      height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      transition: background 0.3s;
-    }
-
-    .header-logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      text-decoration: none;
-    }
-    .header-logo-img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-    }
-    .header-logo-text {
-      font-family: 'Libre Baskerville', serif;
-      color: var(--cream);
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      white-space: nowrap;
-    }
+    #header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    .header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .header-logo-img { width: 36px; height: 36px; object-fit: contain; }
+    .header-logo-text { font-family: 'Libre Baskerville', serif; color: var(--cream); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.16em; white-space: nowrap; }
     .header-logo-text span { color: var(--gold); }
+    #navbar { display: flex; align-items: center; gap: 36px; }
+    #navbar a { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.25s; }
+    #navbar a:hover { color: var(--cream); }
+    .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
 
-    #navbar { display: flex; align-items: center; gap: 28px; }
-    #navbar a {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    #navbar a:hover { color: var(--gold); }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 140px 24px 100px; position: relative; overflow: hidden; background: var(--choc-deep); }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 36px; animation: riseIn 1s ease both; }
+    .hero-sun { width: 110px; height: 110px; object-fit: contain; margin: 0 auto 40px; display: block; animation: riseIn 1.1s ease 0.1s both, breathe 6s ease-in-out 1.2s infinite; }
+    @keyframes breathe { 0%,100% { filter: drop-shadow(0 0 30px rgba(212,168,83,0.15)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px rgba(212,168,83,0.35)); transform: scale(1.04); } }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 16px; animation: riseIn 1.2s ease 0.2s both; }
+    .hero-typed-line { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 2.2rem); font-style: italic; color: var(--gold); margin-bottom: 32px; min-height: 3rem; animation: riseIn 1.2s ease 0.3s both; }
+    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 36px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.35s both; flex-wrap: wrap; }
+    .hero-tagline .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
+    .hero-tavas-desc { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--cream-low); margin-bottom: 52px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; animation: riseIn 1.2s ease 0.38s both; }
+    .hero-tavas-desc .vpipe { width: 1px; height: 10px; background: var(--border); display: inline-block; }
+    .hero-tavas-desc em { font-style: italic; color: rgba(245,236,215,0.35); font-size: 0.68rem; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.4s both; }
 
-    .nav-cta {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--choc-dark) !important;
-      background: var(--gold);
-      padding: 9px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; }
+    .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
 
-    .mobile-nav-toggle {
-      display: none;
-      color: var(--cream);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+    .stats-bar { background: var(--choc-deep); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 32px 48px; }
+    .stats-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; }
+    .stat-item { flex: 1; text-align: center; padding: 0 32px; position: relative; }
+    .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 28px; width: 0.5px; background: var(--border); }
+    .stat-val { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-lbl { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); }
 
-    /* ══ HERO ══ */
-    .hero-section {
-      min-height: 100vh;
-      background:
-        radial-gradient(ellipse at 50% 20%, rgba(42,26,8,0.95) 0%, rgba(28,18,8,0.98) 50%, rgba(15,10,4,1) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 32px 80px;
-      position: relative;
-      overflow: hidden;
-    }
+    .app-section { padding: 120px 48px; background: var(--choc-deep); }
+    .app-inner { max-width: 1100px; margin: 0 auto; }
+    .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
+    .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
+    .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 520px; margin: 0 auto 56px; text-align: center; }
 
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 40%, rgba(212,168,83,0.06) 0%, transparent 65%);
-      pointer-events: none;
-    }
+    .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-bottom: 52px; }
+    .feat-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color 0.25s, background 0.25s, transform 0.2s; }
+    .feat-card:hover { border-color: rgba(212,168,83,0.28); background: rgba(212,168,83,0.07); transform: translateY(-3px); }
+    .feat-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .feat-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .feat-card h3 { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; font-weight: 700; color: var(--cream); margin-bottom: 8px; }
+    .feat-card p { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; color: var(--cream-mid); line-height: 1.7; }
+    .app-cta-row { display: flex; justify-content: center; }
 
-    .hero-eyebrow {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-      margin-bottom: 20px;
-      animation: fadeUp 0.8s ease both;
-    }
+    .quote-section { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
+    .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; }
+    .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
 
-    .hero-sun {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
-      margin: 0 auto 28px;
-      display: block;
-      animation: fadeUp 0.9s ease 0.1s both, glow 4s ease-in-out infinite;
-      filter: drop-shadow(0 0 24px rgba(212,168,83,0.3));
-    }
+    .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 80px 48px; text-align: center; }
+    .about-strip-inner { max-width: 620px; margin: 0 auto; }
+    .about-strip .sec-label { margin-bottom: 16px; }
+    .about-strip p { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); line-height: 1.9; margin-bottom: 14px; }
+    .about-strip p em { color: var(--gold); font-style: italic; }
 
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 20px rgba(212,168,83,0.25)); }
-      50%       { filter: drop-shadow(0 0 40px rgba(212,168,83,0.45)); }
-    }
+    .cta-band { padding: 100px 48px; background: var(--choc-deep); text-align: center; position: relative; overflow: hidden; border-top: 0.5px solid var(--border); }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.05) 0%, transparent 70%); pointer-events: none; }
+    .cta-band-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 20px; }
+    .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; }
+    .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 40px; line-height: 1.8; }
 
-    .hero-section h1 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 700;
-      color: var(--cream);
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px;
-      animation: fadeUp 1s ease 0.2s both;
-    }
-
-    .hero-typed-wrap {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-style: italic;
-      color: var(--gold);
-      margin-bottom: 20px;
-      min-height: 2.5rem;
-      animation: fadeUp 1s ease 0.3s both;
-    }
-
-    .typed-cursor { color: var(--gold); }
-
-    .hero-tagline {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 18px;
-      animation: fadeUp 1s ease 0.35s both;
-    }
-
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--cream-low);
-      max-width: 480px;
-      margin: 0 auto 40px;
-      line-height: 1.85;
-      animation: fadeUp 1s ease 0.4s both;
-    }
-
-    .hero-btns {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 64px;
-      animation: fadeUp 1s ease 0.5s both;
-    }
-
-    .btn-gold {
-      display: inline-block;
-      padding: 14px 34px;
-      background: var(--gold);
-      color: var(--choc-dark);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-dark); text-decoration: none; }
-
-    .btn-outline-gold {
-      display: inline-block;
-      padding: 14px 34px;
-      background: transparent;
-      color: var(--cream-mid);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      border: 1px solid rgba(212,168,83,0.3);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 56px;
-      padding-top: 40px;
-      border-top: 0.5px solid var(--border);
-      animation: fadeUp 1s ease 0.6s both;
-      flex-wrap: wrap;
-    }
-
-    .stat-num {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.7rem;
-      color: var(--gold);
-    }
-    .stat-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cream-low);
-      margin-top: 4px;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ══ QUOTE BAR ══ */
-    .quote-bar {
-      background: var(--choc);
-      padding: 30px 32px;
-      border-bottom: 0.5px solid rgba(212,168,83,0.06);
-    }
-    .quote-bar p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: rgba(245,236,215,0.75);
-      letter-spacing: 0.02em;
-      text-align: center;
-    }
-    .quote-bar p em { color: var(--gold); font-style: normal; }
-
-    /* ══ SECTIONS ══ */
-    .section { padding: 72px 32px; }
-    .section-alt { background: var(--choc-dark); }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .sec-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .sec-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 14px;
-      line-height: 1.2;
-      text-align: center;
-    }
-    .sec-sub {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: var(--cream-mid);
-      max-width: 580px;
-      line-height: 1.85;
-      margin-bottom: 40px;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
-
-    /* ══ FEATURES GRID ══ */
-    .feat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
-    }
-
-    .feat-card {
-      background: rgba(212,168,83,0.04);
-      border: 0.5px solid var(--border);
-      border-radius: 10px;
-      padding: 26px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: border-color 0.25s, background 0.25s, transform 0.2s;
-    }
-    .feat-card:hover {
-      border-color: rgba(212,168,83,0.28);
-      background: rgba(212,168,83,0.07);
-      transform: translateY(-3px);
-    }
-
-    .feat-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
-      background: rgba(212,168,83,0.08);
-      border: 0.5px solid rgba(212,168,83,0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-    }
-    .feat-icon svg {
-      width: 17px; height: 17px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .feat-card h3 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 8px;
-    }
-    .feat-card p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      color: var(--cream-mid);
-      line-height: 1.7;
-    }
-
-    /* ══ PRICING ══ */
-    .pricing-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 340px));
-      gap: 16px;
-      justify-content: center;
-    }
-    .price-card {
-      border-radius: 12px;
-      padding: 30px;
-      border: 0.5px solid var(--border);
-      background: rgba(212,168,83,0.03);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .price-card.hot {
-      border: 1px solid rgba(212,168,83,0.35);
-      background: rgba(212,168,83,0.06);
-    }
-    .price-badge {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: rgba(212,168,83,0.14);
-      color: var(--gold);
-      padding: 4px 12px;
-      border-radius: 999px;
-      display: inline-block;
-      margin-bottom: 14px;
-    }
-    .price-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-    }
-    .price-num {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2.4rem;
-      color: var(--cream);
-      margin: 8px 0 4px;
-    }
-    .price-num span {
-      font-size: 0.9rem;
-      color: rgba(245,236,215,0.75);
-      font-family: 'Montserrat', sans-serif;
-    }
-    .price-desc {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      font-style: italic;
-      color: rgba(245,236,215,0.75);
-      margin-bottom: 20px;
-    }
-    .price-list { list-style: none; flex: 1; width: 100%; text-align: left; }
-    .price-list li {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      color: var(--cream-mid);
-      padding: 5px 0;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-    .ck {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: rgba(212,168,83,0.1);
-      border: 0.5px solid rgba(212,168,83,0.25);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .ck svg {
-      width: 7px; height: 7px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .price-btn {
-      width: 100%;
-      margin-top: 24px;
-      padding: 12px;
-      border-radius: 999px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: 1px solid rgba(212,168,83,0.2);
-      color: rgba(245,236,215,0.4);
-      background: transparent;
-      transition: all 0.2s;
-    }
-    .price-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
-    .price-card.hot .price-btn {
-      background: var(--gold);
-      color: var(--choc-dark);
-      border-color: var(--gold);
-    }
-    .price-card.hot .price-btn:hover { background: var(--gold-light); }
-
-    /* ══ BOOKS ══ */
-    .books-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 16px;
-    }
-    .book-card {
-      background: rgba(212,168,83,0.03);
-      border: 0.5px solid var(--border);
-      border-radius: 10px;
-      padding: 18px;
-      text-align: center;
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .book-card:hover { border-color: rgba(212,168,83,0.28); transform: translateY(-3px); }
-    .book-cover {
-      width: 100%;
-      height: 140px;
-      object-fit: contain;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    .book-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.82rem;
-      color: rgba(245,236,215,0.75);
-      margin-bottom: 5px;
-      line-height: 1.4;
-    }
-    .book-price {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gold);
-    }
-
-    /* ══ ABOUT ══ */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      width: 100%;
-    }
-    .about-text { text-align: center; }
-    .about-text p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--cream-mid);
-      line-height: 1.9;
-      margin-bottom: 16px;
-    }
-    .about-text p em { color: var(--gold); font-style: italic; }
-    .about-img {
-      background: rgba(212,168,83,0.05);
-      border: 0.5px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      text-align: center;
-    }
-    .about-img h3 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.2rem;
-      color: var(--cream);
-      margin-bottom: 6px;
-    }
-    .about-img p {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.82rem;
-      color: var(--gold-dim);
-      letter-spacing: 0.06em;
-    }
-
-    /* ══ FOOTER ══ */
-    footer {
-      background: var(--choc-deep);
-      border-top: 0.5px solid rgba(212,168,83,0.07);
-      padding: 40px 32px;
-    }
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-    .footer-brand img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-      border-radius: 50%;
-    }
-    .footer-brand-name {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1rem;
-      color: var(--cream);
-      letter-spacing: 0.1em;
-    }
-    .footer-tagline {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--gold);
-      margin-top: 5px;
-    }
-    .footer-links {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .footer-links a {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 48px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-brand-wrap { display: flex; align-items: center; gap: 12px; }
+    .footer-brand-wrap img { width: 28px; height: 28px; object-fit: contain; }
+    .footer-brand-name { font-family: 'Libre Baskerville', serif; font-size: 0.85rem; color: var(--cream); letter-spacing: 0.12em; }
+    .footer-tagline { font-family: 'Playfair Display', serif; font-size: 0.78rem; font-style: italic; color: var(--gold-dim); margin-top: 2px; }
+    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+    .footer-links a { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-    .footer-copy {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      color: var(--cream-low);
-      letter-spacing: 0.06em;
-    }
+    .footer-copy { font-size: 0.65rem; color: rgba(245,236,215,0.3); letter-spacing: 0.06em; text-align: center; margin-top: 32px; padding-top: 24px; border-top: 0.5px solid var(--border); max-width: 1100px; margin-left: auto; margin-right: auto; }
 
-    /* ══ MOBILE ══ */
+    @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
     @media (max-width: 768px) {
-      #header { padding: 0 20px; }
+      #header { padding: 0 20px; height: 64px; }
       .header-logo-text { display: none; }
-      #navbar { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--choc-dark); flex-direction: column; align-items: center; padding: 20px; gap: 16px; border-bottom: 0.5px solid var(--border); }
+      #navbar { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(15,10,4,0.98); flex-direction: column; padding: 24px 20px; gap: 20px; border-bottom: 0.5px solid var(--border); }
       #navbar.show { display: flex; }
       .mobile-nav-toggle { display: block; }
-      .hero-section { padding: 100px 20px 60px; }
-      .hero-sun { width: 100px; height: 100px; }
-      .hero-stats { gap: 28px; }
-      .section { padding: 52px 20px; }
+      .hero { padding: 110px 24px 80px; }
+      .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+      .hero-sun { width: 80px; height: 80px; }
+      .hero-tavas-desc { flex-direction: column; gap: 8px; }
+      .hero-tavas-desc .vpipe { display: none; }
+      .stats-bar { padding: 24px 20px; }
+      .stat-item { padding: 0 12px; }
+      .stat-val { font-size: 1.3rem; }
+      .stat-lbl { font-size: 0.56rem; }
+      .app-section { padding: 72px 24px; }
       .feat-grid { grid-template-columns: 1fr; }
-      .pricing-row { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
+      .quote-section { padding: 60px 24px; }
+      .about-strip { padding: 60px 24px; }
+      .cta-band { padding: 72px 24px; }
+      footer { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
       .footer-links { justify-content: center; }
-      .price-list { text-align: left; }
     }
-
     @media (min-width: 769px) and (max-width: 1024px) {
+      #header { padding: 0 32px; }
+      .app-section { padding: 80px 32px; }
       .feat-grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing-row { grid-template-columns: repeat(2, minmax(0, 340px)); }
     }
   </style>
 </head>
 <body>
 
-  <!-- ══ HEADER ══ -->
   <header id="header">
     <a href="index.html" class="header-logo-wrap">
       <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
@@ -683,238 +158,159 @@
     <nav id="navbar">
       <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">The App</a>
       <a href="books.html">Books</a>
-      <a href="#pricing">Pricing</a>
       <a href="https://www.shotamusic.com" target="_blank">Music</a>
       <a href="about.html">About</a>
       <a href="connect.html" class="nav-cta">Connect</a>
     </nav>
-    <i class="bi bi-list mobile-nav-toggle" id="mobileToggle"></i>
+    <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
   </header>
 
   <main>
 
-    <!-- ══ HERO ══ -->
-    <section class="hero-section">
-      <div class="hero-eyebrow">A creative world inspired by freedom</div>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <p class="hero-eyebrow">A creative world inspired by freedom</p>
       <img src="assets/img/TranparentSun.png" alt="Tavas Sun" class="hero-sun">
       <h1>Your journey.<br>Your story. Your world.</h1>
-      <div class="hero-typed-wrap">
+      <div class="hero-typed-line">
         <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Publish, Thrive"></span>
       </div>
-      <p class="hero-tagline">Your Journey &nbsp;·&nbsp; All Power &nbsp;·&nbsp; Fearless Strength</p>
-      <div style="display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
-        <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; color:var(--cream-mid); letter-spacing:0.06em;">
-          <span style="color:var(--gold); font-weight:600;">T</span>he <span style="color:var(--gold); font-weight:600;">A</span>uthor's <span style="color:var(--gold); font-weight:600;">V</span>irtual <span style="color:var(--gold); font-weight:600;">A</span>ssistant <span style="color:var(--gold); font-weight:600;">S</span>tudio &nbsp;·&nbsp; <em style="color:rgba(245,236,215,0.45); font-style:italic;">Author Brand</em>
-        </div>
-        <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; color:var(--cream-mid); letter-spacing:0.06em;">
-          <span style="color:var(--gold); font-weight:600;">T</span>he <span style="color:var(--gold); font-weight:600;">A</span>I <span style="color:var(--gold); font-weight:600;">V</span>irtual <span style="color:var(--gold); font-weight:600;">A</span>ssistant <span style="color:var(--gold); font-weight:600;">S</span>ystem &nbsp;·&nbsp; <em style="color:rgba(245,236,215,0.45); font-style:italic;">The App</em>
-        </div>
+      <p class="hero-tagline">
+        Your Journey
+        <span class="divpipe"></span>
+        All Power
+        <span class="divpipe"></span>
+        Fearless Strength
+      </p>
+      <div class="hero-tavas-desc">
+        <span>
+          <span style="color:var(--gold);font-weight:600;">T</span>he
+          <span style="color:var(--gold);font-weight:600;">A</span>uthor's
+          <span style="color:var(--gold);font-weight:600;">V</span>irtual
+          <span style="color:var(--gold);font-weight:600;">A</span>ssistant
+          <span style="color:var(--gold);font-weight:600;">S</span>tudio
+          &nbsp;<em>· Author Brand</em>
+        </span>
+        <span class="vpipe"></span>
+        <span>
+          <span style="color:var(--gold);font-weight:600;">T</span>he
+          <span style="color:var(--gold);font-weight:600;">A</span>I
+          <span style="color:var(--gold);font-weight:600;">V</span>irtual
+          <span style="color:var(--gold);font-weight:600;">A</span>ssistant
+          <span style="color:var(--gold);font-weight:600;">S</span>ystem
+          &nbsp;<em>· The App</em>
+        </span>
       </div>
-      <p class="hero-sub">Tavas is your all-in-one wellness performance tracker — track habits, supplements, peptides, and get AI-powered guidance. Built for real life.</p>
       <div class="hero-btns">
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-gold">Download Free</a>
-        <a href="books.html" class="btn-outline-gold">Explore Books</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">6+</div>
-          <div class="stat-label">Books Published</div>
-        </div>
-        <div>
-          <div class="stat-num">Free</div>
-          <div class="stat-label">App Download</div>
-        </div>
-        <div>
-          <div class="stat-num">$4.99</div>
-          <div class="stat-label">Premium / Month</div>
-        </div>
-        <div>
-          <div class="stat-num">14-Day</div>
-          <div class="stat-label">Free Trial</div>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Download Free</a>
+        <a href="books.html" class="btn-ghost">Explore Books</a>
       </div>
     </section>
 
-    <!-- ══ QUOTE ══ -->
-    <div class="quote-bar">
-      <p>"You didn't come this far to only come this far." — <em>Tavas</em></p>
+    <div class="stats-bar">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-val">Free</span>
+          <span class="stat-lbl">To Download</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">$4.99</span>
+          <span class="stat-lbl">Per Month</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">14-Day</span>
+          <span class="stat-lbl">Free Trial</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">6+</span>
+          <span class="stat-lbl">Books Published</span>
+        </div>
+      </div>
     </div>
 
-    <!-- ══ APP FEATURES ══ -->
-    <section class="section">
-      <div class="section-inner">
-        <div class="sec-label">The Tavas App</div>
-        <div class="sec-title">Everything in one place</div>
-        <div class="sec-sub">No more scattered apps. Track your whole wellness — mind, body, and habits — in one system built for real life.</div>
+    <section class="app-section">
+      <div class="app-inner">
+        <span class="sec-label">The Tavas App</span>
+        <h2 class="sec-headline">Everything in one place.</h2>
+        <p class="sec-body">No more scattered apps. Track your whole wellness — mind, body, and habits — in one system built for real life.</p>
         <div class="feat-grid">
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z" fill="none" stroke-width="1.5" stroke-linecap="round"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"/></svg>
+            </div>
             <h3>Supplement & peptide tracker</h3>
             <p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p>
           </div>
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
             <h3>Streak tracking & milestones</h3>
             <p>Build consistency with streak counters and celebrate every win along the way.</p>
           </div>
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <h3>Exercise breaks with timers</h3>
             <p>Built-in movement prompts keep you active throughout the day — not just tracking it.</p>
           </div>
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
             <h3>AI companion & voice logging</h3>
             <p>Log anything hands-free. Get real insights and accountability from your AI wellness companion.</p>
           </div>
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
             <h3>Accessibility-first design</h3>
             <p>Built for dyslexia, color blindness, and more. Wellness tools that work for everyone.</p>
           </div>
           <div class="feat-card">
-            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
             <h3>Insights & wellness score</h3>
             <p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- ══ DOWNLOAD CTA ══ -->
-    <section class="section section-alt">
-      <div class="section-inner" style="text-align:center;">
-        <div class="sec-label">Now Available</div>
-        <div class="sec-title">Start your journey today</div>
-        <div class="sec-sub">Download free on Google Play. Try premium free for 14 days — no commitment, cancel anytime.</div>
-        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-gold">Download Free on Google Play</a>
-          <a href="#pricing" class="btn-outline-gold">See Pricing</a>
+        <div class="app-cta-row">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Download on Google Play</a>
         </div>
       </div>
     </section>
 
-    <hr class="divider">
+    <div class="quote-section">
+      <p class="quote-text">"You didn't come this far to only come this far."</p>
+      <p class="quote-attr">— Tavas</p>
+    </div>
 
-    <!-- ══ PRICING ══ -->
-    <section class="section" id="pricing">
-      <div class="section-inner">
-        <div class="sec-label">Tavas App Pricing</div>
-        <div class="sec-title">Start free. Upgrade anytime.</div>
-        <div class="sec-sub">The <strong style="color:var(--cream);">Tavas App</strong> — <em>The AI Virtual Assistant System</em> — is your all-in-one wellness performance tracker. Download free or unlock the full experience with premium.</div>
-        <div class="pricing-row">
-          <div class="price-card hot">
-            <div class="price-badge">Most Popular</div>
-            <div class="price-name">Monthly</div>
-            <div class="price-num">$4.99 <span>/ month</span></div>
-            <div class="price-desc">The full Tavas experience</div>
-            <ul class="price-list">
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Exercise breaks with timers</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
-            </ul>
-            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Start 14-Day Free Trial</button></a>
-          </div>
-          <div class="price-card hot">
-            <div class="price-badge">Best Value</div>
-            <div class="price-name">Yearly</div>
-            <div class="price-num">$39.99 <span>/ year</span></div>
-            <div class="price-desc">Save 33% vs monthly</div>
-            <ul class="price-list">
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Everything in monthly</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>AI companion + voice logging</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Supplement & peptide tracker</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Unlimited streaks & goals</li>
-              <li><span class="ck"><svg viewBox="0 0 10 10"><polyline points="2,5 4,7 8,3"/></svg></span>Advanced insights & reports</li>
-            </ul>
-            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank"><button class="price-btn">Get Best Value</button></a>
-          </div>
-        </div>
+    <div class="about-strip">
+      <div class="about-strip-inner">
+        <span class="sec-label">About Tavas World</span>
+        <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
+        <p>The Tavas App carries that same vision forward — <em>The AI Virtual Assistant System</em> — bringing intelligent wellness tracking and AI-powered guidance to your daily life.</p>
+        <a href="about.html" class="btn-ghost" style="margin-top:24px; display:inline-flex; padding:12px 28px;">Our Story</a>
       </div>
-    </section>
+    </div>
 
-    <hr class="divider">
-
-    <!-- ══ BOOKS ══ -->
-    <section class="section section-alt">
-      <div class="section-inner">
-        <div class="sec-label">Tavas World Books</div>
-        <div class="sec-title">Stories that build character</div>
-        <div class="sec-sub">Children's books and activity books crafted to spark curiosity, kindness, and emotional growth.</div>
-        <div class="books-row">
-          <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" class="book-card">
-            <img src="assets/img/raspen.png" alt="Adventures of Raspen and Sylas" class="book-cover">
-            <div class="book-name">Adventures of Raspen & Sylas</div>
-            <div class="book-price">$6.99 Kindle · $10.50 Print</div>
-          </a>
-          <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank" class="book-card">
-            <img src="assets/img/shineon.png" alt="Shine On Journal" class="book-cover">
-            <div class="book-name">Shine On: Daily Gratitude Journal</div>
-            <div class="book-price">$19.99</div>
-          </a>
-          <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank" class="book-card">
-            <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book" class="book-cover">
-            <div class="book-name">My Big Dinosaur Activity Book</div>
-            <div class="book-price">$7.99</div>
-          </a>
-          <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank" class="book-card">
-            <img src="assets/img/summer.png" alt="Summer Coloring Book" class="book-cover">
-            <div class="book-name">Summer Coloring Book</div>
-            <div class="book-price">$7.99</div>
-          </a>
-          <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank" class="book-card">
-            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" class="book-cover">
-            <div class="book-name">Dinosaurs in Action</div>
-            <div class="book-price">$7.99</div>
-          </a>
-          <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank" class="book-card">
-            <img src="assets/img/machines.png" alt="Big Machines Coloring Book" class="book-cover">
-            <div class="book-name">Big Machines Coloring Adventures</div>
-            <div class="book-price">$7.99</div>
-          </a>
-        </div>
-        <div style="margin-top: 32px; text-align: center;">
-          <a href="books.html" class="btn-outline-gold">Browse All Books</a>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- ══ ABOUT ══ -->
-    <section class="section">
-      <div class="section-inner">
-        <div class="sec-label">About Tavas World</div>
-        <div class="sec-title">Empowering minds through storytelling</div>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>Welcome to Tavas World — where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space is dedicated to storytelling that builds positivity, kindness, emotional intelligence, curiosity, and authentic connection.</p>
-            <p><em>TAVAS</em> stands for <em>The Author's Virtual Assistant Studio</em> — a creative world built to inspire, mentor, and empower. From heartwarming children's books to activity books, every creation is designed to spark learning and meaningful conversations.</p>
-            <p>The Tavas App carries that same vision forward — <em>The AI Virtual Assistant System</em> — bringing intelligent wellness tracking and AI-powered guidance to your daily life.</p>
-            <a href="about.html" class="btn-outline-gold" style="display:inline-block; margin-top: 16px;">Our Story</a>
-          </div>
-          <div class="about-img">
-            <img src="assets/img/sara.jpg" alt="Sara C. Morell" style="width:140px; height:140px; border-radius:50%; object-fit:cover; object-position: center top; border:3px solid rgba(212,168,83,0.4); margin:0 auto 20px; display:block; box-shadow: 0 0 32px rgba(212,168,83,0.15);">
-            <h3>Sara C. Morell</h3>
-            <p style="margin-bottom:16px;">Author · Publisher · Creator</p>
-            <div style="border-top:0.5px solid var(--border); padding-top:16px; margin-top:4px;">
-              <p style="font-family:'Montserrat',sans-serif; font-size:0.75rem; color:rgba(245,236,215,0.60); line-height:1.7;">Children's book author, wellness app creator, and entrepreneur dedicated to empowering people of all ages.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="cta-band">
+      <p class="cta-band-eyebrow">Now Available on Google Play</p>
+      <h2>Start your journey today.</h2>
+      <p>Download free. Try premium free for 14 days.<br>No commitment. Cancel anytime.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Download Free on Google Play</a>
     </section>
 
   </main>
 
-  <!-- ══ FOOTER ══ -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand">
+      <div class="footer-brand-wrap">
         <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
         <div>
           <div class="footer-brand-name">TAVAS WORLD</div>
@@ -922,34 +318,40 @@
         </div>
       </div>
       <div class="footer-links">
-        <a href="https://tavas.app" target="_blank">App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
         <a href="books.html">Books</a>
         <a href="https://www.shotamusic.com" target="_blank">Music</a>
         <a href="about.html">About</a>
         <a href="connect.html">Connect</a>
-        <a href="mailto:support@tavasworld.com?subject=App Support">App Support</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
       </div>
-      <div class="footer-copy">© 2026 Tavas World. All rights reserved.</div>
     </div>
+    <p class="footer-copy">© 2026 Tavas World. All rights reserved.</p>
   </footer>
 
-  <!-- ══ SCRIPTS ══ -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
   <script>
     const typedEl = document.querySelector('.typed');
     if (typedEl) {
       const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
-      new Typed('.typed', { strings: items, typeSpeed: 80, backSpeed: 40, backDelay: 2000, loop: true });
+      new Typed('.typed', { strings: items, typeSpeed: 80, backSpeed: 40, backDelay: 2200, loop: true });
     }
-
-    document.getElementById('mobileToggle').addEventListener('click', function () {
+    document.getElementById('mobileToggle').addEventListener('click', function() {
       document.getElementById('navbar').classList.toggle('show');
     });
-
     window.addEventListener('scroll', function() {
-      const header = document.getElementById('header');
-      header.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.4)' : 'none';
+      const h = document.getElementById('header');
+      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
+    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.feat-card, .about-strip-inner, .cta-band h2').forEach(el => {
+      el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+      obs.observe(el);
     });
   </script>
 </body>
