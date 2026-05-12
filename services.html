@@ -4,7 +4,7 @@
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services â Tavas World</title>
+  <title>Services — Tavas World</title>
   <meta name="description" content="Strategic operational support for founders, executives, organizations, and growing teams. Tavas World provides adaptable, professional operational services across healthcare, nonprofit, government, education, and entrepreneurial environments.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -65,7 +65,7 @@
     .service-card p { font-size: 0.82rem; line-height: 1.85; color: var(--cream-low); margin-bottom: 16px; }
     .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li { font-size: 0.8rem; color: var(--cream-low); line-height: 1.8; padding-left: 16px; position: relative; }
-    .service-card ul li::before { content: 'â'; position: absolute; left: 0; color: var(--gold-dim); }
+    .service-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
 
     /* PRICING */
     .pricing-section { background: var(--choc-dark); padding: 80px 24px; }
@@ -82,7 +82,7 @@
     .pricing-desc { font-size: 0.8rem; color: var(--cream-low); line-height: 1.7; margin-bottom: 28px; }
     .pricing-list { list-style: none; padding: 0; margin: 0; }
     .pricing-list li { font-size: 0.79rem; color: var(--cream-mid); line-height: 1.8; padding-left: 20px; position: relative; }
-    .pricing-list li::before { content: 'â'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
+    .pricing-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
     .pricing-note { text-align: center; font-size: 0.74rem; color: var(--cream-low); margin-top: 36px; letter-spacing: 0.06em; }
 
     /* HOW IT WORKS */
@@ -104,35 +104,35 @@
     .form-note a { color: var(--gold); text-decoration: none; }
 
     /* HAMBURGER BUTTON */
-.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--cream); }
-.nav-toggle .bar { display: block; width: 22px; height: 2px; background: var(--cream); margin: 5px 0; border-radius: 2px; transition: all 0.3s ease; }
-.nav-toggle.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open .bar:nth-child(2) { opacity: 0; }
-.nav-toggle.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--cream); }
+    .nav-toggle .bar { display: block; width: 22px; height: 2px; background: var(--cream); margin: 5px 0; border-radius: 2px; transition: all 0.3s ease; }
+    .nav-toggle.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open .bar:nth-child(2) { opacity: 0; }
+    .nav-toggle.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* MOBILE MENU OVERLAY */
-.mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: rgba(15,10,4,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 24px 24px 32px; z-index: 999; flex-direction: column; gap: 0; }
-.mobile-menu.open { display: flex; }
-.mobile-menu a { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; padding: 14px 0; border-bottom: 0.5px solid var(--border); transition: color 0.25s; }
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu a:hover, .mobile-menu a.active { color: var(--cream); }
-.mobile-menu .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 14px 0 !important; text-align: center; border-radius: 999px; margin-top: 16px; border-bottom: none; }
+    /* MOBILE MENU OVERLAY */
+    .mobile-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: rgba(15,10,4,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 24px 24px 32px; z-index: 999; flex-direction: column; gap: 0; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; padding: 14px 0; border-bottom: 0.5px solid var(--border); transition: color 0.25s; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover, .mobile-menu a.active { color: var(--cream); }
+    .mobile-menu .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 14px 0 !important; text-align: center; border-radius: 999px; margin-top: 16px; border-bottom: none; }
 
-/* MOBILE */
-@media (max-width: 768px) {
-#header { padding: 0 20px; }
-#navbar { display: none; }
-.nav-toggle { display: flex; flex-direction: column; justify-content: center; }
-.service-card { text-align: center; }
-.service-card ul li { text-align: left; }
-.services-grid { grid-template-columns: 1fr; }
-.pricing-grid { grid-template-columns: 1fr; }
-.steps-row { grid-template-columns: repeat(2, 1fr); gap: 36px; }
-}
-@media (max-width: 480px) {
-.steps-row { grid-template-columns: 1fr; }
-}
-</style>
+    /* MOBILE */
+    @media (max-width: 768px) {
+      #header { padding: 0 20px; }
+      #navbar { display: none; }
+      .nav-toggle { display: flex; flex-direction: column; justify-content: center; }
+      .service-card { text-align: center; }
+      .service-card ul li { text-align: left; }
+      .services-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .steps-row { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+    }
+    @media (max-width: 480px) {
+      .steps-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -149,7 +149,6 @@
       <a href="#">Music</a>
       <a href="about.html">About</a>
       <a href="connect.html" class="nav-cta">Connect</a>
-    
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span class="bar"></span>
@@ -171,12 +170,12 @@
   <!-- HERO -->
   <section class="services-hero">
     <div class="services-hero-bg"></div>
-    <p class="services-eyebrow">Tavas World Â· Operational Services</p>
+    <p class="services-eyebrow">Tavas World · Operational Services</p>
     <h1>Strategic Operations Support for Founders, Organizations, Executives, and Growing Teams</h1>
-    <p>Tavas World brings cross-sector operational experience to founders, executives, and organizations that need a steady, skilled hand behind the scenes â so you can lead, build, and grow without getting buried in the details.</p>
+    <p>Tavas World brings cross-sector operational experience to founders, executives, and organizations that need a steady, skilled hand behind the scenes — so you can lead, build, and grow without getting buried in the details.</p>
     <div class="divider-gold"></div>
     <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); line-height: 2; text-align: center; max-width: 700px; margin: 0 auto;">
-      Founders &nbsp;Â·&nbsp; Executives &nbsp;Â·&nbsp; Healthcare &nbsp;Â·&nbsp; Nonprofit &nbsp;Â·&nbsp; Government &nbsp;Â·&nbsp; Education &nbsp;Â·&nbsp; Startups &nbsp;Â·&nbsp; Small Business &nbsp;Â·&nbsp; Consultants
+      Founders &nbsp;·&nbsp; Executives &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Government &nbsp;·&nbsp; Education &nbsp;·&nbsp; Startups &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Consultants
     </p>
   </section>
 
@@ -205,7 +204,7 @@
       <div class="service-card">
         <span class="service-card-icon"><i class="bi bi-diagram-3"></i></span>
         <h3>Project & Workflow Coordination</h3>
-        <p>Founders move fast. I bring the structure behind the speed â tracking what needs to happen, when, and by whom.</p>
+        <p>Founders move fast. I bring the structure behind the speed — tracking what needs to happen, when, and by whom.</p>
         <ul>
           <li>Task & project management</li>
           <li>Workflow organization & systems support</li>
@@ -231,7 +230,7 @@
       <div class="service-card">
         <span class="service-card-icon"><i class="bi bi-layers"></i></span>
         <h3>Operational Structure & Support</h3>
-        <p>For founders and growing teams running lean â I help create the clarity and structure needed to scale without the chaos.</p>
+        <p>For founders and growing teams running lean — I help create the clarity and structure needed to scale without the chaos.</p>
         <ul>
           <li>Operational clarity & organization</li>
           <li>Streamlining daily operations</li>
@@ -249,7 +248,7 @@
     <div class="pricing-intro">
       <span class="section-label">Investment</span>
       <h2 class="section-title">Simple, Transparent Pricing</h2>
-      <p class="section-body">Monthly retainer packages designed to fit where you are right now â with room to grow. All packages include a complimentary discovery call. Currently accepting a limited number of monthly clients.</p>
+      <p class="section-body">Monthly retainer packages designed to fit where you are right now — with room to grow. All packages include a complimentary discovery call. Currently accepting a limited number of monthly clients.</p>
     </div>
     <div class="pricing-grid">
 
@@ -299,7 +298,7 @@
       </div>
 
     </div>
-    <p class="pricing-note">Not sure which package fits? Let's talk â custom scopes are always available.</p>
+    <p class="pricing-note">Not sure which package fits? Let's talk — custom scopes are always available.</p>
     <p class="pricing-note" style="margin-top: 10px;">All retainers are billed monthly. Contracts are month-to-month after an initial 90-day commitment.</p>
   </section>
 
@@ -324,12 +323,12 @@
       <div class="step">
         <span class="step-num">03</span>
         <div class="step-title">Onboard & Begin</div>
-        <p class="step-desc">We set up systems, tools, and access â then I get to work. Fast, clean, and professional from day one.</p>
+        <p class="step-desc">We set up systems, tools, and access — then I get to work. Fast, clean, and professional from day one.</p>
       </div>
       <div class="step">
         <span class="step-num">04</span>
         <div class="step-title">Ongoing Support</div>
-        <p class="step-desc">Regular check-ins, clear communication, and consistent delivery. You focus forward â I handle the rest.</p>
+        <p class="step-desc">Regular check-ins, clear communication, and consistent delivery. You focus forward — I handle the rest.</p>
       </div>
     </div>
   </section>
@@ -337,9 +336,9 @@
   <!-- CTA -->
   <div class="cta-banner">
     <h2>Ready to bring more structure and clarity to your operations?</h2>
-    <p>Whether you're a founder building in real time, a leader managing complexity, or an organization that needs the operational layer filled in â let's talk about what you're carrying and how I can help you move forward with less friction and more focus.</p>
+    <p>Whether you're a founder building in real time, a leader managing complexity, or an organization that needs the operational layer filled in — let's talk about what you're carrying and how I can help you move forward with less friction and more focus.</p>
     <a href="connect.html" class="btn-gold">Schedule a Discovery Call</a>
-    <p class="form-note" style="margin-top: 16px;">Or email <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a> &nbsp;Â·&nbsp; Call <a href="tel:4062198848">(406) 219-8848</a></p>
+    <p class="form-note" style="margin-top: 16px;">Or email <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a> &nbsp;·&nbsp; Call <a href="tel:4062198848">(406) 219-8848</a></p>
   </div>
 
   <!-- FOOTER -->
@@ -356,7 +355,7 @@
       <a href="connect.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Connect</a>
       <a href="mailto:support@tavasworld.com?subject=App Support" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">App Support</a>
     </nav>
-    <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">Â© 2026 Tavas World. All rights reserved.</p>
+    <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">© 2026 Tavas World. All rights reserved.</p>
   </footer>
 
 
