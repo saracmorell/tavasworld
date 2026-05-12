@@ -42,7 +42,7 @@
     .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
     .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
 
-    /* HERO — FIX #1: smaller heading, tighter spacing */
+    /* HERO */
     .services-hero { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 60px; position: relative; overflow: hidden; }
     .services-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
     .services-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; }
@@ -50,17 +50,13 @@
     .services-hero p { font-size: 0.92rem; line-height: 1.85; color: var(--cream-mid); max-width: 660px; margin: 0 auto 32px; }
     .divider-gold { width: 48px; height: 1px; background: var(--gold-dim); margin: 0 auto 32px; }
 
-    /* SECTOR TAGS */
-    .sector-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .sector-tag { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold-dim); padding: 6px 16px; border-radius: 999px; }
-
     /* SECTIONS */
     section { padding: 80px 24px; }
     .section-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; display: block; text-align: center; }
     .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 16px; text-align: center; }
     .section-body { font-size: 0.88rem; line-height: 1.9; color: var(--cream-mid); text-align: center; }
 
-    /* FIX #3: Service cards — clean 2x2 grid */
+    /* SERVICE CARDS */
     .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; max-width: 1000px; margin: 48px auto 0; }
     .service-card { background: var(--gold-faint); border: 0.5px solid var(--border); padding: 44px 36px; transition: border-color 0.25s, background 0.25s; }
     .service-card:hover { border-color: var(--gold-dim); background: rgba(212,168,83,0.05); }
@@ -84,16 +80,12 @@
     .pricing-price { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; color: var(--gold); margin-bottom: 4px; }
     .pricing-price span { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); font-weight: 400; }
     .pricing-desc { font-size: 0.8rem; color: var(--cream-low); line-height: 1.7; margin-bottom: 28px; }
-    .pricing-list { list-style: none; padding: 0; margin: 0 0 32px; }
+    .pricing-list { list-style: none; padding: 0; margin: 0; }
     .pricing-list li { font-size: 0.79rem; color: var(--cream-mid); line-height: 1.8; padding-left: 20px; position: relative; }
     .pricing-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
     .pricing-note { text-align: center; font-size: 0.74rem; color: var(--cream-low); margin-top: 36px; letter-spacing: 0.06em; }
-    .btn-outline-gold { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold-dim); padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; transition: background 0.2s, color 0.2s; }
-    .btn-outline-gold:hover { background: var(--gold); color: var(--choc-deep); }
-    .btn-gold { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--choc-deep); background: var(--gold); padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
-    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-    /* FIX #5: How It Works — forced 4-column, no orphan */
+    /* HOW IT WORKS */
     .how-section { padding: 80px 24px; }
     .how-intro { max-width: 600px; margin: 0 auto 56px; text-align: center; }
     .steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto; }
@@ -102,25 +94,22 @@
     .step-title { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--cream); margin-bottom: 10px; }
     .step-desc { font-size: 0.78rem; color: var(--cream-low); line-height: 1.8; }
 
-    /* FIX #4: CTA — centered, proportional */
+    /* CTA */
     .cta-banner { background: var(--choc-deep); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; padding: 96px 24px; }
     .cta-banner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.5rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
     .cta-banner p { font-size: 0.88rem; color: var(--cream-low); max-width: 580px; margin: 0 auto 40px; line-height: 1.85; }
-
-    /* FOOTER */
-    footer { text-align: center; padding: 48px 24px; border-top: 0.5px solid var(--border); }
-    footer p { font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.08em; }
+    .btn-gold { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--choc-deep); background: var(--gold); padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .form-note { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--cream-low); margin-top: 14px; text-align: center; }
+    .form-note a { color: var(--gold); text-decoration: none; }
 
     /* MOBILE */
     @media (max-width: 768px) {
       #header { padding: 0 20px; }
       #navbar { gap: 18px; }
       #navbar a { font-size: 0.65rem; }
-      /* stack service cards on mobile */
       .services-grid { grid-template-columns: 1fr; }
-      /* stack pricing on mobile */
       .pricing-grid { grid-template-columns: 1fr; }
-      /* stack steps 2x2 on mobile, not 1 column */
       .steps-row { grid-template-columns: repeat(2, 1fr); gap: 36px; }
     }
     @media (max-width: 480px) {
@@ -132,16 +121,16 @@
 
   <!-- HEADER -->
   <header id="header">
-   <a href="index.html" class="header-logo-wrap">
-  <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
-  <span class="header-logo-text">TAVAS <span>WORLD</span></span>
-</a>
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
     <nav id="navbar">
       <a href="index.html">The App</a>
+      <a href="services.html" class="active">Services</a>
       <a href="books.html">Books</a>
       <a href="#">Music</a>
       <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
       <a href="connect.html" class="nav-cta">Connect</a>
     </nav>
   </header>
@@ -153,12 +142,12 @@
     <h1>Strategic Operations Support for Founders, Organizations, Executives, and Growing Teams</h1>
     <p>Tavas World brings cross-sector operational experience to founders, executives, and organizations that need a steady, skilled hand behind the scenes — so you can lead, build, and grow without getting buried in the details.</p>
     <div class="divider-gold"></div>
-  <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); line-height: 2; text-align: center; max-width: 700px; margin: 0 auto;">
-  Founders &nbsp;·&nbsp; Executives &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Government &nbsp;·&nbsp; Education &nbsp;·&nbsp; Startups &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Consultants
-</p>
+    <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); line-height: 2; text-align: center; max-width: 700px; margin: 0 auto;">
+      Founders &nbsp;·&nbsp; Executives &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Government &nbsp;·&nbsp; Education &nbsp;·&nbsp; Startups &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Consultants
+    </p>
   </section>
 
-  <!-- SERVICES — 2x2 grid -->
+  <!-- SERVICES -->
   <section style="padding: 80px 24px 80px;">
     <div style="max-width:620px; margin:0 auto 48px; text-align:center;">
       <span class="section-label">What I Do</span>
@@ -222,7 +211,7 @@
     </div>
   </section>
 
-  <!-- PRICING — forced 3-column -->
+  <!-- PRICING -->
   <section class="pricing-section">
     <div class="pricing-intro">
       <span class="section-label">Investment</span>
@@ -259,7 +248,6 @@
           <li>Process documentation</li>
           <li>Bi-weekly check-in calls</li>
         </ul>
-        <a href="connect.html" class="btn-gold">Get Started</a>
       </div>
 
       <div class="pricing-card">
@@ -275,15 +263,14 @@
           <li>Operational structure & systems</li>
           <li>Weekly strategy & check-in calls</li>
         </ul>
-        <a href="connect.html" class="btn-outline-gold">Get Started</a>
       </div>
 
     </div>
- <p class="pricing-note">Not sure which package fits? Let's talk — custom scopes are always available.</p>
-<p class="pricing-note" style="margin-top: 10px;">All retainers are billed monthly. Contracts are month-to-month after an initial 90-day commitment.</p>
+    <p class="pricing-note">Not sure which package fits? Let's talk — custom scopes are always available.</p>
+    <p class="pricing-note" style="margin-top: 10px;">All retainers are billed monthly. Contracts are month-to-month after an initial 90-day commitment.</p>
   </section>
 
-  <!-- HOW IT WORKS — forced 4-column, no orphan -->
+  <!-- HOW IT WORKS -->
   <section class="how-section">
     <div class="how-intro">
       <span class="section-label">The Process</span>
@@ -314,29 +301,30 @@
     </div>
   </section>
 
-  <!-- CTA — centered and proportional -->
+  <!-- CTA -->
   <div class="cta-banner">
     <h2>Ready to bring more structure and clarity to your operations?</h2>
     <p>Whether you're a founder building in real time, a leader managing complexity, or an organization that needs the operational layer filled in — let's talk about what you're carrying and how I can help you move forward with less friction and more focus.</p>
     <a href="connect.html" class="btn-gold">Schedule a Discovery Call</a>
+    <p class="form-note" style="margin-top: 16px;">Or email <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a> &nbsp;·&nbsp; Call <a href="tel:4062198848">(406) 219-8848</a></p>
   </div>
 
   <!-- FOOTER -->
- <footer style="background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 64px 24px 40px; text-align: center;">
-  <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;">
-  <div style="font-family: 'Libre Baskerville', serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); margin-bottom: 8px;">Tavas World</div>
-  <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold); margin-bottom: 32px;">Navigating life with intention.</div>
-  <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-bottom: 32px;">
-    <a href="index.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Home</a>
-    <a href="index.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none;">App</a>
-    <a href="books.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Books</a>
-    <a href="#" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Music</a>
-    <a href="about.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">About</a>
-    <a href="connect.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Connect</a>
-    <a href="#" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">App Support</a>
-  </nav>
-  <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">© 2026 Tavas World. All rights reserved.</p>
-</footer>
+  <footer style="background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 64px 24px 40px; text-align: center;">
+    <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;">
+    <div style="font-family: 'Libre Baskerville', serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); margin-bottom: 8px;">Tavas World</div>
+    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold); margin-bottom: 32px;">Navigating life with intention.</div>
+    <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-bottom: 32px;">
+      <a href="index.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Home</a>
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none;">App</a>
+      <a href="books.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Books</a>
+      <a href="https://www.shotamusic.com" target="_blank" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Music</a>
+      <a href="about.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">About</a>
+      <a href="connect.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Connect</a>
+      <a href="mailto:support@tavasworld.com?subject=App Support" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">App Support</a>
+    </nav>
+    <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">© 2026 Tavas World. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
