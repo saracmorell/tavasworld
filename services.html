@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Tavas World</title>
+  <meta name="description" content="Strategic operational support for founders, executives, organizations, and growing teams. Tavas World provides adaptable, professional operational services across healthcare, nonprofit, government, education, and entrepreneurial environments.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --choc: #1C1208;
+      --choc-dark: #140E06;
+      --choc-deep: #0F0A04;
+      --gold: #D4A853;
+      --gold-light: #E8C070;
+      --gold-dim: rgba(212,168,83,0.55);
+      --gold-faint: rgba(212,168,83,0.08);
+      --cream: #F5ECD7;
+      --cream-mid: rgba(245,236,215,0.75);
+      --cream-low: rgba(245,236,215,0.50);
+      --border: rgba(212,168,83,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* HEADER */
+    #header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    .header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .header-logo-img { width: 36px; height: 36px; object-fit: contain; }
+    .header-logo-text { font-family: 'Libre Baskerville', serif; color: var(--cream); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.16em; white-space: nowrap; }
+    .header-logo-text span { color: var(--gold); }
+    #navbar { display: flex; align-items: center; gap: 36px; }
+    #navbar a { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.25s; }
+    #navbar a:hover, #navbar a.active { color: var(--cream); }
+    .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
+
+    /* HERO */
+    .services-hero { min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 140px 24px 80px; position: relative; overflow: hidden; }
+    .services-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
+    .services-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 28px; }
+    .services-hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 700; color: var(--cream); line-height: 1.12; margin-bottom: 24px; }
+    .services-hero p { font-size: 0.95rem; line-height: 1.85; color: var(--cream-mid); max-width: 700px; margin: 0 auto 40px; }
+    .divider-gold { width: 48px; height: 1px; background: var(--gold-dim); margin: 0 auto 40px; }
+
+    /* SECTOR TAGS */
+    .sector-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .sector-tag { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold-dim); padding: 6px 16px; border-radius: 999px; }
+
+    /* SECTION COMMON */
+    section { padding: 96px 24px; }
+    .section-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; display: block; }
+    .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 20px; }
+    .section-body { font-size: 0.88rem; line-height: 1.9; color: var(--cream-mid); }
+
+    /* SERVICE CARDS */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; max-width: 1100px; margin: 0 auto; }
+    .service-card { background: var(--gold-faint); border: 0.5px solid var(--border); padding: 48px 36px; transition: border-color 0.25s, background 0.25s; }
+    .service-card:hover { border-color: var(--gold-dim); background: rgba(212,168,83,0.05); }
+    .service-card-icon { font-size: 1.6rem; color: var(--gold); margin-bottom: 24px; display: block; }
+    .service-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: var(--cream); margin-bottom: 14px; line-height: 1.3; }
+    .service-card p { font-size: 0.82rem; line-height: 1.85; color: var(--cream-low); }
+    .service-card ul { list-style: none; padding: 0; margin: 0; }
+    .service-card ul li { font-size: 0.8rem; color: var(--cream-low); line-height: 1.8; padding-left: 16px; position: relative; }
+    .service-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
+
+    /* PRICING */
+    .pricing-section { background: var(--choc-dark); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; max-width: 1000px; margin: 56px auto 0; }
+    .pricing-card { border: 0.5px solid var(--border); padding: 48px 36px; position: relative; transition: border-color 0.25s; }
+    .pricing-card:hover { border-color: var(--gold-dim); }
+    .pricing-card.featured { border-color: var(--gold-dim); background: rgba(212,168,83,0.05); }
+    .pricing-badge { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--choc-deep); background: var(--gold); padding: 4px 12px; border-radius: 999px; position: absolute; top: -12px; left: 36px; }
+    .pricing-tier { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 12px; display: block; }
+    .pricing-name { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 8px; }
+    .pricing-price { font-family: 'Libre Baskerville', serif; font-size: 2.4rem; color: var(--gold); margin-bottom: 4px; }
+    .pricing-price span { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); font-weight: 400; }
+    .pricing-desc { font-size: 0.8rem; color: var(--cream-low); line-height: 1.7; margin-bottom: 32px; }
+    .pricing-list { list-style: none; padding: 0; margin: 0 0 36px; }
+    .pricing-list li { font-size: 0.8rem; color: var(--cream-mid); line-height: 1.8; padding-left: 20px; position: relative; }
+    .pricing-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
+    .btn-outline-gold { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 0.5px solid var(--gold-dim); padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; transition: background 0.2s, color 0.2s; }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--choc-deep); }
+    .btn-gold { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--choc-deep); background: var(--gold); padding: 12px 28px; border-radius: 999px; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* HOW IT WORKS */
+    .steps-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; max-width: 900px; margin: 56px auto 0; text-align: center; }
+    .step-num { font-family: 'Libre Baskerville', serif; font-size: 2.8rem; color: var(--gold-dim); margin-bottom: 16px; line-height: 1; }
+    .step-title { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--cream); margin-bottom: 10px; }
+    .step-desc { font-size: 0.78rem; color: var(--cream-low); line-height: 1.8; }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--choc-deep); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; padding: 96px 24px; }
+    .cta-banner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.8rem, 4vw, 3rem); color: var(--cream); margin-bottom: 16px; }
+    .cta-banner p { font-size: 0.88rem; color: var(--cream-low); max-width: 580px; margin: 0 auto 40px; line-height: 1.85; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 48px 24px; border-top: 0.5px solid var(--border); }
+    footer p { font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.08em; }
+
+    @media (max-width: 768px) {
+      #header { padding: 0 20px; }
+      #navbar { gap: 20px; }
+      #navbar a { font-size: 0.65rem; }
+      .services-grid, .pricing-grid, .steps-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/TranparentSun.png" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
+    <nav id="navbar">
+      <a href="index.html">The App</a>
+      <a href="books.html">Books</a>
+      <a href="#">Music</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="connect.html" class="nav-cta">Connect</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="services-hero">
+    <div class="services-hero-bg"></div>
+    <p class="services-eyebrow">Tavas World · Operational Services</p>
+    <h1>Strategic Operations Support for Founders, Organizations, Executives, and Growing Teams</h1>
+    <p>With experience supporting founders, healthcare, nonprofit, government, education, and entrepreneurial environments, Tavas World provides adaptable operational support designed to help you stay organized, responsive, and moving forward — no matter what you're building.</p>
+    <div class="divider-gold"></div>
+    <div class="sector-tags">
+      <span class="sector-tag">Founders</span>
+      <span class="sector-tag">Healthcare</span>
+      <span class="sector-tag">Nonprofit</span>
+      <span class="sector-tag">Government</span>
+      <span class="sector-tag">Education</span>
+      <span class="sector-tag">Startups</span>
+      <span class="sector-tag">Executive Teams</span>
+      <span class="sector-tag">Small Business</span>
+      <span class="sector-tag">Consultants</span>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section style="padding-top: 48px;">
+    <div style="text-align:center; max-width:620px; margin:0 auto 56px;">
+      <span class="section-label">What I Do</span>
+      <h2 class="section-title">Four Core Service Areas</h2>
+      <p class="section-body">Whether you're a founder building in real time, an executive managing complexity, or a team that needs the operational layer filled in — this is where I come in.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-card-icon"><i class="bi bi-calendar2-check"></i></span>
+        <h3>Executive & Administrative Operations</h3>
+        <p style="margin-bottom:20px;">Reliable, discreet executive support that keeps founders and leadership focused on what only they can do.</p>
+        <ul>
+          <li>Calendar management & scheduling</li>
+          <li>Inbox organization & communications</li>
+          <li>Meeting coordination & follow-up</li>
+          <li>Travel coordination & logistics</li>
+          <li>Executive correspondence</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card-icon"><i class="bi bi-diagram-3"></i></span>
+        <h3>Project & Workflow Coordination</h3>
+        <p style="margin-bottom:20px;">Founders move fast. I bring the structure behind the speed — tracking what needs to happen, when, and by whom.</p>
+        <ul>
+          <li>Task & project management</li>
+          <li>Workflow organization & systems support</li>
+          <li>Deadline tracking & accountability</li>
+          <li>Process documentation</li>
+          <li>Team coordination support</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card-icon"><i class="bi bi-envelope-paper"></i></span>
+        <h3>Communications & Organizational Support</h3>
+        <p style="margin-bottom:20px;">Polished communications that reflect your brand and keep clients, teams, and stakeholders informed and engaged.</p>
+        <ul>
+          <li>Internal communications & memos</li>
+          <li>Newsletters & announcements</li>
+          <li>Presentations & reports</li>
+          <li>Website content updates</li>
+          <li>Stakeholder communications</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card-icon"><i class="bi bi-layers"></i></span>
+        <h3>Operational Structure & Support</h3>
+        <p style="margin-bottom:20px;">For founders and growing teams running lean — I help create the clarity and structure needed to scale without the chaos.</p>
+        <ul>
+          <li>Operational clarity & organization</li>
+          <li>Streamlining daily operations</li>
+          <li>Systems & tools setup</li>
+          <li>Supporting growing teams & leadership</li>
+          <li>SOPs & reference documentation</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section">
+    <div style="text-align:center; max-width:620px; margin:0 auto 0;">
+      <span class="section-label">Investment</span>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-body">Monthly retainer packages designed to fit where you are right now — with room to grow. All packages include a complimentary discovery call. Currently accepting a limited number of monthly clients.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <span class="pricing-tier">Essentials</span>
+        <div class="pricing-name">Foundation</div>
+        <div class="pricing-price">$350 <span>/ month</span></div>
+        <p class="pricing-desc">Light-touch operational support for founders and solopreneurs who are building something and need to stay organized without hiring full-time.</p>
+        <ul class="pricing-list">
+          <li>Up to 5 hours of support per month</li>
+          <li>Calendar or inbox management</li>
+          <li>Email response support</li>
+          <li>1 communications piece per month</li>
+          <li>Monthly check-in call</li>
+        </ul>
+        <a href="connect.html" class="btn-outline-gold">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="pricing-badge">Most Popular</span>
+        <span class="pricing-tier">Growth</span>
+        <div class="pricing-name">Standard</div>
+        <div class="pricing-price">$750 <span>/ month</span></div>
+        <p class="pricing-desc">Comprehensive support for founders, consultants, nonprofits, and healthcare-adjacent organizations ready to operate at the next level.</p>
+        <ul class="pricing-list">
+          <li>Up to 15 hours of support per month</li>
+          <li>Full calendar & inbox management</li>
+          <li>Project & workflow coordination</li>
+          <li>Communications support</li>
+          <li>Process documentation</li>
+          <li>Bi-weekly check-in calls</li>
+        </ul>
+        <a href="connect.html" class="btn-gold">Get Started</a>
+      </div>
+
+      <div class="pricing-card">
+        <span class="pricing-tier">Executive</span>
+        <div class="pricing-name">Premium</div>
+        <div class="pricing-price">$1,500 <span>/ month</span></div>
+        <p class="pricing-desc">Full-scope operational partnership for founders scaling fast and executives managing high-complexity environments.</p>
+        <ul class="pricing-list">
+          <li>Up to 30 hours of support per month</li>
+          <li>Priority response & near-daily availability</li>
+          <li>Executive inbox & stakeholder communications</li>
+          <li>Full project & team coordination</li>
+          <li>Operational structure & systems</li>
+          <li>Weekly strategy & check-in calls</li>
+        </ul>
+        <a href="connect.html" class="btn-outline-gold">Get Started</a>
+      </div>
+
+    </div>
+    <p style="text-align:center; font-size:0.75rem; color:var(--cream-low); margin-top:40px; letter-spacing:0.06em;">Custom scopes available. All retainers are billed monthly. Contracts are month-to-month after an initial 90-day commitment.</p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section>
+    <div style="text-align:center; max-width:600px; margin:0 auto 0;">
+      <span class="section-label">The Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-body">Simple, intentional, and built around your needs.</p>
+    </div>
+    <div class="steps-row">
+      <div>
+        <div class="step-num">01</div>
+        <div class="step-title">Discovery Call</div>
+        <p class="step-desc">We connect, talk through your current operational challenges, and I learn how you and your organization work best.</p>
+      </div>
+      <div>
+        <div class="step-num">02</div>
+        <div class="step-title">Scope & Agreement</div>
+        <p class="step-desc">I put together a clear proposal outlining scope, hours, deliverables, and your monthly investment.</p>
+      </div>
+      <div>
+        <div class="step-num">03</div>
+        <div class="step-title">Onboard & Begin</div>
+        <p class="step-desc">We set up systems, tools, and access — then I get to work. Fast, clean, and professional from day one.</p>
+      </div>
+      <div>
+        <div class="step-num">04</div>
+        <div class="step-title">Ongoing Support</div>
+        <p class="step-desc">Regular check-ins, clear communication, and consistent delivery. You focus forward — I handle the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <h2>Ready to bring more structure<br>and clarity to your operations?</h2>
+    <p>Whether you're a founder building in real time, a leader managing complexity, or an organization that needs the operational layer filled in — let's talk about what you're carrying and how I can help you move forward with less friction and more focus.</p>
+    <a href="connect.html" class="btn-gold">Schedule a Discovery Call</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Tavas World · Sara C. Morell · All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
