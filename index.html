@@ -60,7 +60,6 @@
     .hero-tavas-desc .vpipe { width: 1px; height: 10px; background: var(--border); display: inline-block; }
     .hero-tavas-desc em { font-style: italic; color: rgba(245,236,215,0.35); font-size: 0.68rem; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.4s both; }
-
     .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; }
     .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
@@ -78,7 +77,6 @@
     .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
     .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
     .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 520px; margin: 0 auto 56px; text-align: center; }
-
     .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-bottom: 52px; }
     .feat-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color 0.25s, background 0.25s, transform 0.2s; }
     .feat-card:hover { border-color: rgba(212,168,83,0.28); background: rgba(212,168,83,0.07); transform: translateY(-3px); }
@@ -107,14 +105,17 @@
     .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; }
     .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 40px; line-height: 1.8; }
 
-   footer { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 64px 24px 40px; text-align: center; }
-.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 28px; }
-.footer-brand-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.footer-brand-wrap img { width: 48px; height: 48px; object-fit: contain; }
-.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-bottom: 8px; }
-    .footer-links a { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.2s; }
+    /* FOOTER */
+    footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+    .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .footer-brand img { width: 40px; height: 40px; object-fit: contain; }
+    .footer-brand-name { font-family: 'Libre Baskerville', serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); }
+    .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold); }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+    .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-size: 0.65rem; color: rgba(245,236,215,0.3); letter-spacing: 0.06em; text-align: center; margin-top: 32px; padding-top: 24px; border-top: 0.5px solid var(--border); max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .footer-copy { font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em; }
 
     @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -139,7 +140,6 @@
       .about-strip { padding: 60px 24px; }
       .cta-band { padding: 72px 24px; }
       footer { padding: 32px 24px; }
-      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
       .footer-links { justify-content: center; }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
@@ -311,26 +311,24 @@
   </main>
 
   <footer>
- <footer style="background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 64px 24px 40px; text-align: center;">
-
-  <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;">
-
-  <div style="font-family: 'Libre Baskerville', serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); margin-bottom: 8px;">Tavas World</div>
-
-  <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold); margin-bottom: 32px;">Navigating life with intention.</div>
-
-  <nav style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-bottom: 32px;">
-    <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none;">App</a>
-    <a href="books.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Books</a>
-    <a href="https://www.shotamusic.com" target="_blank" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Music</a>
-    <a href="about.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">About</a>
-    <a href="connect.html" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Connect</a>
-    <a href="mailto:support@tavasworld.com?subject=App Support" style="font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none;">Support</a>
-  </nav>
-
-  <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">© 2026 Tavas World. All rights reserved.</p>
-
-</footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
+        <div class="footer-brand-name">TAVAS WORLD</div>
+        <div class="footer-tagline">Navigating life with intention.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
+        <a href="books.html">Books</a>
+        <a href="https://www.shotamusic.com" target="_blank">Music</a>
+        <a href="about.html">About</a>
+        <a href="connect.html">Connect</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
+      </div>
+      <div class="footer-copy">© 2026 Tavas World. All rights reserved.</div>
+    </div>
+  </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
@@ -359,14 +357,12 @@
     const quoteText = document.getElementById('quoteText');
     const quoteAttr = document.getElementById('quoteAttr');
     const dotsContainer = document.getElementById('quoteDots');
-
     quotes.forEach((_, i) => {
       const dot = document.createElement('span');
       dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
       dot.addEventListener('click', () => showQuote(i));
       dotsContainer.appendChild(dot);
     });
-
     function showQuote(index) {
       quoteText.style.opacity = '0';
       quoteAttr.style.opacity = '0';
@@ -381,11 +377,9 @@
         });
       }, 400);
     }
-
     setInterval(() => {
       showQuote((currentQuote + 1) % quotes.length);
     }, 8000);
-
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
@@ -396,5 +390,6 @@
       obs.observe(el);
     });
   </script>
+
 </body>
 </html>
