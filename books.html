@@ -88,39 +88,41 @@
     .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; }
 
     /* ══ HERO ══ */
-    .page-hero {
-      margin-top: 68px;
-      padding: 80px 32px 60px;
-      background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 55%, #110B04 100%);
-      text-align: center;
-      border-bottom: 0.5px solid var(--border);
-    }
-    .page-hero .sec-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-    .page-hero h1 {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 16px;
-      line-height: 1.15;
-    }
-    .page-hero p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: var(--cream-mid);
-      max-width: 540px;
-      margin: 0 auto;
-      line-height: 1.85;
-    }
-
+   /* ══ HERO (slim tagline band) ══ */
+.page-hero {
+  margin-top: 68px;
+  padding: 48px 32px 40px;
+  background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 70%, #110B04 100%);
+  text-align: center;
+  border-bottom: 0.5px solid var(--border);
+}
+.page-hero .sec-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream-mid);
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.page-hero h1::before,
+.page-hero h1::after {
+  content: "—";
+  color: var(--gold-dim);
+  margin: 0 14px;
+  font-style: normal;
+}
+.page-hero p { display: none; }
     /* ══ BUTTONS ══ */
     .btn-gold {
       display: inline-block;
@@ -436,11 +438,10 @@
   <main>
 
     <!-- ══ PAGE HERO ══ -->
-    <div class="page-hero">
-      <h1>Stories That Build Character</h1>
-      <p>Children's books and activity books crafted to spark curiosity, kindness, and emotional growth — one story at a time.</p>
-      <div class="sec-label">By Sara C. Morell</div>
-    </div>
+   <div class="page-hero">
+  <div class="sec-label">By Sara C. Morell</div>
+  <h1>Stories That Build Character</h1>
+</div>
 
     <!-- ══ FEATURED SERIES ══ -->
     <section class="section">
