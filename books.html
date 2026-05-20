@@ -9,7 +9,6 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --choc:       #1C1208;
@@ -23,7 +22,6 @@
       --cream-low:  rgba(245,236,215,0.60);
       --border:     rgba(212,168,83,0.14);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -32,7 +30,6 @@
       color: var(--cream);
       overflow-x: hidden;
     }
-
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--choc-dark); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
@@ -51,17 +48,8 @@
       top: 0; left: 0; right: 0;
       z-index: 1000;
     }
-    .header-logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      text-decoration: none;
-    }
-    .header-logo-img {
-      width: 40px; height: 40px;
-      object-fit: contain;
-      border-radius: 50%;
-    }
+    .header-logo-wrap { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .header-logo-img { width: 40px; height: 40px; object-fit: contain; border-radius: 50%; }
     .header-logo-text {
       font-family: 'Libre Baskerville', serif;
       color: var(--cream);
@@ -71,7 +59,6 @@
       white-space: nowrap;
     }
     .header-logo-text span { color: var(--gold); }
-
     #navbar { display: flex; align-items: center; gap: 28px; }
     #navbar a {
       font-family: 'Montserrat', sans-serif;
@@ -173,12 +160,7 @@
     /* ══ SECTIONS ══ */
     .section { padding: 72px 32px; }
     .section-alt { background: var(--choc-dark); }
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      text-align: center;
-    }
+    .section-inner { max-width: 1100px; margin: 0 auto; width: 100%; text-align: center; }
     .sec-label {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.75rem;
@@ -206,6 +188,16 @@
     }
     .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
 
+    /* ══ SERIES INTRO ══ */
+    .series-intro {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--cream-mid);
+      max-width: 760px;
+      line-height: 1.85;
+      margin: 0 auto 56px;
+    }
+
     /* ══ FEATURED BOOK ══ */
     .featured-book {
       display: grid;
@@ -216,6 +208,7 @@
       max-width: 900px;
       margin: 0 auto;
     }
+    .featured-book + .featured-book { margin-top: 64px; }
     .featured-book-img {
       width: 100%;
       border-radius: 10px;
@@ -223,22 +216,21 @@
       transition: transform 0.3s;
     }
     .featured-book-img:hover { transform: scale(1.03); }
-    .featured-book-content h2 {
+    .featured-book-content .book-title {
       font-family: 'Libre Baskerville', serif;
       font-size: 1.7rem;
       font-weight: 700;
       color: var(--cream);
-      margin-bottom: 8px;
+      margin: 6px 0 18px;
       line-height: 1.2;
     }
-    .featured-book-content .book-author { text-align: center; }
+    .featured-book-content .book-eyebrow {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 20px;
     }
     .featured-book-content p {
       font-family: 'Playfair Display', serif;
@@ -251,7 +243,7 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 28px;
+      margin: 8px 0 28px;
     }
     .book-meta-item {
       font-family: 'Montserrat', sans-serif;
@@ -263,6 +255,43 @@
     }
     .book-meta-item span { color: var(--gold); font-weight: 600; }
     .book-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* ══ COMING SOON RIBBON ══ */
+    .coming-soon-wrap { position: relative; display: block; }
+    .coming-soon-wrap .ribbon {
+      position: absolute;
+      top: 14px;
+      left: -10px;
+      background: linear-gradient(135deg, var(--gold), #B07C2A);
+      color: var(--choc-deep);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      padding: 8px 14px;
+      border-radius: 4px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      z-index: 2;
+    }
+
+    /* ══ AUTHOR FOLLOW CALLOUT ══ */
+    .author-follow {
+      text-align: center;
+      margin: 72px auto 0;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      max-width: 720px;
+      background: rgba(212,168,83,0.04);
+    }
+    .author-follow p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.02rem;
+      color: var(--cream-mid);
+      line-height: 1.7;
+      margin: 8px 0 22px;
+    }
 
     /* ══ BOOK GRID ══ */
     .books-grid {
@@ -334,12 +363,7 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-    .footer-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
+    .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
     .footer-brand img { width: 32px; height: 32px; object-fit: contain; border-radius: 50%; }
     .footer-brand-name {
       font-family: 'Libre Baskerville', serif;
@@ -353,12 +377,7 @@
       font-style: italic;
       color: var(--gold);
     }
-    .footer-links {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.82rem;
@@ -389,7 +408,6 @@
       .book-btns { justify-content: center; }
       .books-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     }
-
     @media (max-width: 480px) {
       .books-grid { grid-template-columns: 1fr; }
     }
@@ -424,26 +442,82 @@
       <div class="sec-label">By Sara C. Morell</div>
     </div>
 
-    <!-- ══ FEATURED BOOK ══ -->
+    <!-- ══ FEATURED SERIES ══ -->
     <section class="section">
       <div class="section-inner">
-        <div class="sec-label">Featured</div>
-        <div class="sec-title">The Adventures of Raspen & Sylas</div>
+        <div class="sec-label">The Series</div>
+        <div class="sec-title">The Adventures of Raspen &amp; Sylas</div>
+        <p class="series-intro">
+          A heartwarming children's series following two unlikely friends — a rabbit and a squirrel —
+          through the kind of life lessons Sara and her brother grew up learning side by side:
+          friendship, kindness, courage, and doing what's right. Written for ages 1–6.
+        </p>
+
+        <!-- Book 1 -->
         <div class="featured-book">
-          <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank">
-            <img src="assets/img/raspen.png" alt="The Adventures of Raspen and Sylas" class="featured-book-img">
+          <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener">
+            <img src="assets/img/book1cover.png" alt="Book 1 — A Tale of Friendship" class="featured-book-img">
           </a>
           <div class="featured-book-content">
-            <p>Dive into the enchanting world of Raspen and Sylas — a heartwarming tale that teaches young readers the power of kindness, friendship, and life lessons. Join Raspen, Sylas, and their unexpected new friendships on a journey through a serene forest filled with redwoods, bubbling rivers, and wisdom.</p>
-            <p>Through vibrant storytelling and charming illustrations, Sara inspires emotional growth and resilience in children ages 1–6. With each adventure, a lesson they find — Raspen and Sylas grow wise and kind.</p>
+            <div class="book-eyebrow">Book 1 · The Beginning</div>
+            <div class="book-title">A Tale of Friendship</div>
+            <p>How it all began. Raspen the rabbit and Sylas the squirrel — two unlikely friends — discover that the best adventures start with an open heart. A gentle introduction to kindness, sharing, and the quiet courage it takes to make a new friend.</p>
             <div class="book-meta">
+              <div class="book-meta-item">Lesson <span>Friendship</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
             </div>
             <div class="book-btns">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" class="btn-gold">Buy on Amazon</a>
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener" class="btn-gold">Buy on Amazon</a>
             </div>
           </div>
         </div>
+
+        <!-- Book 2 -->
+        <div class="featured-book">
+          <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener">
+            <img src="assets/img/raspen.png" alt="Book 2 — The Bear Who Won't Share" class="featured-book-img">
+          </a>
+          <div class="featured-book-content">
+            <div class="book-eyebrow">Book 2 · The Adventure Continues</div>
+            <div class="book-title">The Bear Who Won't Share</div>
+            <p>Deeper into the forest, Raspen and Sylas meet a bear who keeps everything for himself. Through patience and a little bravery, they learn that sharing isn't losing — it's how friendships grow. A story about generosity, empathy, and standing up for what's fair.</p>
+            <div class="book-meta">
+              <div class="book-meta-item">Lesson <span>Sharing</span></div>
+              <div class="book-meta-item">Ages <span>1–6</span></div>
+            </div>
+            <div class="book-btns">
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener" class="btn-gold">Buy on Amazon</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book 3 — Coming Soon -->
+        <div class="featured-book">
+          <div class="coming-soon-wrap">
+            <span class="ribbon">Coming Soon</span>
+            <img src="assets/img/book3cover.png" alt="Book 3 — Rune the Sneaky Raccoon" class="featured-book-img">
+          </div>
+          <div class="featured-book-content">
+            <div class="book-eyebrow">Book 3 · New Adventure</div>
+            <div class="book-title">Rune the Sneaky Raccoon</div>
+            <p>The next chapter is almost here. Raspen and Sylas venture beyond the redwoods to a sunlit coast, where they meet Rune — a clever raccoon whose tricks test the very things that make their friendship strong. A story about honesty, trust, and learning that not every shortcut is the right path.</p>
+            <div class="book-meta">
+              <div class="book-meta-item">Lesson <span>Honesty &amp; Trust</span></div>
+              <div class="book-meta-item">Ages <span>1–6</span></div>
+            </div>
+            <div class="book-btns">
+              <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="btn-gold">Follow for Release</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author Follow Callout -->
+        <div class="author-follow">
+          <div class="sec-label">Stay in the Story</div>
+          <p>Follow Sara C. Morell on Amazon to be the first to know when <em>Rune the Sneaky Raccoon</em> — and every future book in the series — is released.</p>
+          <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="btn-outline-gold">+ Follow on Amazon</a>
+        </div>
+
       </div>
     </section>
 
@@ -453,7 +527,7 @@
     <section class="section section-alt">
       <div class="section-inner">
         <div class="sec-label">The Collection</div>
-        <div class="sec-title">All Books & Activity Books</div>
+        <div class="sec-title">All Books &amp; Activity Books</div>
         <div class="sec-sub">Every book is designed to spark curiosity, build confidence, and create meaningful moments between children and the adults who guide them.</div>
         <div class="books-grid">
 
@@ -465,19 +539,19 @@
 
           <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank" class="book-card">
             <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action">
-            <div class="book-card-title">Dinosaurs in Action & Coloring Adventures</div>
+            <div class="book-card-title">Dinosaurs in Action &amp; Coloring Adventures</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
 
           <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank" class="book-card">
             <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book">
-            <div class="book-card-title">My Big Dinosaur Coloring & Activity Book</div>
-              <div class="book-card-type">Coloring Book</div>
+            <div class="book-card-title">My Big Dinosaur Coloring &amp; Activity Book</div>
+            <div class="book-card-type">Coloring Book</div>
           </a>
 
           <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank" class="book-card">
             <img src="assets/img/machines.png" alt="Big Machines Coloring Book">
-            <div class="book-card-title">Big Machines & Hard Workers: Coloring Adventures</div>
+            <div class="book-card-title">Big Machines &amp; Hard Workers: Coloring Adventures</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
 
