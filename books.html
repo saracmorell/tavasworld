@@ -210,13 +210,14 @@
       max-width: 900px;
       margin: 0 auto;
     }
-    .featured-book + .featured-book { margin-top: 64px; }
-    .featured-book-img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
-    }
+   .featured-book-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
     .featured-book-img:hover { transform: scale(1.03); }
     .featured-book-content .book-title {
       font-family: 'Libre Baskerville', serif;
