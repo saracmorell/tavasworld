@@ -317,4 +317,109 @@
     </div>
 
     <section class="cta-band">
+      <section class="cta-band">
+      <p class="cta-band-eyebrow">Start where you are</p>
+      <h2>Start your journey today.</h2>
+      <p>Whether you came for a book, the app, or business support &mdash;<br>this is the right place to begin.</p>
+      <div class="cta-band-btns">
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
+        <a href="connect.html" class="btn-ghost">Work with Sara</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
+        <div class="footer-brand-name">TAVAS WORLD</div>
+        <div class="footer-tagline">Navigating life with intention.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
+        <a href="services.html">Services</a>
+        <a href="books.html">Books</a>
+        <a href="https://www.shotamusic.com" target="_blank">Music</a>
+        <a href="about.html">About</a>
+        <a href="connect.html">Connect</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script>
+    const typedEl = document.querySelector('.typed');
+    if (typedEl) {
+      const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
+      new Typed('.typed', { strings: items, typeSpeed: 80, backSpeed: 40, backDelay: 2200, loop: true });
+    }
+
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navbar').classList.toggle('show');
+    });
+
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
+    });
+
+    const quotes = [
+      { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
+      { text: "I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
+      { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
+      { text: "Showing others the world through my eyes is a passion of mine.", attr: "— Sara C. Morell" },
+      { text: "The best thing about life is that no day is the same.", attr: "— Sara C. Morell" },
+      { text: "As a child I knew my life was not supposed to be that hard — so I made sure when I turned 18 that it was going to be how I chose it to be.", attr: "— Sara C. Morell" }
+    ];
+
+    let currentQuote = 0;
+    const quoteText = document.getElementById('quoteText');
+    const quoteAttr = document.getElementById('quoteAttr');
+    const dotsContainer = document.getElementById('quoteDots');
+
+    quotes.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => showQuote(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function showQuote(index) {
+      quoteText.style.opacity = '0';
+      quoteAttr.style.opacity = '0';
+      setTimeout(() => {
+        currentQuote = index;
+        quoteText.textContent = '"' + quotes[index].text + '"';
+        quoteAttr.textContent = quotes[index].attr;
+        quoteText.style.opacity = '1';
+        quoteAttr.style.opacity = '1';
+        document.querySelectorAll('.quote-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === index);
+        });
+      }, 400);
+    }
+
+    setInterval(() => {
+      showQuote((currentQuote + 1) % quotes.length);
+    }, 8000);
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feat-card, .about-strip-inner, .cta-band h2').forEach(el => {
+      el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+      obs.observe(el);
+    });
+  </script>
+
+</body>
+</html>
       <p class="cta-band-ey
