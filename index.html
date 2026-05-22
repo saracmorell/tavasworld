@@ -34,7 +34,6 @@
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
-
     #header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
     .header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .header-logo-img { width: 36px; height: 36px; object-fit: contain; }
@@ -46,7 +45,6 @@
     .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
     .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
     .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
-
     .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 110px 24px 60px; position: relative; overflow: hidden; background: var(--choc); }
     .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
     .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; animation: riseIn 1s ease both; }
@@ -64,18 +62,15 @@
     .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
-
     .stats-bar { background: var(--choc); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 28px 48px; }
     .stats-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; }
     .stat-item { flex: 1; text-align: center; padding: 0 32px; position: relative; }
     .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 28px; width: 0.5px; background: var(--border); }
     .stat-val { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
     .stat-lbl { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); }
-
     .services-preview { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
     .books-preview { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
     .app-section { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
-
     .app-inner { max-width: 1100px; margin: 0 auto; }
     .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
     .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
@@ -90,27 +85,27 @@
     .feat-card p { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; color: var(--cream-mid); line-height: 1.7; }
     .best-for { display: block; margin-top: 12px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.78rem; color: var(--gold-dim); }
     .app-cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-
     .quote-section { padding: 64px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
     .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; transition: opacity 0.6s ease; }
     .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); transition: opacity 0.6s ease; }
     .quote-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
     .quote-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.3s; }
     .quote-dot.active { background: var(--gold); }
-
     .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 64px 48px; text-align: center; }
     .about-strip-inner { max-width: 620px; margin: 0 auto; }
     .about-strip .sec-label { margin-bottom: 16px; }
     .about-strip p { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); line-height: 1.9; margin-bottom: 14px; }
     .about-strip p em { color: var(--gold); font-style: italic; }
-
+    .featured-testimonial { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 72px 24px; text-align: center; }
+    .featured-testimonial-inner { max-width: 760px; margin: 0 auto; border-left: 3px solid var(--gold); padding: 12px 0 12px 28px; text-align: left; }
+    .featured-testimonial-quote { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-style: italic; line-height: 1.6; color: var(--cream-mid); margin: 0 0 16px 0; }
+    .featured-testimonial-attr { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin: 0; }
     .cta-band { padding: 72px 48px; background: var(--choc); text-align: center; position: relative; overflow: hidden; border-top: 0.5px solid var(--border); }
     .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.05) 0%, transparent 70%); pointer-events: none; }
     .cta-band-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 20px; position: relative; z-index: 1; }
     .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; position: relative; z-index: 1; }
     .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 32px; line-height: 1.8; position: relative; z-index: 1; }
     .cta-band-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; }
-
     footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
     .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -121,9 +116,7 @@
     .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
     .footer-copy { font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em; }
-
     @keyframes riseIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-
     @media (max-width: 768px) {
       #header { padding: 0 20px; height: 64px; }
       .header-logo-text { display: none; }
@@ -143,6 +136,8 @@
       .feat-grid-4 { grid-template-columns: 1fr; }
       .quote-section { padding: 48px 24px; }
       .about-strip { padding: 48px 24px; }
+      .featured-testimonial { padding: 56px 20px; }
+      .featured-testimonial-quote { font-size: 1.1rem; }
       .cta-band { padding: 56px 24px; }
       footer { padding: 32px 24px; }
       .footer-links { justify-content: center; }
@@ -156,7 +151,6 @@
   </style>
 </head>
 <body>
-
   <header id="header">
     <a href="index.html" class="header-logo-wrap">
       <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
@@ -174,9 +168,7 @@
       <i class="bi bi-list"></i>
     </button>
   </header>
-
   <main>
-
     <section class="hero">
       <div class="hero-bg"></div>
       <p class="hero-eyebrow">A creative world inspired by freedom</p>
@@ -201,7 +193,6 @@
         <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
       </div>
     </section>
-
     <div class="stats-bar">
       <div class="stats-inner">
         <div class="stat-item">
@@ -222,7 +213,6 @@
         </div>
       </div>
     </div>
-
     <section class="services-preview">
       <div class="app-inner">
         <span class="sec-label">Business Support</span>
@@ -255,7 +245,6 @@
         </div>
       </div>
     </section>
-
     <section class="books-preview">
       <div class="app-inner">
         <span class="sec-label">The Library</span>
@@ -266,7 +255,6 @@
         </div>
       </div>
     </section>
-
     <section class="app-section">
       <div class="app-inner">
         <span class="sec-label">The Tavas App</span>
@@ -300,14 +288,12 @@
         </div>
       </div>
     </section>
-
     <div class="quote-section">
       <p class="quote-text" id="quoteText">"Do everything you ever dreamed of — and I mean everything."</p>
       <p class="quote-attr" id="quoteAttr">— Sara C. Morell</p>
       <div class="quote-dots" id="quoteDots"></div>
     </div>
-
-    <div class="about-strip">
+<div class="about-strip">
       <div class="about-strip-inner">
         <span class="sec-label">About Tavas World</span>
         <p>Welcome to Tavas World &mdash; where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space brings together storytelling, wellness tools, and professional support under one brand.</p>
@@ -315,16 +301,17 @@
         <a href="about.html" class="btn-ghost" style="margin-top:24px; display:inline-flex; padding:12px 28px;">My Story</a>
       </div>
     </div>
-<section class="featured-testimonial">
-  <div class="featured-testimonial-inner">
-    <p class="featured-testimonial-quote">
-      "I want to thank you not only for what you do, but for being you. I remember how you talked about kindness in our first conversation, and your behavior shows you are true to your word. You strive to make everyone's day a little brighter."
-    </p>
-    <p class="featured-testimonial-attr">— Past client</p>
-  </div>
-</section>
+
+    <section class="featured-testimonial">
+      <div class="featured-testimonial-inner">
+        <p class="featured-testimonial-quote">
+          "I want to thank you not only for what you do, but for being you. I remember how you talked about kindness in our first conversation, and your behavior shows you are true to your word. You strive to make everyone's day a little brighter."
+        </p>
+        <p class="featured-testimonial-attr">— Past client</p>
+      </div>
+    </section>
+
     <section class="cta-band">
-      <section class="cta-band">
       <p class="cta-band-eyebrow">Start where you are</p>
       <h2>Start your journey today.</h2>
       <p>Whether you came for a book, the app, or business support &mdash;<br>this is the right place to begin.</p>
@@ -333,7 +320,6 @@
         <a href="connect.html" class="btn-ghost">Work with Sara</a>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -375,14 +361,14 @@
       h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
     });
 
-   const quotes = [
-  { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
-  { text: "Sara, thanks for all of your hard work. You are such a pleasure to work with.", attr: "— Past client" },
-  { text: "To my three sons — I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
-  { text: "I appreciate all the effort and care you put into your work, your loyalty, and your great personality. I don't know what I would do without you.", attr: "— Past client" },
-  { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
-  { text: "Start where you are. Build what you imagine. Finish what matters.", attr: "— Sara C. Morell" }
-];
+    const quotes = [
+      { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
+      { text: "Sara, thanks for all of your hard work. You are such a pleasure to work with.", attr: "— Past client" },
+      { text: "To my three sons — I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
+      { text: "I appreciate all the effort and care you put into your work, your loyalty, and your great personality. I don't know what I would do without you.", attr: "— Past client" },
+      { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
+      { text: "Start where you are. Build what you imagine. Finish what matters.", attr: "— Sara C. Morell" }
+    ];
 
     let currentQuote = 0;
     const quoteText = document.getElementById('quoteText');
@@ -421,12 +407,12 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.feat-card, .about-strip-inner, .cta-band h2').forEach(el => {
-      el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+    document.querySelectorAll('.feat-card, .about-strip-inner, .cta-band h2, .featured-testimonial-inner').forEach(el => {
+      el.style.opacity='0';
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity 0.6s ease, transform 0.6s ease';
       obs.observe(el);
     });
   </script>
-
 </body>
 </html>
-      <p class="cta-band-ey
