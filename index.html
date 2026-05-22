@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tavas World — Your Journey. All Power. Fearless Strength.</title>
-  <meta name="description" content="Children's books, a wellness app, and operational support for founders — all from Sara C. Morell.">
+  <meta name="description" content="Children's books, a wellness app, and business support services — all from Sara C. Morell.">
   <meta property="og:title" content="Tavas World — Your Journey. All Power. Fearless Strength." />
-  <meta property="og:description" content="Children's books, a wellness app, and operational support for founders — all from Sara C. Morell." />
+  <meta property="og:description" content="Children's books, a wellness app, and business support services — all from Sara C. Morell." />
   <meta property="og:image" content="https://www.tavasworld.com/assets/img/TranparentSun.png" />
   <meta property="og:url" content="https://www.tavasworld.com" />
   <meta property="og:type" content="website" />
@@ -47,17 +47,18 @@
     .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
     .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
 
-    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 140px 24px 100px; position: relative; overflow: hidden; background: var(--choc); }
+    /* HERO — tightened padding so the 3 buttons land above the fold */
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 110px 24px 60px; position: relative; overflow: hidden; background: var(--choc); }
     .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
-    .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 36px; animation: riseIn 1s ease both; }
-    .hero-sun { width: 110px; height: 110px; object-fit: contain; margin: 0 auto 40px; display: block; animation: riseIn 1.1s ease 0.1s both, breathe 6s ease-in-out 1.2s infinite; }
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; animation: riseIn 1s ease both; }
+    .hero-sun { width: 96px; height: 96px; object-fit: contain; margin: 0 auto 28px; display: block; animation: riseIn 1.1s ease 0.1s both, breathe 6s ease-in-out 1.2s infinite; }
     @keyframes breathe { 0%,100% { filter: drop-shadow(0 0 30px rgba(212,168,83,0.15)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px rgba(212,168,83,0.35)); transform: scale(1.04); } }
-    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 16px; animation: riseIn 1.2s ease 0.2s both; }
-    .hero-typed-line { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 2.2rem); font-style: italic; color: var(--gold); margin-bottom: 32px; min-height: 3rem; animation: riseIn 1.2s ease 0.3s both; }
-    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 36px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.35s both; flex-wrap: wrap; }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 14px; animation: riseIn 1.2s ease 0.2s both; }
+    .hero-typed-line { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.8vw, 2rem); font-style: italic; color: var(--gold); margin-bottom: 22px; min-height: 2.5rem; animation: riseIn 1.2s ease 0.3s both; }
+    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 22px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.35s both; flex-wrap: wrap; }
     .hero-tagline .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
 
-    .hero-plain-desc { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--cream-mid); max-width: 640px; margin: 0 auto 44px; line-height: 1.7; animation: riseIn 1.2s ease 0.38s both; }
+    .hero-plain-desc { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--cream-mid); max-width: 640px; margin: 0 auto 30px; line-height: 1.65; animation: riseIn 1.2s ease 0.38s both; }
     .hero-plain-desc em { color: var(--gold); font-style: italic; }
 
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.4s both; }
@@ -67,22 +68,23 @@
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
 
-    .stats-bar { background: var(--choc); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 32px 48px; }
+    .stats-bar { background: var(--choc); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 28px 48px; }
     .stats-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; }
     .stat-item { flex: 1; text-align: center; padding: 0 32px; position: relative; }
     .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 28px; width: 0.5px; background: var(--border); }
     .stat-val { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
     .stat-lbl { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); }
 
-    .services-preview { padding: 120px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
-    .books-preview { padding: 120px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
+    /* Reduced section padding from 120px -> 80px to cut empty space between sections */
+    .services-preview { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
+    .books-preview { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
+    .app-section { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
 
-    .app-section { padding: 120px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
     .app-inner { max-width: 1100px; margin: 0 auto; }
     .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
     .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
-    .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 520px; margin: 0 auto 56px; text-align: center; }
-    .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-bottom: 52px; }
+    .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 560px; margin: 0 auto 44px; text-align: center; }
+    .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-bottom: 40px; }
     .feat-grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
     .feat-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color 0.25s, background 0.25s, transform 0.2s; }
     .feat-card:hover { border-color: rgba(212,168,83,0.28); background: rgba(212,168,83,0.07); transform: translateY(-3px); }
@@ -93,27 +95,26 @@
     .best-for { display: block; margin-top: 12px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.78rem; color: var(--gold-dim); }
     .app-cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
-    .quote-section { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
+    .quote-section { padding: 64px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
     .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; transition: opacity 0.6s ease; }
     .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); transition: opacity 0.6s ease; }
     .quote-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
     .quote-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.3s; }
     .quote-dot.active { background: var(--gold); }
 
-    .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 80px 48px; text-align: center; }
+    .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 64px 48px; text-align: center; }
     .about-strip-inner { max-width: 620px; margin: 0 auto; }
     .about-strip .sec-label { margin-bottom: 16px; }
     .about-strip p { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); line-height: 1.9; margin-bottom: 14px; }
     .about-strip p em { color: var(--gold); font-style: italic; }
 
-    .cta-band { padding: 100px 48px; background: var(--choc); text-align: center; position: relative; overflow: hidden; border-top: 0.5px solid var(--border); }
+    .cta-band { padding: 72px 48px; background: var(--choc); text-align: center; position: relative; overflow: hidden; border-top: 0.5px solid var(--border); }
     .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.05) 0%, transparent 70%); pointer-events: none; }
-    .cta-band-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 20px; }
-    .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; }
-    .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 40px; line-height: 1.8; }
+    .cta-band-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 20px; position: relative; z-index: 1; }
+    .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; position: relative; z-index: 1; }
+    .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 32px; line-height: 1.8; position: relative; z-index: 1; }
     .cta-band-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; }
 
-    /* FOOTER */
     footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
     .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -133,26 +134,26 @@
       #navbar { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(15,10,4,0.98); flex-direction: column; padding: 24px 20px; gap: 20px; border-bottom: 0.5px solid var(--border); }
       #navbar.show { display: flex; }
       .mobile-nav-toggle { display: block; }
-      .hero { padding: 110px 24px 80px; }
-      .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
-      .hero-sun { width: 80px; height: 80px; }
+      .hero { padding: 96px 24px 48px; }
+      .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+      .hero-sun { width: 72px; height: 72px; margin-bottom: 20px; }
       .hero-btns-three { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
-      .stats-bar { padding: 24px 20px; }
-      .stat-item { padding: 0 12px; }
-      .stat-val { font-size: 1.3rem; }
-      .stat-lbl { font-size: 0.56rem; }
-      .services-preview, .books-preview, .app-section { padding: 72px 24px; }
+      .stats-bar { padding: 22px 20px; }
+      .stat-item { padding: 0 10px; }
+      .stat-val { font-size: 1.25rem; }
+      .stat-lbl { font-size: 0.55rem; }
+      .services-preview, .books-preview, .app-section { padding: 56px 24px; }
       .feat-grid { grid-template-columns: 1fr; }
       .feat-grid-4 { grid-template-columns: 1fr; }
-      .quote-section { padding: 60px 24px; }
-      .about-strip { padding: 60px 24px; }
-      .cta-band { padding: 72px 24px; }
+      .quote-section { padding: 48px 24px; }
+      .about-strip { padding: 48px 24px; }
+      .cta-band { padding: 56px 24px; }
       footer { padding: 32px 24px; }
       .footer-links { justify-content: center; }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
       #header { padding: 0 32px; }
-      .services-preview, .books-preview, .app-section { padding: 80px 32px; }
+      .services-preview, .books-preview, .app-section { padding: 64px 32px; }
       .feat-grid { grid-template-columns: repeat(2, 1fr); }
       .feat-grid-4 { grid-template-columns: repeat(2, 1fr); }
     }
@@ -197,7 +198,7 @@
         Fearless Strength
       </p>
       <p class="hero-plain-desc">
-        Children's books, a wellness app, and operational support for founders &mdash; all from <em>Sara C. Morell</em>.
+        Children's books, a wellness app, and business support services &mdash; all from <em>Sara C. Morell</em>.
       </p>
       <div class="hero-btns hero-btns-three">
         <a href="books.html" class="btn-primary-gold">Explore Books</a>
@@ -206,24 +207,24 @@
       </div>
     </section>
 
-    <!-- STATS BAR -->
+    <!-- STATS BAR (credibility, not app pricing) -->
     <div class="stats-bar">
       <div class="stats-inner">
         <div class="stat-item">
-          <span class="stat-val">Free</span>
-          <span class="stat-lbl">To Download</span>
+          <span class="stat-val">6+</span>
+          <span class="stat-lbl">Books Published</span>
         </div>
         <div class="stat-item">
-          <span class="stat-val">$4.99</span>
-          <span class="stat-lbl">Per Month</span>
+          <span class="stat-val">1</span>
+          <span class="stat-lbl">Wellness App Live</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">5</span>
+          <span class="stat-lbl">Service Areas</span>
         </div>
         <div class="stat-item">
           <span class="stat-val">14-Day</span>
-          <span class="stat-lbl">Free Trial</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">6+</span>
-          <span class="stat-lbl">Books Published</span>
+          <span class="stat-lbl">Free App Trial</span>
         </div>
       </div>
     </div>
@@ -233,22 +234,22 @@
       <div class="app-inner">
         <span class="sec-label">Business Support</span>
         <h2 class="sec-headline">Operational support for growing brands</h2>
-        <p class="sec-body">Reliable backend support that keeps founders, authors, and small teams focused on what only they can do.</p>
+        <p class="sec-body">Reliable backend support that keeps authors, creatives, and small business owners focused on what only they can do.</p>
         <div class="feat-grid feat-grid-4">
           <div class="feat-card">
             <h3>Executive &amp; Admin Ops</h3>
             <p>A discreet second brain for calendar, inbox, and meeting flow.</p>
-            <span class="best-for">Best for founders who need a reliable right hand.</span>
+            <span class="best-for">Best for business owners who need a reliable right hand.</span>
           </div>
           <div class="feat-card">
             <h3>Project &amp; Workflow Coordination</h3>
             <p>Turn scattered tasks into a system that actually moves forward.</p>
-            <span class="best-for">Best for teams losing time to chaos.</span>
+            <span class="best-for">Best for teams losing time to disorganized handoffs.</span>
           </div>
           <div class="feat-card">
             <h3>Communications &amp; Org Support</h3>
             <p>Clear internal and client communication, handled with care.</p>
-            <span class="best-for">Best for leaders who hate dropped balls.</span>
+            <span class="best-for">Best for leaders who can&rsquo;t afford dropped balls.</span>
           </div>
           <div class="feat-card">
             <h3>Social Media Management</h3>
@@ -274,12 +275,12 @@
       </div>
     </section>
 
-    <!-- APP SECTION (trimmed to 3 features) -->
+    <!-- APP SECTION -->
     <section class="app-section">
       <div class="app-inner">
         <span class="sec-label">The Tavas App</span>
         <h2 class="sec-headline">Track your wellness in one place.</h2>
-        <p class="sec-body">No more scattered apps. Track your whole wellness &mdash; mind, body, and habits &mdash; in one system built for real life.</p>
+        <p class="sec-body">One app for the way you actually live &mdash; supplements, peptides, habits, movement, and mood, all in one place. Built with accessibility at the center, so wellness tracking works for every body and every brain.</p>
         <div class="feat-grid">
           <div class="feat-card">
             <div class="feat-icon">
@@ -321,7 +322,7 @@
       <div class="about-strip-inner">
         <span class="sec-label">About Tavas World</span>
         <p>Welcome to Tavas World &mdash; where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space brings together storytelling, wellness tools, and professional support under one brand.</p>
-        <p>From books that build kindness and curiosity, to the Tavas App for daily wellness, to operational services for growing brands &mdash; everything here is built around one belief: that intentional support changes what's possible.</p>
+        <p>From books that build kindness and curiosity, to the Tavas App for daily wellness, to business support services for growing brands &mdash; everything here is built around one belief: that intentional support changes what's possible.</p>
         <a href="about.html" class="btn-ghost" style="margin-top:24px; display:inline-flex; padding:12px 28px;">My Story</a>
       </div>
     </div>
@@ -329,5 +330,3 @@
     <!-- FINAL CTA -->
     <section class="cta-band">
       <p class="cta-band-eyebrow">Start where you are</p>
-      <h2>Start your journey today.</h2>
-      <p>Whether you came for a book, the app, or business support &mdash;<br>this is the right place to begin.</p
