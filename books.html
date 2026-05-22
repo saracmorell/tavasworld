@@ -50,7 +50,7 @@
     .page-hero p { display: none; }
 
     /* ══ BUTTONS ══ */
-    .btn-gold { display: inline-block; padding: 13px 32px; background: var(--gold); color: var(--choc-dark); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+    .btn-gold { display: inline-block; padding: 14px 28px; background: var(--gold); color: var(--choc-dark); font-family: 'Montserrat', sans-serif; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; line-height: 1.3; text-align: center; max-width: 100%; }
     .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-dark); text-decoration: none; }
     .btn-outline-gold { display: inline-block; padding: 13px 32px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 1px solid rgba(212,168,83,0.3); cursor: pointer; transition: all 0.2s; }
     .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
@@ -78,30 +78,6 @@
     .book-meta-item { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); display: flex; align-items: center; gap: 6px; }
     .book-meta-item span { color: var(--gold); font-weight: 600; }
     .book-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-
-    /* ══ KINDLE UNLIMITED BADGE ══ */
-    .ku-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      background: rgba(212,168,83,0.08);
-      border: 1px solid rgba(212,168,83,0.35);
-      border-radius: 999px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 18px;
-    }
-    .ku-badge::before {
-      content: "★";
-      font-size: 0.85rem;
-      line-height: 1;
-      color: var(--gold);
-    }
 
     /* ══ COMING SOON RIBBON ══ */
     .coming-soon-wrap { position: relative; display: block; }
@@ -152,7 +128,7 @@
   </style>
 </head>
 <body>
-  <!-- ══ HEADER ══ -->
+<!-- ══ HEADER ══ -->
   <header id="header">
     <a href="index.html" class="header-logo-wrap">
       <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img" width="40" height="40">
@@ -201,9 +177,8 @@
               <div class="book-meta-item">Lesson <span>Friendship</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
             </div>
-            <div class="ku-badge">Free on Kindle Unlimited</div>
             <div class="book-btns">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener" class="btn-gold">Read on Amazon</a>
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener" class="btn-gold">Available on Amazon — Free on Kindle Unlimited</a>
             </div>
           </div>
         </div>
@@ -221,9 +196,8 @@
               <div class="book-meta-item">Lesson <span>Sharing</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
             </div>
-            <div class="ku-badge">Free on Kindle Unlimited</div>
             <div class="book-btns">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener" class="btn-gold">Read on Amazon</a>
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener" class="btn-gold">Available on Amazon — Free on Kindle Unlimited</a>
             </div>
           </div>
         </div>
@@ -243,7 +217,6 @@
               <div class="book-meta-item">Ages <span>1–6</span></div>
               <div class="book-meta-item">Expected <span>2026</span></div>
             </div>
-            <div class="ku-badge">Free on Kindle Unlimited at launch</div>
             <div class="book-btns">
               <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="btn-gold">Follow for Release</a>
             </div>
@@ -332,4 +305,4 @@
     });
   </script>
 </body>
-</html>
+</html>  
