@@ -315,7 +315,14 @@
         <a href="about.html" class="btn-ghost" style="margin-top:24px; display:inline-flex; padding:12px 28px;">My Story</a>
       </div>
     </div>
-
+<section class="featured-testimonial">
+  <div class="featured-testimonial-inner">
+    <p class="featured-testimonial-quote">
+      "I want to thank you not only for what you do, but for being you. I remember how you talked about kindness in our first conversation, and your behavior shows you are true to your word. You strive to make everyone's day a little brighter."
+    </p>
+    <p class="featured-testimonial-attr">— Past client</p>
+  </div>
+</section>
     <section class="cta-band">
       <section class="cta-band">
       <p class="cta-band-eyebrow">Start where you are</p>
@@ -368,14 +375,14 @@
       h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
     });
 
-    const quotes = [
-      { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
-      { text: "I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
-      { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
-      { text: "Showing others the world through my eyes is a passion of mine.", attr: "— Sara C. Morell" },
-      { text: "The best thing about life is that no day is the same.", attr: "— Sara C. Morell" },
-      { text: "As a child I knew my life was not supposed to be that hard — so I made sure when I turned 18 that it was going to be how I chose it to be.", attr: "— Sara C. Morell" }
-    ];
+   const quotes = [
+  { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
+  { text: "Sara, thanks for all of your hard work. You are such a pleasure to work with.", attr: "— Past client" },
+  { text: "To my three sons — I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
+  { text: "I appreciate all the effort and care you put into your work, your loyalty, and your great personality. I don't know what I would do without you.", attr: "— Past client" },
+  { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
+  { text: "Start where you are. Build what you imagine. Finish what matters.", attr: "— Sara C. Morell" }
+];
 
     let currentQuote = 0;
     const quoteText = document.getElementById('quoteText');
