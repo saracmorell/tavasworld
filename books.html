@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — Tavas World</title>
- <meta name="description" content="The Adventures of Raspen & Sylas series and activity books by Sara C. Morell — heartwarming stories that teach friendship, kindness, and life lessons for kids ages 1–6.">
+  <meta name="description" content="The Adventures of Raspen & Sylas series and activity books by Sara C. Morell — heartwarming stories that teach friendship, kindness, and life lessons for kids ages 1–6.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,378 +24,113 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Playfair Display', Georgia, serif;
-      background-color: var(--choc);
-      color: var(--cream);
-      overflow-x: hidden;
-    }
+    body { font-family: 'Playfair Display', Georgia, serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--choc-dark); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
 
     /* ══ HEADER ══ */
-    #header {
-      background: rgba(20,14,6,0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 0.5px solid var(--border);
-      padding: 0 32px;
-      height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-    }
+    #header { background: rgba(20,14,6,0.96); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); padding: 0 32px; height: 68px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
     .header-logo-wrap { display: flex; align-items: center; gap: 11px; text-decoration: none; }
     .header-logo-img { width: 40px; height: 40px; object-fit: contain; border-radius: 50%; }
-    .header-logo-text {
-      font-family: 'Libre Baskerville', serif;
-      color: var(--cream);
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      white-space: nowrap;
-    }
+    .header-logo-text { font-family: 'Libre Baskerville', serif; color: var(--cream); font-size: 1rem; font-weight: 400; letter-spacing: 0.12em; white-space: nowrap; }
     .header-logo-text span { color: var(--gold); }
     #navbar { display: flex; align-items: center; gap: 28px; }
-    #navbar a {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    #navbar a { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-mid); text-decoration: none; transition: color 0.2s; }
     #navbar a:hover, #navbar a.active { color: var(--gold); }
-    .nav-cta {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--choc-dark) !important;
-      background: var(--gold);
-      padding: 9px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
+    .nav-cta { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--choc-dark) !important; background: var(--gold); padding: 9px 22px; border-radius: 999px; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold-light); }
     .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; }
 
     /* ══ HERO ══ */
-   /* ══ HERO (slim tagline band) ══ */
-.page-hero {
-  margin-top: 68px;
-  padding: 48px 32px 40px;
-  background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 70%, #110B04 100%);
-  text-align: center;
-  border-bottom: 0.5px solid var(--border);
-}
-.page-hero .sec-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 14px;
-}
-.page-hero h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--cream-mid);
-  margin: 0;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-.page-hero h1::before,
-.page-hero h1::after {
-  content: "—";
-  color: var(--gold-dim);
-  margin: 0 14px;
-  font-style: normal;
-}
-.page-hero p { display: none; }
+    .page-hero { margin-top: 68px; padding: 48px 32px 40px; background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 70%, #110B04 100%); text-align: center; border-bottom: 0.5px solid var(--border); }
+    .page-hero .sec-label { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 400; font-style: italic; color: var(--cream-mid); margin: 0; line-height: 1.5; letter-spacing: 0.02em; }
+    .page-hero h1::before, .page-hero h1::after { content: "—"; color: var(--gold-dim); margin: 0 14px; font-style: normal; }
+    .page-hero p { display: none; }
+
     /* ══ BUTTONS ══ */
-    .btn-gold {
-      display: inline-block;
-      padding: 13px 32px;
-      background: var(--gold);
-      color: var(--choc-dark);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
+    .btn-gold { display: inline-block; padding: 13px 32px; background: var(--gold); color: var(--choc-dark); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
     .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-dark); text-decoration: none; }
-    .btn-outline-gold {
-      display: inline-block;
-      padding: 13px 32px;
-      background: transparent;
-      color: var(--cream-mid);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      border: 1px solid rgba(212,168,83,0.3);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
+    .btn-outline-gold { display: inline-block; padding: 13px 32px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 1px solid rgba(212,168,83,0.3); cursor: pointer; transition: all 0.2s; }
     .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
 
     /* ══ SECTIONS ══ */
     .section { padding: 72px 32px; }
     .section-alt { background: var(--choc-dark); }
     .section-inner { max-width: 1100px; margin: 0 auto; width: 100%; text-align: center; }
-    .sec-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .sec-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-    .sec-sub {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: var(--cream-mid);
-      max-width: 580px;
-      line-height: 1.85;
-      margin: 0 auto 48px;
-    }
+    .sec-label { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .sec-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--cream); margin-bottom: 14px; line-height: 1.2; }
+    .sec-sub { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); max-width: 580px; line-height: 1.85; margin: 0 auto 48px; }
     .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
 
     /* ══ SERIES INTRO ══ */
-    .series-intro {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: var(--cream-mid);
-      max-width: 760px;
-      line-height: 1.85;
-      margin: 0 auto 56px;
-    }
+    .series-intro { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); max-width: 760px; line-height: 1.85; margin: 0 auto 56px; }
 
     /* ══ FEATURED BOOK ══ */
-    .featured-book {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 56px;
-      align-items: center;
-      text-align: left;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-   .featured-book-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-}
+    .featured-book { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; text-align: left; max-width: 900px; margin: 0 auto 64px; }
+    .featured-book-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); transition: transform 0.3s; display: block; background: rgba(212,168,83,0.04); }
     .featured-book-img:hover { transform: scale(1.03); }
-    .featured-book-content .book-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--cream);
-      margin: 6px 0 18px;
-      line-height: 1.2;
-    }
-    .featured-book-content .book-eyebrow {
+    .featured-book-content .book-title { font-family: 'Libre Baskerville', serif; font-size: 1.7rem; font-weight: 700; color: var(--cream); margin: 6px 0 18px; line-height: 1.2; }
+    .featured-book-content .book-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+    .featured-book-content p { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--cream-mid); line-height: 1.9; margin-bottom: 16px; }
+    .featured-book-content .book-meta { display: flex; gap: 20px; flex-wrap: wrap; margin: 8px 0 18px; }
+    .book-meta-item { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); display: flex; align-items: center; gap: 6px; }
+    .book-meta-item span { color: var(--gold); font-weight: 600; }
+    .book-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+    /* ══ KINDLE UNLIMITED BADGE ══ */
+    .ku-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      background: rgba(212,168,83,0.08);
+      border: 1px solid rgba(212,168,83,0.35);
+      border-radius: 999px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gold);
+      margin-bottom: 18px;
     }
-    .featured-book-content p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--cream-mid);
-      line-height: 1.9;
-      margin-bottom: 16px;
+    .ku-badge::before {
+      content: "★";
+      font-size: 0.85rem;
+      line-height: 1;
+      color: var(--gold);
     }
-    .featured-book-content .book-meta {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 8px 0 28px;
-    }
-    .book-meta-item {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      color: var(--cream-low);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .book-meta-item span { color: var(--gold); font-weight: 600; }
-    .book-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* ══ COMING SOON RIBBON ══ */
     .coming-soon-wrap { position: relative; display: block; }
-    .coming-soon-wrap .ribbon {
-      position: absolute;
-      top: 14px;
-      left: -10px;
-      background: linear-gradient(135deg, var(--gold), #B07C2A);
-      color: var(--choc-deep);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      padding: 8px 14px;
-      border-radius: 4px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-      z-index: 2;
-    }
+    .coming-soon-wrap .ribbon { position: absolute; top: 14px; left: -10px; background: linear-gradient(135deg, var(--gold), #B07C2A); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.7rem; padding: 8px 14px; border-radius: 4px; box-shadow: 0 6px 18px rgba(0,0,0,0.45); z-index: 2; }
 
     /* ══ AUTHOR FOLLOW CALLOUT ══ */
-    .author-follow {
-      text-align: center;
-      margin: 72px auto 0;
-      padding: 32px 28px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      max-width: 720px;
-      background: rgba(212,168,83,0.04);
-    }
-    .author-follow p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.02rem;
-      color: var(--cream-mid);
-      line-height: 1.7;
-      margin: 8px 0 22px;
-    }
+    .author-follow { text-align: center; margin: 72px auto 0; padding: 32px 28px; border: 1px solid var(--border); border-radius: 14px; max-width: 720px; background: rgba(212,168,83,0.04); }
+    .author-follow p { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--cream-mid); line-height: 1.7; margin: 8px 0 22px; }
 
     /* ══ BOOK GRID ══ */
-    .books-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
-    }
-    .book-card {
-      background: rgba(212,168,83,0.04);
-      border: 0.5px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      transition: border-color 0.25s, background 0.25s, transform 0.2s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .book-card:hover {
-      border-color: rgba(212,168,83,0.3);
-      background: rgba(212,168,83,0.07);
-      transform: translateY(-4px);
-      text-decoration: none;
-    }
-    .book-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      border-radius: 6px;
-      margin-bottom: 14px;
-    }
-    .book-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      color: var(--cream);
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-    .book-card-type {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold-dim);
-      margin-bottom: 10px;
-    }
-    .book-card-price {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-top: auto;
-    }
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; margin-top: 48px; }
+    .book-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; text-decoration: none; transition: border-color 0.25s, background 0.25s, transform 0.2s; display: flex; flex-direction: column; align-items: center; }
+    .book-card:hover { border-color: rgba(212,168,83,0.3); background: rgba(212,168,83,0.07); transform: translateY(-4px); text-decoration: none; }
+    .book-card img { width: 100%; height: 200px; object-fit: contain; border-radius: 6px; margin-bottom: 14px; background: rgba(212,168,83,0.04); display: block; }
+    .book-card-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--cream); margin-bottom: 6px; line-height: 1.4; }
+    .book-card-type { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 10px; }
+    .book-card-price { font-family: 'Montserrat', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--gold); margin-top: auto; }
 
     /* ══ FOOTER ══ */
-    footer {
-      background: var(--choc-deep);
-      border-top: 0.5px solid rgba(212,168,83,0.07);
-      padding: 40px 32px;
-    }
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    footer { background: var(--choc-deep); border-top: 0.5px solid rgba(212,168,83,0.07); padding: 40px 32px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; max-width: 1100px; margin: 0 auto; }
     .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
     .footer-brand img { width: 32px; height: 32px; object-fit: contain; border-radius: 50%; }
-    .footer-brand-name {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1rem;
-      color: var(--cream);
-      letter-spacing: 0.1em;
-    }
-    .footer-tagline {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--gold);
-    }
+    .footer-brand-name { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--cream); letter-spacing: 0.1em; }
+    .footer-tagline { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--gold); }
     .footer-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
-    .footer-links a {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cream-mid);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-mid); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-    .footer-copy {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem;
-      color: var(--cream-low);
-    }
+    .footer-copy { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); }
 
     /* ══ MOBILE ══ */
     @media (max-width: 768px) {
@@ -406,7 +141,7 @@
       .mobile-nav-toggle { display: block; }
       .page-hero { padding: 60px 20px 40px; }
       .section { padding: 52px 20px; }
-      .featured-book { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+      .featured-book { grid-template-columns: 1fr; text-align: center; gap: 32px; margin-bottom: 56px; }
       .featured-book-content .book-meta { justify-content: center; }
       .book-btns { justify-content: center; }
       .books-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -417,11 +152,10 @@
   </style>
 </head>
 <body>
-
   <!-- ══ HEADER ══ -->
   <header id="header">
     <a href="index.html" class="header-logo-wrap">
-      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
+      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img" width="40" height="40">
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
     <nav id="navbar">
@@ -437,12 +171,11 @@
   </header>
 
   <main>
-
     <!-- ══ PAGE HERO ══ -->
-   <div class="page-hero">
-  <div class="sec-label">By Sara C. Morell</div>
-  <h1>Stories That Build Character</h1>
-</div>
+    <div class="page-hero">
+      <div class="sec-label">By Sara C. Morell</div>
+      <h1>Stories That Build Character</h1>
+    </div>
 
     <!-- ══ FEATURED SERIES ══ -->
     <section class="section">
@@ -458,7 +191,7 @@
         <!-- Book 1 -->
         <div class="featured-book">
           <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener">
-            <img src="assets/img/book1cover.png" alt="Book 1 — A Tale of Friendship" class="featured-book-img">
+            <img src="assets/img/book1cover.png" alt="Book 1 — A Tale of Friendship" class="featured-book-img" width="280" height="280" loading="eager" decoding="async">
           </a>
           <div class="featured-book-content">
             <div class="book-eyebrow">Book 1 · The Beginning</div>
@@ -468,8 +201,9 @@
               <div class="book-meta-item">Lesson <span>Friendship</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
             </div>
+            <div class="ku-badge">Free on Kindle Unlimited</div>
             <div class="book-btns">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener" class="btn-gold">Buy on Amazon</a>
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Tale-Friendship-ebook/dp/B0DS6G8KZN" target="_blank" rel="noopener" class="btn-gold">Read on Amazon</a>
             </div>
           </div>
         </div>
@@ -477,7 +211,7 @@
         <!-- Book 2 -->
         <div class="featured-book">
           <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener">
-            <img src="assets/img/raspen.png" alt="Book 2 — The Bear Who Won't Share" class="featured-book-img">
+            <img src="assets/img/raspen.png" alt="Book 2 — The Bear Who Won't Share" class="featured-book-img" width="280" height="280" loading="eager" decoding="async">
           </a>
           <div class="featured-book-content">
             <div class="book-eyebrow">Book 2 · The Adventure Continues</div>
@@ -487,26 +221,29 @@
               <div class="book-meta-item">Lesson <span>Sharing</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
             </div>
+            <div class="ku-badge">Free on Kindle Unlimited</div>
             <div class="book-btns">
-              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener" class="btn-gold">Buy on Amazon</a>
+              <a href="https://www.amazon.com/Adventures-Raspen-Sylas-Bear-Share-ebook/dp/B0DSPLL7G8" target="_blank" rel="noopener" class="btn-gold">Read on Amazon</a>
             </div>
           </div>
         </div>
 
         <!-- Book 3 — Coming Soon -->
         <div class="featured-book">
-         <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="coming-soon-wrap">
+          <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="coming-soon-wrap">
             <span class="ribbon">Coming Soon</span>
-            <img src="assets/img/book3cover.png" alt="Book 3 — Rune the Sneaky Raccoon" class="featured-book-img">
+            <img src="assets/img/book3cover.png" alt="Book 3 — Rune the Sneaky Raccoon" class="featured-book-img" width="280" height="280" loading="lazy" decoding="async">
           </a>
           <div class="featured-book-content">
             <div class="book-eyebrow">Book 3 · New Adventure</div>
             <div class="book-title">Rune the Sneaky Raccoon</div>
             <p>The next chapter is almost here. Raspen and Sylas venture beyond the redwoods to a sunlit coast, where they meet Rune — a clever raccoon whose tricks test the very things that make their friendship strong. A story about honesty, trust, and learning that not every shortcut is the right path.</p>
-           <div class="book-meta-item">Lesson <span>Honesty &amp; Trust</span></div>
+            <div class="book-meta">
+              <div class="book-meta-item">Lesson <span>Honesty &amp; Trust</span></div>
               <div class="book-meta-item">Ages <span>1–6</span></div>
               <div class="book-meta-item">Expected <span>2026</span></div>
             </div>
+            <div class="ku-badge">Free on Kindle Unlimited at launch</div>
             <div class="book-btns">
               <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="btn-gold">Follow for Release</a>
             </div>
@@ -519,7 +256,6 @@
           <p>Follow Sara C. Morell on Amazon to be the first to know when <em>Rune the Sneaky Raccoon</em> — and every future book in the series — is released.</p>
           <a href="https://www.amazon.com/stores/Sara-C-Morell/author/B0DVC9X3VJ" target="_blank" rel="noopener" class="btn-outline-gold">+ Follow on Amazon</a>
         </div>
-
       </div>
     </section>
 
@@ -531,55 +267,49 @@
         <div class="sec-label">The Collection</div>
         <div class="sec-title">All Books &amp; Activity Books</div>
         <div class="sec-sub">Every book is designed to spark curiosity, build confidence, and create meaningful moments between children and the adults who guide them.</div>
-        <div class="books-grid">
 
+        <div class="books-grid">
           <a href="https://www.amazon.com/Shine-Daily-Gratitude-Journal-Teens/dp/B0DVT4RCGK" target="_blank" class="book-card">
-            <img src="assets/img/shineon.png" alt="Shine On Journal">
+            <img src="assets/img/shineon.png" alt="Shine On Journal" width="159" height="200" loading="lazy" decoding="async">
             <div class="book-card-title">Shine On: Daily Gratitude Journal</div>
             <div class="book-card-type">Guided Journal</div>
           </a>
-
           <a href="https://www.amazon.com/Dinosaurs-Action-Coloring-Adventures-Morell/dp/B0DVLNJSN5" target="_blank" class="book-card">
-            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action">
+            <img src="assets/img/dinosaur-action.png" alt="Dinosaurs in Action" width="159" height="200" loading="lazy" decoding="async">
             <div class="book-card-title">Dinosaurs in Action &amp; Coloring Adventures</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
-
           <a href="https://www.amazon.com/My-Big-Dinosaur-Coloring-Activity/dp/B0DW3K3YMT" target="_blank" class="book-card">
-            <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book">
+            <img src="assets/img/dino-activity.png" alt="Dinosaur Activity Book" width="159" height="200" loading="lazy" decoding="async">
             <div class="book-card-title">My Big Dinosaur Coloring &amp; Activity Book</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
-
           <a href="https://www.amazon.com/Big-Machine-Hard-Workers-Adventures/dp/B0DVRJ99Y7" target="_blank" class="book-card">
-            <img src="assets/img/machines.png" alt="Big Machines Coloring Book">
+            <img src="assets/img/machines.png" alt="Big Machines Coloring Book" width="159" height="200" loading="lazy" decoding="async">
             <div class="book-card-title">Big Machines &amp; Hard Workers: Coloring Adventures</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
-
           <a href="https://www.amazon.com/Summer-Coloring-Book-Sara-Morell/dp/B0DVC597Z5" target="_blank" class="book-card">
-            <img src="assets/img/summer.png" alt="Summer Coloring Book">
+            <img src="assets/img/summer.png" alt="Summer Coloring Book" width="159" height="200" loading="lazy" decoding="async">
             <div class="book-card-title">Summer Coloring Book</div>
             <div class="book-card-type">Coloring Book</div>
           </a>
-
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ══ FOOTER ══ -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" width="32" height="32">
         <div class="footer-brand-name">TAVAS WORLD</div>
         <div class="footer-tagline">Navigating life with intention.</div>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="https://tavas.app" target="_blank">App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
         <a href="services.html">Services</a>
         <a href="books.html">Books</a>
         <a href="https://www.shotamusic.com" target="_blank">Music</a>
