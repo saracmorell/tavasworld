@@ -47,7 +47,6 @@
     .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
     .mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
 
-    /* HERO — tightened padding so the 3 buttons land above the fold */
     .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 110px 24px 60px; position: relative; overflow: hidden; background: var(--choc); }
     .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
     .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; animation: riseIn 1s ease both; }
@@ -57,10 +56,8 @@
     .hero-typed-line { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.8vw, 2rem); font-style: italic; color: var(--gold); margin-bottom: 22px; min-height: 2.5rem; animation: riseIn 1.2s ease 0.3s both; }
     .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 22px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.35s both; flex-wrap: wrap; }
     .hero-tagline .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
-
     .hero-plain-desc { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--cream-mid); max-width: 640px; margin: 0 auto 30px; line-height: 1.65; animation: riseIn 1.2s ease 0.38s both; }
     .hero-plain-desc em { color: var(--gold); font-style: italic; }
-
     .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.4s both; }
     .hero-btns-three { gap: 14px; }
     .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; }
@@ -75,7 +72,6 @@
     .stat-val { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
     .stat-lbl { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); }
 
-    /* Reduced section padding from 120px -> 80px to cut empty space between sections */
     .services-preview { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
     .books-preview { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
     .app-section { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
@@ -181,7 +177,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
       <p class="hero-eyebrow">A creative world inspired by freedom</p>
@@ -207,7 +202,6 @@
       </div>
     </section>
 
-    <!-- STATS BAR (credibility, not app pricing) -->
     <div class="stats-bar">
       <div class="stats-inner">
         <div class="stat-item">
@@ -229,7 +223,6 @@
       </div>
     </div>
 
-    <!-- SERVICES PREVIEW -->
     <section class="services-preview">
       <div class="app-inner">
         <span class="sec-label">Business Support</span>
@@ -263,7 +256,6 @@
       </div>
     </section>
 
-    <!-- BOOKS PREVIEW -->
     <section class="books-preview">
       <div class="app-inner">
         <span class="sec-label">The Library</span>
@@ -275,7 +267,6 @@
       </div>
     </section>
 
-    <!-- APP SECTION -->
     <section class="app-section">
       <div class="app-inner">
         <span class="sec-label">The Tavas App</span>
@@ -310,14 +301,12 @@
       </div>
     </section>
 
-    <!-- PROOF / QUOTES -->
     <div class="quote-section">
       <p class="quote-text" id="quoteText">"Do everything you ever dreamed of — and I mean everything."</p>
       <p class="quote-attr" id="quoteAttr">— Sara C. Morell</p>
       <div class="quote-dots" id="quoteDots"></div>
     </div>
 
-    <!-- ABOUT SNAPSHOT -->
     <div class="about-strip">
       <div class="about-strip-inner">
         <span class="sec-label">About Tavas World</span>
@@ -327,6 +316,5 @@
       </div>
     </div>
 
-    <!-- FINAL CTA -->
     <section class="cta-band">
-      <p class="cta-band-eyebrow">Start where you are</p>
+      <p class="cta-band-ey
