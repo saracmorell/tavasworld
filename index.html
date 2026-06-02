@@ -4,10 +4,10 @@
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavas World — Your Journey. Your Power. Fearless Strength.</title>
-  <meta name="description" content="Tavas World brings stories, wellness tools, and creative support together for people building a more intentional life.">
-  <meta property="og:title" content="Tavas World — Your Journey. Your Power. Fearless Strength." />
-  <meta property="og:description" content="Tavas World brings stories, wellness tools, and creative support together for people building a more intentional life." />
+  <title>Tavas World — Your Journey. Your Story. Your World.</title>
+  <meta name="description" content="Tavas World is a lifestyle brand of books, wellness tools, and creative projects for people building a more intentional life — from author Sara C. Morell.">
+  <meta property="og:title" content="Tavas World — Your Journey. Your Story. Your World." />
+  <meta property="og:description" content="A lifestyle brand of books, wellness tools, and creative projects for people building a more intentional life — from Sara C. Morell." />
   <meta property="og:image" content="https://www.tavasworld.com/assets/img/TranparentSun.png" />
   <meta property="og:url" content="https://www.tavasworld.com" />
   <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
       --cream-low:  rgba(245,236,215,0.50);
       --border:     rgba(212,168,83,0.12);
     }
-    *, ::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 4px; }
@@ -51,62 +51,64 @@
     .hero-sun { width: 96px; height: 96px; object-fit: contain; margin: 0 auto 28px; display: block; animation: riseIn 1.1s ease 0.1s both, breathe 6s ease-in-out 1.2s infinite; }
     @keyframes breathe { 0%,100% { filter: drop-shadow(0 0 30px rgba(212,168,83,0.15)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px rgba(212,168,83,0.35)); transform: scale(1.04); } }
     .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 22px; animation: riseIn 1.2s ease 0.2s both; }
-    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.3s both; flex-wrap: wrap; }
-    .hero-tagline .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
-    .hero-brand-line { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.4vw, 1.55rem); color: var(--cream); max-width: 720px; margin: 0 auto 18px; line-height: 1.6; animation: riseIn 1.2s ease 0.36s both; }
+    .hero-brand-line { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.4vw, 1.55rem); color: var(--cream); max-width: 760px; margin: 0 auto 30px; line-height: 1.6; animation: riseIn 1.2s ease 0.36s both; }
     .hero-brand-line em { color: var(--gold); font-style: italic; }
-    .hero-plain-desc { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; color: var(--cream-low); max-width: 640px; margin: 0 auto 30px; line-height: 1.7; animation: riseIn 1.2s ease 0.4s both; }
-    .hero-plain-desc em { color: var(--gold-dim); font-style: italic; }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.44s both; }
-    .hero-btns-three { gap: 14px; }
-    .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.44s both; }
+    .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
     .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
     .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
-    .stats-bar { background: var(--choc); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 28px 48px; }
-    .stats-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: center; align-items: center; }
-    .stat-item { flex: 1; text-align: center; padding: 0 32px; position: relative; }
-    .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%); height: 28px; width: 0.5px; background: var(--border); }
-    .stat-val { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
-    .stat-lbl { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); }
-    .services-preview { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
-    .books-preview { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
-    .app-section { padding: 80px 48px; background: var(--choc); border-top: 0.5px solid var(--border); }
-    .app-inner { max-width: 1100px; margin: 0 auto; }
+    .scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--gold-dim); font-size: 1.4rem; animation: riseIn 1.4s ease 0.8s both, nudge 2.4s ease-in-out 1.6s infinite; text-decoration: none; }
+    @keyframes nudge { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
     .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
     .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
     .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 560px; margin: 0 auto 44px; text-align: center; }
-    .feat-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-bottom: 40px; }
-    .feat-grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
-    .feat-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color 0.25s, background 0.25s, transform 0.2s; }
-    .feat-card:hover { border-color: rgba(212,168,83,0.28); background: rgba(212,168,83,0.07); transform: translateY(-3px); }
-    .feat-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-    .feat-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-    .feat-card h3 { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; font-weight: 700; color: var(--cream); margin-bottom: 8px; }
-    .feat-card p { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; color: var(--cream-mid); line-height: 1.7; }
-    .best-for { display: block; margin-top: 12px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.78rem; color: var(--gold-dim); }
-    .app-cta-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-    .quote-section { padding: 64px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; }
-    .quote-text { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.9rem); font-style: italic; color: var(--cream-mid); line-height: 1.6; max-width: 700px; margin: 0 auto 16px; transition: opacity 0.6s ease; }
-    .quote-attr { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); transition: opacity 0.6s ease; }
-    .quote-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
-    .quote-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.3s; }
-    .quote-dot.active { background: var(--gold); }
-    .about-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 64px 48px; text-align: center; }
-    .about-strip-inner { max-width: 620px; margin: 0 auto; }
-    .about-strip .sec-label { margin-bottom: 16px; }
-    .about-strip p { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); line-height: 1.9; margin-bottom: 14px; }
-    .about-strip p em { color: var(--gold); font-style: italic; }
-    .featured-testimonial { background: var(--choc-dark); border-top: 0.5px solid var(--border); padding: 72px 24px; text-align: center; }
-    .featured-testimonial-inner { max-width: 760px; margin: 0 auto; border-left: 3px solid var(--gold); padding: 12px 0 12px 28px; text-align: left; }
-    .featured-testimonial-quote { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-style: italic; line-height: 1.6; color: var(--cream-mid); margin: 0 0 16px 0; }
-    .featured-testimonial-attr { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); margin: 0; }
-    .cta-band { padding: 72px 48px; background: var(--choc); text-align: center; position: relative; overflow: hidden; border-top: 0.5px solid var(--border); }
-    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.05) 0%, transparent 70%); pointer-events: none; }
-    .cta-band-eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 20px; position: relative; z-index: 1; }
-    .cta-band h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; position: relative; z-index: 1; }
-    .cta-band p { font-size: 0.9rem; color: var(--cream-low); margin-bottom: 32px; line-height: 1.8; position: relative; z-index: 1; }
-    .cta-band-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; }
+    .belief { padding: 140px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; }
+    .belief-inner { max-width: 760px; margin: 0 auto; }
+    .belief-statement { font-family: 'Libre Baskerville', serif; font-size: clamp(1.7rem, 3.6vw, 2.7rem); font-weight: 700; color: var(--cream); line-height: 1.35; margin-bottom: 28px; }
+    .belief-statement em { color: var(--gold); font-style: italic; }
+    .belief-body { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--cream-mid); line-height: 1.8; margin-bottom: 44px; }
+    .belief-principles { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; }
+    .belief-principles span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .belief-principles .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
+    .split { padding: 100px 48px; border-top: 0.5px solid var(--border); }
+    .split-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .split-media { display: flex; justify-content: center; align-items: center; }
+    .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: left; margin-left: 0; }
+    .split-copy .sec-body { margin: 0 0 32px; max-width: none; }
+    .split-copy .sec-headline { text-align: left; }
+    .book-stack { display: flex; gap: 14px; align-items: flex-end; }
+    .book-stack img { width: 120px; height: auto; border-radius: 6px; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
+    .book-stack img:nth-child(2) { width: 140px; }
+    .app-mock { width: 240px; height: auto; filter: drop-shadow(0 24px 50px rgba(0,0,0,0.55)); }
+    .app-feats { display: flex; flex-direction: column; gap: 14px; margin: 0 0 32px; }
+    .app-feat { display: flex; gap: 14px; align-items: flex-start; }
+    .app-feat .feat-icon { width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; }
+    .app-feat .feat-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .app-feat h3 { font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
+    .app-feat p { font-size: 0.82rem; color: var(--cream-mid); line-height: 1.6; }
+  </style>
+  <style>
+    .sara { padding: 100px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
+    .sara-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+    .sara-portrait { width: 100%; max-width: 320px; height: auto; border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); justify-self: center; }
+    .sara-copy .sec-label { text-align: left; }
+    .sara-copy h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 20px; }
+    .sara-copy p { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--cream-mid); line-height: 1.85; margin-bottom: 28px; }
+    .work { padding: 72px 48px; background: var(--choc); border-top: 0.5px solid var(--border); text-align: center; }
+    .work-inner { max-width: 620px; margin: 0 auto; }
+    .work p { font-size: 0.92rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 22px; }
+    .work-links { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold-dim); margin-bottom: 28px; }
+    .work-links span { color: var(--gold); }
+    .signup { padding: 110px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; position: relative; overflow: hidden; }
+    .signup::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.06) 0%, transparent 70%); pointer-events: none; }
+    .signup-inner { max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
+    .signup h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 700; color: var(--cream); line-height: 1.25; margin-bottom: 16px; }
+    .signup p { font-size: 0.9rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 32px; }
+    .signup-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .signup-form input { flex: 1; min-width: 240px; max-width: 360px; padding: 15px 22px; background: rgba(245,236,215,0.04); border: 0.5px solid rgba(212,168,83,0.25); border-radius: 999px; color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; outline: none; transition: border-color 0.2s; }
+    .signup-form input::placeholder { color: var(--cream-low); }
+    .signup-form input:focus { border-color: var(--gold-dim); }
     footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
     .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -124,30 +126,27 @@
       #navbar { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(15,10,4,0.98); flex-direction: column; padding: 24px 20px; gap: 20px; border-bottom: 0.5px solid var(--border); }
       #navbar.show { display: flex; }
       .mobile-nav-toggle { display: block; }
-      .hero { padding: 96px 24px 48px; }
+      .hero { padding: 96px 24px 64px; }
       .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
       .hero-sun { width: 72px; height: 72px; margin-bottom: 20px; }
-      .hero-btns-three { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
-      .stats-bar { padding: 22px 20px; }
-      .stat-item { padding: 0 10px; }
-      .stat-val { font-size: 1.25rem; }
-      .stat-lbl { font-size: 0.55rem; }
-      .services-preview, .books-preview, .app-section { padding: 56px 24px; }
-      .feat-grid { grid-template-columns: 1fr; }
-      .feat-grid-4 { grid-template-columns: 1fr; }
-      .quote-section { padding: 48px 24px; }
-      .about-strip { padding: 48px 24px; }
-      .featured-testimonial { padding: 56px 20px; }
-      .featured-testimonial-quote { font-size: 1.1rem; }
-      .cta-band { padding: 56px 24px; }
+      .hero-btns { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
+      .belief { padding: 80px 24px; }
+      .split { padding: 64px 24px; }
+      .split-inner { grid-template-columns: 1fr; gap: 36px; }
+      .split-copy .sec-label, .split-copy .sec-headline { text-align: center; }
+      .split-copy .sec-body { text-align: center; }
+      .app-feat { text-align: left; }
+      .sara { padding: 64px 24px; }
+      .sara-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .sara-copy .sec-label { text-align: center; }
+      .work { padding: 56px 24px; }
+      .signup { padding: 72px 24px; }
+      .signup-form input { min-width: 100%; }
       footer { padding: 32px 24px; }
-      .footer-links { justify-content: center; }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
       #header { padding: 0 32px; }
-      .services-preview, .books-preview, .app-section { padding: 64px 32px; }
-      .feat-grid { grid-template-columns: repeat(2, 1fr); }
-      .feat-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .split, .sara { padding: 72px 32px; }
     }
   </style>
 </head>
@@ -158,39 +157,179 @@
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
     <nav id="navbar">
-      <a href="services.html">Services</a>
       <a href="books.html">Books</a>
       <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">The App</a>
+      <a href="services.html">Services</a>
       <a href="https://www.shotamusic.com" target="_blank">Music</a>
       <a href="about.html">About</a>
-      <a href="connect.html" class="nav-cta">Connect</a>
+      <a href="connect.html" class="nav-cta">Work With Sara</a>
     </nav>
     <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
     </button>
   </header>
   <main>
+
+    <!-- SECTION 1 — HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
-      <p class="hero-eyebrow">A creative world inspired by freedom</p>
+      <p class="hero-eyebrow">Navigating life with intention</p>
       <img src="assets/img/TranparentSun.png" alt="Tavas Sun" class="hero-sun">
       <h1>Your journey.<br>Your story. Your world.</h1>
-      <p class="hero-tagline">
-        Your Journey
-        <span class="divpipe"></span>
-        Your Power
-        <span class="divpipe"></span>
-        Fearless Strength
-      </p>
       <p class="hero-brand-line">
-        <em>Tavas World</em> brings stories, wellness tools, and creative support together for people building a more intentional life.
+        <em>Tavas World</em> brings stories, wellness tools, and creative projects together &mdash; a lifestyle brand for people building a more intentional life, from author <em>Sara C. Morell</em>.
       </p>
-      <p class="hero-plain-desc">
-        Children's books, a wellness app, and business support services &mdash; all from <em>Sara C. Morell</em>.
-      </p>
-      <div class="hero-btns hero-btns-three">
-        <a href="books.html" class="btn-primary-gold">Explore Books</a>
-        <a href="services.html" class="btn-primary-gold">View Services</a>
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
+      <div class="hero-btns">
+        <a href="#belief" class="btn-primary-gold">Start Here</a>
+        <a href="books.html" class="btn-ghost">Explore Books</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-ghost">Get the App</a>
+      </div>
+      <a href="#belief" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+    </section>
+
+    <!-- SECTION 2 — THE BELIEF -->
+    <section class="belief" id="belief">
+      <div class="belief-inner">
+        <span class="sec-label">The Belief</span>
+        <p class="belief-statement">Tavas World begins with one idea &mdash; that a life built on <em>purpose</em> is worth more than a life lived on autopilot.</p>
+        <p class="belief-body">Stories that grow kindness. Tools that support wellbeing. Creative work made with care. Different forms, one purpose &mdash; helping you live, build, and create with intention.</p>
+        <div class="belief-principles">
+          <span>Intention over noise</span>
+          <span class="divpipe"></span>
+          <span>Craft over trend</span>
+          <span class="divpipe"></span>
+          <span>People over metrics</span>
+        </div>
       </div>
     </section>
+
+    <!-- SECTION 3 — BOOKS -->
+    <section class="split" style="background: var(--choc);">
+      <div class="split-inner">
+        <div class="split-media">
+          <div class="book-stack">
+            <img src="assets/img/book-1.png" alt="Tavas World children's book">
+            <img src="assets/img/book-2.png" alt="Tavas World children's book">
+            <img src="assets/img/book-3.png" alt="Tavas World children's book">
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="sec-label">The Library</span>
+          <h2 class="sec-headline">Stories that build kindness, curiosity, and courage.</h2>
+          <p class="sec-body">Children's books written to grow emotional intelligence and imagination &mdash; for the readers who shape tomorrow. Thoughtfully made, and built to be kept.</p>
+          <a href="books.html" class="btn-ghost">Explore the Library</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — THE APP -->
+    <section class="split" style="background: var(--choc-dark);">
+      <div class="split-inner">
+        <div class="split-copy">
+          <span class="sec-label">The Tavas App &middot; Shine On</span>
+          <h2 class="sec-headline">Your wellness, tracked with intention.</h2>
+          <p class="sec-body">One app for the way you actually live &mdash; supplements, peptides, habits, movement, and mood, all in one place. Built with accessibility at the center, so it works for every body and every brain.</p>
+          <div class="app-feats">
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"/></svg></div>
+              <div><h3>Supplement &amp; peptide tracker</h3><p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p></div>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+              <div><h3>AI companion &amp; voice logging</h3><p>Log anything hands-free. Get real insights and accountability from your AI wellness companion.</p></div>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <div><h3>Insights &amp; wellness score</h3><p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p></div>
+            </div>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get Shine On</a>
+        </div>
+        <div class="split-media">
+          <img src="assets/img/app-mockup.png" alt="Shine On app" class="app-mock">
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 5 — MEET SARA -->
+    <section class="sara">
+      <div class="sara-inner">
+        <img src="assets/img/sara-portrait.jpg" alt="Sara C. Morell" class="sara-portrait">
+        <div class="sara-copy">
+          <span class="sec-label">The Founder</span>
+          <h2>One person. One standard. One world.</h2>
+          <p>Tavas World is the work of Sara C. Morell &mdash; author, publisher, and creator. She brought her books, the Shine On app, and her creative work under one roof, guided by a single belief: that intention changes what's possible. Everything here carries her standard, and her name.</p>
+          <a href="about.html" class="btn-ghost">My Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — WAYS TO WORK TOGETHER -->
+    <section class="work">
+      <div class="work-inner">
+        <span class="sec-label">Beyond the Brand</span>
+        <h2 class="sec-headline">Ways to work together.</h2>
+        <p>Beyond books and the app, Sara offers select creative and business support for authors, founders, and small teams &mdash; and is building new mentoring and educational projects.</p>
+        <p class="work-links"><span>Creative &amp; business support</span> &middot; Mentoring (coming soon)</p>
+        <a href="services.html" class="btn-ghost">See How We Can Work Together</a>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — EMAIL SIGNUP -->
+    <section class="signup">
+      <div class="signup-inner">
+        <span class="sec-label">Stay Close</span>
+        <h2>Notes on living, building, and creating with intention.</h2>
+        <p>Occasional letters from Sara &mdash; new books, app updates, and ideas worth your attention. No noise. Unsubscribe anytime.</p>
+        <form class="signup-form" onsubmit="return false;">
+          <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required>
+          <button type="submit" class="btn-primary-gold">Join the World</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
+        <div class="footer-brand-name">TAVAS WORLD</div>
+        <div class="footer-tagline">Navigating life with intention.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
+        <a href="services.html">Services</a>
+        <a href="books.html">Books</a>
+        <a href="https://www.shotamusic.com" target="_blank">Music</a>
+        <a href="about.html">About</a>
+        <a href="connect.html">Connect</a>
+        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navbar').classList.toggle('show');
+    });
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
+    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.belief-inner, .split-copy, .split-media, .sara-inner, .work-inner, .signup-inner').forEach(el => {
+      el.style.opacity='0';
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity 0.7s ease, transform 0.7s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
