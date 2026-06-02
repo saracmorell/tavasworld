@@ -4,10 +4,10 @@
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tavas World — Your Journey. All Power. Fearless Strength.</title>
-  <meta name="description" content="Children's books, a wellness app, and business support services — all from Sara C. Morell.">
-  <meta property="og:title" content="Tavas World — Your Journey. All Power. Fearless Strength." />
-  <meta property="og:description" content="Children's books, a wellness app, and business support services — all from Sara C. Morell." />
+  <title>Tavas World — Your Journey. Your Power. Fearless Strength.</title>
+  <meta name="description" content="Tavas World brings stories, wellness tools, and creative support together for people building a more intentional life.">
+  <meta property="og:title" content="Tavas World — Your Journey. Your Power. Fearless Strength." />
+  <meta property="og:description" content="Tavas World brings stories, wellness tools, and creative support together for people building a more intentional life." />
   <meta property="og:image" content="https://www.tavasworld.com/assets/img/TranparentSun.png" />
   <meta property="og:url" content="https://www.tavasworld.com" />
   <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@
       --cream-low:  rgba(245,236,215,0.50);
       --border:     rgba(212,168,83,0.12);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, ::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 4px; }
@@ -50,13 +50,14 @@
     .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; animation: riseIn 1s ease both; }
     .hero-sun { width: 96px; height: 96px; object-fit: contain; margin: 0 auto 28px; display: block; animation: riseIn 1.1s ease 0.1s both, breathe 6s ease-in-out 1.2s infinite; }
     @keyframes breathe { 0%,100% { filter: drop-shadow(0 0 30px rgba(212,168,83,0.15)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px rgba(212,168,83,0.35)); transform: scale(1.04); } }
-    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 14px; animation: riseIn 1.2s ease 0.2s both; }
-    .hero-typed-line { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.8vw, 2rem); font-style: italic; color: var(--gold); margin-bottom: 22px; min-height: 2.5rem; animation: riseIn 1.2s ease 0.3s both; }
-    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 22px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.35s both; flex-wrap: wrap; }
+    .hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(2.6rem, 6vw, 4.8rem); font-weight: 700; color: var(--cream); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 22px; animation: riseIn 1.2s ease 0.2s both; }
+    .hero-tagline { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream-low); margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 16px; animation: riseIn 1.2s ease 0.3s both; flex-wrap: wrap; }
     .hero-tagline .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
-    .hero-plain-desc { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 2vw, 1.15rem); color: var(--cream-mid); max-width: 640px; margin: 0 auto 30px; line-height: 1.65; animation: riseIn 1.2s ease 0.38s both; }
-    .hero-plain-desc em { color: var(--gold); font-style: italic; }
-    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.4s both; }
+    .hero-brand-line { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.4vw, 1.55rem); color: var(--cream); max-width: 720px; margin: 0 auto 18px; line-height: 1.6; animation: riseIn 1.2s ease 0.36s both; }
+    .hero-brand-line em { color: var(--gold); font-style: italic; }
+    .hero-plain-desc { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; color: var(--cream-low); max-width: 640px; margin: 0 auto 30px; line-height: 1.7; animation: riseIn 1.2s ease 0.4s both; }
+    .hero-plain-desc em { color: var(--gold-dim); font-style: italic; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.44s both; }
     .hero-btns-three { gap: 14px; }
     .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; }
     .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
@@ -174,15 +175,15 @@
       <p class="hero-eyebrow">A creative world inspired by freedom</p>
       <img src="assets/img/TranparentSun.png" alt="Tavas Sun" class="hero-sun">
       <h1>Your journey.<br>Your story. Your world.</h1>
-      <div class="hero-typed-line">
-        <span class="typed" data-typed-items="Inspire, Create, Empower, Connect, Publish, Thrive"></span>
-      </div>
       <p class="hero-tagline">
         Your Journey
         <span class="divpipe"></span>
-        All Power
+        Your Power
         <span class="divpipe"></span>
         Fearless Strength
+      </p>
+      <p class="hero-brand-line">
+        <em>Tavas World</em> brings stories, wellness tools, and creative support together for people building a more intentional life.
       </p>
       <p class="hero-plain-desc">
         Children's books, a wellness app, and business support services &mdash; all from <em>Sara C. Morell</em>.
@@ -193,226 +194,3 @@
         <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
       </div>
     </section>
-    <div class="stats-bar">
-      <div class="stats-inner">
-        <div class="stat-item">
-          <span class="stat-val">6+</span>
-          <span class="stat-lbl">Books Published</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">1</span>
-          <span class="stat-lbl">Wellness App Live</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">5</span>
-          <span class="stat-lbl">Service Areas</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-val">14-Day</span>
-          <span class="stat-lbl">Free App Trial</span>
-        </div>
-      </div>
-    </div>
-    <section class="services-preview">
-      <div class="app-inner">
-        <span class="sec-label">Business Support</span>
-        <h2 class="sec-headline">Operational support for growing brands</h2>
-        <p class="sec-body">Reliable backend support that keeps authors, creatives, and small business owners focused on what only they can do.</p>
-        <div class="feat-grid feat-grid-4">
-          <div class="feat-card">
-            <h3>Executive &amp; Admin Ops</h3>
-            <p>A discreet second brain for calendar, inbox, and meeting flow.</p>
-            <span class="best-for">Best for business owners who need a reliable right hand.</span>
-          </div>
-          <div class="feat-card">
-            <h3>Project &amp; Workflow Coordination</h3>
-            <p>Turn scattered tasks into a system that actually moves forward.</p>
-            <span class="best-for">Best for teams losing time to disorganized handoffs.</span>
-          </div>
-          <div class="feat-card">
-            <h3>Communications &amp; Org Support</h3>
-            <p>Clear internal and client communication, handled with care.</p>
-            <span class="best-for">Best for leaders who can&rsquo;t afford dropped balls.</span>
-          </div>
-          <div class="feat-card">
-            <h3>Social Media Management</h3>
-            <p>Consistent presence and content rhythm without the daily lift.</p>
-            <span class="best-for">Best for brands ready to show up consistently.</span>
-          </div>
-        </div>
-        <div class="app-cta-row">
-          <a href="services.html" class="btn-primary-gold">See All Services</a>
-        </div>
-      </div>
-    </section>
-    <section class="books-preview">
-      <div class="app-inner">
-        <span class="sec-label">The Library</span>
-        <h2 class="sec-headline">Stories that build kindness, curiosity, and courage</h2>
-        <p class="sec-body">Children's books written to grow emotional intelligence, imagination, and a sense of fearless strength &mdash; for the readers who shape tomorrow.</p>
-        <div class="app-cta-row">
-          <a href="books.html" class="btn-primary-gold">Explore the Library</a>
-        </div>
-      </div>
-    </section>
-    <section class="app-section">
-      <div class="app-inner">
-        <span class="sec-label">The Tavas App</span>
-        <h2 class="sec-headline">Track your wellness in one place.</h2>
-        <p class="sec-body">One app for the way you actually live &mdash; supplements, peptides, habits, movement, and mood, all in one place. Built with accessibility at the center, so wellness tracking works for every body and every brain.</p>
-        <div class="feat-grid">
-          <div class="feat-card">
-            <div class="feat-icon">
-              <svg viewBox="0 0 24 24"><path d="M10.5 3.5a5 5 0 0 1 7.07 7.07l-7.07 7.07a5 5 0 0 1-7.07-7.07l7.07-7.07z"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"/></svg>
-            </div>
-            <h3>Supplement &amp; peptide tracker</h3>
-            <p>Log vitamins, supplements, and peptides with smart reminders so you never miss a dose.</p>
-          </div>
-          <div class="feat-card">
-            <div class="feat-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            </div>
-            <h3>AI companion &amp; voice logging</h3>
-            <p>Log anything hands-free. Get real insights and accountability from your AI wellness companion.</p>
-          </div>
-          <div class="feat-card">
-            <div class="feat-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3>Insights &amp; wellness score</h3>
-            <p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p>
-          </div>
-        </div>
-        <div class="app-cta-row">
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Download on Google Play</a>
-        </div>
-      </div>
-    </section>
-    <div class="quote-section">
-      <p class="quote-text" id="quoteText">"Do everything you ever dreamed of — and I mean everything."</p>
-      <p class="quote-attr" id="quoteAttr">— Sara C. Morell</p>
-      <div class="quote-dots" id="quoteDots"></div>
-    </div>
-<div class="about-strip">
-      <div class="about-strip-inner">
-        <span class="sec-label">About Tavas World</span>
-        <p>Welcome to Tavas World &mdash; where imagination meets purpose. Created by children's book author, publisher, and mentor <em>Sara C. Morell</em>, this space brings together storytelling, wellness tools, and professional support under one brand.</p>
-        <p>From books that build kindness and curiosity, to the Tavas App for daily wellness, to business support services for growing brands &mdash; everything here is built around one belief: that intentional support changes what's possible.</p>
-        <a href="about.html" class="btn-ghost" style="margin-top:24px; display:inline-flex; padding:12px 28px;">My Story</a>
-      </div>
-    </div>
-
-    <section class="featured-testimonial">
-      <div class="featured-testimonial-inner">
-        <p class="featured-testimonial-quote">
-          "I want to thank you not only for what you do, but for being you. I remember how you talked about kindness in our first conversation, and your behavior shows you are true to your word. You strive to make everyone's day a little brighter."
-        </p>
-        <p class="featured-testimonial-attr">— Past client</p>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <p class="cta-band-eyebrow">Start where you are</p>
-      <h2>Start your journey today.</h2>
-      <p>Whether you came for a book, the app, or business support &mdash;<br>this is the right place to begin.</p>
-      <div class="cta-band-btns">
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
-        <a href="connect.html" class="btn-ghost">Work with Sara</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World">
-        <div class="footer-brand-name">TAVAS WORLD</div>
-        <div class="footer-tagline">Navigating life with intention.</div>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">App</a>
-        <a href="services.html">Services</a>
-        <a href="books.html">Books</a>
-        <a href="https://www.shotamusic.com" target="_blank">Music</a>
-        <a href="about.html">About</a>
-        <a href="connect.html">Connect</a>
-        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
-      </div>
-      <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-  <script>
-    const typedEl = document.querySelector('.typed');
-    if (typedEl) {
-      const items = typedEl.getAttribute('data-typed-items').split(',').map(s => s.trim());
-      new Typed('.typed', { strings: items, typeSpeed: 80, backSpeed: 40, backDelay: 2200, loop: true });
-    }
-
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navbar').classList.toggle('show');
-    });
-
-    window.addEventListener('scroll', function() {
-      const h = document.getElementById('header');
-      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
-    });
-
-    const quotes = [
-      { text: "Do everything you ever dreamed of — and I mean everything.", attr: "— Sara C. Morell" },
-      { text: "Sara, thanks for all of your hard work. You are such a pleasure to work with.", attr: "— Past client" },
-      { text: "To my three sons — I love you more than space, and space never ends.", attr: "— Sara C. Morell" },
-      { text: "I appreciate all the effort and care you put into your work, your loyalty, and your great personality. I don't know what I would do without you.", attr: "— Past client" },
-      { text: "Freedom means more to me than most will ever know.", attr: "— Sara C. Morell" },
-      { text: "Start where you are. Build what you imagine. Finish what matters.", attr: "— Sara C. Morell" }
-    ];
-
-    let currentQuote = 0;
-    const quoteText = document.getElementById('quoteText');
-    const quoteAttr = document.getElementById('quoteAttr');
-    const dotsContainer = document.getElementById('quoteDots');
-
-    quotes.forEach((_, i) => {
-      const dot = document.createElement('span');
-      dot.className = 'quote-dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', () => showQuote(i));
-      dotsContainer.appendChild(dot);
-    });
-
-    function showQuote(index) {
-      quoteText.style.opacity = '0';
-      quoteAttr.style.opacity = '0';
-      setTimeout(() => {
-        currentQuote = index;
-        quoteText.textContent = '"' + quotes[index].text + '"';
-        quoteAttr.textContent = quotes[index].attr;
-        quoteText.style.opacity = '1';
-        quoteAttr.style.opacity = '1';
-        document.querySelectorAll('.quote-dot').forEach((d, i) => {
-          d.classList.toggle('active', i === index);
-        });
-      }, 400);
-    }
-
-    setInterval(() => {
-      showQuote((currentQuote + 1) % quotes.length);
-    }, 8000);
-
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.feat-card, .about-strip-inner, .cta-band h2, .featured-testimonial-inner').forEach(el => {
-      el.style.opacity='0';
-      el.style.transform='translateY(20px)';
-      el.style.transition='opacity 0.6s ease, transform 0.6s ease';
-      obs.observe(el);
-    });
-  </script>
-</body>
-</html>
