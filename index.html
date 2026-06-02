@@ -63,52 +63,45 @@
     .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
     .sec-headline { font-family: 'Libre Baskerville', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--cream); line-height: 1.1; margin-bottom: 16px; text-align: center; }
     .sec-body { font-size: 0.95rem; color: var(--cream-low); line-height: 1.9; max-width: 560px; margin: 0 auto 44px; text-align: center; }
-    .belief { padding: 140px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; }
+    .belief { padding: 96px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; }
     .belief-inner { max-width: 760px; margin: 0 auto; }
     .belief-statement { font-family: 'Libre Baskerville', serif; font-size: clamp(1.7rem, 3.6vw, 2.7rem); font-weight: 700; color: var(--cream); line-height: 1.35; margin-bottom: 28px; }
     .belief-statement em { color: var(--gold); font-style: italic; }
-    .belief-body { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--cream-mid); line-height: 1.8; margin-bottom: 44px; }
+    .belief-body { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--cream-mid); line-height: 1.8; margin-bottom: 40px; }
     .belief-principles { display: flex; justify-content: center; align-items: center; gap: 28px; flex-wrap: wrap; }
     .belief-principles span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
     .belief-principles .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
-    .split { padding: 100px 48px; border-top: 0.5px solid var(--border); }
-    .split-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .split-media { display: flex; justify-content: center; align-items: center; }
+    .split { padding: 80px 48px; border-top: 0.5px solid var(--border); }
+    .split-inner { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .split-media { display: flex; justify-content: center; align-items: center; min-height: 260px; }
     .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: left; margin-left: 0; }
     .split-copy .sec-body { margin: 0 0 32px; max-width: none; }
-    .split-copy .sec-headline { text-align: left; }
-    .book-stack { display: flex; gap: 14px; align-items: flex-end; }
-    .book-stack img { width: 120px; height: auto; border-radius: 6px; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
-    .book-stack img:nth-child(2) { width: 140px; }
-    .app-mock { width: 240px; height: auto; filter: drop-shadow(0 24px 50px rgba(0,0,0,0.55)); }
+    .book-stack { display: flex; gap: 14px; align-items: flex-end; justify-content: center; }
+    .book-stack img { width: 110px; height: auto; border-radius: 6px; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
+    .book-stack img:nth-child(2) { width: 132px; }
+    .app-mock { width: 230px; height: auto; border-radius: 14px; filter: drop-shadow(0 24px 50px rgba(0,0,0,0.55)); }
     .app-feats { display: flex; flex-direction: column; gap: 14px; margin: 0 0 32px; }
-    .app-feat { display: flex; gap: 14px; align-items: flex-start; }
+    .app-feat { display: flex; gap: 14px; align-items: flex-start; text-align: left; }
     .app-feat .feat-icon { width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; }
     .app-feat .feat-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
     .app-feat h3 { font-family: 'Libre Baskerville', serif; font-size: 0.9rem; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
     .app-feat p { font-size: 0.82rem; color: var(--cream-mid); line-height: 1.6; }
-  </style>
-  <style>
-    .sara { padding: 100px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
-    .sara-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
-    .sara-portrait { width: 100%; max-width: 320px; height: auto; border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); justify-self: center; }
+    .sara { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
+    .sara-inner { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: center; }
+    .sara-portrait { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 2px solid var(--gold-dim); box-shadow: 0 16px 40px rgba(0,0,0,0.5); justify-self: center; }
     .sara-copy .sec-label { text-align: left; }
     .sara-copy h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 20px; }
     .sara-copy p { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--cream-mid); line-height: 1.85; margin-bottom: 28px; }
-    .work { padding: 72px 48px; background: var(--choc); border-top: 0.5px solid var(--border); text-align: center; }
+    .work { padding: 64px 48px; background: var(--choc); border-top: 0.5px solid var(--border); text-align: center; }
     .work-inner { max-width: 620px; margin: 0 auto; }
     .work p { font-size: 0.92rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 22px; }
     .work-links { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--gold-dim); margin-bottom: 28px; }
     .work-links span { color: var(--gold); }
-    .signup { padding: 110px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; position: relative; overflow: hidden; }
+    .signup { padding: 88px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; position: relative; overflow: hidden; }
     .signup::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.06) 0%, transparent 70%); pointer-events: none; }
     .signup-inner { max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
     .signup h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 700; color: var(--cream); line-height: 1.25; margin-bottom: 16px; }
     .signup p { font-size: 0.9rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 32px; }
-    .signup-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .signup-form input { flex: 1; min-width: 240px; max-width: 360px; padding: 15px 22px; background: rgba(245,236,215,0.04); border: 0.5px solid rgba(212,168,83,0.25); border-radius: 999px; color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; outline: none; transition: border-color 0.2s; }
-    .signup-form input::placeholder { color: var(--cream-low); }
-    .signup-form input:focus { border-color: var(--gold-dim); }
     footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
     .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
     .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -130,23 +123,21 @@
       .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
       .hero-sun { width: 72px; height: 72px; margin-bottom: 20px; }
       .hero-btns { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
-      .belief { padding: 80px 24px; }
-      .split { padding: 64px 24px; }
+      .belief { padding: 64px 24px; }
+      .split { padding: 56px 24px; }
       .split-inner { grid-template-columns: 1fr; gap: 36px; }
-      .split-copy .sec-label, .split-copy .sec-headline { text-align: center; }
-      .split-copy .sec-body { text-align: center; }
-      .app-feat { text-align: left; }
-      .sara { padding: 64px 24px; }
-      .sara-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .split-media { min-height: 0; order: -1; }
+      .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: center; }
+      .sara { padding: 56px 24px; }
+      .sara-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
       .sara-copy .sec-label { text-align: center; }
-      .work { padding: 56px 24px; }
-      .signup { padding: 72px 24px; }
-      .signup-form input { min-width: 100%; }
+      .work { padding: 48px 24px; }
+      .signup { padding: 64px 24px; }
       footer { padding: 32px 24px; }
     }
     @media (min-width: 769px) and (max-width: 1024px) {
       #header { padding: 0 32px; }
-      .split, .sara { padding: 72px 32px; }
+      .split, .sara { padding: 64px 32px; }
     }
   </style>
 </head>
@@ -213,7 +204,6 @@
             <img src="assets/img/book3cover.png" alt="Tavas World children's book">
           </div>
         </div>
-        </div>
         <div class="split-copy">
           <span class="sec-label">The Library</span>
           <h2 class="sec-headline">Stories that build kindness, curiosity, and courage.</h2>
@@ -227,7 +217,7 @@
     <section class="split" style="background: var(--choc-dark);">
       <div class="split-inner">
         <div class="split-copy">
-          <span class="sec-label">The Tavas App &middot; Shine On</span>
+          <span class="sec-label">The Tavas App</span>
           <h2 class="sec-headline">Your wellness, tracked with intention.</h2>
           <p class="sec-body">One app for the way you actually live &mdash; supplements, peptides, habits, movement, and mood, all in one place. Built with accessibility at the center, so it works for every body and every brain.</p>
           <div class="app-feats">
@@ -244,13 +234,14 @@
               <div><h3>Insights &amp; wellness score</h3><p>Track mood trends, water intake, exercise patterns and see your overall wellness score.</p></div>
             </div>
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get Shine On</a>
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
         </div>
         <div class="split-media">
-          <img src="assets/dashboardnew.png" alt="Shine On app" class="app-mock">
+          <img src="assets/img/dashboardnew.png" alt="The Tavas App" class="app-mock">
         </div>
       </div>
     </section>
+
     <!-- SECTION 5 — MEET SARA -->
     <section class="sara">
       <div class="sara-inner">
@@ -258,7 +249,7 @@
         <div class="sara-copy">
           <span class="sec-label">The Founder</span>
           <h2>One person. One standard. One world.</h2>
-          <p>Tavas World is the work of Sara C. Morell &mdash; author, publisher, and creator. She brought her books, the Shine On app, and her creative work under one roof, guided by a single belief: that intention changes what's possible. Everything here carries her standard, and her name.</p>
+          <p>Tavas World is the work of Sara C. Morell &mdash; author, publisher, and creator. She brought her books, the Tavas App, and her creative work under one roof, guided by a single belief: that intention changes what's possible. Everything here carries her standard, and her name.</p>
           <a href="about.html" class="btn-ghost">My Story</a>
         </div>
       </div>
@@ -280,16 +271,11 @@
       <div class="signup-inner">
         <span class="sec-label">Stay Close</span>
         <h2>Notes on living, building, and creating with intention.</h2>
-        <p>Occasional letters from Sara &mdash; new books, app updates, and ideas worth your attention. No noise. Unsubscribe anytime.</p>
-        <form class="signup-form" onsubmit="return false;">
-          <input type="email" name="email" placeholder="Your email address" aria-label="Your email address" required>
-          <button type="submit" class="btn-primary-gold">Join the World</button>
-        </form>
+        <p>Occasional letters from Sara &mdash; new books, app updates, and ideas worth your attention. No noise.</p>
+        <a href="mailto:sara@tavasworld.com?subject=I'd like to stay close to Tavas World" class="btn-primary-gold">Email Sara to Join</a>
       </div>
     </section>
-
   </main>
-
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
