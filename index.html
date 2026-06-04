@@ -31,9 +31,9 @@
     *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     html, body { max-width: 100%; overflow-x: hidden; }
-body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); }
-img, svg, video { max-width: 100%; }
-.hero h1 { overflow-wrap: break-word; word-break: break-word; }
+    body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); }
+    img, svg, video { max-width: 100%; }
+    .hero h1 { overflow-wrap: break-word; word-break: break-word; }
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
@@ -57,9 +57,9 @@ img, svg, video { max-width: 100%; }
     .hero-brand-line { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 2.4vw, 1.55rem); color: var(--cream); max-width: 720px; margin: 0 auto 30px; line-height: 1.6; animation: riseIn 1.2s ease 0.36s both; }
     .hero-brand-line em { color: var(--gold); font-style: italic; }
     .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.44s both; }
-    .btn-primary-gold { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
+    .btn-primary-gold { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
     .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; }
-    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
+    .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
     .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
     .scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--gold-dim); font-size: 1.4rem; animation: riseIn 1.4s ease 0.8s both, nudge 2.4s ease-in-out 1.6s infinite; text-decoration: none; }
     @keyframes nudge { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
@@ -139,8 +139,10 @@ img, svg, video { max-width: 100%; }
       .split-media { order: -1; }
       .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: center; }
       .split-copy .sec-body { margin-left: auto; margin-right: auto; }
-      .book-stack img { width: 130px; }
-      .book-stack img:nth-child(2) { width: 152px; }
+      .split-copy .btn-ghost, .split-copy .btn-primary-gold { display: flex; margin-left: auto; margin-right: auto; max-width: 320px; }
+      .book-stack { gap: 10px; padding: 24px 12px; }
+      .book-stack img { width: 30%; }
+      .book-stack img:nth-child(2) { width: 34%; }
       .sara { padding: 56px 24px; }
       .sara-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
       .sara-copy .sec-label { text-align: center; }
@@ -175,7 +177,6 @@ img, svg, video { max-width: 100%; }
     </button>
   </header>
   <main>
-
     <!-- SECTION 1 — HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
@@ -192,7 +193,6 @@ img, svg, video { max-width: 100%; }
       </div>
       <a href="#belief" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
     </section>
-
     <!-- SECTION 2 — THE BELIEF -->
     <section class="belief" id="belief">
       <div class="belief-inner">
@@ -208,7 +208,6 @@ img, svg, video { max-width: 100%; }
         </div>
       </div>
     </section>
-
     <!-- SECTION 3 — BOOKS -->
     <section class="split split-books" style="background: var(--choc);">
       <div class="split-inner">
@@ -227,7 +226,6 @@ img, svg, video { max-width: 100%; }
         </div>
       </div>
     </section>
-
    <!-- SECTION 4 — THE APP -->
     <section class="split split-app" style="background: var(--choc-dark);">
       <div class="split-inner">
@@ -286,7 +284,6 @@ img, svg, video { max-width: 100%; }
         </div>
       </div>
     </section>
-
     <!-- SECTION 6 — WAYS TO WORK TOGETHER -->
     <section class="work">
       <div class="work-inner">
@@ -296,7 +293,6 @@ img, svg, video { max-width: 100%; }
         <a href="services.html" class="btn-ghost">Work With Sara</a>
       </div>
     </section>
-
     <!-- SECTION 7 — EMAIL SIGNUP -->
     <section class="signup">
       <div class="signup-inner">
@@ -306,9 +302,7 @@ img, svg, video { max-width: 100%; }
         <a href="mailto:sara@tavasworld.com?subject=Join the Tavas World list" class="btn-primary-gold">Join the List</a>
       </div>
     </section>
-
   </main>
-
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
@@ -329,7 +323,6 @@ img, svg, video { max-width: 100%; }
       <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
     </div>
   </footer>
-
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
     document.getElementById('mobileToggle').addEventListener('click', function() {
