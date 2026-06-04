@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Tavas World</title>
-  <meta name="description" content="Strategic operational support for founders, executives, organizations, and growing teams. Tavas World provides adaptable, professional operational services across healthcare, nonprofit, government, education, and entrepreneurial environments.">
+  <meta name="description" content="Cross-sector operations and program leadership for executive teams, healthcare, government, nonprofit, education, and growing organizations. Tavas World delivers stronger systems, clearer execution, and sustainable growth.">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,13 +23,12 @@
       --cream-low: rgba(245,236,215,0.50);
       --border: rgba(212,168,83,0.12);
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Montserrat', sans-serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
-
     /* HEADER */
     #header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
     .header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -41,7 +40,6 @@
     #navbar a:hover, #navbar a.active { color: var(--cream); }
     .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
     .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
-
     /* HERO */
     .services-hero { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 40px; position: relative; overflow: hidden; }
     .services-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
@@ -49,15 +47,20 @@
     .services-hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3.2vw, 2.8rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 20px; max-width: 820px; }
     .services-hero p { font-size: 0.92rem; line-height: 1.85; color: var(--cream-mid); max-width: 660px; margin: 0 auto 32px; }
     .divider-gold { width: 48px; height: 1px; background: var(--gold-dim); margin: 0 auto 32px; }
-
+    /* CREDIBILITY STRIP */
+    .credibility-strip { background: var(--choc-dark); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 48px 24px; }
+    .credibility-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .credibility-block { text-align: center; }
+    .credibility-block .cred-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+    .credibility-block .cred-list { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-mid); line-height: 1.9; }
+    @media (max-width: 768px) { .credibility-inner { grid-template-columns: 1fr; gap: 32px; } }
     /* SECTIONS */
     section { padding: 80px 24px; }
     .section-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 16px; display: block; text-align: center; }
     .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 16px; text-align: center; }
     .section-body { font-size: 0.88rem; line-height: 1.9; color: var(--cream-mid); text-align: center; }
-
     /* SERVICE CARDS */
-   .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 48px auto 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 48px auto 0; }
     .service-card { background: var(--gold-faint); border: 0.5px solid var(--border); padding: 44px 36px; transition: border-color 0.25s, background 0.25s; }
     .service-card:hover { border-color: var(--gold-dim); background: rgba(212,168,83,0.05); }
     .service-card-icon { font-size: 1.5rem; color: var(--gold); margin-bottom: 20px; display: block; text-align: center; }
@@ -66,7 +69,6 @@
     .service-card ul { list-style: none; padding: 0; margin: 0; }
     .service-card ul li { font-size: 0.8rem; color: var(--cream-low); line-height: 1.8; padding-left: 16px; position: relative; }
     .service-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dim); }
-
     /* PRICING */
     .pricing-section { background: var(--choc-dark); padding: 80px 24px; }
     .pricing-intro { max-width: 620px; margin: 0 auto 56px; text-align: center; }
@@ -84,7 +86,6 @@
     .pricing-list li { font-size: 0.79rem; color: var(--cream-mid); line-height: 1.8; padding-left: 20px; position: relative; }
     .pricing-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
     .pricing-note { text-align: center; font-size: 0.74rem; color: var(--cream-low); margin-top: 36px; letter-spacing: 0.06em; }
-
     /* HOW IT WORKS */
     .how-section { padding: 60px 24px; }
     .how-intro { max-width: 600px; margin: 0 auto 56px; text-align: center; }
@@ -93,7 +94,6 @@
     .step-num { font-family: 'Libre Baskerville', serif; font-size: 2.4rem; color: var(--gold-dim); margin-bottom: 14px; line-height: 1; display: block; }
     .step-title { font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--cream); margin-bottom: 10px; }
     .step-desc { font-size: 0.78rem; color: var(--cream-low); line-height: 1.8; }
-
     /* CTA */
     .cta-banner { background: var(--choc-deep); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); text-align: center; padding: 96px 24px; }
     .cta-banner h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.5rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
@@ -102,7 +102,6 @@
     .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
     .form-note { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--cream-low); margin-top: 14px; text-align: center; }
     .form-note a { color: var(--gold); text-decoration: none; }
-
     /* HAMBURGER BUTTON */
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--cream); }
     .nav-toggle .bar { display: block; width: 22px; height: 2px; background: var(--cream); margin: 5px 0; border-radius: 2px; transition: all 0.3s ease; }
@@ -133,7 +132,6 @@
   </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <header id="header">
     <a href="index.html" class="header-logo-wrap">
@@ -154,7 +152,6 @@
       <span class="bar"></span>
     </button>
   </header>
-
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">The App</a>
@@ -164,148 +161,142 @@
     <a href="about.html">About</a>
     <a href="connect.html" class="nav-cta">Connect</a>
   </div>
-
   <!-- HERO -->
   <section class="services-hero">
     <div class="services-hero-bg"></div>
-    <p class="services-eyebrow">Tavas World · Operational Services</p>
-    <h1>Strategic Operations Support for Founders, Organizations, Executives, and Growing Teams</h1>
-    <p>Tavas World brings cross-sector operational experience to founders, executives, and organizations that need a steady, skilled hand behind the scenes — so you can lead, build, and grow without getting buried in the details.</p>
+    <p class="services-eyebrow">Tavas World · Operations &amp; Program Leadership</p>
+    <h1>Strategic Operations Support for Executive Teams, Organizations, and Growing Teams</h1>
+    <p>Tavas World brings cross-sector operations and program leadership experience to founders, executives, nonprofits, healthcare organizations, and public-sector teams seeking stronger systems, clearer execution, and sustainable growth.</p>
     <div class="divider-gold"></div>
     <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); line-height: 2; text-align: center; max-width: 700px; margin: 0 auto;">
-      Founders &nbsp;·&nbsp; Executives &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Government &nbsp;·&nbsp; Education &nbsp;·&nbsp; Startups &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Consultants
+      Executive Teams &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Government &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Education &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Growing Organizations
     </p>
   </section>
-
+  <!-- CREDIBILITY STRIP -->
+  <section class="credibility-strip">
+    <div class="credibility-inner">
+      <div class="credibility-block">
+        <span class="cred-label">Experience Across</span>
+        <div class="cred-list">Government · Healthcare · Nonprofit · Education · Startups</div>
+      </div>
+      <div class="credibility-block">
+        <span class="cred-label">Expertise Includes</span>
+        <div class="cred-list">Program Management · Operations Leadership · Compliance · Workforce Coordination · Process Improvement</div>
+      </div>
+    </div>
+  </section>
   <!-- SERVICES -->
- <section style="padding: 40px 24px 40px;">
+  <section style="padding: 40px 24px 40px;">
     <div style="max-width:620px; margin:0 auto 48px; text-align:center;">
       <span class="section-label">What I Do</span>
       <h2 class="section-title">Five Core Service Areas</h2>
-      <p class="section-body">Five service areas. One operational partner. Built to flex around what you actually need.</p>
+      <p class="section-body">Five service areas. One operational partner. Built to flex around what your organization actually needs.</p>
     </div>
     <div class="services-grid">
-
-      <div class="service-card">
-        <span class="service-card-icon"><i class="bi bi-calendar2-check"></i></span>
-        <h3>Executive & Administrative Operations</h3>
-        <p>Reliable, discreet executive support that keeps founders and leadership focused on what only they can do.</p>
-        <ul>
-          <li>Calendar management & scheduling</li>
-          <li>Inbox organization & communications</li>
-          <li>Meeting coordination & follow-up</li>
-          <li>Travel coordination & logistics</li>
-          <li>Executive correspondence</li>
-        </ul>
-      </div>
-
       <div class="service-card">
         <span class="service-card-icon"><i class="bi bi-diagram-3"></i></span>
-        <h3>Project & Workflow Coordination</h3>
-        <p>Founders move fast. I bring the structure behind the speed — tracking what needs to happen, when, and by whom.</p>
+        <h3>Operations Leadership</h3>
+        <p>Design and run the operational backbone that keeps execution sharp, accountable, and built to scale.</p>
         <ul>
-          <li>Task & project management</li>
-          <li>Workflow organization & systems support</li>
-          <li>Deadline tracking & accountability</li>
-          <li>Process documentation</li>
-          <li>Team coordination support</li>
+          <li>Process design</li>
+          <li>Workflow optimization</li>
+          <li>Operational planning</li>
+          <li>Performance tracking</li>
         </ul>
       </div>
-
       <div class="service-card">
-        <span class="service-card-icon"><i class="bi bi-envelope-paper"></i></span>
-        <h3>Communications & Organizational Support</h3>
-        <p>Polished communications that reflect your brand and keep clients, teams, and stakeholders informed and engaged.</p>
+        <span class="service-card-icon"><i class="bi bi-kanban"></i></span>
+        <h3>Program Management</h3>
+        <p>Lead complex programs from planning through execution, aligning people, timelines, and deliverables.</p>
         <ul>
-          <li>Internal communications & memos</li>
-          <li>Newsletters & announcements</li>
-          <li>Presentations & reports</li>
-          <li>Website content updates</li>
-          <li>Stakeholder communications</li>
+          <li>Program planning</li>
+          <li>Cross-functional coordination</li>
+          <li>Stakeholder engagement</li>
+          <li>Execution oversight</li>
         </ul>
       </div>
-
       <div class="service-card">
         <span class="service-card-icon"><i class="bi bi-layers"></i></span>
-        <h3>Operational Structure & Support</h3>
-        <p>For founders and growing teams running lean — I help create the clarity and structure needed to scale without the chaos.</p>
+        <h3>Organizational Effectiveness</h3>
+        <p>Build the documentation, structure, and resourcing that help organizations run with clarity and consistency.</p>
         <ul>
-          <li>Operational clarity & organization</li>
-          <li>Streamlining daily operations</li>
-          <li>Systems & tools setup</li>
-          <li>Support for growing teams & leadership</li>
-          <li>SOPs & reference documentation</li>
+          <li>SOP development</li>
+          <li>Documentation systems</li>
+          <li>Compliance support</li>
+          <li>Resource planning</li>
         </ul>
       </div>
-
-     <div class="service-card" style="grid-column: 1 / -1; max-width: 500px; margin: 0 auto; width: 100%;">
-        <span class="service-card-icon"><i class="bi bi-megaphone"></i></span>
-        <h3>Social Media Management</h3>
-        <p>Consistent, professional presence on the platforms that matter most to your audience. I manage your Facebook and LinkedIn so your organization stays visible, engaged, and active — without you having to think about it.</p>
+      <div class="service-card">
+        <span class="service-card-icon"><i class="bi bi-arrow-repeat"></i></span>
+        <h3>Process Improvement</h3>
+        <p>Find what's slowing the organization down and rebuild it — then make improvement a continuous habit.</p>
         <ul>
-          <li>Content planning &amp; scheduling</li>
-          <li>Caption writing in your brand voice</li>
-          <li>Post creation &amp; publishing</li>
-          <li>Community engagement &amp; comment responses</li>
-          <li>Page optimization &amp; profile upkeep</li>
-          <li>Monthly performance check-in</li>
+          <li>Bottleneck analysis</li>
+          <li>Process redesign</li>
+          <li>Change implementation</li>
+          <li>Continuous improvement</li>
         </ul>
       </div>
-
+      <div class="service-card" style="grid-column: 1 / -1; max-width: 500px; margin: 0 auto; width: 100%;">
+        <span class="service-card-icon"><i class="bi bi-graph-up"></i></span>
+        <h3>Strategic Support</h3>
+        <p>Give leadership the reporting, metrics, and decision support needed to plan ahead with confidence.</p>
+        <ul>
+          <li>Executive reporting</li>
+          <li>KPI development</li>
+          <li>Decision support</li>
+          <li>Operational forecasting</li>
+        </ul>
+      </div>
     </div>
   </section>
-
   <!-- INVESTMENT -->
   <section class="pricing-section">
     <div class="pricing-intro">
       <span class="section-label">Investment</span>
       <h2 class="section-title">Custom Scoped. Fairly Priced.</h2>
-      <p class="section-body">Every engagement is built around what you actually need — not a rigid package. Retainer arrangements typically range from <strong style="color: var(--gold);">$350 to $1,500+ per month</strong> depending on scope, platforms, and hours. Let's talk through what makes sense for your organization.</p>
+      <p class="section-body">Every engagement is built around what your organization actually needs — not a rigid package. Retainer arrangements typically range from <strong style="color: var(--gold);">$350 to $1,500+ per month</strong> depending on scope and level of involvement. Let's talk through what makes sense for your organization.</p>
     </div>
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <span class="pricing-tier">Getting Started</span>
-        <div class="pricing-name">Light Support</div>
-        <p class="pricing-desc">A few focused hours a month to keep things organized and moving. Great for founders who need steady, reliable help without a large commitment.</p>
+        <div class="pricing-name">Operational Advisory</div>
+        <p class="pricing-desc">Strategic guidance and a fresh operational perspective for leaders who need direction without a large commitment.</p>
         <ul class="pricing-list">
-          <li>Calendar &amp; inbox support</li>
-          <li>Basic project coordination</li>
-          <li>Monthly check-in call</li>
+          <li>Process assessment</li>
+          <li>Workflow optimization</li>
+          <li>Program coordination</li>
+          <li>Strategic planning support</li>
         </ul>
       </div>
-
       <div class="pricing-card featured">
         <span class="pricing-badge">Most Popular</span>
-        <span class="pricing-tier">Growing Teams</span>
-        <div class="pricing-name">Ongoing Partnership</div>
-        <p class="pricing-desc">Comprehensive operational support tailored to where your organization is right now. The right scope, built around your goals.</p>
+        <span class="pricing-tier">Growing Organizations</span>
+        <div class="pricing-name">Operations Management</div>
+        <p class="pricing-desc">Hands-on operational management that keeps teams coordinated, systems documented, and execution on track.</p>
         <ul class="pricing-list">
-          <li>Full calendar &amp; inbox management</li>
-          <li>Project &amp; team coordination</li>
-          <li>Social media management</li>
-          <li>Bi-weekly check-in calls</li>
+          <li>Team coordination</li>
+          <li>Documentation systems</li>
+          <li>KPI reporting</li>
+          <li>Stakeholder management</li>
         </ul>
       </div>
-
       <div class="pricing-card">
         <span class="pricing-tier">Executive &amp; High-Complexity</span>
-        <div class="pricing-name">Full Operational Partner</div>
-        <p class="pricing-desc">For founders scaling fast and executives managing complexity. Near-daily availability, deep operational involvement, and strategic support.</p>
+        <div class="pricing-name">Fractional Operations Leadership</div>
+        <p class="pricing-desc">Senior operational leadership embedded in your organization — strategy, oversight, and executive partnership at scale.</p>
         <ul class="pricing-list">
-          <li>Priority &amp; near-daily availability</li>
-          <li>Executive inbox &amp; stakeholder comms</li>
-          <li>Full project &amp; systems management</li>
-          <li>Weekly strategy check-ins</li>
+          <li>Operational strategy</li>
+          <li>Organizational planning</li>
+          <li>Program oversight</li>
+          <li>Executive decision support</li>
         </ul>
       </div>
-
     </div>
     <p class="pricing-note" style="margin-top: 36px;">All engagements are scoped around your specific needs. Pricing is discussed during your discovery call — no surprises.</p>
     <p class="pricing-note" style="margin-top: 10px;">Month-to-month after an initial 90-day commitment. Custom arrangements available.</p>
   </section>
-
-    <!-- HOW IT WORKS -->
+  <!-- HOW IT WORKS -->
   <section class="how-section">
     <div class="how-intro">
       <span class="section-label">The Process</span>
@@ -320,12 +311,12 @@
       </div>
       <div class="step">
         <span class="step-num">02</span>
-        <div class="step-title">Scope & Agreement</div>
-        <p class="step-desc">I put together a clear proposal outlining scope, hours, deliverables, and your monthly investment.</p>
+        <div class="step-title">Scope &amp; Agreement</div>
+        <p class="step-desc">I put together a clear proposal outlining scope, deliverables, and your monthly investment.</p>
       </div>
       <div class="step">
         <span class="step-num">03</span>
-        <div class="step-title">Onboard & Begin</div>
+        <div class="step-title">Onboard &amp; Begin</div>
         <p class="step-desc">We set up systems, tools, and access — then I get to work. Fast, clean, and professional from day one.</p>
       </div>
       <div class="step">
@@ -335,15 +326,13 @@
       </div>
     </div>
   </section>
-
   <!-- CTA -->
   <div class="cta-banner">
-    <h2>Ready to bring more structure and clarity to your operations?</h2>
-    <p>Whether you're a founder building in real time, a leader managing complexity, or an organization that needs the operational layer filled in — let's talk about what you're carrying and how I can help you move forward with less friction and more focus.</p>
+    <h2>Ready to improve execution, strengthen operations, and create systems that scale?</h2>
+    <p>Whether you're a leader managing complexity, a team in a growth phase, or an organization that needs the operational layer built out — let's talk about what you're carrying and how I can help you move forward with stronger systems and clearer execution.</p>
     <a href="connect.html" class="btn-gold">Schedule a Discovery Call</a>
     <p class="form-note" style="margin-top: 16px;">Or email <a href="mailto:sara@tavasworld.com">sara@tavasworld.com</a> &nbsp;·&nbsp; Call <a href="tel:4062198848">(406) 219-8848</a></p>
   </div>
-
   <!-- FOOTER -->
   <footer style="background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 64px 24px 40px; text-align: center;">
     <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" style="width: 48px; height: 48px; object-fit: contain; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;">
@@ -360,8 +349,6 @@
     </nav>
     <p style="font-size: 0.72rem; color: var(--cream-low); letter-spacing: 0.06em;">© 2026 Tavas World. All rights reserved.</p>
   </footer>
-
-
   <script>
     var t=document.getElementById('navToggle'),m=document.getElementById('mobileMenu');
     if(t&&m){t.addEventListener('click',function(){t.classList.toggle('open');m.classList.toggle('open');});m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){t.classList.remove('open');m.classList.remove('open');});});}
