@@ -60,7 +60,10 @@
     .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--cream); margin-bottom: 16px; text-align: center; }
     .section-body { font-size: 0.88rem; line-height: 1.9; color: var(--cream-mid); text-align: center; }
     /* SERVICE CARDS */
-    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 1000px; margin: 48px auto 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; max-width: 1000px; margin: 48px auto 0; }
+    .services-grid .service-card { grid-column: span 2; }
+    .services-grid .service-card:nth-child(4) { grid-column: 2 / span 2; }
+    .services-grid .service-card:nth-child(5) { grid-column: 4 / span 2; }
     .service-card { background: var(--gold-faint); border: 0.5px solid var(--border); padding: 44px 36px; transition: border-color 0.25s, background 0.25s; }
     .service-card:hover { border-color: var(--gold-dim); background: rgba(212,168,83,0.05); }
     .service-card-icon { font-size: 1.5rem; color: var(--gold); margin-bottom: 20px; display: block; text-align: center; }
@@ -123,6 +126,7 @@
       .service-card { text-align: center; }
       .service-card ul li { text-align: left; }
       .services-grid { grid-template-columns: 1fr; }
+      .services-grid .service-card, .services-grid .service-card:nth-child(4), .services-grid .service-card:nth-child(5) { grid-column: auto; }
       .pricing-grid { grid-template-columns: 1fr; }
       .steps-row { grid-template-columns: repeat(2, 1fr); gap: 36px; }
     }
@@ -165,8 +169,8 @@
   <section class="services-hero">
     <div class="services-hero-bg"></div>
     <p class="services-eyebrow">Tavas World · Operations &amp; Program Leadership</p>
-    <h1>Strategic Operations Support for Executive Teams, Organizations, and Growing Teams</h1>
-    <p>Tavas World brings cross-sector operations and program leadership experience to founders, executives, nonprofits, healthcare organizations, and public-sector teams seeking stronger systems, clearer execution, and sustainable growth.</p>
+    <h1>Strategic Operations Support for Executives, Organizations, and Growing Businesses</h1>
+    <p>Tavas World brings cross-sector operations and program leadership experience to executive teams, nonprofits, healthcare organizations, public-sector agencies, and growing businesses seeking stronger systems, clearer execution, and sustainable growth.</p>
     <div class="divider-gold"></div>
     <p style="font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dim); line-height: 2; text-align: center; max-width: 700px; margin: 0 auto;">
       Executive Teams &nbsp;·&nbsp; Healthcare &nbsp;·&nbsp; Government &nbsp;·&nbsp; Nonprofit &nbsp;·&nbsp; Education &nbsp;·&nbsp; Small Business &nbsp;·&nbsp; Growing Organizations
@@ -177,7 +181,7 @@
     <div class="credibility-inner">
       <div class="credibility-block">
         <span class="cred-label">Experience Across</span>
-        <div class="cred-list">Government · Healthcare · Nonprofit · Education · Startups</div>
+        <div class="cred-list">Government · Healthcare · Nonprofit · Education · Small Business · Growing Organizations</div>
       </div>
       <div class="credibility-block">
         <span class="cred-label">Expertise Includes</span>
@@ -237,7 +241,7 @@
           <li>Continuous improvement</li>
         </ul>
       </div>
-      <div class="service-card" style="grid-column: 1 / -1; max-width: 500px; margin: 0 auto; width: 100%;">
+      <div class="service-card">
         <span class="service-card-icon"><i class="bi bi-graph-up"></i></span>
         <h3>Strategic Support</h3>
         <p>Give leadership the reporting, metrics, and decision support needed to plan ahead with confidence.</p>
@@ -254,7 +258,7 @@
   <section class="pricing-section">
     <div class="pricing-intro">
       <span class="section-label">Investment</span>
-      <h2 class="section-title">Custom Scoped. Fairly Priced.</h2>
+      <h2 class="section-title">Built Around Your Needs.</h2>
       <p class="section-body">Every engagement is built around what your organization actually needs — not a rigid package. Retainer arrangements typically range from <strong style="color: var(--gold);">$350 to $1,500+ per month</strong> depending on scope and level of involvement. Let's talk through what makes sense for your organization.</p>
     </div>
     <div class="pricing-grid">
