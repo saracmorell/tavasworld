@@ -4,10 +4,10 @@
 <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tavas World — Inspired by Freedom. Designed for Adventure.</title>
-<meta name="description" content="Tavas World brings books, wellness tools, creative projects, and strategic operations services together in one place — guided by author and creator Sara C. Morell.">
-<meta property="og:title" content="Tavas World — Inspired by Freedom. Designed for Adventure." />
-<meta property="og:description" content="Books, wellness tools, creativeh projects, and strategic operations services in one place — from Sara C. Morell." />
+<title>Tavas World — Sara C. Morell | Operations Consulting, Wellness App &amp; Books</title>
+<meta name="description" content="Sara C. Morell helps organizations build systems that actually work — operations leadership, program management, and growth strategy. Plus the Tavas wellness app, children's books, and adventure-ready gear.">
+<meta property="og:title" content="Tavas World — Sara C. Morell | Systems that work, for organizations and for life." />
+<meta property="og:description" content="Operations consulting, the Tavas wellness app, children's books, and adventure-ready gear — from Sara C. Morell." />
 <meta property="og:image" content="https://www.tavasworld.com/assets/img/FutureSunTrans.png" />
 <meta property="og:url" content="https://www.tavasworld.com" />
 <meta property="og:type" content="website" />
@@ -69,6 +69,7 @@ img, svg, video { max-width: 100%; }
 .ways { padding: 72px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
 .ways-inner { max-width: 1140px; margin: 0 auto; }
 .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+.ways-grid.two { grid-template-columns: repeat(2, minmax(0, 380px)); justify-content: center; }
 .way-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 16px; padding: 36px 28px; text-align: center; display: flex; flex-direction: column; align-items: center; transition: border-color 0.25s, transform 0.25s; }
 .way-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); }
 .way-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
@@ -77,14 +78,7 @@ img, svg, video { max-width: 100%; }
 .way-card p { font-size: 0.85rem; color: var(--cream-mid); line-height: 1.7; margin-bottom: 22px; flex-grow: 1; }
 .way-link { font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); padding-bottom: 3px; transition: color 0.2s, border-color 0.2s; }
 .way-link:hover { color: var(--gold-light); border-color: var(--gold-light); }
-.belief { padding: 88px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; }
-.belief-inner { max-width: 720px; margin: 0 auto; }
-.belief-statement { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 700; color: var(--cream); line-height: 1.35; margin-bottom: 24px; }
-.belief-statement em { color: var(--gold); font-style: italic; }
-.belief-body { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2vw, 1.18rem); color: var(--cream-mid); line-height: 1.8; margin-bottom: 36px; }
-.belief-principles { display: flex; justify-content: center; align-items: center; gap: 26px; flex-wrap: wrap; }
-.belief-principles span { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
-.belief-principles .divpipe { width: 1px; height: 12px; background: var(--gold-dim); display: inline-block; }
+.ways-cta { display: flex; justify-content: center; margin-top: 40px; }
 .split { padding: 80px 48px; border-top: 0.5px solid var(--border); }
 .split-inner { max-width: 1140px; margin: 0 auto; display: grid; gap: 64px; align-items: center; }
 .split-books .split-inner { grid-template-columns: 1.15fr 0.85fr; }
@@ -97,15 +91,10 @@ img, svg, video { max-width: 100%; }
 .book-stack img:nth-child(2) { width: 195px; margin-bottom: 0; z-index: 2; }
 .book-stack img:hover { transform: translateY(-6px); }
 .app-mock { width: 100%; max-width: 380px; height: auto; border-radius: 22px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); }
-.app-feats { display: flex; flex-direction: column; gap: 16px; margin: 0 0 32px; }
-.app-feat { display: flex; gap: 14px; align-items: flex-start; text-align: left; }
-.app-feat .feat-icon { width: 42px; height: 42px; flex-shrink: 0; border-radius: 10px; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; }
-.app-feat .feat-icon svg { width: 17px; height: 17px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.app-feat h3 { font-family: 'Libre Baskerville', serif; font-size: 0.92rem; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
-.app-feat p { font-size: 0.82rem; color: var(--cream-mid); line-height: 1.6; }
 .app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 20px; margin: 0 0 36px; }
-.app-grid .app-feat { flex-direction: column; align-items: flex-start; text-align: left; gap: 0; }
-.app-grid .app-feat .feat-icon { width: 44px; height: 44px; border-radius: 50%; margin-bottom: 12px; }
+.app-grid .app-feat { display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0; }
+.app-grid .app-feat .feat-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(212,168,83,0.08); border: 0.5px solid rgba(212,168,83,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.app-grid .app-feat .feat-icon svg { width: 17px; height: 17px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .app-grid .app-feat h3 { font-family: 'Libre Baskerville', serif; font-size: 0.92rem; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
 .app-grid .app-feat p { font-size: 0.8rem; color: var(--cream-mid); line-height: 1.6; }
 .sara { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
@@ -114,14 +103,16 @@ img, svg, video { max-width: 100%; }
 .sara-copy .sec-label { text-align: left; }
 .sara-copy h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; color: var(--cream); line-height: 1.25; margin-bottom: 20px; }
 .sara-copy p { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); line-height: 1.85; margin-bottom: 28px; }
-.work { padding: 64px 48px; background: var(--choc); border-top: 0.5px solid var(--border); text-align: center; }
-.work-inner { max-width: 600px; margin: 0 auto; }
-.work p { font-size: 0.92rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 28px; }
 .signup { padding: 88px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); text-align: center; position: relative; overflow: hidden; }
 .signup::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(212,168,83,0.06) 0%, transparent 70%); pointer-events: none; }
 .signup-inner { max-width: 580px; margin: 0 auto; position: relative; z-index: 1; }
 .signup h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; color: var(--cream); line-height: 1.25; margin-bottom: 16px; }
 .signup p { font-size: 0.9rem; color: var(--cream-low); line-height: 1.8; margin-bottom: 32px; }
+.signup-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+.signup-form input[type="email"] { flex: 1; min-width: 0; padding: 14px 22px; border-radius: 999px; background: rgba(245,236,215,0.06); border: 0.5px solid rgba(212,168,83,0.25); color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.85rem; outline: none; transition: border-color 0.2s; }
+.signup-form input[type="email"]::placeholder { color: var(--cream-low); }
+.signup-form input[type="email"]:focus { border-color: var(--gold-dim); }
+.signup-note { font-size: 0.72rem !important; color: var(--cream-low) !important; margin: 16px 0 0 !important; letter-spacing: 0.04em; }
 footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); padding: 40px 32px; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
 .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -136,7 +127,7 @@ footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); pa
 @media (max-width: 768px) {
 .app-grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
 .ways { padding: 56px 24px; }
-.ways-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; }
+.ways-grid, .ways-grid.two { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; }
 .way-card { padding: 32px 24px; }
 #header { padding: 0 20px; height: 64px; }
 .header-logo-text { display: none; }
@@ -147,7 +138,6 @@ footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); pa
 .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
 .hero-sun { width: 72px; height: 72px; margin-bottom: 20px; }
 .hero-btns { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
-.belief { padding: 60px 24px; }
 .split { padding: 56px 24px; }
 .split-books .split-inner, .split-app .split-inner { grid-template-columns: 1fr; gap: 36px; }
 .split-media { order: -1; }
@@ -160,8 +150,9 @@ footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); pa
 .sara { padding: 56px 24px; }
 .sara-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
 .sara-copy .sec-label { text-align: center; }
-.work { padding: 48px 24px; }
 .signup { padding: 60px 24px; }
+.signup-form { flex-direction: column; }
+.signup-form .btn-primary-gold { width: 100%; }
 footer { padding: 32px 24px; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -181,9 +172,7 @@ footer { padding: 32px 24px; }
     <nav id="navbar">
       <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">The App</a>
       <a href="https://tavas-world-outfitters.myshopify.com" target="_blank">Shop</a>
-      <a href="services.html">Services</a>
       <a href="books.html">Books</a>
-      <a href="https://www.shotamusic.com" target="_blank">Music</a>
       <a href="about.html">About</a>
       <a href="connect.html" class="nav-cta">Work With Sara</a>
     </nav>
@@ -195,20 +184,49 @@ footer { padding: 32px 24px; }
     <!-- SECTION 1 — HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
-      <p class="hero-eyebrow">A creative world inspired by freedom. Navigating life with intention.</p>
+      <p class="hero-eyebrow">Sara C. Morell &middot; Tavas World</p>
       <img src="assets/img/FutureSunTrans.png" alt="Tavas Sun" class="hero-sun">
-      <h1>Inspired by Freedom.<br>Designed for Adventure.</h1>
-      <p class="hero-brand-line">A world of style, stories, wellness, and adventure.</p>
+      <h1>Systems that work.<br>For organizations &amp; for life.</h1>
+      <p class="hero-brand-line">I help nonprofits and growing teams strengthen operations, sharpen execution, and grow <em>with intention</em> &mdash; and I build tools that help people do the same.</p>
       <div class="hero-btns">
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-ghost">Get Tavas App</a>
-                        <a href="https://tavas-world-outfitters.myshopify.com" target="_blank" class="btn-primary-gold">Shop Now</a>
-                <a href="books.html" class="btn-ghost">Explore Books</a>
-                <a href="services.html" class="btn-ghost">Work With Sara</a>
-</div>
-      <a href="#belief" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+        <a href="connect.html" class="btn-primary-gold">Work With Sara</a>
+        <a href="#app" class="btn-ghost">Explore Tavas World</a>
+      </div>
+      <a href="#consulting" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+    </section>
+    <!-- SECTION 2 — CONSULTING -->
+    <section class="ways" id="consulting">
+      <div class="ways-inner">
+        <span class="sec-label">Work With Sara</span>
+        <h2 class="sec-headline">Operations &amp; growth, handled.</h2>
+        <p class="sec-body">Three ways organizations bring Sara in:</p>
+        <div class="ways-grid">
+          <div class="way-card">
+            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+            <h3>Operations Leadership</h3>
+            <p>Fractional operations leadership for nonprofits and small teams &mdash; clear processes, accountable execution, and systems your staff can actually run.</p>
+            <a href="services.html" class="way-link">Learn More</a>
+          </div>
+          <div class="way-card">
+            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <h3>Program &amp; Project Management</h3>
+            <p>From grant-funded programs to internal initiatives &mdash; scoped, scheduled, and delivered without the chaos.</p>
+            <a href="services.html" class="way-link">Learn More</a>
+          </div>
+          <div class="way-card">
+            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+            <h3>Growth &amp; Process Strategy</h3>
+            <p>Find the bottlenecks, fix the workflows, and build the operating rhythm that lets your organization scale.</p>
+            <a href="services.html" class="way-link">Learn More</a>
+          </div>
+        </div>
+        <div class="ways-cta">
+          <a href="connect.html" class="btn-primary-gold">Start the Conversation</a>
+        </div>
+      </div>
     </section>
    <!-- SECTION 3 — THE APP -->
-    <section class="split split-app" style="background: var(--choc-dark);">
+    <section class="split split-app" id="app" style="background: var(--choc);">
       <div class="split-inner">
         <div class="split-copy">
           <span class="sec-label">The App</span>
@@ -243,7 +261,7 @@ footer { padding: 32px 24px; }
             <div class="app-feat">
               <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></div>
               <h3>AI Companion</h3>
-              <p>Choose your personal AI companion &mdash; that supports journaling, wellness tracking, recipes, performs tasks, and healthy daily habits.</p>
+              <p>Choose your personal AI companion &mdash; supporting journaling, wellness tracking, recipes, tasks, and healthy daily habits.</p>
             </div>
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
@@ -253,29 +271,8 @@ footer { padding: 32px 24px; }
         </div>
       </div>
     </section>
-     <!-- SECTION 6 — WAYS TO WORK TOGETHER -->
-    <section class="work">
-      <div class="work-inner">
-        <span class="sec-label">Beyond the Brand</span>
-        <h2 class="sec-headline">Work with Sara.</h2>
-        <p>From operations leadership and program management to process improvement and growth strategy, Sara helps organizations build stronger systems, improve execution, and create growth.</p>
-        <a href="services.html" class="btn-ghost">Work With Sara</a>
-      </div>
-    </section>
-     <!-- SECTION 5 — MEET SARA -->
-    <section class="sara">
-      <div class="sara-inner">
-        <img src="assets/img/sara.jpg" alt="Sara C. Morell" class="sara-portrait">
-        <div class="sara-copy">
-          <span class="sec-label">The Founder</span>
-          <h2>Meet Sara C. Morell.</h2>
-          <p>Tavas World is created by Sara C. Morell, an author, publisher, app creator, and creative professional building one intentional home for stories, wellness tools, and meaningful support. Every book, resource, and project is thoughtfully created or curated to inspire growth, encourage connection, and support a life lived with intention.</p>
-          <a href="about.html" class="btn-ghost">My Story</a>
-        </div>
-      </div>
-    </section>
-        <!-- SECTION 4 — BOOKS -->
-    <section class="split split-books" style="background: var(--choc);">
+    <!-- SECTION 4 — BOOKS -->
+    <section class="split split-books" style="background: var(--choc-dark);">
       <div class="split-inner">
         <div class="split-media">
           <div class="book-stack">
@@ -292,13 +289,53 @@ footer { padding: 32px 24px; }
         </div>
       </div>
     </section>
+    <!-- SECTION 5 — THE WORLD -->
+    <section class="ways" id="world" style="background: var(--choc);">
+      <div class="ways-inner">
+        <span class="sec-label">More of the World</span>
+        <h2 class="sec-headline">Outfitted for the life you're building.</h2>
+        <div class="ways-grid two">
+          <div class="way-card">
+            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg></div>
+            <h3>Tavas World Outfitters</h3>
+            <p>Western style and beach-day staples &mdash; with adventure &amp; survival gear on the horizon. Join the list for 20% off your first order.</p>
+            <a href="https://tavas-world-outfitters.myshopify.com" target="_blank" class="way-link">Shop the Collections</a>
+          </div>
+          <div class="way-card">
+            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            <h3>Shota Music</h3>
+            <p>Original music from the Tavas World family &mdash; made with the same heart as everything else here.</p>
+            <a href="https://www.shotamusic.com" target="_blank" class="way-link">Listen Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- SECTION 6 — MEET SARA -->
+    <section class="sara">
+      <div class="sara-inner">
+        <img src="assets/img/sara.jpg" alt="Sara C. Morell" class="sara-portrait">
+        <div class="sara-copy">
+          <span class="sec-label">The Founder</span>
+          <h2>Meet Sara C. Morell.</h2>
+          <p>Sara is an operations leader, author, publisher, and app creator building one intentional home for stronger systems, wellness tools, and stories that matter. Every project in Tavas World &mdash; from consulting engagements to children's books &mdash; is built to inspire growth, encourage connection, and support a life lived with intention.</p>
+          <a href="about.html" class="btn-ghost">My Story</a>
+        </div>
+      </div>
+    </section>
     <!-- SECTION 7 — EMAIL SIGNUP -->
-    <section class="signup">
+    <section class="signup" style="background: var(--choc);">
       <div class="signup-inner">
         <span class="sec-label">Stay Close</span>
         <h2>Stay Close to the World as it Grows</h2>
-        <p>Be the first to hear about new books, app updates, creative projects, and future discoveries from Tavas World.</p>
-        <a href="mailto:sara@tavasworld.com?subject=Join the Tavas World list" class="btn-primary-gold">Join the List</a>
+        <p>New books, app updates, gear drops, and 20% off your first Outfitters order &mdash; straight to your inbox.</p>
+        <form class="signup-form" method="post" action="https://tavas-world-outfitters.myshopify.com/contact" accept-charset="UTF-8">
+          <input type="hidden" name="form_type" value="customer">
+          <input type="hidden" name="utf8" value="&#x2713;">
+          <input type="hidden" name="contact[tags]" value="newsletter,tavasworld.com">
+          <input type="email" name="contact[email]" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" class="btn-primary-gold">Join the List</button>
+        </form>
+        <p class="signup-note">No spam, ever. Unsubscribe anytime.</p>
       </div>
     </section>
   </main>
@@ -337,7 +374,7 @@ footer { padding: 32px 24px; }
         if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.belief-inner, .split-copy, .split-media, .sara-inner, .work-inner, .signup-inner').forEach(el => {
+    document.querySelectorAll('.ways-inner, .split-copy, .split-media, .sara-inner, .signup-inner').forEach(el => {
       el.style.opacity='0';
       el.style.transform='translateY(20px)';
       el.style.transition='opacity 0.7s ease, transform 0.7s ease';
