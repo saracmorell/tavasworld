@@ -61,10 +61,11 @@ img, svg, video { max-width: 100%; }
 .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; box-shadow: 0 0 20px rgba(212,168,83,0.6), 0 4px 15px rgba(212,168,83,0.3); transform: translateY(-3px) scale(1.04); }
 .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
 .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
-.hero-paths { margin-top: 30px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); display: flex; gap: 13px; align-items: center; justify-content: center; flex-wrap: wrap; animation: riseIn 1.4s ease 0.6s both; }
-.hero-paths a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.hero-paths { margin-top: 30px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; display: flex; gap: 13px; align-items: baseline; justify-content: center; flex-wrap: wrap; line-height: 1; animation: riseIn 1.4s ease 0.6s both; }
+.hero-paths-label { color: var(--cream-low); }
+.hero-paths a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .hero-paths a:hover { color: var(--gold-light); border-color: var(--gold-dim); }
-.hero-paths span { color: var(--gold-dim); }
+.hero-paths .pathdot { color: var(--gold-dim); }
 .scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--gold-dim); font-size: 1.4rem; animation: riseIn 1.4s ease 0.8s both, nudge 2.4s ease-in-out 1.6s infinite; text-decoration: none; }
 @keyframes nudge { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
 .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
@@ -194,10 +195,10 @@ footer { padding: 32px 24px; }
       <p class="hero-brand-line">Operations consulting for nonprofits and growing teams &mdash; plus a wellness app, children's books, and adventure-ready gear, all made for living <em>with intention</em>.</p>
       <div class="hero-btns">
         <a href="connect.html" class="btn-primary-gold">Work With Sara</a>
-        <a href="#app" class="btn-ghost">Explore Tavas World</a>
+        <a href="#app" class="btn-ghost">Explore Tavas App</a>
       </div>
-      <p class="hero-paths">Here for something else?
-        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">The App</a><span>&middot;</span><a href="books.html">The Books</a><span>&middot;</span><a href="https://tavas-world-outfitters.myshopify.com" target="_blank">The Shop</a><span>&middot;</span><a href="https://www.shotamusic.com" target="_blank">The Music</a>
+      <p class="hero-paths"><span class="hero-paths-label">Here for something else?</span>
+        <a href="books.html">The Books</a><span class="pathdot">&middot;</span><a href="https://tavas-world-outfitters.myshopify.com" target="_blank">The Shop</a><span class="pathdot">&middot;</span><a href="https://www.shotamusic.com" target="_blank">The Music</a>
       </p>
       <a href="#consulting" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
     </section>
