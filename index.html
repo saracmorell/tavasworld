@@ -367,4 +367,26 @@ footer { padding: 32px 24px; }
       <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
     </div>
   </footer>
-  <script s
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+      document.getElementById('navbar').classList.toggle('show');
+    });
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
+    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.ways-inner, .split-copy, .split-media, .sara-inner, .signup-inner').forEach(el => {
+      el.style.opacity='0';
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity 0.7s ease, transform 0.7s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
