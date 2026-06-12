@@ -61,6 +61,10 @@ img, svg, video { max-width: 100%; }
 .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; box-shadow: 0 0 20px rgba(212,168,83,0.6), 0 4px 15px rgba(212,168,83,0.3); transform: translateY(-3px) scale(1.04); }
 .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 0.5px solid rgba(212,168,83,0.25); transition: all 0.2s; }
 .btn-ghost:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
+.hero-paths { margin-top: 30px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-low); display: flex; gap: 13px; align-items: center; justify-content: center; flex-wrap: wrap; animation: riseIn 1.4s ease 0.6s both; }
+.hero-paths a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+.hero-paths a:hover { color: var(--gold-light); border-color: var(--gold-dim); }
+.hero-paths span { color: var(--gold-dim); }
 .scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--gold-dim); font-size: 1.4rem; animation: riseIn 1.4s ease 0.8s both, nudge 2.4s ease-in-out 1.6s infinite; text-decoration: none; }
 @keyframes nudge { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
 .sec-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
@@ -187,11 +191,14 @@ footer { padding: 32px 24px; }
       <p class="hero-eyebrow">Sara C. Morell &middot; Tavas World</p>
       <img src="assets/img/FutureSunTrans.png" alt="Tavas Sun" class="hero-sun">
       <h1>Systems that work.<br>For organizations &amp; for life.</h1>
-      <p class="hero-brand-line">I help nonprofits and growing teams strengthen operations, sharpen execution, and grow <em>with intention</em> &mdash; and I build tools that help people do the same.</p>
+      <p class="hero-brand-line">Operations consulting for nonprofits and growing teams &mdash; plus a wellness app, children's books, and adventure-ready gear, all made for living <em>with intention</em>.</p>
       <div class="hero-btns">
         <a href="connect.html" class="btn-primary-gold">Work With Sara</a>
         <a href="#app" class="btn-ghost">Explore Tavas World</a>
       </div>
+      <p class="hero-paths">Here for something else?
+        <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">The App</a><span>&middot;</span><a href="books.html">The Books</a><span>&middot;</span><a href="https://tavas-world-outfitters.myshopify.com" target="_blank">The Shop</a><span>&middot;</span><a href="https://www.shotamusic.com" target="_blank">The Music</a>
+      </p>
       <a href="#consulting" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
     </section>
     <!-- SECTION 2 — CONSULTING -->
@@ -360,26 +367,4 @@ footer { padding: 32px 24px; }
       <div class="footer-copy">&copy; 2026 Tavas World. All rights reserved.</div>
     </div>
   </footer>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navbar').classList.toggle('show');
-    });
-    window.addEventListener('scroll', function() {
-      const h = document.getElementById('header');
-      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
-    });
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.ways-inner, .split-copy, .split-media, .sara-inner, .signup-inner').forEach(el => {
-      el.style.opacity='0';
-      el.style.transform='translateY(20px)';
-      el.style.transition='opacity 0.7s ease, transform 0.7s ease';
-      obs.observe(el);
-    });
-  </script>
-</body>
-</html>
+  <script s
