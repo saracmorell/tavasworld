@@ -1,0 +1,150 @@
+/* ============================================================
+   TAVAS WORLD — MASTER NAVIGATION
+   Single source of truth for the site header on every page.
+   Values taken verbatim from the homepage (index.html).
+   Edit here once; every page updates.
+   ============================================================ */
+
+:root {
+  --tw-nav-deep:       #0F0A04;
+  --tw-nav-gold:       #D4A853;
+  --tw-nav-gold-light: #E8C070;
+  --tw-nav-cream:      #F5ECD7;
+  --tw-nav-cream-low:  rgba(245, 236, 215, 0.50);
+  --tw-nav-border:     rgba(212, 168, 83, 0.12);
+  --tw-nav-bg:         rgba(15, 10, 4, 0.94);
+  --tw-nav-bg-mobile:  rgba(15, 10, 4, 0.98);
+}
+
+/* ── Header shell ───────────────────────────────────────── */
+#header {
+  background: var(--tw-nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid var(--tw-nav-border);
+  padding: 0 48px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* ── Logo ───────────────────────────────────────────────── */
+.header-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.header-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.header-logo-text {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--tw-nav-cream);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+}
+
+.header-logo-text span {
+  color: var(--tw-nav-gold);
+}
+
+/* ── Nav links ──────────────────────────────────────────── */
+#navbar {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+#navbar a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tw-nav-cream-low);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+#navbar a:hover,
+#navbar a.active {
+  color: var(--tw-nav-cream);
+}
+
+/* ── CTA ────────────────────────────────────────────────── */
+.nav-cta {
+  color: var(--tw-nav-deep) !important;
+  background: var(--tw-nav-gold);
+  padding: 10px 24px !important;
+  border-radius: 999px;
+  transition: background 0.2s, transform 0.15s !important;
+}
+
+.nav-cta:hover {
+  background: var(--tw-nav-gold-light) !important;
+  transform: translateY(-1px);
+}
+
+/* ── Mobile toggle ──────────────────────────────────────── */
+.mobile-nav-toggle {
+  display: none;
+  color: var(--tw-nav-cream);
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* ── Tablet ─────────────────────────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    padding: 0 32px;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #header {
+    padding: 0 20px;
+    height: 64px;
+  }
+
+  .header-logo-text {
+    display: none;
+  }
+
+  #navbar {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--tw-nav-bg-mobile);
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 20px;
+    border-bottom: 0.5px solid var(--tw-nav-border);
+  }
+
+  #navbar.show {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
