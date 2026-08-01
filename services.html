@@ -29,17 +29,6 @@
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
-    /* HEADER */
-    #header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
-    .header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .header-logo-img { width: 36px; height: 36px; object-fit: contain; }
-    .header-logo-text { font-family: 'Libre Baskerville', serif; color: var(--cream); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.16em; white-space: nowrap; }
-    .header-logo-text span { color: var(--gold); }
-    #navbar { display: flex; align-items: center; gap: 36px; }
-    #navbar a { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.25s; }
-    #navbar a:hover, #navbar a.active { color: var(--cream); }
-    .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
-    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
     /* HERO */
     .services-hero { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 40px; position: relative; overflow: hidden; }
     .services-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
@@ -117,11 +106,8 @@
     .mobile-menu a { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; padding: 14px 0; border-bottom: 0.5px solid var(--border); transition: color 0.25s; }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover, .mobile-menu a.active { color: var(--cream); }
-    .mobile-menu .nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 14px 0 !important; text-align: center; border-radius: 999px; margin-top: 16px; border-bottom: none; }
     /* MOBILE */
     @media (max-width: 768px) {
-      #header { padding: 0 20px; }
-      #navbar { display: none; }
       .nav-toggle { display: flex; flex-direction: column; justify-content: center; }
       .service-card { text-align: center; }
       .service-card ul li { text-align: left; }
@@ -134,6 +120,7 @@
       .steps-row { grid-template-columns: 1fr; }
     }
   </style>
+  <link href="assets/css/site-nav.css" rel="stylesheet">
 </head>
 <body>
   <!-- HEADER -->
@@ -143,19 +130,15 @@
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
     <nav id="navbar">
-      <a href="index.html">The App</a>
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
       <a href="https://tavascompass.com">Tavas Compass</a>
       <a href="https://tavas-world-outfitters.myshopify.com" target="_blank">Shop</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="books.html">Books</a>
-      <a href="#">Music</a>
+      <a href="books.html">Library</a>
       <a href="about.html">About</a>
-      <a href="connect.html" class="nav-cta">Connect</a>
+      <a href="connect.html" class="nav-cta">Work With Sara</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+    <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
     </button>
   </header>
   <!-- MOBILE MENU -->
@@ -360,5 +343,6 @@
     var t=document.getElementById('navToggle'),m=document.getElementById('mobileMenu');
     if(t&&m){t.addEventListener('click',function(){t.classList.toggle('open');m.classList.toggle('open');});m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){t.classList.remove('open');m.classList.remove('open');});});}
   </script>
+  <script src="assets/js/site-nav.js"></script>
 </body>
 </html>

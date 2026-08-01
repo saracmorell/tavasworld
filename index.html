@@ -37,17 +37,6 @@ img, svg, video { max-width: 100%; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
-#header { background: rgba(15,10,4,0.94); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 0.5px solid var(--border); padding: 0 48px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
-.header-logo-wrap { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.header-logo-img { width: 36px; height: 36px; object-fit: contain; }
-.header-logo-text { font-family: 'Libre Baskerville', serif; color: var(--cream); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.16em; white-space: nowrap; }
-.header-logo-text span { color: var(--gold); }
-#navbar { display: flex; align-items: center; gap: 36px; }
-#navbar a { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream-low); text-decoration: none; transition: color 0.25s; }
-#navbar a:hover { color: var(--cream); }
-.nav-cta { color: var(--choc-deep) !important; background: var(--gold); padding: 10px 24px !important; border-radius: 999px; transition: background 0.2s, transform 0.15s !important; }
-.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
-.mobile-nav-toggle { display: none; color: var(--cream); font-size: 1.5rem; cursor: pointer; background: none; border: none; padding: 0; }
 .hero { min-height: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center; padding: 130px 24px 80px; position: relative; overflow: hidden; background: var(--choc); }
 .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.07) 0%, transparent 70%); pointer-events: none; }
 .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 24px; animation: riseIn 1s ease both; }
@@ -134,11 +123,6 @@ footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); pa
 .ways { padding: 56px 24px; }
 .ways-grid, .ways-grid.two { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; }
 .way-card { padding: 32px 24px; }
-#header { padding: 0 20px; height: 64px; }
-.header-logo-text { display: none; }
-#navbar { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(15,10,4,0.98); flex-direction: column; padding: 24px 20px; gap: 20px; border-bottom: 0.5px solid var(--border); }
-#navbar.show { display: flex; }
-.mobile-nav-toggle { display: block; }
 .hero { padding: 96px 24px 64px; }
 .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
 .hero-sun { width: 72px; height: 72px; margin-bottom: 20px; }
@@ -161,12 +145,12 @@ footer { background: var(--choc-deep); border-top: 0.5px solid var(--border); pa
 footer { padding: 32px 24px; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-#header { padding: 0 32px; }
 .split, .sara { padding: 64px 32px; }
 .book-stack img { width: 140px; }
 .book-stack img:nth-child(2) { width: 165px; }
 }
 </style>
+  <link href="assets/css/site-nav.css" rel="stylesheet">
 </head>
 <body>
   <header id="header">
@@ -174,14 +158,14 @@ footer { padding: 32px 24px; }
       <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
-  <nav id="navbar">
-  <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
-  <a href="https://tavascompass.com">Tavas Compass</a>
-  <a href="https://tavas-world-outfitters.myshopify.com" target="_blank">Shop</a>
-  <a href="books.html">Library</a>
-  <a href="about.html">About</a>
-  <a href="connect.html" class="nav-cta">Work With Sara</a>
-</nav>
+    <nav id="navbar">
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
+      <a href="https://tavascompass.com">Tavas Compass</a>
+      <a href="https://tavas-world-outfitters.myshopify.com" target="_blank">Shop</a>
+      <a href="books.html">Library</a>
+      <a href="about.html">About</a>
+      <a href="connect.html" class="nav-cta">Work With Sara</a>
+    </nav>
     <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
     </button>
@@ -378,13 +362,6 @@ Discover an ecosystem of tools, insights, and stories designed to help you thriv
   </footer>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById('mobileToggle').addEventListener('click', function() {
-      document.getElementById('navbar').classList.toggle('show');
-    });
-    window.addEventListener('scroll', function() {
-      const h = document.getElementById('header');
-      h.style.borderBottomColor = window.scrollY > 40 ? 'rgba(212,168,83,0.2)' : 'rgba(212,168,83,0.12)';
-    });
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
@@ -397,5 +374,6 @@ Discover an ecosystem of tools, insights, and stories designed to help you thriv
       obs.observe(el);
     });
   </script>
+  <script src="assets/js/site-nav.js"></script>
 </body>
 </html>
