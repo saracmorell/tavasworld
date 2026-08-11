@@ -17,7 +17,6 @@ import os
 NAV_ITEMS = [
     ('https://play.google.com/store/apps/details?id=com.shineon.journal', 'Tavas App',     '_blank', ''),
     ('https://tavascompass.com',                                          'Tavas Compass', '',       ''),
-    ('https://tavas-world-outfitters.myshopify.com',                      'Shop',          '_blank', ''),
     ('books.html',                                                        'Library',       '',       ''),
     ('about.html',                                                        'About',         '',       ''),
     ('connect.html',                                                      'Work With Sara', '',      'nav-cta'),
