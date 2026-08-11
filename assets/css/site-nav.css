@@ -34,18 +34,20 @@
   z-index: 1000;
 }
 
-/* ── Logo ───────────────────────────────────────────────── */
+/* ── Logo ────────────────────────────────────────────────── */
 .header-logo-wrap {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  min-width: 0;
 }
 
 .header-logo-img {
   width: 36px;
   height: 36px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .header-logo-text {
@@ -107,6 +109,7 @@
   background: none;
   border: none;
   padding: 0;
+  flex-shrink: 0;
 }
 
 /* ── Tablet ─────────────────────────────────────────────── */
@@ -119,12 +122,26 @@
 /* ── Mobile ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   #header {
-    padding: 0 20px;
+    padding: 0 18px;
     height: 64px;
   }
 
+  /* The wordmark stays visible on phones. Someone arriving from a
+     search result or a shared link needs to see whose site this is,
+     so it is scaled down to sit beside the menu button instead of
+     being hidden. */
+  .header-logo-wrap {
+    gap: 10px;
+  }
+
+  .header-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
   .header-logo-text {
-    display: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
   }
 
   #navbar {
