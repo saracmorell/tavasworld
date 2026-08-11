@@ -131,17 +131,17 @@
      so it is scaled down to sit beside the menu button instead of
      being hidden. */
   .header-logo-wrap {
-    gap: 9px;
+    gap: 10px;
   }
 
   .header-logo-img {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
 
   .header-logo-text {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
   }
 
   #navbar {
@@ -163,26 +163,5 @@
 
   .mobile-nav-toggle {
     display: block;
-  }
-}
-
-/* ── Very narrow phones ─────────────────────────────────── */
-@media (max-width: 360px) {
-  #header {
-    padding: 0 14px;
-  }
-
-  .header-logo-wrap {
-    gap: 7px;
-  }
-
-  .header-logo-img {
-    width: 26px;
-    height: 26px;
-  }
-
-  .header-logo-text {
-    font-size: 0.64rem;
-    letter-spacing: 0.08em;
   }
 }
