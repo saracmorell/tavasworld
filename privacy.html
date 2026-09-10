@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Tavas World</title>
+  <meta name="description" content="How Tavas World LLC handles information on tavasworld.com. No accounts, no analytics, no cookies of our own — only what you choose to send us.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --choc:       #1C1208;
+      --choc-dark:  #140E06;
+      --choc-deep:  #0F0A04;
+      --gold:       #D4A853;
+      --gold-light: #E8C070;
+      --gold-dim:   rgba(212,168,83,0.55);
+      --cream:      #F5ECD7;
+      --cream-mid:  rgba(245,236,215,0.75);
+      --cream-low:  rgba(245,236,215,0.60);
+      --border:     rgba(212,168,83,0.14);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Playfair Display', Georgia, serif;
+      background-color: var(--choc);
+      color: var(--cream);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ══ LEGAL DOCUMENT ══
+       A single readable column. Same tokens, type and rhythm as the rest of
+       the site; only the measure is narrower, because a policy is read in
+       long lines rather than scanned. */
+    main { flex: 1; padding: 118px 24px 72px; }
+
+    .legal-wrap { max-width: 760px; margin: 0 auto; }
+
+    .legal-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: rgba(212,168,83,0.86);
+      margin-bottom: 14px;
+    }
+
+    .legal-wrap h1 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 700; line-height: 1.18;
+      color: var(--cream);
+    }
+
+    .legal-updated {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.76rem; letter-spacing: 0.06em;
+      color: var(--cream-low);
+      margin-top: 12px;
+    }
+
+    .legal-intro {
+      font-size: 1.02rem; line-height: 1.85;
+      color: var(--cream-mid);
+      margin-top: 26px;
+      padding-bottom: 30px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .legal-wrap h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.16rem; font-weight: 700; line-height: 1.35;
+      color: var(--cream);
+      margin-top: 44px;
+    }
+
+    .legal-wrap h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--cream);
+      margin-top: 26px;
+    }
+
+    .legal-wrap p,
+    .legal-wrap li {
+      font-size: 0.97rem; line-height: 1.85;
+      color: var(--cream-mid);
+    }
+
+    .legal-wrap p { margin-top: 14px; }
+    .legal-wrap ul { margin: 14px 0 0; padding-left: 22px; }
+    .legal-wrap li { margin-top: 8px; }
+    .legal-wrap strong { color: var(--cream); font-weight: 600; }
+
+    .legal-wrap a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .legal-wrap a:hover { color: var(--gold-light); }
+    .legal-wrap a:focus-visible,
+    .skip-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* A short summary panel, in the same card treatment the site already
+       uses for its feature cards. */
+    .legal-callout {
+      margin-top: 30px;
+      padding: 24px 26px;
+      background: rgba(212,168,83,0.05);
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+    }
+    .legal-callout h2 { margin-top: 0; font-size: 1.02rem; }
+    .legal-callout ul { margin-top: 12px; }
+
+    .skip-link {
+      position: absolute; left: -9999px;
+      top: 8px; z-index: 100;
+      background: var(--gold); color: var(--choc-deep);
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 10px 18px; border-radius: 999px; text-decoration: none;
+    }
+    .skip-link:focus { left: 24px; }
+
+    @media (max-width: 768px) {
+      main { padding: 92px 22px 56px; }
+      .legal-wrap h2 { margin-top: 36px; }
+      .legal-callout { padding: 20px 20px; }
+    }
+  </style>
+  <link href="assets/css/site-nav.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#legal-content">Skip to content</a>
+
+  <header id="header">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
+    <nav id="navbar">
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
+      <a href="https://tavascompass.com">Tavas Compass</a>
+      <a href="books.html">Library</a>
+      <a href="about.html">About</a>
+      <a href="connect.html" class="nav-cta">Work With Sara</a>
+    </nav>
+    <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+  </header>
+
+  <main>
+    <div class="legal-wrap" id="legal-content">
+      <p class="legal-eyebrow">Tavas World</p>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated September 10, 2026</p>
+
+      <p class="legal-intro">
+        Tavas World LLC (&ldquo;Tavas World,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is a Montana limited
+        liability company. This policy explains what happens to information when you visit
+        <strong>tavasworld.com</strong>. It covers this website only. Tavas App and Tavas Compass are separate
+        products with their own privacy practices, described in section 8.
+      </p>
+
+      <div class="legal-callout">
+        <h2>The short version</h2>
+        <ul>
+          <li>This website has no accounts, no shopping cart, and no analytics.</li>
+          <li>It sets no cookies of its own and stores nothing in your browser.</li>
+          <li>The only information we receive is what you choose to type into one of two forms, or send us directly by email or phone.</li>
+          <li>We do not sell personal information, and we do not run advertising or tracking on this site.</li>
+        </ul>
+      </div>
+
+      <h2>1. Who is responsible for your information</h2>
+      <p>
+        Tavas World LLC, a Montana limited liability company, operates this website and is responsible for the
+        information described here. You can reach us at
+        <a href="mailto:support@tavasworld.com">support@tavasworld.com</a>.
+      </p>
+
+      <h2>2. Information you choose to give us</h2>
+      <p>There are exactly two forms on this website, and both are optional:</p>
+      <ul>
+        <li>
+          <strong>The Work With Sara contact form.</strong> It asks for your name, your email address, a category
+          describing what your message is about, and your message.
+        </li>
+        <li>
+          <strong>The email list signup.</strong> It asks for your email address and nothing else.
+        </li>
+      </ul>
+      <p>
+        Both forms submit to <strong>Web3Forms</strong>, a third-party form service, and that is where this
+        website&rsquo;s part ends. The signup is a plain HTML form post: your browser sends the email address directly
+        to Web3Forms and is then returned to a thank-you page on this site. The contact form sends its fields to the
+        same service from your browser. This website has no database and no server of its own, and runs no code that
+        stores, copies or forwards what you submit.
+      </p>
+      <p>
+        What happens to a submission after Web3Forms receives it is determined by our configuration with that service
+        and by its own terms and privacy policy, not by anything in this website. We use it so that enquiries and
+        signups reach us, and so we can reply to you and send the updates you asked for. This website does not
+        transfer what you submit to a mailing-list or marketing platform.
+      </p>
+      <p>
+        You can also contact us directly using the email address and telephone number published on the site. Anything
+        you send that way reaches us as an ordinary message.
+      </p>
+
+      <h2>3. Information collected automatically</h2>
+      <p>
+        This website is a set of static pages hosted on <strong>GitHub Pages</strong> and served through its content
+        delivery network. We do not operate our own server. As with any website, the hosting and delivery
+        infrastructure records standard technical request information — such as IP address, browser type and the page
+        requested — in order to serve the pages and protect the service from abuse. That information is handled by
+        those providers under their own policies. We do not receive an analytics dashboard, visitor profile, or report
+        built from it.
+      </p>
+
+      <h2>4. Cookies and browser storage</h2>
+      <p>
+        This website sets no cookies of its own. It does not write to localStorage, sessionStorage, IndexedDB, or any
+        other browser storage. Tavas World does not currently use cookies or browser storage for analytics,
+        advertising, or tracking on this website.
+      </p>
+      <p>
+        Third parties involved in delivering the site — our host and its network, and Google Fonts — may set or read
+        their own cookies or log requests according to their own policies. We do not control that and cannot see it.
+      </p>
+
+      <h2>5. Analytics, advertising and tracking</h2>
+      <p>
+        We do not run analytics software, tag managers, advertising pixels, remarketing tags, conversion trackers, or
+        cross-site profiling tools on this website. There are none in the site&rsquo;s code.
+      </p>
+      <p>
+        Tavas Compass, a separate product, does use advertising measurement on its own website. That is described in
+        the Tavas Compass privacy policy and does not apply to tavasworld.com.
+      </p>
+
+      <h2>6. Third parties that receive information through this site</h2>
+      <ul>
+        <li>
+          <strong>Web3Forms</strong> — receives everything submitted through either form. Its handling, storage
+          and retention of that information are governed by its own terms and privacy policy, which we do not
+          control.
+        </li>
+        <li>
+          <strong>GitHub Pages</strong> and its content delivery network — hosts and serves the site, and logs
+          technical request information as described above.
+        </li>
+        <li>
+          <strong>Google Fonts</strong> — the only third-party resource the pages load. Your browser requests font
+          files from Google&rsquo;s servers, which receive your IP address and browser information as part of that
+          request.
+        </li>
+      </ul>
+      <p>
+        These are service providers. We do not give them information to use for their own marketing, and we do not
+        share your information with data brokers, advertisers, or list resellers.
+      </p>
+
+      <h2>7. Links to other websites</h2>
+      <p>
+        This site links out to places where our work actually lives — Amazon listings for the books, Google Play for
+        Tavas App, the Tavas Compass website, Shota Music, social media profiles, and client or portfolio websites.
+        Following a link takes you to a company we do not control, under its own privacy policy and terms. Check
+        the policy of any site you land on.
+      </p>
+
+      <h2>8. Tavas App and Tavas Compass</h2>
+      <p>
+        Tavas World is the parent brand. <strong>Tavas App</strong> and <strong>Tavas Compass</strong> are separate
+        products, and this policy does not govern them.
+      </p>
+      <ul>
+        <li>
+          Your use of Tavas Compass is governed by the Tavas Compass privacy policy at
+          <a href="https://tavascompass.com/privacy" target="_blank" rel="noopener">tavascompass.com/privacy</a>.
+        </li>
+        <li>
+          Tavas App is distributed through Google Play. How the app handles information is described in the app&rsquo;s
+          own store listing and applicable policies, and by Google Play&rsquo;s terms.
+        </li>
+      </ul>
+      <p>
+        This website links to those products. It does not sign you in to them, and it does not pass information to
+        them.
+      </p>
+
+      <h2>9. How we use information</h2>
+      <ul>
+        <li>To read and reply to what you send us.</li>
+        <li>To send the email updates you asked to receive.</li>
+        <li>To discuss, quote and carry out consulting work you enquire about.</li>
+        <li>To keep the website working, accurate and secure.</li>
+      </ul>
+
+      <h2>10. When information may be shared</h2>
+      <p>
+        We do not sell personal information. Beyond the service providers listed in section 6, we share information
+        only where we are required to by law or valid legal process, or where we reasonably need to in order to
+        protect our rights, our property, or someone&rsquo;s safety. If Tavas World LLC were ever involved in a
+        business transfer, information could move as part of that, and this policy would continue to apply to it until
+        replaced by one that is at least as protective.
+      </p>
+
+      <h2>11. How long we keep information</h2>
+      <p>
+        This website stores nothing, so there is nothing retained here to keep or delete. We keep enquiries and
+        signups that reach us for as long as they are useful for the purpose you sent them — answering a question,
+        running a project, or keeping you on the list you asked to join. You can ask us to delete yours at any time
+        and we will.
+      </p>
+      <p>
+        Where information sits with our form provider or our host, their own retention schedules apply. Those are set
+        by them, not by us, and we do not state a period here that we cannot actually control.
+      </p>
+
+      <h2>12. Security</h2>
+      <p>
+        The site is served over HTTPS, and we use established providers for hosting and form delivery. No website or
+        email system is perfectly secure, and we will not claim otherwise. Please do not send sensitive personal
+        information — financial account numbers, government identification numbers, or health information — through
+        the forms or by email.
+      </p>
+
+      <h2>13. Your choices and your rights</h2>
+      <p>You can, at any time:</p>
+      <ul>
+        <li>ask what information we hold about you;</li>
+        <li>ask us to correct it;</li>
+        <li>ask us to delete it;</li>
+        <li>unsubscribe from email updates;</li>
+        <li>simply not use the forms — they are entirely voluntary.</li>
+      </ul>
+      <p>
+        Email <a href="mailto:support@tavasworld.com">support@tavasworld.com</a> and we will act on your request.
+      </p>
+      <p>
+        Depending on where you live, U.S. state privacy laws — including those in California, Colorado, Connecticut,
+        Utah and Virginia — may give you rights to access, correct, delete, or receive a copy of your personal
+        information, to opt out of certain uses, and to appeal if we refuse a request. We extend these choices to
+        everyone who asks, wherever you live. We do not sell personal information, we do not share it for
+        cross-context behavioural advertising, and we do not use it for targeted advertising or automated profiling.
+      </p>
+
+      <h2>14. Children&rsquo;s privacy</h2>
+      <p>
+        Some of what Tavas World publishes is written for young children. The website itself is built for the adults
+        who buy the books, download the app, and enquire about services. It is not directed to children: there are no
+        accounts, no purchases, no comments, and nothing a visitor can submit other than the two forms described
+        above.
+      </p>
+      <p>
+        We do not knowingly collect personal information from children under 13. If you believe a child has sent us
+        information, email <a href="mailto:support@tavasworld.com">support@tavasworld.com</a> and we will delete it.
+      </p>
+
+      <h2>15. Changes to this policy</h2>
+      <p>
+        If this website changes what it collects, we will update this page and change the date at the top. Where a
+        change is material, we will say so clearly rather than quietly revising the text.
+      </p>
+
+      <h2>16. Contact</h2>
+      <p>
+        Tavas World LLC, Montana, USA.<br>
+        Email <a href="mailto:support@tavasworld.com">support@tavasworld.com</a> and a person will answer.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="footer-logo-wrap" aria-label="Tavas World home">
+            <img src="assets/img/TWLogoNewTrans.png" alt="" class="footer-logo-img">
+            <span class="footer-logo-text">TAVAS <span>WORLD</span></span>
+          </a>
+          <p class="footer-tagline">Navigating life with intention.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener">Tavas App</a>
+          <a href="https://tavascompass.com" target="_blank" rel="noopener">Tavas Compass</a>
+          <a href="books.html">Library</a>
+          <a href="https://www.shotamusic.com" target="_blank" rel="noopener">Music</a>
+          <a href="about.html">About</a>
+          <a href="connect.html">Work With Sara</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-utility" aria-label="Support and legal">
+          <a href="mailto:support@tavasworld.com?subject=Tavas World Support">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Tavas World LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site-nav.js"></script>
+</body>
+</html>

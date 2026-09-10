@@ -36,12 +36,13 @@ FOOTER_ITEMS = [
     ('connect.html',                                                      'Work With Sara', ''),
 ]
 
-# Utility row. Support is the mailto the old footers already used.
-# Terms and Privacy are deliberately absent: no such page exists in this
-# repository yet, and inventing a dead link is worse than omitting one.
-# Add them here the moment those pages land.
+# Utility row. Support is the mailto the old footers already used; Terms and
+# Privacy are the Tavas World legal pages in this repository. Refunds is not
+# listed: this site takes no payments, so it has no refund policy of its own.
 FOOTER_UTILITY = [
     ('mailto:support@tavasworld.com?subject=Tavas World Support', 'Support', ''),
+    ('terms.html',                                                'Terms',   ''),
+    ('privacy.html',                                              'Privacy', ''),
 ]
 
 FOOTER_TAGLINE = 'Navigating life with intention.'
@@ -62,6 +63,8 @@ PAGES = [
     'connect.html',
     'services.html',
     'thankyou.html',
+    'terms.html',
+    'privacy.html',
 ]
 
 # Selectors owned by the shared stylesheet. Any inline rule matching these
