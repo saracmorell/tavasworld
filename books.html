@@ -83,18 +83,6 @@
     .book-card-type { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 10px; }
     .book-card-price { font-family: 'Montserrat', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--gold); margin-top: auto; }
 
-    /* ══ FOOTER ══ */
-    footer { background: var(--choc-deep); border-top: 0.5px solid rgba(212,168,83,0.07); padding: 40px 32px; }
-    .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-    .footer-brand img { width: 32px; height: 32px; object-fit: contain; border-radius: 50%; }
-    .footer-brand-name { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--cream); letter-spacing: 0.1em; }
-    .footer-tagline { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: var(--gold); }
-    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-mid); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; color: var(--cream-low); }
-
     /* ══ MOBILE ══ */
     @media (max-width: 768px) {
       .page-hero { padding: 60px 20px 40px; }
@@ -256,24 +244,31 @@
   </main>
 
   <!-- ══ FOOTER ══ -->
-  <footer>
+  <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" width="32" height="32">
-        <div class="footer-brand-name">TAVAS WORLD</div>
-        <div class="footer-tagline">Navigating life with intention.</div>
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="footer-logo-wrap" aria-label="Tavas World home">
+            <img src="assets/img/TWLogoNewTrans.png" alt="" class="footer-logo-img">
+            <span class="footer-logo-text">TAVAS <span>WORLD</span></span>
+          </a>
+          <p class="footer-tagline">Navigating life with intention.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener">Tavas App</a>
+          <a href="https://tavascompass.com" target="_blank" rel="noopener">Tavas Compass</a>
+          <a href="books.html">Library</a>
+          <a href="https://www.shotamusic.com" target="_blank" rel="noopener">Music</a>
+          <a href="about.html">About</a>
+          <a href="connect.html">Work With Sara</a>
+        </nav>
       </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="https://play.google.com/store/s/details?id=com.shineon.journal" target="_blank"></a>
-        <a href="services.html">Services</a>
-        <a href="books.html">Books</a>
-        <a href="https://www.shotamusic.com" target="_blank">Music</a>
-        <a href="about.html">About</a>
-        <a href="connect.html">Connect</a>
-        <a href="mailto:support@tavasworld.com?subject=App Support">Support</a>
+      <div class="footer-bottom">
+        <nav class="footer-utility" aria-label="Support and legal">
+          <a href="mailto:support@tavasworld.com?subject=Tavas World Support">Support</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Tavas World LLC. All rights reserved.</p>
       </div>
-      <div class="footer-copy">© 2026 Tavas World. All rights reserved.</div>
     </div>
   </footer>
 
