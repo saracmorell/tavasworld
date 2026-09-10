@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — Tavas World</title>
+  <meta name="description" content="The terms that govern use of the Tavas World website, published by Tavas World LLC.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --choc:       #1C1208;
+      --choc-dark:  #140E06;
+      --choc-deep:  #0F0A04;
+      --gold:       #D4A853;
+      --gold-light: #E8C070;
+      --gold-dim:   rgba(212,168,83,0.55);
+      --cream:      #F5ECD7;
+      --cream-mid:  rgba(245,236,215,0.75);
+      --cream-low:  rgba(245,236,215,0.60);
+      --border:     rgba(212,168,83,0.14);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Playfair Display', Georgia, serif;
+      background-color: var(--choc);
+      color: var(--cream);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ══ LEGAL DOCUMENT ══
+       A single readable column. Same tokens, type and rhythm as the rest of
+       the site; only the measure is narrower, because a policy is read in
+       long lines rather than scanned. */
+    main { flex: 1; padding: 118px 24px 72px; }
+
+    .legal-wrap { max-width: 760px; margin: 0 auto; }
+
+    .legal-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: rgba(212,168,83,0.86);
+      margin-bottom: 14px;
+    }
+
+    .legal-wrap h1 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 700; line-height: 1.18;
+      color: var(--cream);
+    }
+
+    .legal-updated {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.76rem; letter-spacing: 0.06em;
+      color: var(--cream-low);
+      margin-top: 12px;
+    }
+
+    .legal-intro {
+      font-size: 1.02rem; line-height: 1.85;
+      color: var(--cream-mid);
+      margin-top: 26px;
+      padding-bottom: 30px;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .legal-wrap h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.16rem; font-weight: 700; line-height: 1.35;
+      color: var(--cream);
+      margin-top: 44px;
+    }
+
+    .legal-wrap h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--cream);
+      margin-top: 26px;
+    }
+
+    .legal-wrap p,
+    .legal-wrap li {
+      font-size: 0.97rem; line-height: 1.85;
+      color: var(--cream-mid);
+    }
+
+    .legal-wrap p { margin-top: 14px; }
+    .legal-wrap ul { margin: 14px 0 0; padding-left: 22px; }
+    .legal-wrap li { margin-top: 8px; }
+    .legal-wrap strong { color: var(--cream); font-weight: 600; }
+
+    .legal-wrap a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    .legal-wrap a:hover { color: var(--gold-light); }
+    .legal-wrap a:focus-visible,
+    .skip-link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* A short summary panel, in the same card treatment the site already
+       uses for its feature cards. */
+    .legal-callout {
+      margin-top: 30px;
+      padding: 24px 26px;
+      background: rgba(212,168,83,0.05);
+      border: 0.5px solid var(--border);
+      border-radius: 14px;
+    }
+    .legal-callout h2 { margin-top: 0; font-size: 1.02rem; }
+    .legal-callout ul { margin-top: 12px; }
+
+    .skip-link {
+      position: absolute; left: -9999px;
+      top: 8px; z-index: 100;
+      background: var(--gold); color: var(--choc-deep);
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 10px 18px; border-radius: 999px; text-decoration: none;
+    }
+    .skip-link:focus { left: 24px; }
+
+    @media (max-width: 768px) {
+      main { padding: 92px 22px 56px; }
+      .legal-wrap h2 { margin-top: 36px; }
+      .legal-callout { padding: 20px 20px; }
+    }
+  </style>
+  <link href="assets/css/site-nav.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#legal-content">Skip to content</a>
+
+  <header id="header">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/TWLogoNewTrans.png" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
+    <nav id="navbar">
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
+      <a href="https://tavascompass.com">Tavas Compass</a>
+      <a href="books.html">Library</a>
+      <a href="about.html">About</a>
+      <a href="connect.html" class="nav-cta">Work With Sara</a>
+    </nav>
+    <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+  </header>
+
+  <main>
+    <div class="legal-wrap" id="legal-content">
+      <p class="legal-eyebrow">Tavas World</p>
+      <h1>Terms of Use</h1>
+      <p class="legal-updated">Last updated September 10, 2026</p>
+
+      <p class="legal-intro">
+        These terms govern your use of <strong>tavasworld.com</strong>, the website published by Tavas World LLC, a
+        Montana limited liability company. They are terms for using this website. They are not the terms for the
+        Tavas Compass subscription, the Tavas App, or any consulting engagement &mdash; each of those is governed by
+        its own agreement, as described below.
+      </p>
+
+      <h2>1. Acceptance of these terms</h2>
+      <p>
+        By using this website you agree to these terms. If you do not agree with them, please do not use the site.
+      </p>
+
+      <h2>2. Who you are dealing with</h2>
+      <p>
+        This website is published by <strong>Tavas World LLC</strong>, a Montana limited liability company.
+        &ldquo;Tavas World,&rdquo; &ldquo;we&rdquo; and &ldquo;us&rdquo; mean that company. Tavas World is the parent
+        brand for a small group of products and creative work, including children&rsquo;s books, Tavas App, Tavas
+        Compass, and Sara C. Morell&rsquo;s consulting practice.
+      </p>
+
+      <h2>3. Using this website</h2>
+      <p>
+        You may use this site if you are able to form a binding agreement, or if you are using it under the
+        supervision of a parent or guardian who can. The site has no accounts and no login, so nothing here requires
+        you to register.
+      </p>
+      <p>You agree not to:</p>
+      <ul>
+        <li>use the site for any unlawful purpose, or in a way that interferes with anyone else&rsquo;s use of it;</li>
+        <li>attempt to gain unauthorised access to the site or to any system connected to it;</li>
+        <li>scrape, harvest or bulk-download the site&rsquo;s content or the contact details published on it;</li>
+        <li>send us automated, deceptive or abusive submissions through the forms;</li>
+        <li>misrepresent who you are when you contact us.</li>
+      </ul>
+
+      <h2>4. What this website is</h2>
+      <p>
+        This website is informational. It describes books we publish, products we build, music from the Tavas World
+        family, and consulting services. Nothing on it is legal, financial, medical, tax, or professional advice, and
+        nothing on it creates a professional relationship between you and Tavas World LLC or Sara C. Morell.
+      </p>
+      <p>
+        Descriptions of services, availability and pricing on this site are provided for information and may change.
+        Any actual engagement is agreed separately and in writing.
+      </p>
+
+      <h2>5. Our content and intellectual property</h2>
+      <p>
+        Except where we say otherwise, the material on this website &mdash; the text, page designs, layouts,
+        photographs, illustrations, book covers, graphics, logos and code &mdash; is owned by Tavas World LLC or used
+        with permission, and is protected by copyright and other applicable laws. Copyright arises automatically in
+        original work; nothing here is a claim that any particular work has been registered with the United States
+        Copyright Office.
+      </p>
+      <p>
+        &ldquo;Tavas World,&rdquo; &ldquo;Tavas App&rdquo; and &ldquo;Tavas Compass,&rdquo; together with the Tavas
+        World and Tavas Compass logos and other brand elements, are names and marks we use to identify our products
+        and our business. We are not asserting any particular registration status for them here.
+      </p>
+
+      <h3>What you may do</h3>
+      <ul>
+        <li>View, browse and read the site.</li>
+        <li>Print or save a copy of a page for your own personal, non-commercial reference.</li>
+        <li>Share a link to any page.</li>
+        <li>Quote a short excerpt with attribution to Tavas World, where the law allows it.</li>
+      </ul>
+
+      <h3>What you may not do</h3>
+      <ul>
+        <li>Copy, republish, mirror or redistribute the site&rsquo;s content, in whole or in substantial part.</li>
+        <li>Use any of it commercially, including in a product, publication, course or advertisement.</li>
+        <li>Reproduce, adapt, translate or create derivative works from the books, illustrations, music or other
+            creative works, or from the site&rsquo;s design and code.</li>
+        <li>Use our names, logos or brand assets in a way that suggests we endorse, supply or are affiliated with
+            something we are not.</li>
+        <li>Remove or obscure any copyright or attribution notice.</li>
+      </ul>
+      <p>
+        The books and music are also sold and distributed on third-party platforms, and your rights in a copy you buy
+        there are set by that platform&rsquo;s terms and by copyright law. Buying a book or listening to a track does
+        not grant you rights to reproduce or republish it.
+      </p>
+
+      <h2>6. What you send us</h2>
+      <p>
+        When you use a form, or email or call us, you are choosing to send us that information. Please send only
+        information you have the right to share, and do not send anything confidential that you are not willing to
+        have read as ordinary business correspondence. How we handle what you send is described in our
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+      <p>
+        If you send us a suggestion, comment, or idea, we may use it in running and improving our business without
+        owing you payment or confidentiality. That does not affect your ownership of your own creative work, and it is
+        not an invitation to submit manuscripts or unsolicited work for publication.
+      </p>
+
+      <h2>7. Links to other websites</h2>
+      <p>
+        This site links to third-party websites and platforms, including Amazon, Google Play, Shota Music, social
+        media platforms, and client or portfolio sites. We do not control those services and are not responsible for
+        their content, products, availability, terms or privacy practices. A link is not an endorsement of everything
+        on the other end of it.
+      </p>
+
+      <h2>8. Tavas App and Tavas Compass</h2>
+      <p>
+        Tavas App and Tavas Compass are separate products, and these terms do not govern your use of them.
+      </p>
+      <ul>
+        <li>
+          Tavas Compass is a subscription service with its own terms of service, privacy policy and refund policy at
+          <a href="https://tavascompass.com" target="_blank" rel="noopener">tavascompass.com</a>.
+        </li>
+        <li>
+          Tavas App is distributed through Google Play and is subject to the app&rsquo;s own applicable terms and to
+          Google Play&rsquo;s terms.
+        </li>
+      </ul>
+      <p>
+        Where those product terms differ from these, the product&rsquo;s own terms govern that product.
+      </p>
+
+      <h2>9. Consulting and Work With Sara</h2>
+      <p>
+        The consulting pages describe services offered through Tavas World LLC and indicate typical ranges so you can
+        judge whether a conversation is worth having. Submitting the contact form is an enquiry. It is not a contract,
+        it does not reserve capacity, and it does not oblige either of us to proceed. Any engagement begins only when
+        scope, fees and terms are agreed separately in writing, and that agreement governs the work.
+      </p>
+
+      <h2>10. Purchases</h2>
+      <p>
+        You cannot buy anything on this website. There is no cart, no checkout and no payment processing here. Books
+        are sold through Amazon, the app is distributed through Google Play, music is available through Shota Music,
+        and Tavas Compass sells its own subscriptions on its own website.
+      </p>
+      <p>
+        Any purchase you make is a transaction with that platform or service, under its terms, its payment handling
+        and its refund policy &mdash; not under these terms. Prices, availability and offers shown here are
+        informational and may be out of date; the selling platform&rsquo;s listing controls.
+      </p>
+
+      <h2>11. Availability and accuracy</h2>
+      <p>
+        We try to keep this site accurate and available, but we do not promise either. Content may become out of date,
+        contain errors, or be changed or removed without notice. We may modify, suspend or discontinue any part of the
+        site at any time.
+      </p>
+
+      <h2>12. Disclaimer</h2>
+      <p>
+        The website and its content are provided &ldquo;as is&rdquo; and &ldquo;as available,&rdquo; without warranties
+        of any kind, whether express or implied, including implied warranties of merchantability, fitness for a
+        particular purpose, title, and non-infringement. We do not warrant that the site will be uninterrupted,
+        secure, or error-free, or that any content is accurate, complete or current.
+      </p>
+
+      <h2>13. Limitation of liability</h2>
+      <p>
+        To the fullest extent permitted by law, Tavas World LLC and its members, officers, contractors and agents will
+        not be liable for any indirect, incidental, special, consequential, exemplary or punitive damages, or for lost
+        profits, lost data, business interruption, or loss of goodwill, arising out of or relating to your use of this
+        website &mdash; whether the claim is based in contract, tort, statute or anything else, and even if we have
+        been advised that such damages are possible.
+      </p>
+      <p>
+        Some jurisdictions do not allow certain exclusions or limitations. Where that is the case, the exclusions and
+        limitations above apply only to the extent permitted, and nothing in these terms limits liability that cannot
+        lawfully be limited.
+      </p>
+
+      <h2>14. Indemnification</h2>
+      <p>
+        You agree to indemnify and hold harmless Tavas World LLC and the people working with it from any claims,
+        losses, liabilities and reasonable legal fees arising out of your misuse of this website, your breach of these
+        terms, or your violation of any law or of anyone else&rsquo;s rights.
+      </p>
+
+      <h2>15. Restricting access</h2>
+      <p>
+        We may restrict or block access to this website, in whole or in part, at any time and without notice,
+        including where we reasonably believe it is being misused. Sections 5, 6, and 12 through 17 continue to apply
+        afterwards.
+      </p>
+
+      <h2>16. Governing law</h2>
+      <p>
+        These terms are governed by the laws of the State of Montana, United States, without regard to its
+        conflict-of-laws rules. Any dispute arising out of or relating to this website or these terms will be brought
+        in the state or federal courts located in Montana, and both of us consent to that jurisdiction.
+      </p>
+
+      <h2>17. Changes to these terms</h2>
+      <p>
+        We may update these terms. When we do, we will change the date at the top of this page. If a change is
+        material, we will say so rather than quietly revising the text. Continuing to use the site after a change
+        means you accept the updated terms.
+      </p>
+
+      <h2>18. Contact</h2>
+      <p>
+        Tavas World LLC, Montana, USA.<br>
+        Email <a href="mailto:support@tavasworld.com">support@tavasworld.com</a> with any question about these terms.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="footer-logo-wrap" aria-label="Tavas World home">
+            <img src="assets/img/TWLogoNewTrans.png" alt="" class="footer-logo-img">
+            <span class="footer-logo-text">TAVAS <span>WORLD</span></span>
+          </a>
+          <p class="footer-tagline">Navigating life with intention.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener">Tavas App</a>
+          <a href="https://tavascompass.com" target="_blank" rel="noopener">Tavas Compass</a>
+          <a href="books.html">Library</a>
+          <a href="https://www.shotamusic.com" target="_blank" rel="noopener">Music</a>
+          <a href="about.html">About</a>
+          <a href="connect.html">Work With Sara</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-utility" aria-label="Support and legal">
+          <a href="mailto:support@tavasworld.com?subject=Tavas World Support">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Tavas World LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site-nav.js"></script>
+</body>
+</html>
