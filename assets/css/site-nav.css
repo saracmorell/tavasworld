@@ -165,3 +165,147 @@
     display: block;
   }
 }
+
+/* ============================================================
+   TAVAS WORLD — MASTER FOOTER
+   Single source of truth for the site footer on every page, the
+   same way the header above is. Structure mirrors the header:
+   brand lockup on the left, navigation on the right, with a
+   quiet utility row beneath. Edit here once; every page updates.
+   ============================================================ */
+
+.site-footer {
+  background: var(--tw-nav-deep);
+  border-top: 0.5px solid var(--tw-nav-border);
+  padding: 36px 48px 28px;
+}
+
+.site-footer .footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ── Top block: centred, matching the site's centred language ── */
+.site-footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+/* The same lockup as the header, one step smaller, centred. */
+.site-footer .footer-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.site-footer .footer-logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.site-footer .footer-logo-text {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tw-nav-cream);
+  white-space: nowrap;
+}
+
+.site-footer .footer-logo-text span { color: var(--tw-nav-gold); }
+
+.site-footer .footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer .footer-nav a {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(245, 236, 215, 0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-radius: 3px;
+}
+
+.site-footer .footer-nav a:hover { color: var(--tw-nav-gold); }
+
+/* ── A restrained brand line, no longer the focal point ──── */
+.site-footer .footer-tagline {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: rgba(245, 236, 215, 0.42);
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+/* ── Bottom block: subtle divider, then Support, then copyright ── */
+.site-footer .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 0.5px solid var(--tw-nav-border);
+}
+
+.site-footer .footer-utility {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer .footer-utility a {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(245, 236, 215, 0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-radius: 3px;
+}
+
+.site-footer .footer-utility a:hover { color: var(--tw-nav-cream); }
+
+.site-footer .footer-copy {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: rgba(245, 236, 215, 0.45);
+  margin: 0;
+}
+
+/* Focus is visible on every footer control, not just on hover. */
+.site-footer a:focus-visible {
+  outline: 2px solid var(--tw-nav-gold);
+  outline-offset: 3px;
+}
+
+/* ── Phones: stack, centred, still compact ──────────────── */
+@media (max-width: 768px) {
+  .site-footer { padding: 30px 24px 24px; }
+  .site-footer .footer-nav { gap: 12px 22px; }
+}

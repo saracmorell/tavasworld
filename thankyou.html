@@ -109,21 +109,6 @@
     }
     .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
 
-    /* ══ FOOTER ══ */
-    footer {
-      background: var(--choc-deep);
-      border-top: 0.5px solid rgba(212,168,83,0.07);
-      padding: 32px;
-      text-align: center;
-    }
-    .footer-tagline {
-      font-family: 'Playfair Display', serif; font-size: 1rem;
-      font-style: italic; color: var(--gold); margin-bottom: 8px;
-    }
-    .footer-copy {
-      font-family: 'Montserrat', sans-serif; font-size: 0.75rem; color: var(--cream-low);
-    }
-
     @media (max-width: 768px) {
       main { padding: 100px 20px 60px; }
     }
@@ -167,9 +152,32 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-tagline">Navigating life with intention.</div>
-    <div class="footer-copy">© 2025 Tavas World. All rights reserved.</div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="footer-logo-wrap" aria-label="Tavas World home">
+            <img src="assets/img/TWLogoNewTrans.png" alt="" class="footer-logo-img">
+            <span class="footer-logo-text">TAVAS <span>WORLD</span></span>
+          </a>
+          <p class="footer-tagline">Navigating life with intention.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener">Tavas App</a>
+          <a href="https://tavascompass.com" target="_blank" rel="noopener">Tavas Compass</a>
+          <a href="books.html">Library</a>
+          <a href="https://www.shotamusic.com" target="_blank" rel="noopener">Music</a>
+          <a href="about.html">About</a>
+          <a href="connect.html">Work With Sara</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-utility" aria-label="Support and legal">
+          <a href="mailto:support@tavasworld.com?subject=Tavas World Support">Support</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Tavas World LLC. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

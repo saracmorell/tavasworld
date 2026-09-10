@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-TAVAS WORLD — navigation synchroniser.
+TAVAS WORLD — navigation and footer synchroniser.
 
-The homepage header is the master. Running this script rewrites the
-header block on every page so all navigation stays identical, and points
-each page at the shared stylesheet and script.
+This file is the master for both the site header and the site footer.
+Running it rewrites those two blocks on every page so they stay
+identical everywhere, and points each page at the shared stylesheet
+and script.
 
 Usage:  python3 tools/sync-nav.py
 """
@@ -21,6 +22,30 @@ NAV_ITEMS = [
     ('about.html',                                                        'About',         '',       ''),
     ('connect.html',                                                      'Work With Sara', '',      'nav-cta'),
 ]
+
+# ── The master footer. Edit HERE and re-run to update every page. ──
+# Primary row. Every destination is one already live on the site: the
+# first two match the header exactly, Music is the link the homepage and
+# the old footers already pointed at.
+FOOTER_ITEMS = [
+    ('https://play.google.com/store/apps/details?id=com.shineon.journal', 'Tavas App',      '_blank'),
+    ('https://tavascompass.com',                                          'Tavas Compass',  '_blank'),
+    ('books.html',                                                        'Library',        ''),
+    ('https://www.shotamusic.com',                                        'Music',          '_blank'),
+    ('about.html',                                                        'About',          ''),
+    ('connect.html',                                                      'Work With Sara', ''),
+]
+
+# Utility row. Support is the mailto the old footers already used.
+# Terms and Privacy are deliberately absent: no such page exists in this
+# repository yet, and inventing a dead link is worse than omitting one.
+# Add them here the moment those pages land.
+FOOTER_UTILITY = [
+    ('mailto:support@tavasworld.com?subject=Tavas World Support', 'Support', ''),
+]
+
+FOOTER_TAGLINE = 'Navigating life with intention.'
+FOOTER_COPY = '&copy; 2026 Tavas World LLC. All rights reserved.'
 
 LOGO_HREF = 'index.html'
 LOGO_IMG = 'assets/img/TWLogoNewTrans.png'
@@ -44,6 +69,8 @@ PAGES = [
 OWNED = re.compile(
     r'^\s*(?:/\*.*?\*/\s*)*'
     r'(?:#header|\.header-logo-wrap|\.header-logo-img|\.header-logo-text(?:\s+span)?'
+    r'|footer|\.footer-inner|\.footer-brand(?:-name)?|\.footer-brand\s+img'
+    r'|\.footer-tagline|\.footer-links(?:\s+a(?::hover)?)?|\.footer-copy'
     r'|#navbar(?:\s+a)?(?:\.show|:hover|\.active)?'
     r'|\.nav-cta(?::hover)?|\.mobile-nav-toggle|\.mobile-menu\s+\.nav-cta)'
     r'(?:\s*,\s*(?:#navbar\s+a(?::hover|\.active)?|\.nav-cta|\.mobile-nav-toggle))*\s*$',
@@ -71,6 +98,42 @@ def build_header(indent='  '):
     out.append(f'{i}    <i class="bi bi-list"></i>')
     out.append(f'{i}  </button>')
     out.append(f'{i}</header>')
+    return '\n'.join(out)
+
+
+def build_footer(indent='  '):
+    i = indent
+    out = [f'{i}<footer class="site-footer">']
+    out.append(f'{i}  <div class="footer-inner">')
+    out.append(f'{i}    <div class="footer-top">')
+    out.append(f'{i}      <div>')
+    out.append(f'{i}        <a href="{LOGO_HREF}" class="footer-logo-wrap" aria-label="Tavas World home">')
+    out.append(f'{i}          <img src="{LOGO_IMG}" alt="" class="footer-logo-img">')
+    out.append(f'{i}          <span class="footer-logo-text">{LOGO_TEXT}</span>')
+    out.append(f'{i}        </a>')
+    if FOOTER_TAGLINE:
+        out.append(f'{i}        <p class="footer-tagline">{FOOTER_TAGLINE}</p>')
+    out.append(f'{i}      </div>')
+    out.append(f'{i}      <nav class="footer-nav" aria-label="Footer">')
+    for href, label, target in FOOTER_ITEMS:
+        attrs = f'href="{href}"'
+        if target:
+            attrs += f' target="{target}" rel="noopener"'
+        out.append(f'{i}        <a {attrs}>{label}</a>')
+    out.append(f'{i}      </nav>')
+    out.append(f'{i}    </div>')
+    out.append(f'{i}    <div class="footer-bottom">')
+    out.append(f'{i}      <nav class="footer-utility" aria-label="Support and legal">')
+    for href, label, target in FOOTER_UTILITY:
+        attrs = f'href="{href}"'
+        if target:
+            attrs += f' target="{target}" rel="noopener"'
+        out.append(f'{i}        <a {attrs}>{label}</a>')
+    out.append(f'{i}      </nav>')
+    out.append(f'{i}      <p class="footer-copy">{FOOTER_COPY}</p>')
+    out.append(f'{i}    </div>')
+    out.append(f'{i}  </div>')
+    out.append(f'{i}</footer>')
     return '\n'.join(out)
 
 
@@ -114,6 +177,14 @@ def process(path):
         return None, [f'{path}: NO <header id="header"> FOUND — skipped']
     s = s[:m.start()] + build_header() + s[m.end():]
     notes.append('header block replaced')
+
+    # 1b. Replace the footer block
+    fm = re.search(r'[ \t]*<footer[^>]*>.*?</footer>', s, re.S)
+    if fm:
+        s = s[:fm.start()] + build_footer() + s[fm.end():]
+        notes.append('footer block replaced')
+    else:
+        notes.append('NO <footer> FOUND — footer skipped')
 
     # 2. Strip inline header CSS
     def style_repl(sm):
