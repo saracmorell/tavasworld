@@ -24,17 +24,9 @@ NAV_ITEMS = [
 ]
 
 # ── The master footer. Edit HERE and re-run to update every page. ──
-# Primary row. Every destination is one already live on the site: the
-# first two match the header exactly, Music is the link the homepage and
-# the old footers already pointed at.
-FOOTER_ITEMS = [
-    ('https://play.google.com/store/apps/details?id=com.shineon.journal', 'Tavas App',      '_blank'),
-    ('https://tavascompass.com',                                          'Tavas Compass',  '_blank'),
-    ('books.html',                                                        'Library',        ''),
-    ('https://www.shotamusic.com',                                        'Music',          '_blank'),
-    ('about.html',                                                        'About',          ''),
-    ('connect.html',                                                      'Work With Sara', ''),
-]
+# There is no primary navigation row: it repeated the header link for link,
+# and the header is where navigation belongs. The footer carries the brand
+# lockup, the tagline, the utility row and the copyright.
 
 # Utility row. Support is the mailto the old footers already used; Terms and
 # Privacy are the Tavas World legal pages in this repository. Refunds is not
@@ -117,13 +109,6 @@ def build_footer(indent='  '):
     if FOOTER_TAGLINE:
         out.append(f'{i}        <p class="footer-tagline">{FOOTER_TAGLINE}</p>')
     out.append(f'{i}      </div>')
-    out.append(f'{i}      <nav class="footer-nav" aria-label="Footer">')
-    for href, label, target in FOOTER_ITEMS:
-        attrs = f'href="{href}"'
-        if target:
-            attrs += f' target="{target}" rel="noopener"'
-        out.append(f'{i}        <a {attrs}>{label}</a>')
-    out.append(f'{i}      </nav>')
     out.append(f'{i}    </div>')
     out.append(f'{i}    <div class="footer-bottom">')
     out.append(f'{i}      <nav class="footer-utility" aria-label="Support and legal">')
