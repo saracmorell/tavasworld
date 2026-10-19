@@ -41,7 +41,7 @@ FOOTER_TAGLINE = 'Navigating life with intention.'
 FOOTER_COPY = '&copy; 2026 Tavas World LLC. All rights reserved.'
 
 LOGO_HREF = 'index.html'
-LOGO_IMG = 'assets/img/TWLogoNewTrans.png'
+LOGO_IMG = 'assets/img/web/tw-logo-sunset.webp'
 LOGO_ALT = 'Tavas World'
 LOGO_TEXT = 'TAVAS <span>WORLD</span>'
 

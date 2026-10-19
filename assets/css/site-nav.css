@@ -61,6 +61,10 @@
 
 .header-logo-text span {
   color: var(--tw-nav-gold);
+  background: linear-gradient(90deg, #F6CF6A, #EC8A45 50%, #D0566A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ── Nav links ──────────────────────────────────────────── */
@@ -221,7 +225,7 @@
   white-space: nowrap;
 }
 
-.site-footer .footer-logo-text span { color: var(--tw-nav-gold); }
+.site-footer .footer-logo-text span { color: var(--tw-nav-gold); background: linear-gradient(90deg, #F6CF6A, #EC8A45 50%, #D0566A); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
 .site-footer .footer-nav {
   display: flex;
