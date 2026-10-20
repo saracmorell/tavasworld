@@ -153,6 +153,12 @@ img, svg, video { max-width: 100%; }
 }
 
 /* ===== Homepage hero refresh (2026-10-19) ===== */
+/* Eyebrow: letters spread in, then a soft sunset shimmer passes across every few seconds (CSS only) */
+.hero-eyebrow.shimmer { background: linear-gradient(90deg, var(--gold) 0%, var(--gold) 40%, #F6CF6A 47%, #EC8A45 50%, #D0566A 53%, var(--gold) 60%, var(--gold) 100%); background-size: 250% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: eyebrowIn 1.2s cubic-bezier(.2,.8,.2,1) both, shimmer 6s ease-in-out 1.6s infinite; }
+@keyframes eyebrowIn { from { opacity: 0; letter-spacing: .6em; } to { opacity: 1; } }
+@keyframes shimmer { 0% { background-position: 100% 0; } 35%,100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-eyebrow.shimmer { animation: none; } }
+
 .hero { padding: 120px 24px 72px; }
 .hero-glow { position:absolute; inset:-20%; pointer-events:none; z-index:0; filter: blur(60px); opacity:.55;
   background: radial-gradient(40% 35% at 30% 30%, rgba(246,207,106,.20), transparent 70%),
@@ -226,7 +232,7 @@ img, svg, video { max-width: 100%; }
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="hero-glow" aria-hidden="true"></div>
-      <p class="hero-eyebrow">Inspired by Freedom &middot; Navigating Life with Intention</p>
+      <p class="hero-eyebrow shimmer">Inspired by Freedom &middot; Navigating Life with Intention</p>
       <svg class="hero-logo" viewBox="0 0 200 200" role="img" aria-label="Tavas World logo">
         <defs><linearGradient id="twg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6CF6A"/><stop offset=".55" stop-color="#EC8A45"/><stop offset="1" stop-color="#D0566A"/></linearGradient></defs>
         <g transform="translate(-2,8)">
