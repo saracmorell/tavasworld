@@ -8,10 +8,10 @@
 <meta charset="UTF-8">
 <link rel="canonical" href="https://www.tavasworld.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tavas World | Career Tools, Wellness, Books &amp; Consulting</title>
-<meta name="description" content="Explore Tavas Compass career guidance, the Tavas wellness app, children's books and professional consulting from Tavas World.">
-<meta property="og:title" content="Tavas World | Career Tools, Wellness, Books &amp; Consulting" />
-<meta property="og:description" content="Explore Tavas Compass career guidance, the Tavas wellness app, children's books and professional consulting from Tavas World." />
+<title>Tavas World | Career Tools, Wellness &amp; Books</title>
+<meta name="description" content="Explore Tavas Compass career guidance, the Tavas wellness app and books from Tavas World.">
+<meta property="og:title" content="Tavas World | Career Tools, Wellness &amp; Books" />
+<meta property="og:description" content="Explore Tavas Compass career guidance, the Tavas wellness app and books from Tavas World." />
 <meta property="og:image" content="https://www.tavasworld.com/assets/img/tavasworld-share-tw.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -151,6 +151,62 @@ img, svg, video { max-width: 100%; }
 .book-stack img { width: 140px; }
 .book-stack img:nth-child(2) { width: 165px; }
 }
+
+/* ===== Homepage hero refresh (2026-10-19) ===== */
+/* Eyebrow: letters spread in, then a soft sunset shimmer passes across every few seconds (CSS only) */
+.hero-eyebrow.shimmer { background: linear-gradient(90deg, var(--gold) 0%, var(--gold) 40%, #F6CF6A 47%, #EC8A45 50%, #D0566A 53%, var(--gold) 60%, var(--gold) 100%); background-size: 250% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: eyebrowIn 1.2s cubic-bezier(.2,.8,.2,1) both, shimmer 6s ease-in-out 1.6s infinite; }
+@keyframes eyebrowIn { from { opacity: 0; letter-spacing: .6em; } to { opacity: 1; } }
+@keyframes shimmer { 0% { background-position: 100% 0; } 35%,100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) { .hero-eyebrow.shimmer { animation: none; } }
+
+.hero { padding: 120px 24px 72px; }
+.hero-glow { position:absolute; inset:-20%; pointer-events:none; z-index:0; filter: blur(60px); opacity:.55;
+  background: radial-gradient(40% 35% at 30% 30%, rgba(246,207,106,.20), transparent 70%),
+              radial-gradient(35% 30% at 70% 35%, rgba(236,138,69,.18), transparent 70%),
+              radial-gradient(30% 30% at 50% 70%, rgba(208,86,106,.14), transparent 70%);
+  animation: glowDrift 18s ease-in-out infinite alternate; }
+@keyframes glowDrift { 0% { transform: translate3d(-3%, -2%, 0) scale(1); } 100% { transform: translate3d(3%, 2%, 0) scale(1.08); } }
+.hero > *:not(.hero-bg):not(.hero-glow) { position: relative; z-index: 1; }
+.hero-logo { width: 168px; height: 168px; margin: 4px auto 14px; display:block; overflow: visible; }
+.hero-logo .tw-path { stroke-dasharray: 520; stroke-dashoffset: 520; animation: drawPath 1.6s cubic-bezier(.65,0,.35,1) .25s forwards; }
+.hero-logo .tw-sun { transform-origin: 164px 48px; transform: scale(0); opacity: 0; animation: sunRise .7s cubic-bezier(.34,1.56,.64,1) 1.65s forwards, sunGlow 5s ease-in-out 2.4s infinite; }
+@keyframes drawPath { to { stroke-dashoffset: 0; } }
+@keyframes sunRise { to { transform: scale(1); opacity: 1; } }
+@keyframes sunGlow { 0%,100% { filter: drop-shadow(0 0 0 rgba(236,138,69,0)); } 50% { filter: drop-shadow(0 0 10px rgba(236,138,69,.55)); } }
+.hero-intro { font-family: 'Playfair Display', serif; font-size: clamp(1.02rem, 1.6vw, 1.2rem); color: var(--cream-mid); max-width: 660px; margin: 0 auto 36px; line-height: 1.7; animation: riseIn 1.2s ease 0.4s both; }
+.hero-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; width: 100%; max-width: 1040px; margin: 0 auto; animation: riseIn 1.3s ease 0.55s both; }
+.prod-card { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 26px 22px 24px; border-radius: 20px; text-decoration: none; color: var(--cream);
+  background: linear-gradient(180deg, rgba(245,236,215,.045), rgba(245,236,215,.015)); border: 1px solid rgba(212,168,83,.18);
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; overflow: hidden; }
+.prod-card::before { content:""; position:absolute; inset:0; border-radius: inherit; padding:1px; background: linear-gradient(135deg, #F6CF6A, #EC8A45, #D0566A); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .35s; }
+.prod-card:hover, .prod-card:focus-visible { transform: translateY(-6px); box-shadow: 0 24px 50px -20px rgba(236,138,69,.45); border-color: transparent; }
+.prod-card:hover::before, .prod-card:focus-visible::before { opacity: 1; }
+.prod-card.primary { background: linear-gradient(180deg, rgba(236,138,69,.12), rgba(245,236,215,.02)); border-color: rgba(236,138,69,.35); }
+.prod-media { height: 128px; display:flex; align-items:center; justify-content:center; margin-bottom: 4px; }
+.prod-media img { max-height: 128px; width: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,.5)); }
+.prod-media .books { display:flex; gap:6px; align-items:center; justify-content:center; width:100%; }
+.prod-media .books img { width: 30%; height: auto; max-height: 96px; object-fit: cover; border-radius: 6px; }
+.prod-media .books img:nth-child(2) { width: 34%; max-height: 112px; }
+.prod-label { font-family: 'Montserrat', sans-serif; font-size: .66rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.prod-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1.12rem; font-weight: 700; margin: 0; line-height: 1.35; color: var(--cream); }
+.prod-cta { margin-top: 6px; font-family: 'Montserrat', sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--choc-deep); background: var(--gold); padding: 11px 22px; border-radius: 999px; transition: background .25s; }
+.prod-card:not(.primary) .prod-cta { background: transparent; color: var(--cream); border: 1px solid rgba(212,168,83,.45); }
+.prod-card:hover .prod-cta { background: linear-gradient(90deg, #F6CF6A, #EC8A45); color: var(--choc-deep); border-color: transparent; }
+.hero-sara { margin-top: 26px; font-size: .78rem; letter-spacing: .08em; color: var(--cream-low); animation: riseIn 1.3s ease .7s both; }
+.hero-sara a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212,168,83,.4); padding-bottom: 2px; }
+.hero-sara a:hover { color: var(--gold-light); }
+@media (max-width: 860px) {
+  .hero-products { grid-template-columns: 1fr; max-width: 460px; gap: 12px; }
+  .prod-card { display: grid; grid-template-columns: 96px 1fr; grid-template-rows: auto auto auto; column-gap: 16px; row-gap: 4px; text-align: left; align-items: center; padding: 16px; }
+  .prod-media { grid-row: 1 / 4; height: 96px; margin: 0; }
+  .prod-media img { max-height: 92px; }
+  .prod-media .books img { width: 48%; max-height: 70px; } .prod-media .books img:nth-child(3) { display:none; } .prod-media .books img:nth-child(2) { width: 48%; max-height: 80px; }
+  .prod-card h3 { font-size: 1rem; }
+  .prod-cta { justify-self: start; padding: 8px 16px; font-size: .62rem; margin-top: 4px; }
+  .hero-intro { font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+}
+@media (max-width: 768px) { .hero-logo { width: 120px; height: 120px; } .hero { padding: 104px 20px 56px; } }
+@media (prefers-reduced-motion: reduce) { .hero-glow { animation: none; } .hero-logo .tw-path { animation: none; stroke-dashoffset: 0; } .hero-logo .tw-sun { animation: none; transform: none; opacity: 1; } }
 </style>
   <link href="assets/css/site-nav.css" rel="stylesheet">
 </head>
@@ -165,7 +221,6 @@ img, svg, video { max-width: 100%; }
       <a href="https://tavascompass.com">Tavas Compass</a>
       <a href="books.html">Library</a>
       <a href="about.html">About</a>
-      <a href="connect.html" class="nav-cta">Work With Sara</a>
     </nav>
     <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
       <i class="bi bi-list"></i>
@@ -175,61 +230,38 @@ img, svg, video { max-width: 100%; }
     <!-- SECTION 1 — HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
-     <p class="hero-eyebrow">Inspired by Freedom &middot; Navigating Life with Intention</p>
-      <img src="assets/img/tw-logo-sunset.png" alt="Tavas World logo" class="hero-sun">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="hero-eyebrow shimmer">Inspired by Freedom &middot; Navigating Life with Intention</p>
+      <svg class="hero-logo" viewBox="0 0 200 200" role="img" aria-label="Tavas World logo">
+        <defs><linearGradient id="twg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6CF6A"/><stop offset=".55" stop-color="#EC8A45"/><stop offset="1" stop-color="#D0566A"/></linearGradient></defs>
+        <g transform="translate(-2,8)">
+          <path class="tw-path" d="M18 56 H100 M59 56 V152 L88 96 L117 152 L144 78" fill="none" stroke="url(#twg)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle class="tw-sun" cx="164" cy="48" r="24" fill="url(#twg)"/>
+        </g>
+      </svg>
       <p class="hero-wordmark">Tavas <span>World</span></p>
-     <h1>Navigate life with confidence.</h1>
-
-<p class="hero-brand-line" style="margin-bottom:10px;">
-Life doesn't follow just one path.
-</p>
-<p class="hero-brand-line">
-Tavas World brings together career guidance, wellness tools, children's stories, and professional expertise to help people and organizations move forward with greater clarity and purpose.
-</p>
-
-<div class="hero-btns">
-  <!-- Approved 2026-10-11: Tavas Compass is the primary action; the app, books and consulting stay visible as secondary. -->
-  <a href="https://tavascompass.com" target="_blank" rel="noopener" class="btn-primary-gold">Explore Tavas Compass</a>
-
-  <a href="#app" class="btn-ghost">Try Tavas App</a>
-
-
-  <a href="books.html" class="btn-ghost">Discover Tavas Library</a>
-
-  <a href="connect.html" class="btn-ghost">Work With Sara</a>
-</div>
-      </p>
-      <a href="#consulting" class="scroll-cue" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
-    </section>
-    <!-- SECTION 2 — CONSULTING -->
-    <section class="ways" id="consulting">
-      <div class="ways-inner">
-        <span class="sec-label">Work With Sara</span>
-        <h2 class="sec-headline">Operations &amp; growth, handled.</h2>
-        <p class="sec-body">Three ways organizations bring Sara in:</p>
-        <div class="ways-grid">
-          <div class="way-card">
-            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
-            <h3>Operations Leadership</h3>
-            <p>Fractional operations leadership for nonprofits and small teams &mdash; clear processes, accountable execution, and systems your staff can actually run.</p>
-            <a href="services.html" class="way-link">Learn More</a>
-          </div>
-          <div class="way-card">
-            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-            <h3>Program &amp; Project Management</h3>
-            <p>From grant-funded programs to internal initiatives &mdash; scoped, scheduled, and delivered without the chaos.</p>
-            <a href="services.html" class="way-link">Learn More</a>
-          </div>
-          <div class="way-card">
-            <div class="way-icon"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
-            <h3>Growth &amp; Process Strategy</h3>
-            <p>Find the bottlenecks, fix the workflows, and build the operating rhythm that lets your organization scale.</p>
-            <a href="services.html" class="way-link">Learn More</a>
-          </div>
-        </div>
-        <div class="ways-cta">
-          <a href="connect.html" class="btn-primary-gold">Start the Conversation</a>
-        </div>
+      <h1>Navigate life with confidence.</h1>
+      <p class="hero-intro">Life doesn't follow just one path. Tavas World brings together career guidance, wellness tools, and books to help you move forward with greater clarity and purpose.</p>
+      <!-- Tavas Compass stays the primary action (approved 2026-10-11). -->
+      <div class="hero-products">
+        <a class="prod-card primary" href="https://tavascompass.com" target="_blank" rel="noopener">
+          <div class="prod-media"><img src="assets/img/web/compass-emblem.webp" alt="" width="128" height="128"></div>
+          <span class="prod-label">Tavas Compass</span>
+          <h3>Career tools built for what work is becoming.</h3>
+          <span class="prod-cta">Explore Tavas Compass</span>
+        </a>
+        <a class="prod-card" href="#app">
+          <div class="prod-media"><img src="assets/img/web/dashboardnew.webp" alt="" width="92" height="128"></div>
+          <span class="prod-label">Tavas App</span>
+          <h3>Your wellness. All in one place.</h3>
+          <span class="prod-cta">Try Tavas App</span>
+        </a>
+        <a class="prod-card" href="books.html">
+          <div class="prod-media"><div class="books"><img src="assets/img/web/book1cover.webp" alt=""><img src="assets/img/web/raspen.webp" alt=""><img src="assets/img/web/book3cover.webp" alt=""></div></div>
+          <span class="prod-label">Tavas Library</span>
+          <h3>Kindness, curiosity, and courage in every story.</h3>
+          <span class="prod-cta">Discover Tavas Library</span>
+        </a>
       </div>
     </section>
    <!-- SECTION 3 — THE APP -->
@@ -238,12 +270,12 @@ Tavas World brings together career guidance, wellness tools, children's stories,
         <div class="split-copy">
           <span class="sec-label">The App</span>
           <h2 class="sec-headline">Your wellness.<br>All in one place.</h2>
-          <p class="sec-body">Tavas App is your daily AI companion for mind, body, and life. Journal, track your habits, set goals, and get gentle reminders to keep you moving forward.</p>
+          <p class="sec-body">Tavas App is your daily AI companion for mind, body, and life. Track your habits, peptides and supplements, set goals, and get gentle reminders to keep you moving forward.</p>
           <div class="app-grid">
             <div class="app-feat">
               <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-              <h3>Journal</h3>
-              <p>Write, reflect, and grow &mdash; with daily positivity and motivation.</p>
+              <h3>Daily Check-ins</h3>
+              <p>Reflect, reset, and grow &mdash; with daily positivity and motivation.</p>
             </div>
             <div class="app-feat">
               <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2.5C12 2.5 5 10 5 15a7 7 0 0014 0c0-5-7-12.5-7-12.5z"/></svg></div>
@@ -263,12 +295,12 @@ Tavas World brings together career guidance, wellness tools, children's stories,
             <div class="app-feat">
               <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></div>
               <h3>Smart Reminders</h3>
-              <p>Stay consistent with journaling, hydration, supplements, exercise breaks &amp; more.</p>
+              <p>Stay consistent with check-ins, hydration, supplements, exercise breaks &amp; more.</p>
             </div>
             <div class="app-feat">
               <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></div>
               <h3>AI Companion</h3>
-              <p>Choose your personal AI companion &mdash; supporting journaling, wellness tracking, recipes, tasks, and healthy daily habits.</p>
+              <p>Choose your personal AI companion &mdash; supporting check-ins, wellness tracking, recipes, tasks, and healthy daily habits.</p>
             </div>
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
@@ -315,24 +347,6 @@ Tavas World brings together career guidance, wellness tools, children's stories,
             <a href="https://www.shotamusic.com" target="_blank" class="way-link">Listen Now</a>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- SECTION 7 — EMAIL SIGNUP -->
-    <section class="signup" style="background: var(--choc);">
-      <div class="signup-inner">
-        <span class="sec-label">Stay Close</span>
-        <h2>Stay Close to the World as it Grows</h2>
-        <p>New books, app updates, and what's next from Tavas World &mdash; straight to your inbox.</p>
-        <form class="signup-form" method="POST" action="https://api.web3forms.com/submit" accept-charset="UTF-8">
-          <input type="hidden" name="access_key" value="d47e65a1-e5ec-4430-9ff4-4954505a79b4">
-          <input type="hidden" name="subject" value="New Tavas World newsletter signup">
-          <input type="hidden" name="from_name" value="Tavas World">
-          <input type="hidden" name="redirect" value="https://www.tavasworld.com/thankyou.html">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-          <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
-          <button type="submit" class="btn-primary-gold">Join the List</button>
-        </form>
-        <p class="signup-note">No spam, ever. Unsubscribe anytime.</p>
       </div>
     </section>
   </main>
