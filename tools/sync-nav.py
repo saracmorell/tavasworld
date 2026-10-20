@@ -20,7 +20,6 @@ NAV_ITEMS = [
     ('https://tavascompass.com',                                          'Tavas Compass', '',       ''),
     ('books.html',                                                        'Library',       '',       ''),
     ('about.html',                                                        'About',         '',       ''),
-    ('connect.html',                                                      'Work With Sara', '',      'nav-cta'),
 ]
 
 # ── The master footer. Edit HERE and re-run to update every page. ──
