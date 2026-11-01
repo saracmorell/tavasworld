@@ -19,6 +19,7 @@ NAV_ITEMS = [
     ('https://play.google.com/store/apps/details?id=com.shineon.journal', 'Tavas App',     '_blank', ''),
     ('https://tavascompass.com',                                          'Tavas Compass', '',       ''),
     ('books.html',                                                        'Library',       '',       ''),
+    ('favorites.html',                                                    'Favorites',     '',       ''),
     ('about.html',                                                        'About',         '',       ''),
 ]
 
