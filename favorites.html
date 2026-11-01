@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <meta charset="UTF-8">
+<link rel="canonical" href="https://www.tavasworld.com/favorites.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites — Tavas World</title>
+  <meta name="description" content="Brands Sara C. Morell trusts for wellness, the outdoors, kids and careers, picked to fit the Tavas World way of living.">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --choc:       #1C1208;
+      --choc-dark:  #140E06;
+      --choc-deep:  #0F0A04;
+      --gold:       #D4A853;
+      --gold-light: #E8C070;
+      --gold-dim:   rgba(212,168,83,0.55);
+      --cream:      #F5ECD7;
+      --cream-mid:  rgba(245,236,215,0.75);
+      --cream-low:  rgba(245,236,215,0.60);
+      --border:     rgba(212,168,83,0.14);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Playfair Display', Georgia, serif; background-color: var(--choc); color: var(--cream); overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--choc-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+    /* ══ HERO ══ */
+    .page-hero { margin-top: 68px; padding: 48px 32px 40px; background: radial-gradient(ellipse at 50% 0%, #2A1A08 0%, #1C1208 70%, #110B04 100%); text-align: center; border-bottom: 0.5px solid var(--border); }
+    .page-hero .sec-label { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-hero h1 { font-family: 'Libre Baskerville', serif; font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 400; font-style: italic; color: var(--cream-mid); margin: 0; line-height: 1.5; letter-spacing: 0.02em; }
+    .page-hero h1::before, .page-hero h1::after { content: "—"; color: var(--gold-dim); margin: 0 14px; font-style: normal; }
+    .page-hero p { display: none; }
+
+    /* ══ BUTTONS ══ */
+    .btn-gold { display: inline-block; padding: 14px 28px; background: var(--gold); color: var(--choc-dark); font-family: 'Montserrat', sans-serif; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; line-height: 1.3; text-align: center; max-width: 100%; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-dark); text-decoration: none; }
+    .btn-outline-gold { display: inline-block; padding: 13px 32px; background: transparent; color: var(--cream-mid); font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 1px solid rgba(212,168,83,0.3); cursor: pointer; transition: all 0.2s; }
+    .btn-outline-gold:hover { border-color: var(--gold-dim); color: var(--gold); text-decoration: none; }
+
+    /* ══ SECTIONS ══ */
+    .section { padding: 72px 32px; }
+    .section-alt { background: var(--choc-dark); }
+    .section-inner { max-width: 1100px; margin: 0 auto; width: 100%; text-align: center; }
+    .sec-label { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .sec-title { font-family: 'Libre Baskerville', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--cream); margin-bottom: 14px; line-height: 1.2; }
+    .sec-sub { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--cream-mid); max-width: 580px; line-height: 1.85; margin: 0 auto 48px; }
+    .divider { border: none; border-top: 0.5px solid rgba(212,168,83,0.07); }
+
+    /* ══ FAVORITES ══ */
+    .disclosure { font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: var(--cream-low); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    .jump { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+    .jump button { font-family: 'Montserrat', sans-serif; font-size: 0.74rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-mid); text-decoration: none; border: 1px solid rgba(212,168,83,0.3); border-radius: 999px; padding: 9px 18px; transition: all 0.2s; background: transparent; cursor: pointer; }
+    .jump button.active { background: var(--gold); border-color: var(--gold); color: var(--choc-dark); font-weight: 600; }
+    .jump button:not(.active):hover { border-color: var(--gold-dim); color: var(--gold); }
+    .fav-section { scroll-margin-top: 90px; }
+    .fav-head { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 32px; }
+    .fav-head i { font-size: 1.5rem; color: var(--gold); }
+    .fav-head .sec-title { margin-bottom: 0; }
+    .fav-head .fav-note { font-family: 'Playfair Display', serif; font-style: italic; color: var(--cream-low); font-size: 1rem; }
+    .fav-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; max-width: 1240px; margin: 0 auto; }
+    .fav-grid .fav-card { flex: 0 1 252px; }
+    .fav-card[hidden] { display: none; }
+    .fav-cat { font-family: 'Montserrat', sans-serif; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
+    .fav-card { background: rgba(212,168,83,0.04); border: 0.5px solid var(--border); border-radius: 14px; padding: 28px 24px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; transition: border-color 0.25s, background 0.25s, transform 0.2s; }
+    .fav-card:hover { border-color: rgba(212,168,83,0.3); background: rgba(212,168,83,0.07); transform: translateY(-4px); }
+    .fav-icon { width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(212,168,83,0.35); display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 1.3rem; }
+    .fav-name { font-family: 'Libre Baskerville', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); }
+    .fav-desc { font-family: 'Playfair Display', serif; font-size: 0.98rem; color: var(--cream-mid); line-height: 1.7; flex: 1; }
+    .fav-site { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--gold-dim); text-transform: lowercase; }
+    .fav-card .btn-gold { margin-top: 4px; padding: 12px 26px; }
+    @media (max-width: 768px) { .fav-grid .fav-card { flex-basis: 100%; max-width: 360px; } }
+  </style>
+  <link href="assets/css/site-nav.css" rel="stylesheet">
+</head>
+<body>
+<!-- ══ HEADER ══ -->
+  <header id="header">
+    <a href="index.html" class="header-logo-wrap">
+      <img src="assets/img/web/tw-logo-sunset.webp" alt="Tavas World" class="header-logo-img">
+      <span class="header-logo-text">TAVAS <span>WORLD</span></span>
+    </a>
+    <nav id="navbar">
+      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
+      <a href="https://tavascompass.com">Tavas Compass</a>
+      <a href="books.html">Library</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
+      <i class="bi bi-list"></i>
+    </button>
+  </header>
+
+  <main>
+    <!-- ══ PAGE HERO ══ -->
+    <div class="page-hero">
+      <div class="sec-label">Sara's Favorites</div>
+      <h1>Brands We Trust</h1>
+    </div>
+
+    <section class="section" style="padding-bottom:40px">
+      <div class="section-inner">
+        <p class="sec-sub" style="margin-bottom:18px">A short list of brands that fit the Tavas World way of living: healthy habits, time outdoors, family and work you're proud of.</p>
+        <p class="disclosure">Some links on this page are affiliate links. If you buy through them, Tavas World may earn a commission at no extra cost to you. Each link opens the brand's own website.</p>
+        <div class="jump" role="group" aria-label="Show a category"><button type="button" class="active" data-filter="all">All</button><button type="button" data-filter="wellness">Wellness &amp; Fitness</button><button type="button" data-filter="outdoors">Outdoors</button><button type="button" data-filter="family">Kids &amp; Family</button><button type="button" data-filter="career">Career</button></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" style="padding-top:56px">
+      <div class="section-inner">
+        <div class="fav-grid" id="favGrid">
+          <div class="fav-card" data-cat="wellness">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-smartwatch"></i></div>
+            <div class="fav-cat">Wellness &amp; Fitness</div>
+            <div class="fav-name">Amazfit</div>
+            <p class="fav-desc">Fitness watches and smart rings that track workouts, sleep and steps.</p>
+            <div class="fav-site">amazfit.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-15735909" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop Amazfit (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="outdoors">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-bullseye"></i></div>
+            <div class="fav-cat">Outdoors</div>
+            <div class="fav-name">Ravin Crossbows</div>
+            <p class="fav-desc">Crossbows and archery gear built for accuracy in the field.</p>
+            <div class="fav-site">ravincrossbows.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-15734445" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop Ravin Crossbows (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="family">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-book"></i></div>
+            <div class="fav-cat">Kids &amp; Family</div>
+            <div class="fav-name">Magic Story</div>
+            <p class="fav-desc">Personalized storybooks that star your child, plus a monthly book club.</p>
+            <div class="fav-site">magicstory.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-17360179" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop Magic Story (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="career">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-laptop"></i></div>
+            <div class="fav-cat">Career</div>
+            <div class="fav-name">FlexJobs</div>
+            <p class="fav-desc">Hand-screened remote and flexible jobs.</p>
+            <div class="fav-site">flexjobs.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-15734834" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop FlexJobs (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="career">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
+            <div class="fav-cat">Career</div>
+            <div class="fav-name">MyPerfectResume</div>
+            <p class="fav-desc">Build a polished resume and cover letter in minutes.</p>
+            <div class="fav-site">myperfectresume.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-14314857" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop MyPerfectResume (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="career">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-patch-check"></i></div>
+            <div class="fav-cat">Career</div>
+            <div class="fav-name">ExpertRating</div>
+            <p class="fav-desc">Online skills tests and certifications for your resume.</p>
+            <div class="fav-site">expertrating.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-15734442" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop ExpertRating (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="fav-card" data-cat="career">
+            <div class="fav-icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></div>
+            <div class="fav-cat">Career</div>
+            <div class="fav-name">Brain Sensei</div>
+            <p class="fav-desc">Project management training and PMP exam prep.</p>
+            <div class="fav-site">brainsensei.com</div>
+            <a href="https://www.anrdoezrs.net/click-101909765-15735142" target="_blank" rel="sponsored noopener" class="btn-gold" aria-label="Shop Brain Sensei (opens in a new tab)">Shop now <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="footer-logo-wrap" aria-label="Tavas World home">
+            <img src="assets/img/web/tw-logo-sunset.webp" alt="" class="footer-logo-img" loading="lazy" decoding="async">
+            <span class="footer-logo-text">TAVAS <span>WORLD</span></span>
+          </a>
+          <p class="footer-tagline">Navigating life with intention.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-utility" aria-label="Support and legal">
+          <a href="mailto:support@tavasworld.com?subject=Tavas World Support">Support</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <p class="footer-copy">&copy; 2026 Tavas World LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/site-nav.js"></script>
+  <script>
+    document.querySelectorAll('.jump button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        document.querySelectorAll('.jump button').forEach(function (x) { x.classList.toggle('active', x === b); });
+        document.querySelectorAll('#favGrid .fav-card').forEach(function (c) { c.hidden = f !== 'all' && c.getAttribute('data-cat') !== f; });
+      });
+    });
+  </script>
+</body>
+</html>  
