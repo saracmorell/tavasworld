@@ -20,6 +20,7 @@ NAV_ITEMS = [
     ('https://tavascompass.com',                                          'Tavas Compass', '',       ''),
     ('books.html',                                                        'Library',       '',       ''),
     ('favorites.html',                                                    'Favorites',     '',       ''),
+    ('friends.html',                                                      'Friends &amp; Family', '', ''),
     ('about.html',                                                        'About',         '',       ''),
 ]
 
