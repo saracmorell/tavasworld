@@ -102,6 +102,17 @@ img, svg, video { max-width: 100%; }
 .app-grid .app-feat .feat-icon svg { width: 17px; height: 17px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .app-grid .app-feat h3 { font-family: 'Libre Baskerville', serif; font-size: 0.92rem; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
 .app-grid .app-feat p { font-size: 0.8rem; color: var(--cream-mid); line-height: 1.6; }
+.split-app.light { background: #EDE1CE; }
+.split-app.light .sec-label { color: #8A5C1C; }
+.split-app.light .sec-headline { color: #2A1708; }
+.split-app.light .sec-body { color: rgba(42,23,8,0.78); }
+.split-app.light .app-feat h3 { color: #2A1708; }
+.split-app.light .app-feat p { color: rgba(42,23,8,0.72); }
+.split-app.light .feat-icon.gem { width: 52px; height: 52px; background: #FFF8EC; border: 1px solid rgba(138,92,28,0.25); box-shadow: 0 4px 14px rgba(58,33,18,0.10); }
+.split-app.light .feat-icon.gem svg { width: 30px; height: 30px; stroke: none; fill: initial; stroke-width: initial; }
+.split-app.light .app-mock.scene { max-width: 440px; border-radius: 24px; filter: none; box-shadow: 0 30px 60px rgba(42,23,8,0.35); }
+.btn-primary-choc { display: inline-flex; align-items: center; justify-content: center; padding: 16px 40px; background: #2A1708; color: #F5ECD7; font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: transform 0.15s, box-shadow 0.2s; }
+.btn-primary-choc:hover { color: #E8C070; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(42,23,8,0.35); text-decoration: none; }
 .sara { padding: 80px 48px; background: var(--choc-dark); border-top: 0.5px solid var(--border); }
 .sara-inner { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: center; }
 .sara-portrait { width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 2px solid var(--gold-dim); box-shadow: 0 18px 45px rgba(0,0,0,0.55); justify-self: center; }
@@ -135,7 +146,7 @@ img, svg, video { max-width: 100%; }
 .split-media { order: -1; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: center; }
 .split-copy .sec-body { margin-left: auto; margin-right: auto; }
-.split-copy .btn-ghost, .split-copy .btn-primary-gold { display: flex; margin-left: auto; margin-right: auto; max-width: 320px; }
+.split-copy .btn-ghost, .split-copy .btn-primary-gold, .split-copy .btn-primary-choc { display: flex; margin-left: auto; margin-right: auto; max-width: 320px; }
 .book-stack { gap: 10px; padding: 24px 12px; }
 .book-stack img { width: 30%; }
 .book-stack img:nth-child(2) { width: 34%; }
@@ -253,7 +264,7 @@ img, svg, video { max-width: 100%; }
           <span class="prod-cta">Explore Tavas Compass</span>
         </a>
         <a class="prod-card" href="#app">
-          <div class="prod-media"><img src="assets/img/web/dashboardnew.webp" alt="" width="92" height="128"></div>
+          <div class="prod-media"><img src="assets/img/web/tavas-app-emblem.webp" alt="" width="128" height="128"></div>
           <span class="prod-label">Tavas App</span>
           <h3>Your wellness. All in one place.</h3>
           <span class="prod-cta">Try Tavas App</span>
@@ -267,48 +278,48 @@ img, svg, video { max-width: 100%; }
       </div>
     </section>
    <!-- SECTION 3 — THE APP -->
-    <section class="split split-app" id="app" style="background: var(--choc);">
+    <section class="split split-app light" id="app">
       <div class="split-inner">
         <div class="split-copy">
           <span class="sec-label">The App</span>
           <h2 class="sec-headline">Your wellness.<br>All in one place.</h2>
-          <p class="sec-body">Tavas App is your daily AI companion for mind, body, and life. Track your habits, peptides and supplements, set goals, and get gentle reminders to keep you moving forward.</p>
+          <p class="sec-body">Tavas is your wellness tracker with an AI companion who actually remembers. Track peptides, supplements, water, workouts and your journal, just by saying what you did. Accessible by design, with large text, dyslexia-friendly fonts and color-blind modes.</p>
           <div class="app-grid">
             <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-              <h3>Daily Check-ins</h3>
-              <p>Reflect, reset, and grow &mdash; with daily positivity and motivation.</p>
-            </div>
-            <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2.5C12 2.5 5 10 5 15a7 7 0 0014 0c0-5-7-12.5-7-12.5z"/></svg></div>
-              <h3>Health Tracking</h3>
-              <p>Hydration, exercise, supplements, mood, download reports &amp; more.</p>
-            </div>
-            <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.6" fill="var(--gold)" stroke="none"/></svg></div>
-              <h3>Goals &amp; Progress</h3>
-              <p>Set goals, AI insights, stay motivated.</p>
-            </div>
-            <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="3"/><path d="M12 12v6M12 18l-4 3M12 18l4 3M7 9H3M21 9h-4"/></svg></div>
-              <h3>Accessible by Design</h3>
-              <p>Color-blind modes, dyslexia-friendly fonts, adjustable text, dark mode, and more.</p>
-            </div>
-            <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></div>
-              <h3>Smart Reminders</h3>
-              <p>Stay consistent with check-ins, hydration, supplements, exercise breaks &amp; more.</p>
-            </div>
-            <div class="app-feat">
-              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></div>
+              <div class="feat-icon gem"><span aria-hidden="true" class="relative inline-flex flex-none items-center justify-center rounded-full border-[1.5px] box-border border-[#B8913A] [background:radial-gradient(circle_at_50%_30%,#FFFDF6_0%,#F6ECD6_60%,#EAD9B4_100%)] shadow-[inset_0_0_0_3px_#FFFDF6,inset_0_0_0_4px_rgba(176,135,58,0.55),inset_0_-4px_10px_rgba(150,110,40,0.18),0_2px_6px_rgba(92,62,20,0.16)] dark:border-[#C9A04F] dark:[background:radial-gradient(circle_at_50%_35%,#2C1E10_0%,#170F07_70%)] dark:shadow-[inset_0_0_0_3px_#1A1109,inset_0_0_0_4px_rgba(212,168,83,0.55),inset_0_6px_12px_rgba(0,0,0,0.45),0_2px_6px_rgba(0,0,0,0.25)]" style="width:48px;height:48px"><svg width="27" height="27" viewBox="8 8 84 84" aria-hidden="true"><path d="M44 56L44 23L38.70 50.70Z" fill="#FBE6A6"></path><path d="M44 56L44 23L49.30 50.70Z" fill="#F1CF7E"></path><path d="M44 56L77 56L49.30 50.70Z" fill="#D8AC56"></path><path d="M44 56L77 56L49.30 61.30Z" fill="#8A5C1C"></path><path d="M44 56L44 89L49.30 61.30Z" fill="#8A5C1C"></path><path d="M44 56L44 89L38.70 61.30Z" fill="#D8AC56"></path><path d="M44 56L11 56L38.70 61.30Z" fill="#D8AC56"></path><path d="M44 56L11 56L38.70 50.70Z" fill="#FBE6A6"></path><path d="M76 23L76 9L73.74 20.74Z" fill="#FBE6A6"></path><path d="M76 23L76 9L78.26 20.74Z" fill="#F1CF7E"></path><path d="M76 23L90 23L78.26 20.74Z" fill="#D8AC56"></path><path d="M76 23L90 23L78.26 25.26Z" fill="#8A5C1C"></path><path d="M76 23L76 37L78.26 25.26Z" fill="#8A5C1C"></path><path d="M76 23L76 37L73.74 25.26Z" fill="#D8AC56"></path><path d="M76 23L62 23L73.74 25.26Z" fill="#D8AC56"></path><path d="M76 23L62 23L73.74 20.74Z" fill="#FBE6A6"></path></svg></span></div>
               <h3>AI Companion</h3>
-              <p>Choose your personal AI companion &mdash; supporting check-ins, wellness tracking, recipes, tasks, and healthy daily habits.</p>
+              <p>Just say what you did and it&rsquo;s logged. A companion who remembers you, and talks back.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon gem"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="twcapsulegR0" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#E2C2FF"></stop><stop offset=".4" stop-color="#9152E0"></stop><stop offset="1" stop-color="#371068"></stop></linearGradient><linearGradient id="twcapsuleoR0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D88B"></stop><stop offset=".5" stop-color="#C9973F"></stop><stop offset="1" stop-color="#8A5C1C"></stop></linearGradient></defs><g transform="rotate(-45 24 24)"><rect x="5" y="14" width="38" height="20" rx="10" fill="url(#twcapsulegR0)" stroke="url(#twcapsuleoR0)" stroke-width="2.2"></rect><path d="M24 14v20" stroke="url(#twcapsuleoR0)" stroke-width="2.2"></path><rect x="9" y="17.5" width="12" height="3.4" rx="1.7" fill="#FFFFFF" fill-opacity=".75"></rect><circle cx="35" cy="19.5" r="1.4" fill="#FFFFFF" fill-opacity=".6"></circle></g></svg></div>
+              <h3>Peptides &amp; Supplements</h3>
+              <p>Doses, injection sites and side effects, with reminders that know what you&rsquo;ve taken.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon gem"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><defs><radialGradient id="twwaterwsR0" cx="0.38" cy="0.42" r="0.75"><stop offset="0" stop-color="#5AA8F0"></stop><stop offset=".45" stop-color="#1F5FC0"></stop><stop offset="1" stop-color="#0B2A6B"></stop></radialGradient><linearGradient id="twwaterwgR0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D88B"></stop><stop offset=".5" stop-color="#C9973F"></stop><stop offset="1" stop-color="#8A5C1C"></stop></linearGradient></defs><path d="M24 5c7.5 9.5 12.5 15.5 12.5 23a12.5 12.5 0 0 1-25 0c0-7.5 5-13.5 12.5-23z" fill="url(#twwaterwsR0)" stroke="url(#twwaterwgR0)" stroke-width="2.2" stroke-linejoin="round"></path><path d="M18.5 27.5c-.6 3 .4 5.6 2.6 7" fill="none" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2.4" stroke-linecap="round"></path><circle cx="27.5" cy="21" r="1.4" fill="#FFFFFF" fill-opacity=".7"></circle></svg></div>
+              <h3>Water &amp; Workouts</h3>
+              <p>Log in seconds and keep your streak going.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon gem"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="twjournalgR0" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#F2B865"></stop><stop offset=".45" stop-color="#B5621C"></stop><stop offset="1" stop-color="#5A2608"></stop></linearGradient><linearGradient id="twjournaloR0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D88B"></stop><stop offset=".5" stop-color="#C9973F"></stop><stop offset="1" stop-color="#8A5C1C"></stop></linearGradient></defs><path d="M11 7h24a3 3 0 0 1 3 3v28a3 3 0 0 1-3 3H11z" fill="url(#twjournalgR0)" stroke="url(#twjournaloR0)" stroke-width="2.2" stroke-linejoin="round"></path><rect x="8" y="7" width="5" height="34" rx="1.5" fill="url(#twjournaloR0)"></rect><path d="M38 12v24" stroke="#F3D88B" stroke-width="1.6" stroke-opacity=".9"></path><path d="M19 17h12M19 22h9" stroke="#FFE7C2" stroke-opacity=".8" stroke-width="2.2" stroke-linecap="round"></path><rect x="15.5" y="9.5" width="2" height="10" rx="1" fill="#FFFFFF" fill-opacity=".45"></rect></svg></div>
+              <h3>Journal &amp; Mood</h3>
+              <p>A private journal, just for you.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon gem"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="twscalegR0" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#FFE9A3"></stop><stop offset=".45" stop-color="#E0A21E"></stop><stop offset="1" stop-color="#7A4A05"></stop></linearGradient><linearGradient id="twscaleoR0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D88B"></stop><stop offset=".5" stop-color="#C9973F"></stop><stop offset="1" stop-color="#8A5C1C"></stop></linearGradient></defs><rect x="6" y="6" width="36" height="36" rx="9" fill="url(#twscalegR0)" stroke="url(#twscaleoR0)" stroke-width="2.2"></rect><path d="M15 19a9 9 0 0 1 18 0z" fill="#2A1806" fill-opacity=".55" stroke="#F3D88B" stroke-width="1.6" stroke-linejoin="round"></path><path d="M24 19l3.6-5.2" stroke="#FFF4D6" stroke-width="2" stroke-linecap="round"></path><rect x="11" y="10" width="10" height="3" rx="1.5" fill="#FFFFFF" fill-opacity=".55"></rect><circle cx="17" cy="35" r="2" fill="#FFF4D6" fill-opacity=".7"></circle><circle cx="31" cy="35" r="2" fill="#FFF4D6" fill-opacity=".7"></circle></svg></div>
+              <h3>Weight &amp; Progress</h3>
+              <p>See your trends and patterns over time.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon gem"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="twprovidergR0" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#9BF0C8"></stop><stop offset=".45" stop-color="#14946A"></stop><stop offset="1" stop-color="#063E2B"></stop></linearGradient><linearGradient id="twprovideroR0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D88B"></stop><stop offset=".5" stop-color="#C9973F"></stop><stop offset="1" stop-color="#8A5C1C"></stop></linearGradient></defs><path d="M13 7v10a8 8 0 0 0 16 0V7" fill="none" stroke="url(#twprovideroR0)" stroke-width="2.6" stroke-linecap="round"></path><path d="M21 25v5a9 9 0 0 0 18 0v-3" fill="none" stroke="url(#twprovideroR0)" stroke-width="2.6" stroke-linecap="round"></path><circle cx="39" cy="22" r="6" fill="url(#twprovidergR0)" stroke="url(#twprovideroR0)" stroke-width="2.2"></circle><circle cx="37.5" cy="20.5" r="1.6" fill="#FFFFFF" fill-opacity=".7"></circle></svg></div>
+              <h3>Reports for Your Provider</h3>
+              <p>A clear wellness summary to share with your doctor.</p>
             </div>
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Get the App</a>
+          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener" class="btn-primary-choc">Get it on Google Play</a>
         </div>
         <div class="split-media">
-          <img src="assets/img/web/dashboardnew.webp" alt="The Tavas App" class="app-mock" width="700" height="969" loading="lazy" decoding="async">
+          <img src="assets/img/web/tavas-app-scene.webp" alt="The Tavas app on a phone: your whole day at a glance" class="app-mock scene" width="1400" height="1938" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
