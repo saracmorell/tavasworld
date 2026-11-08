@@ -92,6 +92,31 @@ img, svg, video { max-width: 100%; }
 .tales-phone { width: 100%; max-width: 300px; height: auto; border-radius: 34px; border: 8px solid #2A1A0E; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,83,0.25); display: block; margin: 0 auto; }
 .app-grid .app-feat .feat-icon.tt-ico { color: var(--gold); }
 .app-grid .app-feat .feat-icon.tt-ico svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2.6; }
+
+/* Tavas Tales live demo phone */
+.tt-demo { width: 300px; max-width: 100%; margin: 0 auto; padding: 9px; border-radius: 42px;
+  background: linear-gradient(145deg, #F2D58E 0%, #B8893A 22%, #4A2E12 50%, #B8893A 78%, #F2D58E 100%);
+  box-shadow: 0 0 0 1px rgba(242,213,142,.35), 0 0 34px rgba(212,168,83,.28), 0 30px 60px rgba(0,0,0,.6); }
+.tt-screen { background: #160E07; border-radius: 34px; padding: 18px 16px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 2px 10px rgba(0,0,0,.7); }
+.tt-top { display: flex; align-items: center; gap: 8px; align-self: stretch; justify-content: center; }
+.tt-logo { width: 40px; height: auto; }
+.tt-word { font-family: 'Jost','Montserrat',sans-serif; font-weight: 600; letter-spacing: .24em; font-size: .78rem; color: #D4A853; }
+.tt-page { width: 100%; aspect-ratio: 1065/1080; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,.55); }
+.tt-page img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .35s; }
+.tt-reader { font-family: 'Montserrat',sans-serif; font-size: .95rem; font-weight: 600; color: #F5ECD7; margin: 0; text-align: center; }
+.tt-dots { display: flex; gap: 6px; } .tt-dots span { width: 7px; height: 7px; border-radius: 4px; background: rgba(212,168,83,.3); transition: width .25s; } .tt-dots span.on { width: 22px; background: #D4A853; }
+.tt-controls { display: flex; align-items: center; gap: 20px; }
+.tt-round, .tt-play { border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+.tt-round { width: 46px; height: 46px; background: transparent; border: 1.5px solid rgba(212,168,83,.6); }
+.tt-round:disabled { opacity: .35; cursor: default; }
+.tt-round svg { width: 22px; height: 22px; fill: none; stroke: #D4A853; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; }
+.tt-play { width: 64px; height: 64px; background: linear-gradient(135deg,#EBCB82,#D4A853 55%,#B88A3A); box-shadow: 0 0 0 0 rgba(212,168,83,.5); }
+.tt-play svg { width: 28px; height: 28px; fill: #1C1208; stroke: #1C1208; stroke-width: 5; stroke-linecap: round; }
+.tt-play .i-pause { display: none; fill: none; } .tt-demo.playing .tt-play .i-play { display: none; } .tt-demo.playing .tt-play .i-pause { display: block; }
+.tt-demo.playing .tt-play { animation: ttpulse 1.8s infinite; }
+@keyframes ttpulse { 0% { box-shadow: 0 0 0 0 rgba(212,168,83,.5); } 70% { box-shadow: 0 0 0 14px rgba(212,168,83,0); } 100% { box-shadow: 0 0 0 0 rgba(212,168,83,0); } }
+.tt-hint { font-family: 'Montserrat',sans-serif; font-size: .75rem; color: #CDB485; margin: 0; }
+@media (prefers-reduced-motion: reduce) { .tt-demo.playing .tt-play { animation: none; } .tt-page img { transition: none; } }
 .tales-note { font-size: 0.8rem; color: var(--cream-low); margin: -16px 0 24px; }
 .split-media { display: flex; justify-content: center; align-items: center; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: left; margin-left: 0; }
@@ -394,7 +419,20 @@ img, svg, video { max-width: 100%; }
           <a href="https://tavas-tales.pages.dev/#/hello" target="_blank" rel="noopener" class="btn-primary-gold">Join the Waitlist</a>
         </div>
         <div class="split-media">
-          <img src="assets/img/web/tavas-tales-listen.webp" alt="Tavas Tales playing a Raspen &amp; Sylas book read by Gigi" class="tales-phone" width="390" height="844" loading="lazy" decoding="async">
+          <div class="tt-demo" id="ttDemo" aria-label="Tavas Tales demo">
+            <div class="tt-screen">
+              <div class="tt-top"><img src="assets/img/web/tavas-tales-logo-gold.webp" alt="" class="tt-logo"><span class="tt-word">TAVAS TALES</span></div>
+              <div class="tt-page"><img id="ttPage" src="assets/img/web/tales-demo/bear-01.webp" alt="The Adventures of Raspen and Sylas: The Bear Who Won't Share, cover"></div>
+              <p class="tt-reader" id="ttReader">Read by Sara C. Morell, the author</p>
+              <div class="tt-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+              <div class="tt-controls">
+                <button type="button" class="tt-round" id="ttPrev" aria-label="Previous page"><svg viewBox="0 0 48 48"><path d="M30 10L16 24l14 14"/></svg></button>
+                <button type="button" class="tt-play" id="ttPlay" aria-label="Play the demo"><svg class="i-play" viewBox="0 0 48 48"><path d="M15 9l25 15-25 15z"/></svg><svg class="i-pause" viewBox="0 0 48 48"><path d="M17 10v28M31 10v28"/></svg></button>
+                <button type="button" class="tt-round" id="ttNext" aria-label="Next page"><svg viewBox="0 0 48 48"><path d="M18 10l14 14-14 14"/></svg></button>
+              </div>
+              <p class="tt-hint" id="ttHint">Tap play to hear a sample</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -435,5 +473,32 @@ img, svg, video { max-width: 100%; }
     });
   </script>
   <script src="assets/js/site-nav.js"></script>
+
+<script>
+/* Tavas Tales demo: real recordings by the author, page turns like the app. */
+(function(){
+  var root=document.getElementById('ttDemo'); if(!root) return;
+  var pages=['bear-01','bear-02','bear-03'], n=0, playing=false, gap;
+  var img=document.getElementById('ttPage'), dots=root.querySelectorAll('.tt-dots span'), hint=document.getElementById('ttHint');
+  var prev=document.getElementById('ttPrev'), next=document.getElementById('ttNext'), play=document.getElementById('ttPlay');
+  var audio=new Audio(); audio.preload='none';
+  var alts=["The Bear Who Won't Share, cover","Raspen and Sylas in the cedar forest","Raspen and Sylas, page 3"];
+  pages.forEach(function(p){ var i=new Image(); i.src='assets/img/web/tales-demo/'+p+'.webp'; });
+  function show(k){ n=k; img.src='assets/img/web/tales-demo/'+pages[n]+'.webp'; img.alt=alts[n];
+    dots.forEach(function(d,i){ d.classList.toggle('on', i===n); }); prev.disabled=n===0; next.disabled=n===pages.length-1; }
+  function setPlaying(v){ playing=v; root.classList.toggle('playing', v); play.setAttribute('aria-label', v?'Pause':'Play the demo'); }
+  function start(){ clearTimeout(gap); audio.src='assets/audio/tales-demo/'+pages[n]+'.m4a';
+    audio.play().then(function(){ hint.textContent='Pages turn by themselves, just like the app'; })
+      .catch(function(){ setPlaying(false); hint.textContent='Sample coming soon'; }); }
+  audio.addEventListener('ended', function(){ if(!playing) return;
+    if(n<pages.length-1){ gap=setTimeout(function(){ show(n+1); start(); }, 1000); }
+    else { setPlaying(false); hint.textContent='The End · join the waitlist to make your own'; } });
+  play.addEventListener('click', function(){ if(playing){ setPlaying(false); audio.pause(); clearTimeout(gap); return; }
+    if(n===pages.length-1 && audio.ended) show(0); setPlaying(true); start(); });
+  prev.addEventListener('click', function(){ if(n>0){ show(n-1); if(playing) start(); } });
+  next.addEventListener('click', function(){ if(n<pages.length-1){ show(n+1); if(playing) start(); } });
+  show(0);
+})();
+</script>
 </body>
 </html>
