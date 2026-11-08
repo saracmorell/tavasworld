@@ -11,6 +11,7 @@
   --tw-nav-gold-light: #E8C070;
   --tw-nav-cream:      #F5ECD7;
   --tw-nav-cream-low:  rgba(245, 236, 215, 0.50);
+  --tw-nav-champagne:  #DDC28C;
   --tw-nav-border:     rgba(212, 168, 83, 0.12);
   --tw-nav-bg:         rgba(15, 10, 4, 0.94);
   --tw-nav-bg-mobile:  rgba(15, 10, 4, 0.98);
@@ -80,7 +81,7 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--tw-nav-cream-low);
+  color: var(--tw-nav-champagne);
   text-decoration: none;
   transition: color 0.25s;
 }
