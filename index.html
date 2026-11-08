@@ -87,6 +87,9 @@ img, svg, video { max-width: 100%; }
 .split { padding: 80px 48px; border-top: 0.5px solid var(--border); }
 .split-inner { max-width: 1140px; margin: 0 auto; display: grid; gap: 64px; align-items: center; }
 .split-books .split-inner { grid-template-columns: 1.15fr 0.85fr; }
+.split-compass .split-inner { grid-template-columns: 0.9fr 1.1fr; }
+.compass-hero { width: 100%; max-width: 300px; height: auto; filter: drop-shadow(0 0 50px rgba(212,168,83,.28)) drop-shadow(0 24px 40px rgba(0,0,0,.55)); }
+.compass-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
 .split-app .split-inner { grid-template-columns: 0.9fr 1.1fr; }
 .split-tales .split-inner { grid-template-columns: 1fr 0.8fr; }
 .tales-phone { width: 100%; max-width: 300px; height: auto; border-radius: 34px; border: 8px solid #2A1A0E; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,83,0.25); display: block; margin: 0 auto; }
@@ -164,7 +167,7 @@ img, svg, video { max-width: 100%; }
 .hero-sun { width: 96px; height: 96px; margin-bottom: 20px; }
 .hero-btns { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
 .split { padding: 56px 24px; }
-.split-books .split-inner, .split-app .split-inner, .split-tales .split-inner { grid-template-columns: 1fr; gap: 36px; }
+.split-books .split-inner, .split-app .split-inner, .split-tales .split-inner, .split-compass .split-inner { grid-template-columns: 1fr; gap: 36px; }
 .split-media { order: -1; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: center; }
 .split-copy .sec-body { margin-left: auto; margin-right: auto; }
@@ -360,21 +363,34 @@ img, svg, video { max-width: 100%; }
         </div>
       </div>
     </section>
-    <!-- SECTION 4 — BOOKS -->
-    <section class="split split-books" style="background: var(--choc-dark);">
+    <!-- SECTION 4 — TAVAS COMPASS -->
+    <section class="split split-compass" id="compass" style="background: var(--choc-dark);">
       <div class="split-inner">
         <div class="split-media">
-          <div class="book-stack">
-            <img src="assets/img/web/book1cover.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
-            <img src="assets/img/web/raspen.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
-            <img src="assets/img/web/book3cover.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
-          </div>
+          <img src="assets/img/web/compass-emblem.webp" alt="Tavas Compass" class="compass-hero" width="320" height="320" loading="lazy" decoding="async">
         </div>
         <div class="split-copy">
-          <span class="sec-label">Stories children carry with them.</span>
-          <h2 class="sec-headline">Kindness, curiosity, and courage in every story.</h2>
-          <p class="sec-body">Children's books designed to build emotional intelligence, encourage imagination, and create moments families remember.</p>
-          <a href="books.html" class="btn-ghost">Explore the Library</a>
+          <span class="sec-label">Tavas Compass</span>
+          <h2 class="sec-headline">Know where you stand.<br>Know what&rsquo;s next.</h2>
+          <p class="sec-body">Career tools built for what work is becoming. Take the free Career Resilience Snapshot in minutes, then get your Career Compass Report: your strengths, your risks, and your next moves, in one clear plan.</p>
+          <div class="app-grid compass-grid">
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z"/></svg></div>
+              <h3>Free Snapshot</h3>
+              <p>See where your career stands today, in just a few minutes.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+              <h3>Your Compass Report</h3>
+              <p>Strengths, risks and next moves, in a report you keep.</p>
+            </div>
+            <div class="app-feat">
+              <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/></svg></div>
+              <h3>Haven, Your Advisor</h3>
+              <p>Ask questions and plan your next step with your AI career advisor.</p>
+            </div>
+          </div>
+          <a href="https://tavascompass.com" target="_blank" rel="noopener" class="btn-primary-gold">Take the Free Snapshot</a>
         </div>
       </div>
     </section>
@@ -434,6 +450,24 @@ img, svg, video { max-width: 100%; }
               <p class="tt-hint" id="ttHint">Tap play to hear a sample</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 6 — LIBRARY -->
+    <section class="split split-books" id="library" style="background: var(--choc-dark);">
+      <div class="split-inner">
+        <div class="split-media">
+          <div class="book-stack">
+            <img src="assets/img/web/book1cover.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
+            <img src="assets/img/web/raspen.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
+            <img src="assets/img/web/book3cover.webp" alt="Tavas World children's book" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="sec-label">Stories children carry with them.</span>
+          <h2 class="sec-headline">Kindness, curiosity, and courage in every story.</h2>
+          <p class="sec-body">Children's books designed to build emotional intelligence, encourage imagination, and create moments families remember.</p>
+          <a href="books.html" class="btn-ghost">Explore the Library</a>
         </div>
       </div>
     </section>
