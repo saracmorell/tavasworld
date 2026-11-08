@@ -94,16 +94,17 @@ img, svg, video { max-width: 100%; }
 .app-grid .app-feat .feat-icon.tt-ico svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2.6; }
 
 /* Tavas Tales live demo phone */
-.tt-demo { width: 300px; max-width: 100%; margin: 0 auto; padding: 9px; border-radius: 42px;
+.tt-demo { width: 320px; max-width: 100%; margin: 0 auto; padding: 9px; border-radius: 42px;
   background: linear-gradient(145deg, #F2D58E 0%, #B8893A 22%, #4A2E12 50%, #B8893A 78%, #F2D58E 100%);
   box-shadow: 0 0 0 1px rgba(242,213,142,.35), 0 0 34px rgba(212,168,83,.28), 0 30px 60px rgba(0,0,0,.6); }
-.tt-screen { background: #160E07; border-radius: 34px; padding: 18px 16px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 2px 10px rgba(0,0,0,.7); }
-.tt-top { display: flex; align-items: center; gap: 8px; align-self: stretch; justify-content: center; }
+.tt-screen { background: #160E07; border-radius: 34px; padding: 26px 16px 22px; aspect-ratio: 9 / 19; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 2px 10px rgba(0,0,0,.7); }
+.tt-top { margin-top: 6px; display: flex; align-items: center; gap: 8px; align-self: stretch; justify-content: center; }
 .tt-logo { width: 40px; height: auto; }
 .tt-word { font-family: 'Jost','Montserrat',sans-serif; font-weight: 600; letter-spacing: .24em; font-size: .78rem; color: #D4A853; }
 .tt-page { width: 100%; aspect-ratio: 1065/1080; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,.55); }
 .tt-page img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .35s; }
 .tt-reader { font-family: 'Montserrat',sans-serif; font-size: 1.12rem; font-weight: 600; color: #F5ECD7; margin: 0; text-align: center; }
+.tt-reader span { display: block; font-size: .8rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: #D4A853; margin-top: 4px; }
 .tt-dots { display: flex; gap: 6px; } .tt-dots span { width: 7px; height: 7px; border-radius: 4px; background: rgba(212,168,83,.3); transition: width .25s; } .tt-dots span.on { width: 22px; background: #D4A853; }
 .tt-controls { display: flex; align-items: center; gap: 20px; }
 .tt-round, .tt-play { border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
@@ -423,7 +424,7 @@ img, svg, video { max-width: 100%; }
             <div class="tt-screen">
               <div class="tt-top"><img src="assets/img/web/tavas-tales-logo-gold.webp" alt="" class="tt-logo"><span class="tt-word">TAVAS TALES</span></div>
               <div class="tt-page"><img id="ttPage" src="assets/img/web/tales-demo/bear-01.webp" alt="The Adventures of Raspen and Sylas: The Bear Who Won't Share, cover"></div>
-              <p class="tt-reader" id="ttReader">Read by Sara C. Morell</p>
+              <p class="tt-reader" id="ttReader">Read by Sara C. Morell<span>the author</span></p>
               <div class="tt-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
               <div class="tt-controls">
                 <button type="button" class="tt-round" id="ttPrev" aria-label="Previous page"><svg viewBox="0 0 48 48"><path d="M30 10L16 24l14 14"/></svg></button>
