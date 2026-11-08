@@ -89,7 +89,10 @@ img, svg, video { max-width: 100%; }
 .split-books .split-inner { grid-template-columns: 1.15fr 0.85fr; }
 .split-app .split-inner { grid-template-columns: 0.9fr 1.1fr; }
 .split-tales .split-inner { grid-template-columns: 1fr 0.8fr; }
-.tales-phone { width: 100%; max-width: 300px; height: auto; border-radius: 34px; border: 8px solid #2A1A0E; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,83,0.25); display: block; margin: 0 auto; }
+.tales-device { position: relative; width: 100%; max-width: 310px; margin: 0 auto; padding: 9px; border-radius: 46px; background: linear-gradient(150deg, #6B4C2C 0%, #2E1D10 28%, #1A1009 55%, #3A2716 80%, #7A5A34 100%); box-shadow: 0 0 0 1px rgba(232,192,112,.38), inset 0 1px 1.5px rgba(255,232,190,.45), inset 0 -2px 5px rgba(0,0,0,.65), 0 34px 70px rgba(0,0,0,.65), 0 0 70px rgba(212,168,83,.16); }
+.tales-device::before { content: ""; position: absolute; right: -3px; top: 150px; width: 3px; height: 64px; border-radius: 0 3px 3px 0; background: linear-gradient(180deg, #7A5A34, #3A2716); }
+.tales-device::after { content: ""; position: absolute; left: -3px; top: 120px; width: 3px; height: 92px; border-radius: 3px 0 0 3px; background: linear-gradient(180deg, #7A5A34 0 40%, transparent 40% 52%, #7A5A34 52% 100%); }
+.tales-phone { width: 100%; height: auto; border-radius: 38px; display: block; box-shadow: 0 0 0 2px #0B0603; }
 .app-grid .app-feat .feat-icon.tt-ico { color: var(--gold); }
 .app-grid .app-feat .feat-icon.tt-ico svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 2.6; }
 .tales-note { font-size: 0.8rem; color: var(--cream-low); margin: -16px 0 24px; }
@@ -394,7 +397,7 @@ img, svg, video { max-width: 100%; }
           <a href="https://tavas-tales.pages.dev/#/hello" target="_blank" rel="noopener" class="btn-primary-gold">Join the Waitlist</a>
         </div>
         <div class="split-media">
-          <img src="assets/img/web/tavas-tales-listen.webp" alt="Tavas Tales playing a Raspen &amp; Sylas book read by Gigi" class="tales-phone" width="390" height="844" loading="lazy" decoding="async">
+          <div class="tales-device"><img src="assets/img/web/tavas-tales-listen.webp" alt="Tavas Tales playing a Raspen &amp; Sylas book read by Gigi" class="tales-phone" width="390" height="844" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </section>
