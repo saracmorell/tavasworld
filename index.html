@@ -189,6 +189,7 @@ img, svg, video { max-width: 100%; }
 .prod-card.primary { background: linear-gradient(180deg, rgba(236,138,69,.12), rgba(245,236,215,.02)); border-color: rgba(236,138,69,.35); }
 .prod-media { height: 128px; display:flex; align-items:center; justify-content:center; margin-bottom: 4px; }
 .prod-media img { max-height: 128px; width: auto; filter: drop-shadow(0 14px 24px rgba(0,0,0,.5)); }
+.prod-media img.tales-card-logo { max-height: 84px; }
 .prod-media .books { display:flex; gap:6px; align-items:center; justify-content:center; width:100%; }
 .prod-media .books img { width: 30%; height: auto; max-height: 96px; object-fit: cover; border-radius: 6px; }
 .prod-media .books img:nth-child(2) { width: 34%; max-height: 112px; }
@@ -211,6 +212,7 @@ img, svg, video { max-width: 100%; }
   .hero-intro { font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
 }
 @media (max-width: 768px) { .hero-logo { width: 120px; height: 120px; } .hero { padding: 104px 20px 56px; } }
+@media (min-width: 861px) and (max-width: 1100px) { .hero-products { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; } }
 @media (prefers-reduced-motion: reduce) { .hero-glow { animation: none; } .hero-logo .tw-path { animation: none; stroke-dashoffset: 0; } .hero-logo .tw-sun { animation: none; transform: none; opacity: 1; } }
 </style>
   <link href="assets/css/site-nav.css" rel="stylesheet">
@@ -249,7 +251,7 @@ img, svg, video { max-width: 100%; }
       </svg>
       <p class="hero-wordmark">Tavas <span>World</span></p>
       <h1>Navigate life with confidence.</h1>
-      <p class="hero-intro">Life doesn't follow just one path. Tavas World brings together career guidance, wellness tools, and books to help you move forward with greater clarity and purpose.</p>
+      <p class="hero-intro">Life doesn't follow just one path. Tavas World brings together career guidance, wellness tools, books, and family storytelling to help you move forward with greater clarity and purpose.</p>
       <!-- Tavas Compass stays the primary action (approved 2026-10-11). -->
       <div class="hero-products">
         <a class="prod-card primary" href="https://tavascompass.com" target="_blank" rel="noopener">
@@ -265,7 +267,7 @@ img, svg, video { max-width: 100%; }
           <span class="prod-cta">Try Tavas App</span>
         </a>
         <a class="prod-card" href="#tales">
-          <div class="prod-media"><img src="assets/img/web/tavas-tales-logo-gold.webp" alt="" width="180" height="102"></div>
+          <div class="prod-media"><img class="tales-card-logo" src="assets/img/web/tavas-tales-logo-gold.webp" alt="" width="180" height="102"></div>
           <span class="prod-label">Tavas Tales</span>
           <h3>Their favorite stories. Your voice.</h3>
           <span class="prod-cta">Meet Tavas Tales</span>
@@ -337,7 +339,7 @@ img, svg, video { max-width: 100%; }
         <div class="split-copy">
           <span class="sec-label">Stories children carry with them.</span>
           <h2 class="sec-headline">Kindness, curiosity, and courage in every story.</h2>
-          <p class="sec-body">Children's books designed to build emotional intelligence, encourage imagination, and create moments families remember.</p>
+          <p class="sec-body">Children's books designed to build emotional intelligence, encourage imagination, and create moments families remember. Soon, kids can hear these stories read by the people they love, with <a href="#tales" style="color: var(--gold);">Tavas Tales</a>.</p>
           <a href="books.html" class="btn-ghost">Explore the Library</a>
         </div>
       </div>
