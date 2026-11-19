@@ -433,7 +433,7 @@ img, svg, video { max-width: 100%; }
               <p>Big text, dyslexia-friendly fonts, high contrast, and dark mode.</p>
             </div>
           </div>
-          <a href="https://tavastales.com/" target="_blank" rel="noopener" class="btn-primary-gold">Join the Waitlist</a>
+          <a href="https://tavastales.com/" target="_blank" rel="noopener" class="btn-primary-gold">Start free trial</a>
         </div>
         <div class="split-media">
           <div class="tt-demo" id="ttDemo" aria-label="Tavas Tales demo">
@@ -527,7 +527,7 @@ img, svg, video { max-width: 100%; }
       .catch(function(){ setPlaying(false); hint.textContent='Sample coming soon'; }); }
   audio.addEventListener('ended', function(){ if(!playing) return;
     if(n<pages.length-1){ gap=setTimeout(function(){ show(n+1); start(); }, 1000); }
-    else { setPlaying(false); hint.textContent='The End · join the waitlist to make your own'; } });
+    else { setPlaying(false); hint.textContent='The End · start a free trial to make your own'; } });
   play.addEventListener('click', function(){ if(playing){ setPlaying(false); audio.pause(); clearTimeout(gap); return; }
     if(n===pages.length-1 && audio.ended) show(0); setPlaying(true); start(); });
   prev.addEventListener('click', function(){ if(n>0){ show(n-1); if(playing) start(); } });
