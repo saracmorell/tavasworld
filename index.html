@@ -439,7 +439,7 @@ img, svg, video { max-width: 100%; }
           <div class="tt-demo" id="ttDemo" aria-label="Tavas Tales demo">
             <div class="tt-screen">
               <div class="tt-top"><img src="assets/img/web/tavas-tales-logo-gold.webp" alt="" class="tt-logo"><span class="tt-word">TAVAS TALES</span></div>
-              <div class="tt-page"><img id="ttPage" src="assets/img/web/tales-demo/bear-01.webp" alt="The Adventures of Raspen and Sylas: The Bear Who Won't Share, cover"></div>
+              <div class="tt-page"><img id="ttPage" src="assets/img/web/tales-demo/bear-01.webp" alt="The Adventures of Raspen and Sylas: The Bear That Won't Share, cover"></div>
               <p class="tt-reader" id="ttReader">Read by Sara C. Morell<span>the author</span></p>
               <div class="tt-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
               <div class="tt-controls">
@@ -517,7 +517,7 @@ img, svg, video { max-width: 100%; }
   var img=document.getElementById('ttPage'), dots=root.querySelectorAll('.tt-dots span'), hint=document.getElementById('ttHint');
   var prev=document.getElementById('ttPrev'), next=document.getElementById('ttNext'), play=document.getElementById('ttPlay');
   var audio=new Audio(); audio.preload='none';
-  var alts=["The Bear Who Won't Share, cover","Raspen and Sylas in the cedar forest","Raspen and Sylas, page 3"];
+  var alts=["The Bear That Won't Share, cover","Raspen and Sylas in the cedar forest","Raspen and Sylas, page 3"];
   pages.forEach(function(p){ var i=new Image(); i.src='assets/img/web/tales-demo/'+p+'.webp'; });
   function show(k){ n=k; img.src='assets/img/web/tales-demo/'+pages[n]+'.webp'; img.alt=alts[n];
     dots.forEach(function(d,i){ d.classList.toggle('on', i===n); }); prev.disabled=n===0; next.disabled=n===pages.length-1; }
