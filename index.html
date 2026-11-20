@@ -59,6 +59,7 @@ img, svg, video { max-width: 100%; }
 .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: riseIn 1.3s ease 0.44s both; }
 .btn-primary-gold { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: var(--gold); color: var(--choc-deep); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; transition: background 0.2s, transform 0.15s; cursor: pointer; border: none; }
 .btn-primary-gold:hover { background: var(--gold-light); transform: translateY(-2px); color: var(--choc-deep); text-decoration: none; box-shadow: 0 0 20px rgba(212,168,83,0.6), 0 4px 15px rgba(212,168,83,0.3); transform: translateY(-3px) scale(1.04); }
+.store-badges { display: flex; gap: 12px; flex-wrap: wrap; } .split-copy .store-badges { justify-content: flex-start; } .store-badge { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 18px; background: #000; color: #fff; border: 1px solid #5a5a5a; border-radius: 12px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1rem; line-height: 1.1; } .store-badge span { display: flex; flex-direction: column; } .store-badge small { font-size: 0.66rem; font-weight: 500; opacity: 0.8; } .store-badge:hover { color: #fff; text-decoration: none; opacity: 0.9; }
 .btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 40px; background: rgba(212,168,83,0.07); color: var(--cream); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border-radius: 999px; border: 1px solid rgba(212,168,83,0.45); transition: all 0.2s; }
 .btn-ghost:hover { background: rgba(212,168,83,0.13); border-color: var(--gold); color: var(--gold-light); text-decoration: none; }
 .hero-paths { margin-top: 30px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; display: flex; gap: 13px; align-items: baseline; justify-content: center; flex-wrap: wrap; line-height: 1; animation: riseIn 1.4s ease 0.6s both; }
@@ -172,6 +173,7 @@ img, svg, video { max-width: 100%; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: center; }
 .split-copy .sec-body { margin-left: auto; margin-right: auto; }
 .split-copy .btn-ghost, .split-copy .btn-primary-gold { display: flex; margin-left: auto; margin-right: auto; max-width: 320px; }
+.split-copy .store-badges { justify-content: center; }
 .book-stack { gap: 10px; padding: 24px 12px; }
 .book-stack img { width: 30%; }
 .book-stack img:nth-child(2) { width: 34%; }
@@ -259,7 +261,7 @@ img, svg, video { max-width: 100%; }
       <span class="header-logo-text">TAVAS <span>WORLD</span></span>
     </a>
     <nav id="navbar">
-      <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank">Tavas App</a>
+      <a href="https://tavas.app" target="_blank" rel="noopener">Tavas App</a>
       <a href="https://tavascompass.com">Tavas Compass</a>
       <a href="index.html#tales">Tavas Tales</a>
       <a href="books.html">Library</a>
@@ -293,7 +295,7 @@ img, svg, video { max-width: 100%; }
           <div class="prod-media"><img src="assets/img/web/tavas-app-icon.webp" alt="" width="112" height="112" class="app-icon-card"></div>
           <span class="prod-label">Tavas App</span>
           <h3>Just say it. Tavas remembers.</h3>
-          <p class="prod-sub">The wellness and peptide tracker with an AI companion.</p>
+          <p class="prod-sub">Your GLP-1 and peptide companion, with an AI companion who remembers you.</p>
           <span class="prod-cta">Try Tavas App</span>
         </a>
         <a class="prod-card primary" href="https://tavascompass.com" target="_blank" rel="noopener">
@@ -355,7 +357,10 @@ img, svg, video { max-width: 100%; }
               <p>Walk into appointments prepared, with a clear summary to share with your doctor.</p>
             </div>
           </div>
-          <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" class="btn-primary-gold">Start Free on Google Play</a>
+          <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6832662303" target="_blank" rel="noopener" class="store-badge" aria-label="Download Tavas on the App Store"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.28 1.86-3.38 1.95-3.43-1.06-1.55-2.71-1.77-3.3-1.79-1.4-.14-2.74.83-3.45.83-.71 0-1.81-.81-2.98-.79-1.53.02-2.94.89-3.73 2.26-1.59 2.76-.41 6.84 1.14 9.08.76 1.1 1.66 2.33 2.84 2.29 1.14-.05 1.57-.74 2.95-.74 1.38 0 1.77.74 2.98.71 1.23-.02 2.01-1.12 2.76-2.22.87-1.27 1.23-2.51 1.25-2.57-.03-.01-2.39-.92-2.41-3.63zM14.1 5.9c.63-.76 1.05-1.82.94-2.88-.9.04-2 .6-2.65 1.36-.58.67-1.09 1.75-.95 2.78 1 .08 2.03-.51 2.66-1.26z"/></svg><span><small>Download on the</small>App Store</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.shineon.journal" target="_blank" rel="noopener" class="store-badge" aria-label="Get Tavas on Google Play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#34A853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="m16.7 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1.1.6 1.1 1.7 0 2.3l-3.7 2.2z"/><path fill="#EA4335" d="M16.7 15.3 13.4 12l-9.8 9.7c.4.2.9.2 1.4-.1l11.7-6.3z"/><path fill="#4285F4" d="M16.7 8.7 5 2.4c-.5-.3-1-.3-1.4-.1l9.8 9.7 3.3-3.3z"/></svg><span><small>Get it on</small>Google Play</span></a>
+          </div>
           <p class="app-free-note">Free download &middot; 14-day Premium trial</p>
         </div>
         <div class="split-media">
