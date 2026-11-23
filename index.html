@@ -118,10 +118,10 @@ img, svg, video { max-width: 100%; }
 .tt-play { width: 64px; height: 64px; background: linear-gradient(135deg,#EBCB82,#D4A853 55%,#B88A3A); box-shadow: 0 0 0 0 rgba(212,168,83,.5); }
 .tt-play svg { width: 28px; height: 28px; fill: #1C1208; stroke: #1C1208; stroke-width: 5; stroke-linecap: round; }
 .tt-play .i-pause { display: none; fill: none; } .tt-demo.playing .tt-play .i-play { display: none; } .tt-demo.playing .tt-play .i-pause { display: block; }
-.tt-demo.playing .tt-play { animation: ttpulse 1.8s infinite; }
+.tt-demo:not(.playing) .tt-play { animation: ttpulse 1.8s infinite; }
 @keyframes ttpulse { 0% { box-shadow: 0 0 0 0 rgba(212,168,83,.5); } 70% { box-shadow: 0 0 0 14px rgba(212,168,83,0); } 100% { box-shadow: 0 0 0 0 rgba(212,168,83,0); } }
 .tt-hint { font-family: 'Montserrat',sans-serif; font-size: .75rem; color: #CDB485; margin: 0; }
-@media (prefers-reduced-motion: reduce) { .tt-demo.playing .tt-play { animation: none; } .tt-page img { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .tt-demo .tt-play { animation: none !important; } .tt-page img { transition: none; } }
 .tales-note { font-size: 0.8rem; color: var(--cream-low); margin: -16px 0 24px; }
 .split-media { display: flex; justify-content: center; align-items: center; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: left; margin-left: 0; }
