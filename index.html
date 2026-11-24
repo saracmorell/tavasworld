@@ -120,9 +120,9 @@ img, svg, video { max-width: 100%; }
 .tt-play svg { width: 28px; height: 28px; fill: #1C1208; stroke: #1C1208; stroke-width: 5; stroke-linecap: round; }
 .tt-play .i-pause { display: none; fill: none; } .tt-demo.playing .tt-play .i-play { display: none; } .tt-demo.playing .tt-play .i-pause { display: block; }
 .tt-demo:not(.playing) .tt-play { animation: ttpulse 1.8s infinite; }
-@keyframes ttpulse { 0% { box-shadow: 0 0 0 0 rgba(212,168,83,.5); } 70% { box-shadow: 0 0 0 14px rgba(212,168,83,0); } 100% { box-shadow: 0 0 0 0 rgba(212,168,83,0); } }
+@keyframes ttpulse { 0% { box-shadow: 0 0 0 0 rgba(242,213,142,.75); } 70% { box-shadow: 0 0 0 20px rgba(212,168,83,0); } 100% { box-shadow: 0 0 0 0 rgba(212,168,83,0); } }
 .tt-hint { font-family: 'Montserrat',sans-serif; font-size: .75rem; color: #CDB485; margin: 0; }
-@media (prefers-reduced-motion: reduce) { .tt-demo .tt-play { animation: none !important; } .tt-page img { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .tt-demo .tt-play { animation: none !important; } .tt-demo:not(.playing) .tt-play { box-shadow: 0 0 0 6px rgba(242,213,142,.35); } .tt-page img { transition: none; } }
 .tales-note { font-size: 0.8rem; color: var(--cream-low); margin: -16px 0 24px; }
 .split-media { display: flex; justify-content: center; align-items: center; }
 .split-copy .sec-label, .split-copy .sec-headline, .split-copy .sec-body { text-align: left; margin-left: 0; }
@@ -460,7 +460,7 @@ img, svg, video { max-width: 100%; }
                 <button type="button" class="tt-play" id="ttPlay" aria-label="Play the demo"><svg class="i-play" viewBox="0 0 48 48"><path d="M15 9l25 15-25 15z"/></svg><svg class="i-pause" viewBox="0 0 48 48"><path d="M17 10v28M31 10v28"/></svg></button>
                 <button type="button" class="tt-round" id="ttNext" aria-label="Next page"><svg viewBox="0 0 48 48"><path d="M18 10l14 14-14 14"/></svg></button>
               </div>
-              <p class="tt-hint" id="ttHint">Tap play to hear a sample</p>
+              <p class="tt-hint" id="ttHint">Tap play to listen</p>
             </div>
           </div>
         </div>
@@ -538,12 +538,12 @@ img, svg, video { max-width: 100%; }
   function preload(){ for(var i=2;i<=total;i++){ var im=new Image(); im.src=BASE+'/p'+i+'.jpg'; } }
   function setPlaying(v){ playing=v; root.classList.toggle('playing', v); play.setAttribute('aria-label', v?'Pause':'Play the sample'); }
   function start(){ clearTimeout(gap); audio.src=BASE+'/a'+(n+1)+'.webm';
-    audio.play().then(function(){ hint.textContent='Page '+(n+1)+' of '+total; })
-      .catch(function(){ setPlaying(false); hint.textContent='Tap play to hear a sample'; }); }
+    audio.play().then(function(){ hint.textContent='Tap to pause'; })
+      .catch(function(){ setPlaying(false); hint.textContent='Tap play to listen'; }); }
   audio.addEventListener('ended', function(){ if(!playing) return;
     if(n<total-1){ gap=setTimeout(function(){ show(n+1); start(); }, 700); }
     else { setPlaying(false); show(0); hint.textContent='Make one with your family\u2019s photos. Start a free trial.'; } });
-  play.addEventListener('click', function(){ if(playing){ setPlaying(false); audio.pause(); clearTimeout(gap); return; }
+  play.addEventListener('click', function(){ if(playing){ setPlaying(false); audio.pause(); clearTimeout(gap); hint.textContent='Tap play to keep listening'; return; }
     preload(); setPlaying(true); start(); });
   prev.addEventListener('click', function(){ if(n>0){ show(n-1); if(playing) start(); } });
   next.addEventListener('click', function(){ if(n<total-1){ show(n+1); if(playing) start(); } });
