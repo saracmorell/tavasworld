@@ -104,6 +104,7 @@ img, svg, video { max-width: 100%; }
 .tt-screen { background: #160E07; border-radius: 34px; padding: 26px 16px 22px; aspect-ratio: 9 / 19; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 2px 10px rgba(0,0,0,.7); }
 .tt-top { margin-top: 6px; display: flex; align-items: center; gap: 8px; align-self: stretch; justify-content: center; }
 .tt-logo { width: 40px; height: auto; }
+.tt-book { font-family: 'Montserrat',sans-serif; font-size: .66rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #CDB485; margin: -4px 0 0; text-align: center; }
 .tt-word { font-family: 'Jost','Montserrat',sans-serif; font-weight: 600; letter-spacing: .24em; font-size: .78rem; color: #D4A853; }
 .tt-page { width: 100%; aspect-ratio: 1065/1080; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,.55); }
 .tt-page img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .35s; }
@@ -450,9 +451,10 @@ img, svg, video { max-width: 100%; }
           <div class="tt-demo" id="ttDemo" aria-label="Tavas Tales demo">
             <div class="tt-screen">
               <div class="tt-top"><img src="assets/img/web/tavas-tales-logo-gold.webp" alt="" class="tt-logo"><span class="tt-word">TAVAS TALES</span></div>
-              <div class="tt-page"><img id="ttPage" src="assets/img/web/tales-demo/bear-01.webp" alt="The Adventures of Raspen and Sylas: The Bear That Won't Share, cover"></div>
-              <p class="tt-reader" id="ttReader">Read by Sara C. Morell<span>the author</span></p>
-              <div class="tt-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+              <p class="tt-book" id="ttBook">Auntie&rsquo;s Adventures &middot; Page 1</p>
+              <div class="tt-page"><img id="ttPage" src="https://mvzrlkxiwhcpbrxvzwev.supabase.co/storage/v1/object/public/site/sample/aunties-adventures/p1.jpg" alt="Sunset over the ocean at Sunset Beach, Oregon"></div>
+              <p class="tt-reader" id="ttReader">Read by Auntie<span>a family storybook</span></p>
+              <div class="tt-dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
               <div class="tt-controls">
                 <button type="button" class="tt-round" id="ttPrev" aria-label="Previous page"><svg viewBox="0 0 48 48"><path d="M30 10L16 24l14 14"/></svg></button>
                 <button type="button" class="tt-play" id="ttPlay" aria-label="Play the demo"><svg class="i-play" viewBox="0 0 48 48"><path d="M15 9l25 15-25 15z"/></svg><svg class="i-pause" viewBox="0 0 48 48"><path d="M17 10v28M31 10v28"/></svg></button>
@@ -521,28 +523,30 @@ img, svg, video { max-width: 100%; }
   <script src="assets/js/site-nav.js"></script>
 
 <script>
-/* Tavas Tales demo: real recordings by the author, page turns like the app. */
+/* Tavas Tales demo: the same family-photo sample as tavastales.com ("Auntie's Adventures", Sara's own trip photos
+   and voice, location details removed), pages turn with the recording like the app (Sara, 2026-11-23). */
 (function(){
   var root=document.getElementById('ttDemo'); if(!root) return;
-  var pages=['bear-01','bear-02','bear-03'], n=0, playing=false, gap;
-  var img=document.getElementById('ttPage'), dots=root.querySelectorAll('.tt-dots span'), hint=document.getElementById('ttHint');
+  var BASE='https://mvzrlkxiwhcpbrxvzwev.supabase.co/storage/v1/object/public/site/sample/aunties-adventures';
+  var total=9, n=0, playing=false, gap;
+  var img=document.getElementById('ttPage'), book=document.getElementById('ttBook'), dots=root.querySelectorAll('.tt-dots span'), hint=document.getElementById('ttHint');
   var prev=document.getElementById('ttPrev'), next=document.getElementById('ttNext'), play=document.getElementById('ttPlay');
   var audio=new Audio(); audio.preload='none';
-  var alts=["The Bear That Won't Share, cover","Raspen and Sylas in the cedar forest","Raspen and Sylas, page 3"];
-  pages.forEach(function(p){ var i=new Image(); i.src='assets/img/web/tales-demo/'+p+'.webp'; });
-  function show(k){ n=k; img.src='assets/img/web/tales-demo/'+pages[n]+'.webp'; img.alt=alts[n];
-    dots.forEach(function(d,i){ d.classList.toggle('on', i===n); }); prev.disabled=n===0; next.disabled=n===pages.length-1; }
-  function setPlaying(v){ playing=v; root.classList.toggle('playing', v); play.setAttribute('aria-label', v?'Pause':'Play the demo'); }
-  function start(){ clearTimeout(gap); audio.src='assets/audio/tales-demo/'+pages[n]+'.m4a';
-    audio.play().then(function(){ hint.textContent='Pages turn by themselves, just like the app'; })
-      .catch(function(){ setPlaying(false); hint.textContent='Sample coming soon'; }); }
+  var alts=["Sunset over the ocean at Sunset Beach, Oregon","A windsurfer high above the waves at Hug Point","A waterfall and sea caves on the beach","A beach picnic blanket with snacks","A small rocky beach on the Oregon coast","Mountains in Montana","Sam the dog with his beds and toys","Three dogs waiting at the door","Auntie and Nalu back home"];
+  function show(k){ n=k; img.src=BASE+'/p'+(n+1)+'.jpg'; img.alt=alts[n]; book.innerHTML='Auntie&rsquo;s Adventures &middot; Page '+(n+1);
+    dots.forEach(function(d,i){ d.classList.toggle('on', i===n); }); prev.disabled=n===0; next.disabled=n===total-1; }
+  function preload(){ for(var i=2;i<=total;i++){ var im=new Image(); im.src=BASE+'/p'+i+'.jpg'; } }
+  function setPlaying(v){ playing=v; root.classList.toggle('playing', v); play.setAttribute('aria-label', v?'Pause':'Play the sample'); }
+  function start(){ clearTimeout(gap); audio.src=BASE+'/a'+(n+1)+'.webm';
+    audio.play().then(function(){ hint.textContent='Page '+(n+1)+' of '+total; })
+      .catch(function(){ setPlaying(false); hint.textContent='Tap play to hear a sample'; }); }
   audio.addEventListener('ended', function(){ if(!playing) return;
-    if(n<pages.length-1){ gap=setTimeout(function(){ show(n+1); start(); }, 1000); }
-    else { setPlaying(false); hint.textContent='The End · start a free trial to make your own'; } });
+    if(n<total-1){ gap=setTimeout(function(){ show(n+1); start(); }, 700); }
+    else { setPlaying(false); show(0); hint.textContent='Make one with your family\u2019s photos. Start a free trial.'; } });
   play.addEventListener('click', function(){ if(playing){ setPlaying(false); audio.pause(); clearTimeout(gap); return; }
-    if(n===pages.length-1 && audio.ended) show(0); setPlaying(true); start(); });
+    preload(); setPlaying(true); start(); });
   prev.addEventListener('click', function(){ if(n>0){ show(n-1); if(playing) start(); } });
-  next.addEventListener('click', function(){ if(n<pages.length-1){ show(n+1); if(playing) start(); } });
+  next.addEventListener('click', function(){ if(n<total-1){ show(n+1); if(playing) start(); } });
   show(0);
 })();
 </script>
